@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>语法</TITLE>
+  <LINK href="../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>语法</H1>
+
+<PRE class = "syntax">
+7z <A href = "commands/index.htm">&lt;命令行></A> [<A href = "switches/index.htm">&lt;选项></A>...] &lt;基本档案名称> [&lt;参数变量>...]
+
+7z <A href = "commands/index.htm">&lt;command></A> [<A href = "switches/index.htm">&lt;switch></A>...] &lt;base_archive_name> [&lt;arguments>...]
+</PRE>
+<PRE class = "syntax">
+&lt;参数变量> ::= <A href = "switches/index.htm">&lt;选项></A> | &lt;通配符> | &lt;文件名> | &lt;文件列表>
+<A href = "switches/index.htm">&lt;选项></A>::= &lt;选项标记>&lt;选项字符>[&lt;选项>]
+&lt;选项标记> ::= '/' | '-' 
+&lt;文件列表> ::= @{文件名}
+
+
+&lt;arguments> ::= <A href = "switches/index.htm">&lt;switch></A> | &lt;wildcard> | &lt;filename> | &lt;list_file>
+<A href = "switches/index.htm">&lt;switch></A>::= &lt;switch_symbol>&lt;switch_characters>[&lt;option>]
+&lt;switch_symbol> ::= '/' | '-' 
+&lt;list_file> ::= @{filename}
+</PRE>
+
+
+<P>在方括号内的表达式(“[” 和 “]”之间的字符)是可选的。</P>
+
+<P>在书名号内的表达式(“&lt;” 和 “>”之间的字符)是必须替换的表达式(而且要去掉括号)。</P>
+
+<P>表达式</P>
+
+<PRE class = "syntax">
+expression1 | expression2 | ... | expressionN</DT>
+</PRE>
+
+<P><A href = "commands/index.htm">命令行</A> 及 <A href = "switches/index.htm">选项</A> 使用大写或小写字母都可以。</P>
+
+<P>首个命令行必须是无选项的参数变量。</P>
+
+<P>选项及其它文件名的输入顺序可以打乱。</P>
+
+<P>带有空格的通配符或文件名必须加上引号：</P>
+
+<PRE>
+    "Dir\Program files\*"
+    Dir\"Program files"\*
+</PRE>
+
+<P>通配符是一个键盘字符，例如星号(*)或问号(?)，当执行添加文件、释放文件、选定文件、删除文件等操作时，您可以使用它来代表一个或多个字符。当您不知道真正字符或者不想键入完整名称时，常常使用通配符代替一个或多个字符。</P>
+
+<P>7-Zip 支持和 Windows 相类似的通配符：</P>
+<UL>
+  <LI><B>“*”</B>可以使用星号代替零个或多个字符。</LI>
+  <LI><B>“?”</B>可以用问号代替名称中的单个字符。</LI>
+</UL>
+
+<P><B>7-Zip 使用的并不是系统处理通配符的默认方法，因而 7-Zip 不支持其它通配符规则，在系统中 *.* 相当于所有文件。而 7-Zip 会将其视为任何扩展名的全部文件。所以，要处理所有文件您必须使用 * 通配符。</B></P>
+
+<P>示例：</P>
+<TABLE border = "0">
+  <TR><TD>*.txt</TD><TD>这样会查找(添加、选定……)所有扩展名是“.txt”的文件</TD></TR>
+  <TR><TD>?a*</TD><TD>这样会查找(添加、选定……)所有第二个字母为“a”的文件</TD></TR>
+  <TR><TD>*1*</TD><TD>这样会查找(添加、选定……)所有包含“1”的文件</TD></TR>
+  <TR><TD>*.*.*</TD><TD>这样会查找(添加、选定……)所有包含“.”的双扩展名文件</TD></TR>
+</TABLE>
+
+
+<P>如果在命令行中没有文件名，系统将会使用默认通配符“*”。</P>
+
+<P>档案文件中通配符及文件名的使用限制：</P>
+<UL>
+  <LI>通配符及文件名不能包括系统盘符或网址。每个通配符及文件名路径将被视为从盘符到当前目录的完整路径/从压缩档案的根目录算起的完整路径。换句话说，路径的开始部分(在首个斜线(“\”)之前的字符)必须是某个名称或通配符。</LI>
+  <LI>通配符及文件名不能以斜线(“\”)结尾。</LI>
+  <LI>通配符只可以在完整路径的最后一部分中出现。</LI>
+</UL>
+
+<P>示例：</P>
+
+<TABLE border = "0">
+  <TR><TD>Dir1\*.cpp</TD><TD>正确</TD></TR>
+  <TR><TD>c:\Dir1\*.cpp</TD><TD>错误：路径中不能包括盘符</TD></TR>
+  <TR><TD>Dir1\Dir2\g?.txt</TD><TD>正确</TD></TR>
+  <TR><TD>Dir1\D?r2\file1.txt</TD><TD>错误：只有在以路径的最后一部分才能使用通配符</TD></TR>
+</TABLE>
+
+<H2><A name = "ListFile"></A>文件列表</H2>
+
+<P>您可以使用文件列表来对要操作的文件进行批量操作。在文件中的文件名必须用空格或另起一行隔开。(如使用空格格开，每一个文件必须加引号)。</P>
+
+<P>7-Zip 命令行支持多个文件列表同时操作。</P>
+
+<P>举个例子，这里有一个文件列表“listfile.txt”包含下列内容：</P>
+
+<PRE>
+    "My programs\*.cpp"
+    Src\*.cpp
+</PRE>
+<P>那么我们可以输入命令：</P>
+
+<PRE>
+    7z a -tzip archive.zip @listfile.txt
+</PRE>
+
+<P>将“My programs”及“Src”目录中所有扩展名为“cpp”的文件添加到压缩档案“archive.zip”中。</P>
+
+</P>
+
+<H2><A name = "ListFile"></A>长文件名及短文件名</H2>
+
+<P>7-Zip 在某些情况下支持短文件名（例如 FILENA~1.TXT）。然而，我们强烈的推荐您只使用真是（长）文件名。</P>
+
+</BODY>
+</HTML>

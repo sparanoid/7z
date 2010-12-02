@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-m (设置压缩算法) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-m (设置压缩算法) 选项</H1>
+
+<P>指定压缩算法。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-m&lt;method_parameters>
+</PRE>
+
+<P>此选项的格式依压缩包的类型而定。</P>
+
+<UL>
+<LI><TD><A class="parameter" href="#Zip">Zip</A></TD> 
+<LI><TD><A class="parameter" href="#GZ">GZip</A></TD> 
+<LI><TD><A class="parameter" href="#BZ2">BZip2</A></TD> 
+<LI><TD><A class="parameter" href="#7Z">7z</A></TD> 
+<LI><TD><A class="parameter" href="#XZ">XZ</A></TD> 
+</UL>
+
+<H2><A name="Zip"></A>Zip</H2>
+<TABLE>
+  <TR> 
+    <TH width="160">参数</TH> 
+    <TH align="center">默认值</TH> 
+    <TH>描述</TH> </TR>
+  <TR> 
+    <TD><A class="parameter" href="#ZipX">x=[0 | 1 | 3 | 5 | 7 | 9 ]</A></TD> 
+    <TD align="center">5</TD>
+    <TD>设置压缩等级。</TD> </TR>
+  <TR> 
+    <TD>m={MethodID}</TD> 
+    <TD align="center">Deflate</TD> 
+    <TD>设置压缩算法：Copy、Deflate、Deflate64、BZip2、LZMA。</TD> </TR>
+  <TR> 
+    <TD><A class="parameter" href="#Deflate_FastBytes">fb={NumFastBytes}</A></TD>
+    <TD align="center">32</TD>
+    <TD>设置 Deflate 编码器的快速字节大小</TD> </TR>
+  <TR> 
+    <TD><A class="parameter" href="#Zip_Pass">pass={NumPasses}</A></TD>
+    <TD align="center">1</TD>
+    <TD>设置 Deflate 编码器传送大小</TD></TR>
+  <TR> 
+    <TD><A class="parameter" href="#ZipDictionarySize">d={Size}[b|k|m]</A></TD> 
+    <TD align="center">900000</TD>  
+    <TD>设置 BZip2 字典大小</TD></TR>
+  <TR> 
+    <TD><A class="parameter" href="#ZipMultiThread">mt=[off | on | {N}]</A></TD> 
+    <TD align="center">on</TD>  
+    <TD>设置多线程模式</TD></TR>
+  <TR> 
+    <TD>em={EncryptionMethodID}</TD> 
+    <TD align="center">ZipCrypto</TD> 
+    <TD>设置加密算法：ZipCrypto、AES128、AES192、AES256</TD> </TR>
+  <TR> <TD><A class="parameter">tc=[off | on]</A></TD> 
+     <TD align="center">off</TD>  <TD>储存 NTFS 文件时间戳：修改时间、创建时间、最后访问时间</TD> </TR>
+  <TR> <TD><A class="parameter">cl=[off | on]</A></TD> 
+     <TD align="center">off</TD>  <TD>文件名总是使用本地代码页</TD> </TR>
+  <TR> <TD><A class="parameter">cu=[off | on]</A></TD> 
+     <TD align="center">off</TD>  <TD>遇到非 ASCII 字符时是 7-Zip 是否使用 UTF-8 文件名</TD> </TR>
+</TABLE>
+
+<P>默认情况下，(如果 <B>cl</B> 及 <B>cu</B> 选项未被指定)，7-Zip 将对本地代码页不支持的文件名使用 UTF-8 编码</P>
+
+<DL>
+  <DT><A name="ZipX"></A>x=[0 | 1 | 3 | 5 | 7 | 9 ]</DT>
+  <DD>
+    <P>设置压缩等级。x=0 为复制模式 (意味着不进行压缩)</P>
+    <P>Deflate / Deflate64 设置：</P>
+    <TABLE>
+      <TR> <TH>压缩等级</TH> <TH>快速字节大小</TH> <TH>传送大小</TH> <TH>描述</TH> </TR>
+      <TR> <TD class="cc">1</TD> <TD class="cc" rowspan=3>32</TD> <TD class="cc" rowspan=3>1</TD> <TD>最快</TD> </TR>
+      <TR> <TD class="cc">3</TD> <TD>快速</TR>
+      <TR> <TD class="cc">5</TD> <TD>正常</TR>
+      <TR> <TD class="cc">7</TD> <TD class="cc">64</TD> <TD class="cc">3</TD> <TD>最大</TD> </TR>
+      <TR> <TD class="cc">9</TD> <TD class="cc">128</TD> <TD class="cc">10</TD> <TD>极限</TD> </TR>
+    </TABLE>
+    
+    <P>x=1 以及 x=3 选项，Deflate 算法下为快速压缩模式</P>
+
+    <P>BZip2 设置：</P>
+    <TABLE>
+      <TR> <TH>压缩等级</TH> <TH>字典大小</TH> <TH>传送大小</TH> <TH>描述</TH> </TR>
+      <TR> <TD class="cc">1</TD> <TD class="cc">100000</TD> <TD class="cc" rowspan=3>1</TD> <TD>最快</TD> </TR>
+      <TR> <TD class="cc">3</TD> <TD class="cc">500000</TD>  <TD>快速</TD> </TR>
+      <TR> <TD class="cc">5</TD> <TD class="cc" rowspan=3>900000</TD> <TD>正常</TD> </TR>
+      <TR> <TD class="cc">7</TD> <TD align="center">2</TD> <TD>最大</TD> </TR>
+      <TR> <TD class="cc">9</TD> <TD align="center">7</TD> <TD>极限</TD> </TR>
+    </TABLE>
+  </DD>
+
+  <DT><A name="Deflate_FastBytes"></A>fb={NumFastBytes}</DT>
+  <DD>
+    <P>设置 Deflate 编码器的单词大小。您可以在 3 到 258 (Deflate64 为 257) 范围之内更改。在 Deflate 算法下，它的默认值是 32；在 Deflate 64 算法下，它的默认值是 64。如果要压缩的多个文件中，有很多排列相同的字节，比如说内容及格式极为相同的两个纯文本文档，那么在压缩的时候如果有较大的单词大小，将会在一定程度上提高压缩比。所以，通常情况下，其数量越大，压缩后的文件就会越小。但是在压缩和解压缩的时候会比较慢而且需要较多的物理内存。</P>
+  </DD>
+  <DT><A name="Deflate_Pass"></A>pass={NumPasses}</DT>
+  <DD>
+    <P>设置 Deflate 编码器的传送大小。您可以在 1 到 15 范围之内更改。在 Deflate 算法下，它的默认值是 1；在 Deflate 64 算法下，它的默认值是 3。此项可略微提升压缩比，但并不明显。
+    </P>
+  </DD>
+  <DT><A name="ZipDictionarySize"></A>d={Size}[b|k|m]</DT>
+  <DD>
+    <P>设置 BZip2 的字典大小. 单位必须为字节、KB、MB。字典大小的最大值为 900000b。如果你不指定 [b|k|m]，字典大小将会被视为字节。</P>
+  </DD>
+  <DT><A name="ZipMultiThread"></A>mt=[off | on | {N}]</DT>
+  <DD>
+    <P>设置多线程模式，如果您有多个处理器或者多核系统，开启此选项会提高运行速度。 这个选择对于任意压缩算法都有效，对于解压缩仅支持 BZip2。多线程模式中的每一个线程都会使用 32 MB 来缓存数据。如果您指定了 {N} 的大小，7-Zip 将会尝试使用 N 线程。</P>
+  </DD>
+</DL>
+
+<H2><A name="GZ"></A>GZip</H2>
+除了 GZip 不支持“储存”压缩算法之外，GZip 和 Zip 一样使用着相同的参数。
+
+<H2><A name="BZ2"></A>BZip2</H2>
+<TABLE>
+  <TR> 
+    <TH width="160">参数</TH> 
+    <TH align="center">默认值</TH> 
+    <TH>描述</TH> </TR>
+  <TR> 
+    <TD><A class="parameter" href="#BZip2X">x=[1 | 3 | 5 | 7 | 9 ]</A></TD> 
+    <TD align="center">5</TD>
+    <TD>压缩等级</TD> </TR>
+  <TR> 
+    <TD><A class="parameter" href="#BZip2Pass">pass={NumPasses}</A></TD>
+    <TD align="center">1</TD>
+    <TD>设置 Bzip2 编码器传送大小</TD></TR>
+  <TR> 
+    <TD><A class="parameter" href="#BZip2MultiThread">mt=[off | on | {N}]</A></TD> 
+    <TD align="center">on</TD>  
+    <TD>设置多线程模式</TD></TR>
+</TABLE>
+
+<DL>
+  <DT><A name="BZip2"></A>x=[1 | 3 | 5 | 7 | 9 ]</DT>
+  <DD>
+    <P>设置压缩等级</P>
+    <TABLE>
+      <TR> <TH>等级</TH> <TH>传送大小</TH> <TH>描述</TH> </TR>
+      <TR> <TD>5</TD> <TD align="center">1</TD> <TD>默认压缩算法</TD> </TR>
+      <TR> <TD>7</TD> <TD align="center">2</TD> <TD>最大压缩算法</TD> </TR>
+      <TR> <TD>9</TD> <TD align="center">7</TD> <TD>极限压缩算法</TD> </TR>
+    </TABLE>
+  </DD>
+
+  <DT><A name="#BZip2Pass"></A>pass={NumPasses}</DT>
+  <DD>
+    <P>设置编码器的传送大小。您可以在 1 到 15 范围之内更改。在 Deflate 算法下，它的默认值是 1；在 Deflate 64 算法下，它的默认值是 3。此项可略微提升压缩比，但并不明显。</P>
+  </DD>
+  <DT><A name="BZip2MultiThread"></A>mt=[off | on | {N}]</DT>
+  <DD>
+    <P>设置多线程模式，如果您有多个处理器或者多核系统，开启此选项会提高运行速度。如果您指定了 {N} 的大小，例如 mt=4，7-Zip 将会尝试使用 4 个线程。</P>
+  </DD>
+</DL>
+
+<H2><A name="7Z"></A>7z</H2>
+<TABLE>
+  <TR> <TH width="80">参数</TH> <TH align="center">默认</TH> <TH>描述</TH> </TR>
+  <TR> <TD><A class="parameter" href="#SevenZipX">x=[0 | 1 | 3 | 5 | 7 | 9 ]</A></TD> 
+        <TD align="center">5</TD><TD>设置压缩等级。</TD> </TR>
+  <TR> <TD><A class="parameter" href="#Solid">s=[off | on | [e] [{N}f] [{N}b | {N}k | {N}m | {N}g]</A></TD> 
+       <TD align="center">on</TD>  <TD>设置固实模式。</TD> </TR>
+  <TR> <TD><A class="parameter" href="#Filter">f=[off | on]</A></TD> 
+       <TD align="center">on</TD>  <TD>开启或关闭可执行文件压缩过滤器。</TD> </TR>
+  <TR> <TD><A class="parameter" href="#HeaderCompress">hc=[off | on]</A></TD> 
+       <TD align="center">on</TD>  <TD>开启或关闭档案文件头压缩。</TD> </TR>
+  <TR> <TD><A class="parameter" href="#HeaderEncrypt">he=[off | on]</A></TD> 
+       <TD align="center">off</TD>  <TD>开启或关闭档案文件头加密。</TD> </TR>
+  <TR> <TD><A class="parameter" href="#Bind">b{C1}[s{S1}]:{C2}[s{S2}]</A></TD> 
+       <TD align="center"> </TD>  <TD>设置编码器之间绑定。</TD> </TR>
+  <TR> <TD><A class="parameter" href="#MethodID">{N}={MethodID}[:param1][:param2][..]</A></TD> 
+       <TD align="center">LZMA</TD>  <TD>设置压缩算法：LZMA、PPMd、BZip2、Deflate、BCJ、BCJ2、Copy。</TD> </TR>
+   <TR> <TD><A class="parameter" href="#MultiThread">mt=[off | on]</A></TD> 
+        <TD align="center">off</TD>  <TD>设置多线程模式。</TD> </TR>
+   <TR> <TD><A class="parameter">tc=[off | on]</A></TD> 
+        <TD align="center">off</TD>  <TD>储存文件创建时间戳</TD> </TR>
+</TABLE>
+
+<DL>
+  <DT><A name="SevenZipX"></A>x=[0 | 1 | 5 | 7 | 9 ]</DT>
+  <DD>
+    <P>设置压缩等级</P>
+    <TABLE>
+      <TR> <TH>压缩等级</TH> <TH>压缩算法</TH> <TH>字典大小</TH> <TH>快速字节</TH> <TH>匹配器</TH> <TH>过滤器</TH> <TH>描述</TH> </TR>
+      <TR> <TD align="center">0</TD> <TD align="center">Copy</TD> <TD align="center"></TD> <TD align="center"></TD> <TD align="center"></TD> <TD align="center"></TD> <TD>无压缩</TD> </TR>
+      <TR> <TD align="center">1</TD> <TD align="center">LZMA</TD> <TD align="center">64 KB</TD> <TD align="center">32</TD> <TD align="center">HC4</TD> <TD align="center">BCJ</TD> <TD>最快压缩</TD> </TR>
+      <TR> <TD align="center">3</TD> <TD align="center">LZMA</TD> <TD align="center">1 MB</TD>  <TD align="center">32</TD> <TD align="center">HC4</TD> <TD align="center">BCJ</TD> <TD>快速压缩</TD> </TR>
+      <TR> <TD align="center">5</TD> <TD align="center">LZMA</TD> <TD align="center">16 MB</TD>  <TD align="center">32</TD> <TD align="center">BT4</TD> <TD align="center">BCJ</TD> <TD>正常压缩</TD> </TR>
+      <TR> <TD align="center">7</TD> <TD align="center">LZMA</TD> <TD align="center">32 MB</TD> <TD align="center">64</TD> <TD align="center">BT4</TD> <TD align="center">BCJ</TD> <TD>最大压缩</TD> </TR>
+      <TR> <TD align="center">9</TD> <TD align="center">LZMA</TD> <TD align="center">64 MB</TD> <TD align="center">64</TD> <TD align="center">BT4</TD> <TD align="center">BCJ2</TD><TD>极限压缩</TD> </TR>
+    </TABLE>
+  </DD>
+
+  <DT><A name="Solid"></A>s=[off | on | [e] [{N}f] [{N}b | {N}k | {N}m | {N}g)]</DT>
+  <DD>
+    <P> 开启或关闭固实模式。此选项的默认值是 s=on。开启或关闭固实压缩包模式。在创建固实压缩包模式中，它把压缩包中的所有文件都当成一个连续数据流来看待。通常情况下，固实压缩可增加压缩比，特别是在添加大量小文件的时候。</P>
+    <TABLE>
+      <TR> <TD>e</TD> <TD>为每一种文件扩展名使用单独的固实数据流</TD> </TR>
+      <TR> <TD>{N}f</TD> <TD>设置在一个固实数据流种文件的个数</TD> </TR>
+      <TR> <TD>{N}b | {N}k | {N}m | {N}g</TD> <TD>设置固实数据流的大小(字节)</TD> </TR>
+    </TABLE>
+    <P>不同的压缩等级对固实数据流大小的限制：</P>
+
+    <TABLE>
+      <TR> <TH width="150">压缩等级</TH> <TH>固实大小</TH> </TR>
+      <TR> <TD>储存</TD> <TD>0 B</TD> </TR>
+      <TR> <TD>最快</TD> <TD>16 MB</TD> </TR>
+      <TR> <TD>快速</TD> <TD>128 MB</TD> </TR>
+      <TR> <TD>正常</TD> <TD>2 GB</TD> </TR>
+      <TR> <TD>最大</TD> <TD>4 GB</TD> </TR>
+      <TR> <TD>极限</TD> <TD>4 GB</TD> </TR>
+    </TABLE>
+
+    <P>对固实数据流大小的限制虽然能应响到压缩比，但是它还是有相当多的优势：</P>
+    <UL>
+      <LI>万一压缩包损坏，并不会丢失所有数据。
+      <LI>减少了文件的释放时间。</LI>
+    </UL>
+    <P>在当前的版本中，您只能更新在压缩时未选择“创建固实压缩包”的压缩包。也就是说当前版本不支持固实压缩包的更新。</P>
+    <P>示例：</P>
+      <PRE class="example">
+        -s=100f10m</PRE>
+    <P>设置固实模式使每个固实数据流种最多 100 文件，并且最大 10 MB 。</P>
+
+  <DT><A name="Filter"></A>f=[off | on]</DT>
+  <DD>
+    <P>开启或关闭可执行文件压缩过滤器：dll、exe、ocx、sfx、sys。它用于 BCJ2 过滤器(使用极限压缩)及 BCJ 过滤器中。此选项的默认值是 f=on. 
+    </P>
+  <DT><A name="HeaderCompress"></A>hc=[off | on]</DT>
+  <DD>
+    <P>开启或关闭档案文件头压缩。此选项的默认值是 hc=on。如果开启档案文件头压缩，一部分档案的文件头将使用 LZMA 算法进行压缩。
+    </P>
+  <DT><A name="HeaderEncrypt"></A>he=[off | on]</DT>
+  <DD>
+    <P>开启或关闭档案文件头加密。此选项的默认值是 he=off。
+    </P>
+  <DT>{N}</DT>
+  <DD>
+    <P>设置算法的顺序。它被用作算法关联参数。最小值为 0。含有从号的算法将被首先使用。</P>
+  </DD>
+
+  <DT><A name="Bind"></A>b{C1}[s{S1}]:{C2}[s{S2}]</DT>
+  <DD>
+    <P> 将以 C1 编码器编码的输出流 S1 与以 C2 编码器编码的输入流 S2 绑定，如果数据流序号未被指定，默认的数据流序号为 S0。</P>
+    <P> 通常情况下，编码器有一个输入流及一个输出流。而在 7z 中，一些编码器有多个输入及输出流。</P>
+
+    <P>举个例子，<A class="parameter" href="#BCJ2">BCJ2</A> 编码器有一个输入流及四个输出流。</P>
+  </DD>
+
+  <DT><A name="MultiThread"></A>mt=[off | on]</DT>
+  <DD>
+    <P>开启或关闭多线程压缩模式。在多线程支持模式中，7-Zip 将使用两个线程来进行压缩。这样的话，对于多处理器系统，那么压缩速度将提升 70-80%。对于 Pentium 4 超线程处理器，压缩速度将提升 25% 左右。但解压缩时只使用单独线程。注意！此选项仅对 LZMA 压缩算法有效。
+    </P>
+  </DD>
+  
+  <DT><A name="MethodID"></A>{N}={MethodID}[:param1][:param2] ... [:paramN]</DT>
+  <DD>
+    <P>设置压缩算法。在 7z 格式中，您可以使用许多压缩算法。此选项的默认算法是 LZMA。</P>
+    <P>此参数必须是下列格式中的任意一种：</P>
+    <UL>
+      <LI>{ParamName}={ParamValue}。
+      <LI>{ParamName}{ParamValue}，{ParamValue} 是一个数值，并且 {ParamName} 中不包含数字。
+    </UL>
+        
+    <P>支持的压缩算法：</P>
+    <TABLE>
+      <TR> <TH width="60">MethodID</TH> <TH>描述</TH> </TR>
+      <TR> <TD><A class="parameter" href="#LZMA">LZMA</A></TD> <TD>基于 LZ 之上的压缩算法。</TD> </TR>
+      <TR> <TD><A class="parameter" href="#PPMd">PPMd</A></TD> <TD>基于 Dmitry Shkarin 之上的算法 PPMdH 并加以优化。通常能对纯文本提供高压缩比及较快的解压缩速度。</TD> </TR>
+      <TR> <TD>BZip2</TD> <TD>基于 BWT 的标准压缩算法。通常能对纯文本提供较高压缩比及相当不错的解压缩速度。</TD> </TR>
+      <TR> <TD>Deflate</TD> <TD>ZIP 及 GZip 格式的标准压缩算法。没有很高的压缩比。但是它拥有十分快的压缩及解压缩速度。Deflate 压缩算法只支持 32 KB 字典大小。</TD> </TR>
+      <TR> <TD>BCJ</TD> <TD>(CALL、JUMP)32 位 x86 可执行文件转换器。</TD> </TR>
+      <TR> <TD><A class="parameter" href="#BCJ2">BCJ2</A></TD> <TD>(CALL、JUMP、JCC)32 位 x86 可执行文件转换器(第二版)。</TD> </TR>
+      <TR> <TD>Copy</TD> <TD>不压缩。</TD> </TR>
+    </TABLE>
+
+    <TABLE>
+      <TR> <TH width="60">名称</TH> <TH>描述</TH> </TR>
+      <TR> <TD><A class="parameter" href="#LZMA">LZMA</A></TD> <TD>基于 LZ 的压缩算法</TD> </TR>
+      <TR> <TD><A class="parameter" href="#LZMA2">LZMA2</A></TD> <TD>基于 LZMA 的压缩算法</TD> </TR>
+      <TR> <TD><A class="parameter" href="#PPMd">PPMd</A></TD> <TD>基于 Dmitry Shkarin 的算法 PPMdH 并加以优化</TD> </TR>
+      <TR> <TD>BZip2</TD> <TD>BWT 算法</TD> </TR>
+      <TR> <TD>Deflate</TD> <TD>LZ + Huffman</TD> </TR>
+      <TR> <TD>Copy</TD> <TD>无压缩</TD> </TR>
+    </TABLE>
+
+    <P>支持过滤器：</P>
+    <TABLE>
+      <TR> <TH width="60">名称</TH> <TH>名称</TH> </TR>
+      <TR> <TD><A class="parameter" href="#Delta">Delta</A></TD> <TD>Delta 过滤器</TD> </TR>
+      <TR> <TD>BCJ</TD> <TD>x86 可执行文件转换器</TD> </TR>
+      <TR> <TD><A class="parameter" href="#BCJ2">BCJ2</A></TD> <TD>x86 可执行文件转换器 (版本 2)</TD> </TR>
+      <TR> <TD>ARM</TD> <TD>ARM (小字节序) 可执行文件转换器</TD> </TR>
+      <TR> <TD>ARMT</TD> <TD>ARM Thumb (小字节序) 可执行文件转换器</TD> </TR>
+      <TR> <TD>IA64</TD> <TD>A-64 可执行文件转换器</TD> </TR>
+      <TR> <TD>PPC</TD> <TD>PowerPC (大字节序) 可执行文件转换器</TD> </TR>
+      <TR> <TD>SPARC</TD> <TD>SPARC 可执行文件转换器</TD> </TR>
+    </TABLE>
+    <P>过滤器能提高某些文件的压缩比，过滤器必须和压缩比同时使用 (比如 BCJ + LZMA)</P>
+  </DD>
+
+
+ <H4><A name="LZMA"></A>LZMA</H4>
+ <P> LZMA 是基于 Lempel-Ziv(由以色列数学家 A.Lempel 和 J.Ziv 共同开发的压缩算法)之上的压缩算法。它能提供相当快的解压缩速度(约比压缩快 10 到 20 倍)。对内存的需求也不尽相同(详细信息请参见  <A class="parameter" href="#DictionarySize">d={Size}[b|k|m]</A> 选项)。</P>
+
+ <TABLE>
+   <TR> <TH width="80">参数</TH> <TH align="center">默认值</TH> <TH>描述</TH> </TR>
+
+   <TR> <TD><A class="parameter" href="#LZMAMode">a=[0|1|2]</A></TD> 
+        <TD align="center">1</TD>  <TD>设置压缩等级</TD> </TR>
+   <TR> <TD><A class="parameter" href="#DictionarySize">d={Size}[b|k|m]</A></TD> 
+        <TD align="center">20</TD>  <TD>设置字典大小</TD> </TR>
+   <TR> <TD><A class="parameter" href="#MatchFinder">mf={MF_ID}</A></TD> 
+        <TD align="center">bt4</TD>  <TD>设置匹配器</TD> </TR>
+   <TR> <TD><A class="parameter" href="#FastBytes">fb={N}</A></TD> 
+        <TD align="center">32</TD>  <TD>设置紧缩字节数量</TD></TR>
+   <TR> <TD><A class="parameter" href="#MatchFinderCycles">mc={N}</A></TD> 
+        <TD align="center">32</TD><TD>设置匹配器周期</TD> </TR>
+   <TR> <TD><A class="parameter" href="#LitContext">lc={N}</A></TD> 
+        <TD align="center">3</TD>  <TD>设置 Literal Context 块数 - [0, 8]</TD></TR>
+   <TR> <TD><A class="parameter" href="#LitPos">lp={N}</A></TD> 
+        <TD align="center">0</TD>  <TD>设置 Literal Pos 块数 - [0, 4]</TD></TR>
+   <TR> <TD><A class="parameter" href="#PosBits">pb={N}</A></TD> 
+        <TD align="center">2</TD>  <TD>设置 Pos 块数 - [0, 4]</TD></TR>
+ </TABLE>
+
+ 
+ <DL>
+  <DT><A name="#LZMAMode"></A>a=[0|1|2]</DT>
+  <DD>
+    <P> 设置压缩等级：0＝快速、1＝正常、2＝最大压缩。默认值为 1。</P>
+  </DD>
+  <DT><A name="DictionarySize"></A>d={Size}[b|k|m]</DT>
+  <DD>
+    <P> 设置 LZMA 压缩算法的字典大小。您可以使用字节、KB 或 MB 来指定此项。字典大小的最大值为 256 MB＝2^28 字节。正常模式下，LZMA 的字典大小默认值为 21(2 MB) ；最大模式(-mx=7)下为 23(8 MB)；极限模式(-mx=9)下为 25(32 MB)。如果您未指定 [b|k|m] 项，字典大小将自动根据压缩等级来选择相应的单位。对于 LZMA 算法的文件解压缩，若压缩文件的字典大小为 64 MB，则解压缩时就需要 64 兆可用的物理内存。
+       </P>
+  </DD>
+  <DT><A name="MatchFinder"></A>mf={MF_ID}</DT>
+  <DD>
+    <P> 设置 LZMA 压缩算法的匹配器。默认算法为 bt4。bt* 类的算法所需的内存比 pat* 类所需的内存少。通常情况下 bt4 的工作速度比 pat* 快得多，然而部分文件格式在 pat* 算法中可以工作得很快。hc* 类算法并没有很好得压缩比，但是它与快速模式(a=0)结合使用通常会工作得相当快。所需内存依字典大小而定(参见下表)。</P>
+    <TABLE>
+      <TR> <TH width="60">MF_ID</TH> <TH width="120">所需内存</TH> <TH>描述</TH> </TR>
+      <TR> <TD>bt2</TD> <TD>d×9.5 + 1 MB</TD> <TD>二进制树；2 散列字节。</TD> </TR>
+      <TR> <TD>bt3</TD> <TD>d×9.5 + 65 MB</TD> <TD>二进制树；2-3(完整) 散列字节。</TD> </TR>
+      <TR> <TD>bt4</TD> <TD>d×9.5 + 6 MB</TD> <TD>二进制树；2-3-4 散列字节。</TD> </TR>
+      <TR> <TD>bt4b</TD> <TD>d×9.5 + 34 MB</TD> <TD>二进制树；2-3-4(大) 散列字节。</TD> </TR>
+      <TR> <TD>pat2r</TD> <TD>d×26 + 1 MB</TD> <TD>Patricia 树；2-位节点；可移动。</TD> </TR>
+      <TR> <TD>pat2</TD> <TD>d×38 + 1 MB</TD> <TD>Patricia 树；2-位节点。</TD> </TR>
+      <TR> <TD>pat2h</TD> <TD>d×38 + 77 MB</TD> <TD>Patricia 树；2-位节点；2-3 散列字节。</TD> </TR>
+      <TR> <TD>pat3h</TD> <TD>d×62 + 85 MB</TD> <TD>Patricia 树；3-位节点；2-3 散列字节。</TD> </TR>
+      <TR> <TD>pat4h</TD> <TD>d×110 + 101 MB</TD> <TD>Patricia 树；4-位节点；2-3 散列字节。</TD> </TR>
+      <TR> <TD>hc3</TD> <TD>d×5.5 + 1 MB</TD> <TD>Hash Chain；-3 散列字节。</TD> </TR>
+      <TR> <TD>hc4</TD> <TD>d×5.5 + 6 MB</TD> <TD>Hash Chain；2-3-4 散列字节。</TD> </TR>
+    </TABLE>
+    <P>注意：操作系统同样需要一部分物理内存来维持系统得正常运行。所以至少要剩余 32 可用物理内存。</P>
+  </DD>
+  
+  <DT><A name="FastBytes"></A>fb={N}</DT>
+  <DD>
+    <P>设置 LZMA 压缩算法的单词字节。有效范围从 5 到 273。正常模式下默认值为 32；最大模式下为 64 。通常情况下，较大的数值能略微提高压缩比。但同时也会降低压缩速度。
+       </P>
+  </DD>
+  <DT><A name="LitContext"></A>lc={N}</DT>
+  <DD>
+    <P>设置 Literal Context 位数。有效范围从 0 到 8。默认值为 3。有时压缩包中含有大文件会自动使用 lc=4。</P>
+  </DD>
+  <DT><A name="LitPos"></A>lp={N}</DT>
+  <DD>
+    <P>设置 Literal Pos 位数。有效范围从 0 到 4。默认值为 0。</P>
+  </DD>
+  <DT><A name="PosBits"></A>pb={N}</DT>
+  <DD>
+    <P>设置 Pos 位数。有效范围从 0 到 4。默认值为 2。</P>
+  </DD>
+  
+ </DL>
+  
+ <H4><A name="LZMA2"></A>LZMA2</H4>
+ <P>LZMA2 是 LZMA 的修改版本。它比 LZMA 有下列优势：</P>
+ <UL>
+   <LI>对于不容易压缩的文件有更好的压缩比。LZMA2 可以储存那些难以压缩的数据，并且提供更快的解压速度
+   <LI>更好的多线程支持。如果您想压缩大文件，LZMA2 可以将文件分成多区块用多线程技术同时压缩
+ </UL>
+
+ <TABLE>
+   <TR> <TH width="80">参数</TH> <TH align="center">默认值</TH> <TH>描述</TH> </TR>
+
+   <TR> <TD><A class="parameter" href="#ChunkSize">c={Size}[b|k|m]</A></TD> 
+        <TD align="center">dictSize * 4</TD>  <TD>设置区块大小</TD> </TR>
+ </TABLE>
+
+ <P>如果你不指定区块的大小，LZMA2 将使用 4 倍字典大小</P>
+
+ <P>LZMA2 同样支持所有 LZMA 参数，但是 lp+lc 不能大于 4。</P>
+ 
+
+ <H4><A name="PPMd"></A>PPMd</H4>
+ <P> PPMd 是 PPM-based 压缩算法的简写。它基于 Dmitry Shkarin 的算法 PPMdH 并对其源代码加以优化。PPMd 通常能对纯文本提供高压缩比及较快的解压缩速度。压缩和解压缩的速度完全相同，所需的内存大小也一样。</P>
+ <TABLE>
+   <TR> <TH width="80">参数</TH> <TH align="center">默认值</TH> <TH>描述</TH> </TR>
+   <TR> <TD><A class="parameter" href="#MemorySize">mem={Size}[b|k|m]</A></TD> 
+        <TD align="center">24</TD>  <TD>设置 PPMd 算法使用内存。</TD> </TR>
+   <TR> <TD><A class="parameter" href="#Order">o={Size}</A></TD> 
+        <TD align="center">6</TD>  <TD>设置 PPMd 算法压缩命令。</TD> </TR>
+ </TABLE>
+ <DL>
+  <DT><A name="MemorySize"></A>mem={Size}[b|k|m]</DT>
+  <DD>
+    <P> 设置 PPMd 算法使用的内存多少。您可以使用字节、KB 或 MB 来指定此项。最大值为 2 GB＝2^31 字节；默认值为 24(16MB)。如果您未指定 [b|k|m] 项，字典大小将自动根据压缩等级来选择相应的单位。PPMd 在压缩和解压缩时所需的内存大小是相同的。</P>
+  </DD>
+  
+  <DT><A name="Order"></A>o={Size}</DT>
+  <DD>
+    <P> 设置 PPMd 算法压缩命令。其大小必须在 [2,32] 范围内。默认值为 6。</P>
+  </DD>
+ </DL>
+
+ <H4><A name="BCJ2"></A>BCJ2</H4>
+ <P>BCJ2 是 32 位 x86 可执行文件转换器(第二版)。它通过转换分支指令来对文件进行进一步压缩。</P>
+ <P>BCJ2 编码器有一个输入流和四个输出流：</P>
+ <UL>
+   <LI>s0：主流。需要被进一步压缩。</LI> 
+   <LI>s1：CALL 值转换流。需要被进一步压缩。</LI>  
+   <LI>s2：JUMP 值转换流。需要被进一步压缩。</LI>  
+   <LI>s3：服务流。它已经备压缩过。</LI>  
+ </UL>
+ <P>如果使用 LZMA 压缩算法，s1 及 s2 流的字典大小可以比 s0 流的小很多(大多数情况下 512 KB 足够了)。</P>
+
+</DL>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a -tzip archive.zip *.jpg -mx0
+</PRE>
+
+<P>不压缩而直接将 <SPAN class="filename">*.jpg</SPAN> 文件添加到 <SPAN class="filename">archive.zip</SPAN> 档案。</P>
+
+<PRE class="example">
+7z a -t7z archive.7z *.exe *.dll -m0=BCJ -m1=LZMA:d=21 -ms -mmt
+</PRE>
+
+<P>添加 <SPAN class="filename">*.exe</SPAN> 及 <SPAN class="filename">*.dll</SPAN> 文件到固实压缩包 <SPAN class="filename">archive.7z</SPAN>。使用 LZMA 压缩算法、2 MB 字典大小及 BCJ 转换器。压缩将开启多线程优化(如果可用)。</P>
+
+<PRE class="example">
+7z a -t7z archive.7z *.exe *.dll -m0=BCJ2 -m1=LZMA:d23 -m2=LZMA:d19 -m3=LZMA:d19 -mb0:1 -mb0s1:2 -mb0s2:3
+</PRE>
+
+<P>使用 BCJ2 转换器添加 <SPAN class="filename">*.exe</SPAN> 及 <SPAN class="filename">*.dll</SPAN> 文件到压缩包 <SPAN class="filename">archive.7z</SPAN>。主输出流(s0)使用 LZMA 压缩算法且 8 MB 字典大小， BCJ2 转换的输出流 s1 及 s2 使用 LZMA 压缩算法且 512 KB 字典大小。</P>
+
+  
+<PRE class="example">
+7z a -t7z archive.7z *.txt -m0=PPMd
+</PRE>
+
+<P>添加 <SPAN class="filename">*.txt</SPAN> 文件到压缩包 <SPAN class="filename">archive.7z</SPAN>。 使用 PPMd 压缩算法。</P>
+
+
+
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+<H4>其它</H4>
+
+<P>
+  <B>选项：</B>
+  <A href="type.htm">-t (设置压缩包格式)</A>
+</P>
+
+</BODY>
+</HTML>

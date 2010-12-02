@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-v (创建分卷) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css"></HEAD>
+
+<BODY>
+
+<H1>-v (创建分卷) 选项</H1>
+
+<P>指定分卷大小。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-v{Size}[b | k | m | g]
+
+</PRE>
+<DL>
+  <DT>{Size}[b | k | m | g]</DT>
+  <DD>指定分卷大小，可以使用字节、KB(1 KB＝1024 字节)，MB(1 MB = 1024 KB)或 GB(1 GB = 1024 MB)。如果您只指定了 {Size}，7-zip 将把它视为字。</DD>
+</DL>
+
+<P>您可以同时指定多个 -v 选项。</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a a.7z *.txt -v10k -v15k -v2m
+</PRE>
+
+<P>创建 <SPAN class="filename">a.7z</SPAN> 分卷压缩包。第一个分卷为 10 KB，第二个为 15 KB，剩下全部为 2 MB。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>
+</P>
+
+</BODY>
+</HTML>
