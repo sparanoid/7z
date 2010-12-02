@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-r (递归子目录) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-r (递归子目录) 选项</H1>
+
+<P>把命令行中的通配符及文件名以指定的方法对待。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-r[- | 0]
+</PRE>
+
+
+<TABLE>
+  <TR> <TH width="80">选项</TH> <TH>描述</TH> </TR>
+  <TR> <TD>-r</TD> <TD>开启递归子目录。对于 <A href="../commands/extract.htm">e (释放)</A>、<A href="../commands/list.htm">l (列表)</A>、<A href="../commands/test.htm">t (测试)</A>、<A href="../commands/extract_full.htm">x (完整路径释放)</A> 这些在压缩包中操作的命令， 会默认使用此选项。
+     </TD> </TR>
+  <TR> <TD>-r-</TD> <TD>关闭递归子目录。对于 <A href="../commands/add.htm">a (添加)</A>、<A href="../commands/delete.htm">d (删除)</A>、<A href="../commands/update.htm">u (更新)</A> 等所有需扫描磁盘文件的命令，会默认使用此选项。
+     </TD> </TR>
+  <TR> <TD>-r0</TD> <TD>开启递归子目录。但只应用于通配符。
+     </TD> </TR>
+</TABLE>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z l archive.zip -r- *.doc
+</PRE>
+
+<P>列出在 <SPAN class="filename">archive.zip</SPAN> 压缩包中根目录下的 <SPAN class="filename">*.doc</SPAN> 文件。
+  </P>
+
+<PRE class="example">
+7z a -tzip archive.zip -r src\*.cpp src\*.h
+</PRE>
+
+<P>将 <SPAN class="filename">src</SPAN> 目录及其子目录中的 <SPAN class="filename">*.cpp</SPAN> 及 <SPAN class="filename">*.h</SPAN> 文件添加到 <SPAN class="filename">archive.zip</SPAN> 压缩包。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/list.htm">l (列表)</A>，
+  <A href="../commands/test.htm">t (测试)</A>，
+  <A href="../commands/update.htm">u (更新)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+<H4>其它</H4>
+
+<P>
+  <B>选项：</B>
+  <A href="include.htm">-i (附加文件)</A>，
+  <A href="exclude.htm">-x (排除文件)</A>
+</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>x (完整路径释放) 命令</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>x (完整路径释放) 命令</H1>
+
+<P>在当前目录中，使用完整路径从压缩档案中释放文件.或者到指定的输出文件夹。</P>
+
+<P>更多详细内容请参阅 <A href="extract.htm">e (释放)</A> 命令。</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z x archive.zip
+</PRE>
+
+<P>从压缩档案 <SPAN class="filename">archive.zip</SPAN> 中释放所有文件到当前文件夹。</P>
+
+<PRE class="example">
+7z x archive.zip -oc:\soft *.cpp
+</PRE>
+
+<P>从压缩档案 <SPAN class="filename">archive.zip</SPAN> 中释放 <SPAN class="filename">*.cpp</SPAN> 文件到 <SPAN class="filename">c:\soft</SPAN> 文件夹。</P>
+
+<H4>注意</H4>
+
+<P>7-Zip 并不使用系统自带的通配符解析器，也就是说 7-Zip 并不遵守像 *.* 就是代表所有文件这样的通配符，7-Zip 认为
+*.* 代表拥有任意扩展的文件，想选择所有文件您必须使用 * 通配符。</P>
+
+<H4>可以和此命令结合使用的选项</H4>
+
+<P>
+  <A href="../switches/ar_include.htm">-ai (附加档案文件名)</A><BR>
+  <A href="../switches/ar_no.htm">-an (不解析档案名称)</A><BR>
+  <A href="../switches/overwrite.htm">-ao (覆盖模式)</A><BR>
+  <A href="../switches/ar_exclude.htm">-ax (排除档案文件名)</A><BR>
+  <A href="../switches/include.htm">-i (包括文件名)</A><BR>
+  <A href="../switches/output_dir.htm">-o (设置输出目录)</A><BR>
+  <A href="../switches/password.htm">-p (设置密码)</A><BR>
+  <A href="../switches/recurse.htm">-r (递归子目录)</A><BR>
+  <A href="../switches/stdout.htm">-so (从 stdout 写入数据)</A><BR>
+  <A href="../switches/type.htm">-t (设置压缩档案格式)</A><BR>
+  <A href="../switches/exclude.htm">-x (排除文件)</A><BR>
+  <A href="../switches/yes.htm">-y (全是)</A>
+</P>
+
+<H4>其他</H4>
+
+<P>
+  <B>命令行：</B>
+  <A href="extract.htm">e (释放)</A>
+</P>
+
+</BODY>
+</HTML>

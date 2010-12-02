@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>性能对比</TITLE>
+  <LINK href="../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>性能对比</H1>
+
+<H4>ZIP 格式</H4>
+<P>压缩性能测试能体现一款压缩软件的性能高低。我们比较 7-Zip 和一些有权威的压缩软件：PKZIP 2.04g 和 WinZip 7.0。</P>
+
+<P>文件设置：11 个文件，合计 2,810,784 字节，全部采用目前流行的压缩算法。</P>
+
+<TABLE>
+  <TR>
+    <TH>软件名称</TH>
+    <TH>压缩后大小</TH>
+    <TH>压缩率</TH>
+  </TR>
+  <TR>
+    <TD><B>7-Zip (zip 格式)</B></TD>
+    <TD><B>676284</B></TD>
+    <TD><B>100%</B></TD>
+  </TR>
+  <TR>
+    <TD>PKZIP 2.04g -ex</TD>
+    <TD>726047</TD>
+    <TD>107%</TD>
+  </TR>
+  <TR>
+    <TD>WinZip 7.0 (最大压缩)</TD>
+    <TD>731499</TD>
+    <TD>108%</TD>
+  </TR>
+</TABLE>
+
+
+<H4>7z 格式</H4>
+
+<P>7z 是一种新的压缩档案格式，它能够为您提供最高的压缩比。</P>
+
+<P>文件设置：GIMP 1.2.4，Windows 版本。使用完整安装(127 个子文件夹，1304 个文件，共 27,128,826 字节)。 GIMP 是 GNU 图像处理程序。您可以从 www.gimp.org 下载源安装程序。</P>
+
+<TABLE>
+  <TR>
+    <TH>软件名称</TH>
+    <TH>压缩后大小</TH>
+    <TH>压缩率</TH>
+  </TR>
+  <TR>
+    <TD><B>7-Zip (7z 格式)</B></TD>
+    <TD><B>5445402</B></TD>
+    <TD><B>100%</B></TD>
+  </TR>
+  <TR>
+    <TD>WinRAR 3.10</TD>
+    <TD>6004155</TD>
+    <TD>110%</TD>
+  </TR>
+  <TR>
+    <TD>WinAce 2.3</TD>
+    <TD>6242424</TD>
+    <TD>115%</TD>
+  </TR>
+  <TR>
+    <TD>CABARC 1.0</TD>
+    <TD>6455327</TD>
+    <TD>119%</TD>
+  </TR>
+  <TR>
+    <TD><B>7-Zip (zip 格式)</B></TD>
+    <TD><B>9461621</B></TD>
+    <TD><B>174%</B></TD>
+  </TR>
+  <TR>
+    <TD>PKZIP 2.50</TD>
+    <TD>9842800</TD>
+    <TD>181%</TD>
+  </TR>
+</TABLE>
+
+<H4>GZIP 格式</H4>
+
+<P>7-Zip 为您提供 GZIP 格式最高的压缩率。压缩率和我们提供的 ZIP 格式差不多。</P>
+
+<H4>RAR 格式</H4>
+
+<P>7-Zip 同样为您提供 RAR 格式较快的解压缩速度。对于固实压缩档案，其只需解压缩欲解压的文件。比如说，目前有一固实压缩档案 <B>archive.rar</B> (包含 100000 个文件)且使用下列命令行进行压缩：
+<BR><B>rar a archive.rar -s100 * -r</B><BR>
+在这个固实压缩档案里，每 100 就会看作一个大文件来压缩。如果您想从该档案中提取某个文件，7-Zip 将只解压缩 1 到 99 个文件。所以，这样对于较大的固实压缩档案的解压缩十分有利。</P>
+
+</BODY>
+</HTML>
