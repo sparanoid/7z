@@ -1,0 +1,5 @@
+;!@Install@!UTF-8!
+Title="软件 5.00"
+BeginPrompt="您确定要安装软件 5.00？"
+RunProgram="7zr.exe b"
+;!@InstallEnd@!

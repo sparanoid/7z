@@ -1,0 +1,65 @@
+7-Zip FAR 管理器插件
+--------------------
+
+FAR 管理器是一款工作在文本模式下的文件管理器。
+您可以从下面的网站中下载 FAR 管理器：
+http://www.farmanager.com
+
+文件：
+
+far7z.txt     - 本文件
+far7z.reg     - MultiArc 插件注册表文件
+7zToFar.ini   - MultiArc 插件支持 7z 格式所需文件
+7-ZipFar.dll  - 7-Zip FAR 管理器插件
+7-ZipFar64.dll- 7-Zip FAR 管理器插件 (64 位)
+7-ZipChs.hlf  - 简体中文帮助文件
+7-ZipEng.hlf  - 英文帮助文件
+7-ZipRus.hlf  - 俄文帮助文件
+7-ZipChs.lng  - FAR 管理器插件简体中文字串
+7-ZipEng.lng  - FAR 管理器插件英文字串
+7-ZipRus.lng  - FAR 管理器插件俄文字串
+
+有两种方法在 FAR 管理器中使用 7-Zip：
+
+  1) 通过 7-Zip FAR 插件（推荐）
+  2) 通过标准的 MultiArc 插件
+
+
+7-Zip FAR 插件
+~~~~~~~~~~~~~~
+
+7-Zip FAR 是一款十分小巧、轻量级的 FAR 管理器插件，与 MultiArc 插件一样，并没有
+使用外部程序，因此它可以非常快速的提取和更新压缩包，并且支持错有 7-Zip 本身支持
+的格式：
+7z、ZIP、RAR、CAB、ARJ、GZIP、BZIP2、Z、TAR、CPIO、RPM、DEB。
+
+如何安装 7-Zip FAR 插件：
+  1) 在 ...\Program Files\Far\Plugins 文件夹中创建“7-Zip”文件夹
+  2) 从“FAR”中复制所有文件到刚才新建的文件夹中
+  3) 安装 7-Zip，或者从 7-Zip 程序中复制 7z.dll 文件到 Files\Far\Plugins\7-Zip\ 文件夹中
+  4) 重启 FAR
+
+然后您可以使用下列任意方法打开压缩包：
+  * 按回车键
+  * 按 Ctrl-PgDown
+  * 按 F11 然后选择 7-Zip
+
+
+您可以按 F11 键，通过选择 7-Zip（添加到压缩包）来创建新的压缩包。
+
+如果您认为 MultiArc 插件对于压缩包的操作习惯更适合您，您可以在 选项 / 插件配置 / 7-Zip 中
+禁用 7-Zip 插件。禁用之后，使用回车键、Ctrl-PgDown 将会使用 MultiArc 插件来打开压缩包，如
+果您想使用 7-Zip 来打开压缩包，请按 F11 然后选择 7-Zip。
+
+
+通过 MultiArc 插件使用 7-Zip 命令行
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+如果您想通过 MultiArc 插件使用 7-Zip，您必须注册 far7z.reg 文件到注册表中。
+
+如果您想通过 MultiArc 插件读取 7-Zip 压缩包，您必须将 Far\7zToFar.ini 中的内容添加到
+..\Program Files\Far\Plugins\MultiArc\Formats\Custom.ini 文件中去。
+
+
+如果您不想通过 MultiArc 使用 7-Zip，从下列注册表中删除与 7-Zip（7z）相关的键值：
+7-Zip (7z) program name from HKEY_LOCAL_MACHINE\SOFTWARE\Far\Plugins\MultiArc\ZIP
