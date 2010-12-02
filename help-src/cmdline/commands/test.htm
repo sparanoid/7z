@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>t (测试) 命令</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>t (测试) 命令</H1>
+
+<P>测试压缩档案文件的完整性。</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z t archive.zip *.doc
+</PRE>
+
+<P>在压缩档案 <SPAN class="filename">archive.zip</SPAN> 中测试 <SPAN class="filename">*.doc</SPAN> 文件的完整性。</P>
+
+<H4>注意</H4>
+
+<P>7-Zip 并不使用系统自带的通配符解析器，也就是说 7-Zip 并不遵守像 *.* 就是代表所有文件这样的通配符，7-Zip 认为
+*.* 代表拥有任意扩展的文件，想选择所有文件您必须使用 * 通配符。</P>
+
+<H4>可以和此命令结合使用的选项</H4>
+
+<P>
+  <A href="../switches/ar_include.htm">-ai (附加档案文件名)</A><BR>
+  <A href="../switches/ar_no.htm">-an (不解析档案名称)</A><BR>
+  <A href="../switches/ar_exclude.htm">-ax (排除档案文件名)</A><BR>
+  <A href="../switches/include.htm">-i (包括文件名)</A><BR>
+  <A href="../switches/password.htm">-p (设置密码)</A><BR>
+  <A href="../switches/recurse.htm">-r (递归子目录)</A><BR>
+  <A href="../switches/exclude.htm">-x (排除文件)</A>
+</P>
+
+</BODY>
+</HTML>

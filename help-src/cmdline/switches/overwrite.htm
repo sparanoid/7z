@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-ao (覆盖模式) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-ao (覆盖模式) 选项</H1>
+
+<P>指定在释放期间如何覆盖硬盘上现有的同名文件。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-ao[a | s | u ]
+</PRE>
+
+
+<TABLE>
+  <TR> <TH width="80">参数</TH> <TH>描述</TH> </TR>
+  <TR> <TD>-aoa</TD> <TD>直接覆盖现有文件，而没有任何提示。</TD> </TR>
+  <TR> <TD>-aos</TD> <TD>跳过现有文件，其不会被覆盖。 </TD> </TR>
+  <TR> <TD>-aou</TD> <TD>如果相同文件名的文件以存在，将自动重命名被释放的文件。举个例子，文件 file.txt 将被自动重命名为 file_1.txt。</TD> </TR>
+  <TR> <TD>-aot</TD> <TD>如果相同文件名的文件以存在，将自动重命名现有的文件。举个例子，文件 file.txt 将被自动重命名为 file_1.txt。</TD> </TR>
+</TABLE>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z x test.zip -aoa
+</PRE>
+
+<P>从压缩包 <SPAN class="filename">test.zip</SPAN> 中释放所有文件并却不做提示直接覆盖现有文件。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+<H4>其它</H4>
+
+<P>
+  <B>选项：</B>
+  <A href="yes.htm">-y (全是)</A>
+</P>
+
+</BODY>
+</HTML>

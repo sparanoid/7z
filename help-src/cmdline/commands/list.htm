@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>l (列表) 命令</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>l (列表) 命令</H1>
+
+
+
+<!--
+<H4>语法</H4>
+<P><PRE class="syntax">
+l[a | t][f]
+</PRE></P>
+
+-->
+
+<P>列出压缩档案内容。</P>
+
+<!-- 
+<P>下列选项可供使用：</P>
+<TABLE>
+<TR> <TH>选项</TH> <TH>描述</TH> </TR>
+<TR> <TD>a</TD> <TD>附加栏列表</TD> </TR>
+<TR> <TD>t</TD> <TD>列出所有内容，包括技术方面的内容</TD> </TR>
+<TR> <TD>f</TD> <TD>使用完整路径列表</TD> </TR>
+</TABLE>
+-->
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z l archive.zip
+</PRE>
+
+<P>列出压缩档案 <SPAN class="filename">archive.zip</SPAN> 的内容。</P>
+
+<!--
+<PRE class="example">
+7z lf archive.zip *.txt
+</PRE>
+
+<P>从压缩档案 <SPAN class="filename">archive.zip</SPAN> 中列出 <SPAN class="filename">*.txt</SPAN> 文件并使用完整路径。</P>
+-->
+
+<H4>注意</H4>
+
+<P>7-Zip 并不使用系统自带的通配符解析器，也就是说 7-Zip 并不遵守像 *.* 就是代表所有文件这样的通配符，7-Zip 认为
+*.* 代表拥有任意扩展的文件，想选择所有文件您必须使用 * 通配符。</P>
+
+<H4>可以和此命令结合使用的选项</H4>
+
+<P>
+  <A href="../switches/ar_include.htm">-ai (附加档案文件名)</A><BR>
+  <A href="../switches/ar_no.htm">-an (不解析档案名称)</A><BR>
+  <A href="../switches/ar_exclude.htm">-ax (排除档案文件名)</A><BR>
+  <A href="../switches/include.htm">-i (包括文件名)</A><BR>
+  <A href="../switches/list_tech.htm">-slt (显示技术信息)</A><BR>
+  <A href="../switches/password.htm">-p (设置密码)</A><BR>
+  <A href="../switches/recurse.htm">-r (递归子目录)</A><BR>
+  <A href="../switches/type.htm">-t (设置压缩档案格式)</A><BR>
+  <A href="../switches/exclude.htm">-x (排除文件)</A>
+</P>
+
+</BODY>
+</HTML>

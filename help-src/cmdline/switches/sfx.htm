@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-sfx (创建自释放档案) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-sfx (创建自释放档案) 选项</H1>
+
+<P>创建自释放档案。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-sfx[<A class="parameter" href="#SFX_Module">{SFX_Module}</A>]
+</PRE>
+
+<DL>
+  <DT><A name="SFX_Module"></A>{SFX_Module}</DT>
+  <DD>
+    <P>指定将被添加到压缩包的自释放(SFX)模块。然而被指定的模块必须和 7z.exe 文件在同一目录。如果 {SFX_Module} 未指定，7-Zip 将使用命令行自释放模块 7zCon.sfx。</P>
+    <TABLE>
+      <TR> <TH width="60">SFX_Module</TH> <TH>描述</TH> </TR>
+      <TR> <TD>7zC.sfx</TD> <TD>Windows 版本。</TD> </TR>
+      <TR> <TD>7zCon.sfx</TD> <TD>命令行(DOS)版本。</TD> </TR>
+      <TR> <TD>7zS.sfx</TD> <TD>Windows 安装版本。</TD> </TR>
+      <TR> <TD>7zSD.sfx</TD> <TD>Windows 安装版本(需调用 MSVCRT.dll)。</TD> </TR>
+    </TABLE>
+  </DD>
+</DL>
+
+<P>
+除 7zC.sfx 之外，大多数的自释放模块都是未压缩的。
+您可以使用 UPX 程序 (http://upx.sourceforge.net) 来压缩这些模块。在使用 UPX 程序压缩之后，自释放模块的大小将比压缩之前减小 40-50%。
+</P>
+
+<H4>自释放安装模块</H4>
+<P>
+自释放安装模块(7zS.sfx 和 7zSD.sfx)可让您创建软件的安装程序。这类模块将释放文件到一临时文件夹，然后运行指定的程序来进行安装。安装之后再自动删除临时文件。
+要创建自释放档案必须有三个文件：自释放模块、安装程序配置、7z 压缩包。其中安装程序配置文件是可选的。您可以使用下列命令来创建安装程序：</P>
+<PRE class="example">
+copy /b 7zS.sfx + config.txt + archive.7z archive.exe
+</PRE>
+
+<P>请注意上述文件的输入顺序：*.sfx、*.txt、*.7z。最后的 archive.exe 即为生成的安装程序。</P>
+
+<P>选项 <SPAN class="filename">-y</SPAN> 使用在自释放安装模块中可设置释放时是否为安静模式。</P>
+
+<H4>安装程序配置文件格式</H4>
+<P>
+配置文件包括安装程序的命令行。文件要以字串 <B>;!@Install@!UTF-8!</B> 开头，以 <B>;!@InstallEnd@!</B> 结尾。且文件必须使用 UTF-8 编码。文件中还需包含下列变量：
+<P>ID_String="Value"</P>
+<P>
+    <TABLE>
+      <TR> <TH width="60">ID_String</TH> <TH>描述</TH> </TR>
+      <TR> <TD>Title</TD> <TD>对话框信息标题。</TD> </TR>
+      <TR> <TD>BeginPrompt</TD> <TD>安装前提示信息。</TD> </TR>
+      <TR> <TD>RunProgram</TD> <TD>欲执行命令。若添加子命令 <B>%%T</B> 则会把文件释放到系统的临时目录。</TD> </TR>
+    </TABLE>
+</P>
+<P>您可以省略上述任何一部分。</P>
+
+
+<H4>配置文件示例</H4>
+
+<PRE class="example">
+;!@Install@!UTF-8!
+Title="7-Zip 1.00"
+BeginPrompt="应用程序将安装 7-Zip 1.00，是否继续？"
+RunProgram="Setup.exe /T:%%T"
+;!@InstallEnd@!
+</PRE>
+
+<P>
+程序将以 <SPAN class="filename">BeginPrompt</SPAN> 中的信息提示用户，再执行 <SPAN class="filename">RunProgram</SPAN> 中的命令。然后程序将使用 .inf 文件的内容并调用压缩包中的 advpack.dll 文件进行安装。
+
+</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a -sfx a.exe *.txt
+</PRE>
+
+<P>添加 <SPAN class="filename">*.txt</SPAN> 文件到自释放档案 <SPAN class="filename">a.exe</SPAN> 并使用默认的命令行自释放模块。</P>
+
+<PRE class="example">
+7z a -sfx7zC.sfx a.exe * -r
+</PRE>
+
+<P>添加所有文件到自释放档案 <SPAN class="filename">a.exe</SPAN> 并使用 <SPAN class="filename">7zC.sfx</SPAN> Windows 版本的自释放模块。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>

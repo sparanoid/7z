@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-scs (设置列表文件字符集) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-scs (设置列表文件字符集) 选项</H1>
+
+<P>设置列表文件的字符集。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-scs{UTF-8 | WIN | DOS}
+</PRE>
+
+<P>默认字符集为 UTF-8。</P>
+
+<DL>
+  <DT>UTF-8</DT>
+  <DD>Unicode UTF-8 字符集。</DD>
+  <DT>WIN</DT>
+  <DD>Windows 默认字符集。</DD>
+  <DT>DOS</DT>
+  <DD>Windows 默认 DOS (OEM) 字符集。</DD>
+</DL>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a archive.7z @listfile.txt -scsWIN
+</PRE>
+
+<P>从列表文件 <SPAN class="filename">listfile.txt</SPAN> 中压缩文件，该列表文件使用 Windows 默认字符集。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>

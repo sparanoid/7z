@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>7-Zip 插件选项</TITLE>
+  <LINK href="../../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>7-Zip 插件选项</H1>
+
+
+<P>在 7-Zip 选项对话框中，您可以更改 7-Zip 插件的许多设置。如果想打开此对话框，点击“工具”菜单，选择“选项”，然后切换到插件页，选择 7-Zip 插件，按“插件选项”按钮。</P> 
+
+<P>选项对话框包括两个页面：</P>
+<UL>
+  <LI><A href = "#system">系统页</A></LI>
+  <LI><A href = "#folders">文件夹页</A></LI>
+</UL>
+
+<H2><a name="system"></a>系统页</H2>
+<P>允许您更改 7-Zip Windows 外壳扩展设置。</P>
+<DL>
+  <DT>添加 7-Zip 右键菜单</DT>
+    <DD>选择此复选框将 7-Zip 添加到右键菜单，方便进行一些常用的操作。</DD>
+  <DT>层叠右键菜单</DT>
+    <DD>选择此复选框可以将 7-Zip 的每一个右键菜单项目层叠成一个 <B>7-Zip</B> 子菜单。</DD>
+  <DT>选择显示在右键菜单中的项目</DT>
+    <DD>列出可选的右键菜单项目。如果项目被选定，7-Zip 将添加其至右键菜单。</DD>
+</DL>
+
+<H2><a name="folders"></a>文件夹页</H2>
+<P>允许您设置 7-Zip 的工作文件夹。</P>
+
+<H3>工作文件夹</H3>
+
+<P>您可以更改 7-Zip 对压缩档案的压缩、解压缩、测试等操作的临时文件夹：</P>
+
+<DL>
+  <DT>系统临时文件夹</DT>
+    <DD>7-Zip 将使用 Windows 的默认临时文件夹。</DD>
+  <DT>当前文件夹</DT>
+    <DD>7-Zip 将使用目标压缩档案的所在文件夹。</DD>
+  <DT>指定位置</DT>
+    <DD>7-Zip 将使用您自定义的文件夹位置。</DD>
+</DL>
+
+<DL>
+  <DT>只使用可移动设备</DT>
+    <DD> 指定 7-Zip 的“指定文件夹”设置是否只对可移动磁盘有效，而其它的驱动器 7-Zip 只在目标压缩档案的所在文件夹创建临时文件夹。如果您清除此复选框，7-Zip 将总是使用“指定文件夹”模式。
+    </DD>
+</DL>
+
+<P>7-Zip 使用的临时文件夹，主要的目的是同步操作。所以磁盘的读取、写入速度是关键。我们推荐您选择 <B>系统临时文件夹</B> 选项并且选上 <B>只使用可移动磁盘</B> 复选框。
+</P>
+
+</BODY>
+</HTML>

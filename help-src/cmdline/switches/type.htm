@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-t (设置压缩包格式) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-t (设置压缩包格式) 选项</H1>
+
+<P>指定压缩包格式。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-t{archive_type}
+</PRE>
+
+<DL>
+  <DT>{archive_type}</DT>
+  <DD>指定压缩包格式。它们可以是：zip、7z、rar、cab、gzip、bzip2、tar 或其它格式。而 默认值是 7z 格式。</DD>
+</DL>
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a -tzip archive.zip *.txt
+</PRE>
+
+<P>使用 zip 格式从当前目录中添加所有 <SPAN class="filename">*.txt</SPAN> 文件到压缩包 <SPAN class="filename">archive.zip</SPAN>。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-ssc (设置区分大小写模式) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-ssc (设置区分大小写模式) 选项</H1>
+
+<P>设置文件名是否区分大小写。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-scs[-]
+</PRE>
+
+<TABLE>
+  <TR><TH width="80">选项</TH> <TH>描述</TH></TR>
+  <TR><TD>-ssc</TD> <TD>设置为区分大小写模式。Posix 及 Linux 系统默认使用此选项。</TD></TR>
+  <TR><TD>-ssc-</TD> <TD>设置为不区分大小写模式。Windows 系统默认使用此选项。</TD></TR>
+</TABLE>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a archive.7z A*.txt -ssc -r
+</PRE>
+
+<P>从当前目录及其子目录压缩所有 <SPAN class="filename">A*.txt</SPAN> 文件，但不包括 <SPAN class="filename">a*.txt</SPAN> 文件。
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/list.htm">l (列表)</A>，
+  <A href="../commands/test.htm">t (测试)</A>，
+  <A href="../commands/update.htm">u (更新)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+</BODY>
+</HTML>

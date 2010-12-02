@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-si (从 stdin 读取数据) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css"></HEAD>
+
+<BODY>
+
+<H1>-si (从 stdin 读取数据) 选项</H1>
+
+<P>使 7-Zip 从 stdin 中使用数据(标准输入流)。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-si{file_name}
+</PRE>
+
+<DL>
+  <DT>{file_name}</DT>
+  <DD>为要压缩的数据指定一个将要储存在压缩包中的名称。如果 file_name 未被指定，数据将被储存而没有名称。</DD>
+</DL>
+
+<P>注意：当前版本的 7-Zip 不支持从 stdin 中读取压缩包。</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a archive.gz -tgzip -siDoc2.txt < Doc.txt
+</PRE>
+
+<P>使用 <SPAN class="filename">Doc2.txt</SPAN> 文件名压缩输入流从文件 Doc.txt 到压缩包 <SPAN class="filename">archive.gz</SPAN>。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>

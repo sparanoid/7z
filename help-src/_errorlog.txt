@@ -1,0 +1,74 @@
+Microsoft HTML Help Compiler 4.74.8702
+
+Compiling e:\sparanoid-documents\My Dropbox\sparanoid-win\7z\trunk\help-src\7-zip.chm
+
+start.htm
+style.css
+cmdline\exit_codes.htm
+cmdline\index.htm
+cmdline\syntax.htm
+cmdline\commands\add.htm
+cmdline\commands\bench.htm
+cmdline\commands\delete.htm
+cmdline\commands\extract.htm
+cmdline\commands\extract_full.htm
+cmdline\commands\index.htm
+cmdline\commands\list.htm
+cmdline\commands\test.htm
+cmdline\commands\update.htm
+cmdline\switches\ar_exclude.htm
+cmdline\switches\ar_include.htm
+cmdline\switches\ar_no.htm
+cmdline\switches\charset.htm
+cmdline\switches\email.htm
+cmdline\switches\exclude.htm
+cmdline\switches\include.htm
+cmdline\switches\index.htm
+cmdline\switches\large_pages.htm
+cmdline\switches\list_tech.htm
+cmdline\switches\method.htm
+cmdline\switches\output_dir.htm
+cmdline\switches\overwrite.htm
+cmdline\switches\password.htm
+cmdline\switches\recurse.htm
+cmdline\switches\scc.htm
+cmdline\switches\sfx.htm
+cmdline\switches\shared.htm
+cmdline\switches\ssc.htm
+cmdline\switches\stdin.htm
+cmdline\switches\stdout.htm
+cmdline\switches\stop_switch.htm
+cmdline\switches\type.htm
+cmdline\switches\update.htm
+cmdline\switches\volume.htm
+cmdline\switches\working_dir.htm
+cmdline\switches\yes.htm
+fm\about.htm
+fm\benchmark.htm
+fm\index.htm
+fm\menu.htm
+fm\options.htm
+fm\plugins\index.htm
+fm\plugins\7-zip\add.htm
+fm\plugins\7-zip\extract.htm
+fm\plugins\7-zip\index.htm
+fm\plugins\7-zip\options.htm
+general\7z.htm
+general\faq.htm
+general\formats.htm
+general\index.htm
+general\license.htm
+general\performance.htm
+general\thanks.htm
+7-Zip.hhc
+7-Zip.hhk
+
+Compile time: 0 minutes, 1 second
+59	Topics
+529	Local links
+3	Internet links
+0	Graphics
+
+
+Created e:\sparanoid-documents\My Dropbox\sparanoid-win\7z\trunk\help-src\7-zip.chm, 110,272 bytes
+Compression decreased file by 89,547 bytes.
