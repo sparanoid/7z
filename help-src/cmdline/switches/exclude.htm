@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-x (排除文件) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-x (排除文件) 选项</H1>
+
+<P>指定某一文件或某一类文件从操作中排除。</P>
+<P>此选项可同时排除多个类型。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-x[&lt;recurse_type>]&lt;file_ref>
+
+&lt;recurse_type> ::= r[- | 0]
+&lt;file_ref> ::= @{listfile} | !{wildcard}
+</PRE>
+
+<P>更多详细内容请参阅 <A href="include.htm">-i (附加文件)</A> 选项。</P>
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a -tzip archive.zip *.txt -x!temp.*
+</PRE>
+
+<P>添加除 <SPAN class="filename">temp.*</SPAN> 文件之外的所有 <SPAN class="filename">*.txt</SPAN> 文件到压缩包 <SPAN class="filename">archive.zip</SPAN>。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/list.htm">l (列表)</A>，
+  <A href="../commands/test.htm">t (测试)</A>，
+  <A href="../commands/update.htm">u (更新)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+<H4>其它</H4>
+
+<P>
+  <B>选项：</B>
+  <A href="recurse.htm">-r (递归子目录)</A>，
+  <A href="include.htm">-i (附加文件)</A>
+</P>
+
+</BODY>
+</HTML>

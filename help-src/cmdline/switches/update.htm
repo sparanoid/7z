@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-u (更新选项) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-u (更新选项) 选项</H1>
+
+<P>指定压缩包中文件的更新及创建的方式。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-u<A class="parameter" href="#disable_base_archive">[-]</A>&lt;action_set><A class="parameter" href="#new_archive_name">[!{new_archive_name}]</A>
+
+  &lt;action_set> ::= &lt;state_action>...
+
+    &lt;state_action> ::= <A class="parameter" href="#state">&lt;state></A><A class="parameter" href="#state">&lt;action></A>
+
+      <A class="parameter" href="#action">&lt;state></A> ::= p | q | r | x | y | z | w
+
+      <A class="parameter" href="#action">&lt;action></A> ::= 0 | 1 | 2 | 3
+</PRE>
+
+
+<H4>参量</H4>
+
+<DL>
+  <DT><A name="disable_base_archive"></A>连字符(-)</DT>
+  <DD><P>对原压缩包不进行任何更新。</P></DD>
+  <DT><A name="new_archive_name"></A>{new_archive_name}</DT>
+  <DD><P>指定新压缩包的路径。</P>
+  </DD>
+  <DT><A name="state"></A>&lt;state></DT>
+  <DD><PRE class="syntax">&lt;state> ::= p | q | r | x | y | z | w</PRE>
+    <P>每个文件名都会赋予下列六个变量：</P>
+    <TABLE>
+      <TR> <TH>&lt;state></TH> <TH>状态说明</TH>
+           <TH width="20%">磁盘上的文件</TH> <TH width="20%">压缩包中的文件</TH> </TR>
+
+      <TR> <TD align="center">p</TD> <TD>文件在压缩包中，但并不和磁盘上的文件相匹配。</TD>
+           <TD>&nbsp;</TD> <TD>存在，但并不匹配</TD> </TR>
+
+      <TR> <TD align="center">q</TD> <TD>文件在压缩包中，但磁盘上并不存在。</TD>
+           <TD>不存在</TD> <TD>存在</TD> </TR>
+
+      <TR> <TD align="center">r</TD> <TD>文件不在压缩包中，但磁盘上存在。</TD>
+           <TD>存在</TD> <TD>不存在</TD> </TR>
+
+      <TR> <TD align="center">x</TD> <TD>压缩包中的文件比磁盘上的文件新。</TD>
+           <TD>较旧</TD> <TD>较新</TD> </TR>
+
+      <TR> <TD align="center">y</TD> <TD>压缩包中的文件比磁盘上的文件旧。</TD>
+           <TD>较新</TD> <TD>较旧</TD> </TR>
+
+      <TR> <TD align="center">z</TD> <TD>压缩包中的文件和磁盘上的文件相同。</TD>
+           <TD>相同</TD> <TD>相同</TD> </TR>
+
+      <TR> <TD align="center">w</TD> <TD>不能检测文件是否较新(时间相同但大小不同)</TD>
+           <TD>?</TD> <TD>?</TD> </TR>
+    </TABLE>
+  </DD>
+
+  <DT><A name="action"></A>&lt;action></DT>
+  <DD><P>为适当的 <A class="parameter" href="#state">&lt;state></A> 指定动作。</P>
+    <PRE class="syntax">&lt;action> ::= 0 | 1 | 2 | 3</PRE>
+    <P>您可以指定下列四个动作变量中的任意一个：</P>
+    <TABLE>
+      <TR> <TH>&lt;action></TH> <TH>描述</TH></TR>
+      <TR> <TD align="center">0</TD> <TD>忽略文件(在压缩包中不为此文件创建项目)</TD></TR>
+      <TR> <TD align="center">1</TD> <TD>复制文件(用压缩包中的新文件覆盖旧文件)</TD></TR>
+      <TR> <TD align="center">2</TD> <TD>压缩文件(将磁盘上的新文件压缩到档案中)</TD></TR>
+      <TR> <TD align="center">3</TD> <TD>创建剔除项(释放过程中将删除文件或目录项)。此功能只支持 7z 格式。</TD></TR>
+    </TABLE>
+  </DD>
+</DL>
+
+
+<H4>注意</H4>
+
+<P>任何的更新命令(如 <A href="../commands/add.htm">a (添加)</A>、<A href="../commands/delete.htm">d (删除)</A>、<A href="../commands/update.htm">u (更新)</A>)都可以被分配到下列项目中。</P>
+<P>下列表格中显示的是更新命令的动作设置。</P>
+
+<TABLE>
+  <TR> <TH>命令\ <A class="parameter" href="#state">&lt;state></A></TH>
+              <TH>p</TH> <TH>q</TH> <TH>r</TH> <TH>x</TH> <TH>y</TH> <TH>z</TH> <TH>w</TH></TR>
+  <TR> <TH><A href="../commands/delete.htm">d (删除)</A></TH> <TD>1</TD> <TD>0</TD> <TD>0</TD> <TD>0</TD> <TD>0</TD> <TD>0</TD> <TD>0</TD></TR>
+  <TR> <TH><A href="../commands/add.htm">a (添加)</A></TH> <TD>1</TD> <TD>1</TD> <TD>2</TD> <TD>2</TD> <TD>2</TD> <TD>2</TD>  <TD>2</TD></TR>
+  <TR> <TH><A href="../commands/update.htm">u (更新)</A></TH> <TD>1</TD> <TD>1</TD> <TD>2</TD> <TD>1</TD> <TD>2</TD> <TD>1</TD> <TD>2</TD></TR>
+</TABLE>
+
+<P>此选项可同时更新多个文件。7-Zip 能在一次操作中创建任何数量的新压缩包。</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z u c:\1\exist.7z -u- -up0q3x2z0!c:\1\update.7z * -r
+</PRE>
+
+<P>创建新压缩包 <SPAN class="filename">update.7z</SPAN> 并将当前目录中的 <SPAN class="filename">exist.7z</SPAN> 压缩包里所有不同文件写入此压缩包。并不更改 <SPAN class="filename">exist.7z</SPAN> 压缩包的内容。</P>
+
+
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>

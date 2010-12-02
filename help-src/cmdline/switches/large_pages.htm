@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-slp (设置大内存模式) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-slp (设置大内存模式) 选项</H1>
+
+<P>设置大内存模式。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-slp[-]
+</PRE>
+
+
+<TABLE>
+  <TR><TH width="80">选项</TH> <TH>描述</TH></TR>
+  <TR><TD>-slp</TD> <TD>开启大内存模式。</TD></TR>
+  <TR><TD>-slp-</TD> <TD>关闭大内存模式。此选项维默认值。</TD></TR>
+</TABLE>
+
+<P>如果开启此功能，7-Zip 将尝试使用大内存页。此功能可以加快压缩速度。但是 7-Zip 在开始压缩的时候要分配大内存页，会出现一些停顿，同样，如果 7-Zip 使用大内存页，任务管理器页不会显示程序占用内存的实际值。此功能仅能运行在 Windows 2003 / XP x64 / Vista。并且您必须拥有系统的管理员权限。推荐内存大小：1 GB 或更多。正确配置此功能您必须至少运行一次 7-Zip 文件管理器，关闭后重启系统即可。</P>
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a archive.7z -slp a.iso
+</PRE>
+
+<P>使用大内存页压缩模式压缩 <SPAN class="filename">a.iso</SPAN>文件。</P>
+
+</BODY>
+</HTML>

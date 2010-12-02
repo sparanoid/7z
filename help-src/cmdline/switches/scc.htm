@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-scc (设置命令行输入/输出编码)</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-scc (设置命令行输入/输出编码) 选项</H1>
+
+<P>设置命令行输入/输出编码。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-scc{UTF-8 | WIN | DOS}
+</PRE>
+
+<P>默认为 DOS。</P>
+
+<DL>
+  <DT>UTF-8</DT>
+  <DD>Unicode UTF-8 编码集。</DD>
+  <DT>WIN</DT>
+  <DD>Windows 默认编码集。</DD>
+  <DT>DOS</DT>
+  <DD>Windows DOS (OEM) 编码集。</DD>
+</DL>
+
+<H4>Example</H4>
+
+<PRE class="example">
+7z l archive.7z -sccUTF-8
+</PRE>
+
+<P>用 UTF-8 编码列出 <SPAN class="filename">archive.7z</SPAN> 中的文件。</P>
+
+
+</BODY>
+</HTML>

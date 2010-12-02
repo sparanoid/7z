@@ -1,0 +1,83 @@
+
+[OPTIONS]
+Auto Index=Yes
+Binary TOC=No
+Binary Index=Yes
+Compatibility=1.1
+Compiled File=7-zip.chm
+Contents File=7-Zip.hhc
+Default Topic=start.htm
+Error log file=_errorlog.txt
+Index File=7-Zip.hhk
+Title=7-Zip °ïÖú
+Full-text search=Yes
+Display compile progress=Yes
+Display compile notes=Yes
+Default Window=main
+Default Font=ËÎÌå, 9
+Language=0x804 Chinese (Simplified/PRC)
+Create CHI file=No
+Full text search stop list file=
+
+[WINDOWS]
+main=,"7-Zip.hhc","7-Zip.hhk","start.htm","start.htm",,,,,0x2120,222,0x1046,[274,335,1019,875],0xB0000,,,,,,0
+
+[FILES]
+start.htm
+style.css
+cmdline\exit_codes.htm
+cmdline\index.htm
+cmdline\syntax.htm
+cmdline\commands\add.htm
+cmdline\commands\bench.htm
+cmdline\commands\delete.htm
+cmdline\commands\extract.htm
+cmdline\commands\extract_full.htm
+cmdline\commands\index.htm
+cmdline\commands\list.htm
+cmdline\commands\test.htm
+cmdline\commands\update.htm
+cmdline\switches\ar_exclude.htm
+cmdline\switches\ar_include.htm
+cmdline\switches\ar_no.htm
+cmdline\switches\charset.htm
+cmdline\switches\email.htm
+cmdline\switches\exclude.htm
+cmdline\switches\include.htm
+cmdline\switches\index.htm
+cmdline\switches\large_pages.htm
+cmdline\switches\list_tech.htm
+cmdline\switches\method.htm
+cmdline\switches\output_dir.htm
+cmdline\switches\overwrite.htm
+cmdline\switches\password.htm
+cmdline\switches\recurse.htm
+cmdline\switches\scc.htm
+cmdline\switches\sfx.htm
+cmdline\switches\shared.htm
+cmdline\switches\ssc.htm
+cmdline\switches\stdin.htm
+cmdline\switches\stdout.htm
+cmdline\switches\stop_switch.htm
+cmdline\switches\type.htm
+cmdline\switches\update.htm
+cmdline\switches\volume.htm
+cmdline\switches\working_dir.htm
+cmdline\switches\yes.htm
+fm\about.htm
+fm\benchmark.htm
+fm\index.htm
+fm\menu.htm
+fm\options.htm
+fm\plugins\index.htm
+fm\plugins\7-zip\add.htm
+fm\plugins\7-zip\extract.htm
+fm\plugins\7-zip\index.htm
+fm\plugins\7-zip\options.htm
+general\7z.htm
+general\faq.htm
+general\formats.htm
+general\index.htm
+general\license.htm
+general\performance.htm
+general\thanks.htm

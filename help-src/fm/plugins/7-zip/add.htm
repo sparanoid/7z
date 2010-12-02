@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>添加到压缩档案对话框</TITLE>
+  <LINK href="../../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>添加到压缩档案对话框</H1>
+
+<P>此对话框允许您对压缩档案的创建和更新进行详细的设置。</P>
+
+<H4>如何调出此对话框</H4>
+<OL>
+  <LI>在 Windows 资源管理器或 7-Zip 中，右键点击您想要压缩的文件或文件夹。</LI>
+  <LI>指向 <B>7-Zip</B>，然后点击 <B>添加到压缩档案...</B> 命令。</LI>
+</OL>
+
+<H4>各项设置说明</H4>
+<DL>
+  <DT>压缩档案</DT>
+  <DD>在这里您可以自定义文件或文件夹压缩后的压缩档案名称。您可以点击“<B>浏览...</B>”按钮来打开本地磁盘，从而选择您想要保存文件的具体路径。</DD>
+
+  <DT>压缩档案格式</DT>
+  <DD>指定要创建的压缩档案的格式。一部分格式(如 gzip 和 bzip2)仅支持单个文件压缩(即每个压缩档案中只有一个被压缩的文件)。</DD>
+
+  <DT>压缩等级</DT>
+  <DD>
+    <P>指定要压缩的等级。目前共有六个压缩等级：</P>
+    <TABLE>
+      <TR> <TH>等级(7z)</TH> <TH>描述</TH> </TR>
+      <TR> <TD>储存</TD> <TD>文件将被复制到压缩档案而不压缩。</TD> </TR>
+      <TR> <TD>极速</TD> <TD>最快速压缩。</TD> </TR>
+      <TR> <TD>快速</TD> <TD>快速压缩。</TD> </TR>
+      <TR> <TD>正常</TD> <TD>使用较为均衡的设定进行压缩。</TD> </TR>
+      <TR> <TD>最大</TD> <TD>此项将提供比正常压缩更多的压缩比，压缩后的文件会更小。但是在压缩和解压缩的时候会比较慢而且需要较多的物理内存。</TD> </TR>
+      <TR> <TD>极限</TD> <TD>此项将提供比最大压缩更多的压缩比，压缩后的文件最小。但是在压缩和解压缩的时候会很慢而且需要相当的物理内存及虚拟内存。</TD> </TR>
+    </TABLE>
+  </DD>
+
+  <DT>压缩算法</DT>
+  <DD>
+    <P>指定压缩算法。每一个压缩档案格式都拥有自己的压缩算法：</P>
+    <TABLE>
+      <TR> <TH>算法</TH> <TH>描述</TH> </TR>
+      <TR> <TD>LZMA</TD> <TD>7z 格式的默认压缩算法。它能提供高压缩比及较快的解压缩速度。</TD> </TR>
+      <TR> <TD>LZMA2</TD> <TD>基于 LZMA 算法。增强了 LZMA 对多线程的支持，但压缩比在某些情况下并不理想。</TD> </TR>
+      <TR> <TD>PPMd</TD> <TD>基于 Dmitry Shkarin 之上的算法 PPMdH 并加以优化。通常能对纯文本提供高压缩比及较快的解压缩速度。</TD> </TR>
+      <TR> <TD>BZip2</TD> <TD>基于 BWT 的标准压缩算法。通常能对纯文本提供较高压缩比及相当不错的解压缩速度。</TD> </TR>
+      <TR> <TD>Deflate</TD> <TD>ZIP 及 GZip 格式的标准压缩算法。没有很高的压缩比。但是它拥有十分快的压缩及解压缩速度。Deflate 压缩算法只支持 32 KB 字典大小。</TD> </TR>
+      <TR> <TD>Deflate64</TD> <TD>Deflate 压缩算法的改良版本，拥有较大的字典大小(64KB)。</TD> </TR>
+    </TABLE>
+    <P>下列表格为 Pentium 4 3.0 GHz 系统上不同压缩算法所需的系统配置：</P>
+    <TABLE>
+      <TR> 
+        <TH class="cc">算法</TH> 
+        <TH class="cc">等级</TH> 
+        <TH class="cc">字典大小</TH> 
+        <TH class="cc">压缩速度</TH> 
+        <TH class="cc">解压速度</TH> 
+        <TH class="cc">压缩所需内存</TH> 
+        <TH class="cc">解压所需内存</TH> 
+      </TR>
+      <TR>
+         <TD class="cc" rowspan="5">LZMA</TD>
+         <TD class="cc">极速压缩</TD>
+         <TD class="cc">64 KB</TD>
+         <TD class="cc">4.5 MB/秒</TD>
+         <TD class="cc" rowspan="5">15 MB/秒</TD>
+         <TD class="cc">3 MB</TD>
+         <TD class="cc">3 MB</TD></TR>
+      <TR>
+        <TD class="cc">快速压缩</TD>
+        <TD class="cc">1 MB</TD>
+        <TD class="cc">3 MB/s</TD>
+        <TD class="cc">10 MB</TD>
+        <TD class="cc">3 MB</TD></TR>
+      <TR>
+        <TD class="cc">正常压缩</TD>
+        <TD class="cc">16 M</TD>
+        <TD class="cc">2 MB/s/TD>
+        <TD class="cc">186 MB</TD>
+        <TD class="cc">18 MB</TD></TR>
+      <TR>
+        <TD class="cc">最大压缩</TD>
+        <TD class="cc">32 M</TD>
+        <TD class="cc">1.8 MB/s</TD>
+        <TD class="cc">376 MB</TD>
+        <TD class="cc">34 MB</TD></TR>
+      <TR>
+        <TD class="cc">极限压缩</TD>
+        <TD class="cc">64 M</TD>
+        <TD class="cc">1.6 MB/s</TD>
+        <TD class="cc">709 MB</TD>
+        <TD class="cc">66 MB</TD></TR>
+      <TR>
+        <TD class="cc" rowspan="4">PPMD</TD>
+        <TD class="cc">快速压缩</TD>
+        <TD class="cc">4 MB</TD>
+        <TD class="cc" colspan="2">1.4 MB/秒</TD>
+        <TD class="cc" colspan="2">6 MB</TD></TR>
+      <TR>
+        <TD class="cc">正常压缩</TD>
+        <TD class="cc">24 MB</TD>
+        <TD class="cc" colspan="2">1.2 MB/秒</TD>
+        <TD class="cc" colspan="2">26 MB</TD></TR>
+      <TR>
+        <TD class="cc">最大压缩</TD>
+        <TD class="cc">64 MB</TD>
+        <TD class="cc" colspan="2">1.0 MB/秒</TD>
+        <TD class="cc" colspan="2">66 MB</TD></TR>
+      <TR>
+        <TD class="cc">极限压缩</TD>
+        <TD class="cc">192 MB</TD>
+        <TD class="cc" colspan="2">0.9 MB/秒</TD>
+        <TD class="cc" colspan="2">194 MB</TD></TR>
+      <TR>
+        <TD class="cc" rowspan="3">Deflate</TD>
+        <TD class="cc">正常压缩</TD>
+        <TD class="cc" rowspan="3">32 KB</TD>
+        <TD class="cc">3.5 MB/秒</TD>
+        <TD class="cc" rowspan="3">40 MB/秒</TD>
+        <TD class="cc">3 MB</TD>
+        <TD class="cc" rowspan="3">2 MB</TD></TR>
+      <TR>
+        <TD class="cc">最大压缩</TD>
+        <TD class="cc">1.5 MB/秒</TD>
+        <TD class="cc" rowspan="2">4 MB</TD></TR>
+      <TR>
+        <TD class="cc">最大压缩</TD>
+        <TD class="cc">0.4 MB/秒</TD>
+      <TR>
+        <TD class="cc" rowspan="3">BZip2</TD>
+        <TD class="cc">正常压缩</TD>
+        <TD class="cc" rowspan="3">900 KB</TD>
+        <TD class="cc">3 MB/秒</TD>
+        <TD class="cc" rowspan="3">16 MB/秒</TD>
+        <TD class="cc" rowspan="3">20 MB</TD>
+        <TD class="cc" rowspan="3">7 MB</TD></TR>
+      <TR>
+        <TD class="cc">最大压缩</TD>
+        <TD class="cc">1.2 MB/秒</TD>
+      <TR>
+        <TD class="cc">最大压缩</TD>
+        <TD class="cc">0.4 MB/秒</TD>
+    </TABLE>
+  </DD>
+
+  <DT>字典大小</DT>
+  <DD>
+    <P>指定压缩算法的字典大小。</P>
+    <P>通常情况下，较大的字典文件能提供较高的压缩比。但是在压缩和解压缩的时候会比较慢而且需要较多的物理内存。</P>
+    <P> LZMA 压缩算法在压缩时，所需的内存(RAM)大约为字典大小的十倍。LZMA 压缩算法在解压缩时，所需的内存(RAM)接近于字典大小。PPMd 压缩算法在压缩及解压缩时，所需的内存(RAM)与字典大小基本相等。
+  </DD>
+
+  <DT>单词大小</DT>
+  <DD>
+    <P>指定单词的长度，将使用用户自定义的相同字节排列顺序来进行压缩。</P>
+    <P>通常情况下，LZMA 及 Deflate 使用较大的单词大小可以略微提高压缩比，但同时也能稍稍降低压缩速度。简单地讲，如果要压缩的多个文件中，有很多排列相同的字节，比如说内容及格式极为相同的两个纯文本文档，那么在压缩的时候如果有较大的单词大小，将会在一定程度上提高压缩比。单词大小的设置对 PPMd 压缩算法拥有很重要的意义，它直接应响到压缩比、压缩及解压缩的速度。</P>
+  </DD>
+
+  
+  <DT>固实数据大小</DT>
+  <DD>
+    <P>指定固实数据的大小，您可以关闭固实模式，在创建固实压缩档案模式中，它把压缩档案中的所有文件都当成一个连续数据流来看待。通常情况下，固实压缩可增加压缩比，特别是在添加大量小文件的时候，此选项只适用于 7z 格式。在当前的版本中，如果您想使您创建的压缩档案可以更新，您必须关闭固实模式。
+  </DD>
+
+  <DT>CPU 线程数</DT>
+  <DD>
+    <P>指定用于压缩的 CPU 线程数，多线程压缩可以加快压缩速度，有时在单核 CPU 上也会有效。
+  </DD>
+
+  <DT>分卷压缩</DT>
+  <DD>
+  <PRE class = "syntax">{Size}[b | k | m | g]</PRE>
+    <P>指定分卷大小，单位可以是字节、千字节(1 千字节 = 1024 字节)、兆字节(1 兆字节 = 1024 千字节)或千兆字节(1 千兆字节 = 1024 兆字节)。如果您只指定了 {Size}，7-zip 按照“字节”单位来处理。并且分卷压缩可以指定多个值。例如：</P>
+    <PRE class="example">
+      10k 15k 2m</PRE>
+      <P>首个压缩卷为 10 KB，第二个为 15 KB，剩下所有的为 2 MB。</P>
+
+  </DD>
+
+  <DT>附加参数</DT>
+  <DD>
+    <P>指定您的自定义压缩参数。更多详细内容请参阅 <A href="../../../../cmdline/switches/method.htm">-m (设置压缩算法)</A> 选项。在此对话框中，您不必输入 -m 前缀。<P> 
+    <P><B>例子</B></P>
+    <PRE class="example">
+      0=PPMd</PRE>
+      <P>使用 PPMd 压缩算法来压缩文件。</P>
+
+    <PRE class="example">
+      0=bcj2 1=lzma:d23 2=lzma 3=lzma b0:1 b0s1:2 b0s2:3</PRE>
+      <P>使用 LZMA 压缩算法 及 BCJ2 过滤器(用于 x86 可执行文件)。</P>
+
+  </DD>
+
+  <DT>更新方式</DT>
+  <DD>
+    <P>指定更新方式：</P>
+    <TABLE>
+      <TR><TH width="30%">更新方式</TH><TH>描述</TH> </TR>
+      <TR><TD>添加并替换文件</TD><TD>当添加的文件有相同名称时，始终替换已压缩的文件。在压缩档案中不存在时，始终添加这些文件。</TD></TR>
+      <TR><TD>添加并更新文件</TD><TD>仅在添加的文件较新时才替换已压缩的文件。在压缩档案中不存在时，总是添加这些文件。</TD></TR>
+      <TR><TD>只刷新现有文件</TD><TD>仅在添加的文件较新时才替换已压缩的文件。在压缩档案中不存在时，不添加这些文件。</TD></TR>
+      <TR><TD>同步压缩档案内容</TD><TD>仅在添加的文件较新时才替换已压缩的文件。在压缩档案中不存在时，总是添加这些文件。
+      在添加的文件不存在压缩文件时，删除这些文件。这类似创建一个新压缩文件，但这并不相同：如果在上次备份后，没有文件被修改过，这项操作会比创建新压缩档案要快一些。</TD></TR>
+    </TABLE>
+  </DD>
+
+  <DT>选项</DT>
+  <DD>
+    <P>指定压缩选项：</P>
+    <TABLE>
+      <TR><TH width="30%">选项</TH><TH>描述</TH></TR>
+      <TR><TD>创建自释放档案</TD><TD>创建自释放(SFX，全称为 SelF-eXtracting)压缩档案。此选项只适用于 7z 格式。更多有关自释放模块的详细内容请参阅 <A href="../../../../cmdline/switches/sfx.htm">-sfx (创建自释放档案)</A> 选项。</TD></TR>
+      <TR><TD>压缩共享文件</TD><TD>压缩正在被其他应用程序使用的文件。</TD></TR>
+    </TABLE>
+  </DD>
+
+  <DT>密码</DT>
+  <DD>
+    <P>指定加密密码。</P>
+    <DL>
+      <DT>输入密码</DT>
+        <DD>输入指定密码。</DD>
+      <DT>重新输入密码</DT>
+        <DD>重新输入密码进行验证。</DD>
+      <DT>显示密码</DT>
+        <DD>显示输入的密码以确保密码正确无误。</DD>
+      <DT>加密算法</DT>
+        <DD>指定加密算法。7z 格式只能使用 AES-256 算法，而 ZIP 格式您可以选择 ZipCrypto 或 AES-256。如果您想获得压缩包的最大兼容性，您可以使用 ZipCrypto，AES-256 则能提供更强力的加密保证，但 AES-256 加密的 ZIP 文件只有 7-Zip、WinZip 和部分支持 ZIP 格式的软件支持。</DD>
+      <DT>加密文件名</DT>
+        <DD>开启或关闭压缩档案文件头加密，其中包括文件名加密。</DD>
+    </DL>
+
+  </DD>
+
+</DL>
+<UL>
+
+</BODY>
+</HTML>

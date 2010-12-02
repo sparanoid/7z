@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-- (阻止选项解析)">
+		<param name="Local" value="cmdline/switches/stop_switch.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="7z 格式">
+		<param name="Local" value="general/7z.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="7-Zip">
+		<param name="Local" value="fm/plugins/7-zip/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="7-Zip 插件选项">
+		<param name="Local" value="fm/plugins/7-zip/options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="7-Zip 起始页">
+		<param name="Local" value="start.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="a (添加)">
+		<param name="Local" value="cmdline/commands/add.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-ai (附加档案文件名)">
+		<param name="Local" value="cmdline/switches/ar_include.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-an (不解析档案名称)">
+		<param name="Local" value="cmdline/switches/ar_no.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-ao (覆盖模式)">
+		<param name="Local" value="cmdline/switches/overwrite.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-ax (排除档案文件名)">
+		<param name="Local" value="cmdline/switches/ar_exclude.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="b (基准测试)">
+		<param name="Local" value="cmdline/commands/bench.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="d (删除)">
+		<param name="Local" value="cmdline/commands/delete.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="e (释放)">
+		<param name="Local" value="cmdline/commands/extract.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-i (附加文件)">
+		<param name="Local" value="cmdline/switches/include.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="l (列表)">
+		<param name="Local" value="cmdline/commands/list.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-m (设置压缩算法)">
+		<param name="Local" value="cmdline/switches/method.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-o (设置输出文件夹)">
+		<param name="Local" value="cmdline/switches/output_dir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-p (设置密码)">
+		<param name="Local" value="cmdline/switches/password.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-r (递归子目录)">
+		<param name="Local" value="cmdline/switches/recurse.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-scc (设置命令行输入/输出编码)">
+		<param name="Local" value="cmdline\switches\scc.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-scs (设置列表文件字符集)">
+		<param name="Local" value="cmdline/switches/charset.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-seml (通过电子邮件发送档案)">
+		<param name="Local" value="cmdline/switches/email.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-sfx (创建自释放档案)">
+		<param name="Local" value="cmdline/switches/sfx.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-si (从 stdin 读取数据)">
+		<param name="Local" value="cmdline/switches/stdin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-so (从 stdout 写入数据)">
+		<param name="Local" value="cmdline/switches/stdout.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-slp (设置大内存模式)">
+		<param name="Local" value="cmdline/switches/large_pages.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-slt (显示技术信息)">
+		<param name="Local" value="cmdline/switches/list_tech.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-ssc (设置区分大小写模式)">
+		<param name="Local" value="cmdline/switches/ssc.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-ssw (压缩正在写入的文件) 选项">
+		<param name="Local" value="cmdline/switches/shared.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="t (测试)">
+		<param name="Local" value="cmdline/commands/test.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-t (设置压缩档案格式)">
+		<param name="Local" value="cmdline/switches/type.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="u (更新)">
+		<param name="Local" value="cmdline/commands/update.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-u (更新选项)">
+		<param name="Local" value="cmdline/switches/update.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-v (创建分卷)">
+		<param name="Local" value="cmdline/switches/volume.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-w (设置工作目录)">
+		<param name="Local" value="cmdline/switches/working_dir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-x (排除文件)">
+		<param name="Local" value="cmdline/switches/exclude.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="x (完整路径释放)">
+		<param name="Local" value="cmdline/commands/extract_full.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="-y (全是)">
+		<param name="Local" value="cmdline/switches/yes.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="菜单项目及快捷键">
+		<param name="Local" value="fm/Menu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="插件">
+		<param name="Local" value="fm/plugins/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="常规信息">
+		<param name="Local" value="general/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="常见问题解答 (FAQ)">
+		<param name="Local" value="general/faq.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="关于对话框">
+		<param name="Local" value="fm/about.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="基准测试">
+		<param name="Local" value="fm/benchmark.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="鸣谢">
+		<param name="Local" value="general/thanks.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="命令行">
+		<param name="Local" value="cmdline/commands/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="命令行版本">
+		<param name="Local" value="cmdline/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="命令行选项">
+		<param name="Local" value="cmdline/switches/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="释放对话框">
+		<param name="Local" value="fm/plugins/7-zip/extract.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="添加到压缩档案对话框">
+		<param name="Local" value="fm/plugins/7-zip/add.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="文件管理器">
+		<param name="Local" value="fm/index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="性能对比">
+		<param name="Local" value="general/performance.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="选项对话框">
+		<param name="Local" value="fm/options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="语法">
+		<param name="Local" value="cmdline/syntax.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="支持格式">
+		<param name="Local" value="general/formats.htm">
+		</OBJECT>
+</UL>
+</BODY>
+</HTML>

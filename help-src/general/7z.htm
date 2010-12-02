@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>7z 格式</TITLE>
+  <LINK href="../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>7z 格式</H1>
+
+<P><B>7z</B> 是一种新的压缩格式，它拥有极高的压缩比。</P>
+
+<P><B>7z</B> 格式的主要特征：</P>
+<UL>
+  <LI>公开的结构编辑功能
+  <LI>高的压缩比
+  <LI>强大的 AES-256 加密
+  <LI>可更改和配置压缩的算法
+  <LI>最高支持 16000000000 GB 的文件压缩
+  <LI>以 Unicode 为标准的文件名
+  <LI>支持固实压缩
+  <LI>支持档案文件头压缩
+</UL>
+
+<P><B>7z</B> 已公开了结构编辑功能，所以它可以支持任何一种新的压缩算法。</P>
+目前，下列压缩算法已被整合到了 <B>7z</B>:<P>
+
+<TABLE cellspacing ="2" cellpadding ="4">
+  <TR> <TH class="Title" width="60">压缩算法</TH> <TH class="Title">备注</TH> </TR>
+  <TR> <TD class="Item">LZMA</TD> <TD class="Item">LZ77 改良和优化算法后的最新版本</TD></TR>
+  <TR> <TD class="Item">PPMD</TD> <TD class="Item">基于 Dmitry Shkarin 之上的算法 PPMdH 并加以优化</TD></TR>
+  <TR> <TD class="Item">BCJ</TD> <TD class="Item">32-位 x86 可执行文件转换程序</TD></TR>
+  <TR> <TD class="Item">BCJ2</TD> <TD class="Item">32-位 x86 可执行文件转换程序</TD></TR>
+  <TR> <TD class="Item">BZip2</TD> <TD class="Item">标准 BWT 算法</TD></TR>
+  <TR> <TD class="Item">Deflate</TD> <TD class="Item">标准 LZ77-based 算法</TD></TR>
+</TABLE>
+
+<P><B>LZMA</B> 算法是 <B>7z</B> 格式的默认标准算法。<B>LZMA</B> 算法的主要特征：</P>
+<UL>
+  <LI>高压缩比
+  <LI>可变字典大小(最大 4 GB)
+  <LI>压缩速度：运行于 2 GHz 的处理器可达到 1 MB/秒
+  <LI>解压缩速度：运行于 2 GHz 的处理器可达到 10-20 MB/秒
+  <LI>较小的解压缩内存需求(依赖于字典大小)
+  <LI>较小的解压缩代码：约 5 KB
+  <LI>支持 Pentium 4 超线程(Hyper-Threading)技术及多处理器
+</UL>
+
+<P><B>LZMA</B> 压缩算法非常适于应用程序的内嵌。如果您想使用 <B>LZMA</B> 代码，您可以通过访问下列地址来咨询和自定义设计代码及申请开发者使用许可。</P>
+<P><A href="http://www.7-zip.org/support.html" target="_blank">www.7-zip.org/support.html</A></P>
+</P>
+
+<H2>密码破解</H2>
+
+<P>为进行试验，我们使用穷举法对已设置密码的档案进行暴力破解(密码是小写的拉丁文字，并打乱顺序)。</P>
+
+<P>我们假设一个用户以每秒十个字符的速度进行穷举破解，而组织(专业的破解组织)以每秒一兆个字符的速度进行穷举破解。并且我们还估计计算机每两年的处理性能就会翻一番，来计算性能增长后密码破解所用的时间。</P>
+
+<P>下面就是我们对破解时间的估计：</P>
+
+<TABLE>
+  <TR align=center>
+    <TH>密码长度</TH>
+    <TH>个人破解(1 位用户)</TH>
+    <TH>组织破解(多位成员)</TH>
+  </TR>
+  <TR align=center>
+    <TD>1</TD>
+    <TD>2 秒</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>2</TD>
+    <TD>1 分钟</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>3</TD>
+    <TD>30 分钟</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>4</TD>
+    <TD>12 个小时</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>5</TD>
+    <TD>14 天</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>6</TD>
+    <TD>1 年</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>7</TD>
+    <TD>10 年</TD>
+    <TD>1 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>8</TD>
+    <TD>19 年</TD>
+    <TD>20 秒</TD>
+  </TR>
+  <TR align=center>
+    <TD>9</TD>
+    <TD>26 年</TD>
+    <TD>9 分钟</TD>
+  </TR>
+  <TR align=center>
+    <TD>10</TD>
+    <TD>37 年</TD>
+    <TD>4 个小时</TD>
+  </TR>
+  <TR align=center>
+    <TD>11</TD>
+    <TD>46 年</TD>
+    <TD>4 天</TD>
+  </TR>
+  <TR align=center>
+    <TD>12</TD>
+    <TD>55 年</TD>
+    <TD>4 个月</TD>
+  </TR>
+  <TR align=center>
+    <TD>13</TD>
+    <TD>64 年</TD>
+    <TD>4 年</TD>
+  </TR>
+  <TR align=center>
+    <TD>14</TD>
+    <TD>73 年</TD>
+    <TD>13 年</TD>
+  </TR>
+  <TR align=center>
+    <TD>15</TD>
+    <TD>82 年</TD>
+    <TD>22 年</TD>
+  </TR>
+  <TR align=center>
+    <TD>16</TD>
+    <TD>91 年</TD>
+    <TD>31 年</TD>
+  </TR>
+  <TR align=center>
+    <TD>17</TD>
+    <TD>100 年</TD>
+    <TD>40 年</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
