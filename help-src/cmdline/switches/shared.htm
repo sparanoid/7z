@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-ssw (压缩正在使用的文件) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-ssw (压缩正在写入的文件) 选项</H1>
+
+<P>压缩正在被其他应用程序使用的文件。如果此选项未被设置，7-Zip 将不会压缩这样的文件。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-ssw
+</PRE>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a archive.7z -ssw *.txt
+</PRE>
+
+<P>压缩当前文件夹下所有 <SPAN class="filename">*.txt</SPAN> 文件，包括正在被其他应用程序使用的文件。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-i (附加文件) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-i (附加文件) 选项</H1>
+
+<P>指定附加文件或一类文件。</P>
+<P>此选项可附件添加多个类型。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-i[<A class="parameter" href="#recurse_type">&lt;recurse_type></A>]<A class="parameter" href="#file_ref">&lt;file_ref></A>
+
+<A class="parameter" href="#recurse_type">&lt;recurse_type></A> ::= r[- | 0]
+<A class="parameter" href="#file_ref">&lt;file_ref></A> ::= @{listfile} | !{wildcard}
+</PRE>
+
+<H4>参量</H4>
+
+<DL>
+  <DT><A name="recurse_type"></A>&lt;recurse_type></DT>
+  <DD><P>此值在这个选项中必须使用。如果此选项的值不存在，那么将使用被 <A href="recurse.htm">-r (递归子目录)</A> 选项所指定的值。更多详细内容请参阅 <A href="recurse.htm">-r (递归子目录)</A> 选项。</P>
+<PRE class="syntax">
+&lt;recurse_type> ::= r[- | 0]
+</PRE>
+
+ </DD>
+ <DT><A name="file_ref"></A>&lt;file_ref></DT>
+ <DD>
+   <P>指定文件名或通配符、或使用文件列表来添加文件。</P>
+<PRE class="syntax">
+&lt;file_ref> ::= @{listfile} | !{wildcard}
+</PRE>
+   <TABLE>
+     <TR> <TH width="120">参数</TH> <TH>描述</TH> </TR>
+     <TR> <TD>{listfile}</TD> <TD>指定文件列表。请参考 <A href = ../syntax.htm#ListFile>文件列表</A> 相关信息。</TD> </TR>
+     <TR> <TD>{wildcard}</TD> <TD>指定文件名或通配符。</TD> </TR>
+   </TABLE>
+ </DD>
+</DL>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a -tzip src.zip *.txt -ir!DIR1\*.cpp
+</PRE>
+
+<P>从当前目录中添加 <SPAN class="filename">*.txt</SPAN> 文件，和 <SPAN class="filename">DIR1</SPAN> 目录及其子目录中的 <SPAN class="filename">*.cpp</SPAN> 文件到 <SPAN class="filename">src.zip</SPAN> 压缩包。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/list.htm">l (列表)</A>，
+  <A href="../commands/test.htm">t (测试)</A>，
+  <A href="../commands/update.htm">u (更新)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+<H4>其它</H4>
+
+<P>
+  <B>选项：</B>
+  <A href="recurse.htm">-r (递归子目录)</A>，
+  <A href="exclude.htm">-x (排除文件)</A>
+</P>
+
+</BODY>
+</HTML>

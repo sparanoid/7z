@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>a (添加) 命令</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>a (添加) 命令</H1>
+
+<P>添加文件到压缩档案。</P>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a archive1.zip subdir\
+</PRE>
+
+<P>添加 <SPAN class="filename">subdir</SPAN> 目录下所有文件及所有子文件夹中的内容到 
+  <SPAN class="filename">archive1.zip</SPAN>。
+  压缩档案中的路径中包含 <SPAN class="filename">subdir\</SPAN></P>
+
+<PRE class="example">
+7z a archive2.zip .\subdir\*
+</PRE>
+
+<P>添加 <SPAN class="filename">subdir</SPAN> 目录下所有文件及所有子文件夹中的内容到 
+  <SPAN class="filename">archive2.zip</SPAN>。
+  压缩档案中的路径中不包含 <SPAN class="filename">subdir\</SPAN></P>
+
+<PRE class="example">
+cd /D c:\dir1\
+7z a c:\archive3.zip dir2\dir3\ 
+</PRE>
+
+压缩档案 <SPAN class="filename">c:\archive3.zip</SPAN> 中的文件名将包含
+<SPAN class="filename">dir2\dir3\</SPAN> 路径，但是不会包含
+<SPAN class="filename">c:\dir1\</SPAN>
+
+<PRE class="example">
+7z a Files.7z *.txt -r
+</PRE>
+
+<P>添加当前目录及其子目录下所有 *.txt 文件到压缩档案
+    <SPAN class="filename">Files.7z</SPAN>.</P>
+
+
+<H4>注意</H4>
+
+<P>7-Zip 并不使用系统自带的通配符解析器，也就是说 7-Zip 并不遵守像 *.* 就是代表所有文件这样的通配符，7-Zip 认为
+*.* 代表拥有任意扩展的文件，想选择所有文件您必须使用 * 通配符。</P>
+
+<H4>可以和此命令结合使用的选项</H4>
+
+<P>
+  <A href="../switches/include.htm">-i (包括文件名)</A><BR>
+  <A href="../switches/method.htm">-m (设置压缩算法)</A><BR>
+  <A href="../switches/password.htm">-p (设置密码)</A><BR>
+  <A href="../switches/recurse.htm">-r (递归子目录)</A><BR>
+  <A href="../switches/sfx.htm">-sfx (创建自释放档案)</A><BR>
+  <A href="../switches/stdin.htm">-si (从 stdin 读取数据)</A><BR>
+  <A href="../switches/stdout.htm">-so (从 stdin 写入数据)</A><BR>
+  <A href="../switches/shared.htm">-ssw (压缩正在写入的文件)</A><BR>
+  <A href="../switches/type.htm">-t (设置压缩档案格式)</A><BR>
+  <A href="../switches/update.htm">-u (更新选项)</A><BR>
+  <A href="../switches/volume.htm">-v (创建分卷)</A><BR>
+  <A href="../switches/working_dir.htm">-w (设置工作目录)</A><BR>
+  <A href="../switches/exclude.htm">-x (排除文件)</A>
+</P>
+
+<H4>其他</H4>
+
+<P>
+  <B>命令行：</B>
+    <A href="delete.htm">d (删除)</A>，
+    <A href="update.htm">u (更新)</A><BR>
+  <B>选项：</B>
+    <A href="../switches/update.htm">-u (更新选项)</A>
+</P>
+
+</BODY>
+</HTML>

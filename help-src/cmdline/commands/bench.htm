@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>b (基准测试) 命令</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>b (基准测试) 命令</H1>
+
+<P>测试 CPU 运行速度及检查内存错误。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+b [number_of_iterations] [-mmt{N}] [-md{N}] [-mm={Method}]
+</PRE>
+
+<P>它分以下两项测试：<P>
+<OL>
+  <LI>使用 LZMA 算法压缩
+  <LI>使用 LZMA 算法解压缩
+</OL>
+
+<P>基准测试的数据将以 MIPS (100 万条指令/秒)的格式显示。是根据 Intel Core 2 Duo E6600 (2.4 GHz, 4 MB L2) 超线程选项关闭，下在 64 位 Windows 下的计算速度得来的。所以，如果您的处理器是 Intel Core 2 Duo，那么计算结果一定很接近于真实的处理器频率。</P>
+
+<P>你可以通过 -md{N} 选项改变字典大小来增加内存的使用率。如果您的处理器支持多线程，同样您也可以通过 -mmt{N} 选项将它开启。</P>
+
+<P><B>Dict</B> 栏显示字典大小，比如 21 就是 2^21 = 2 MB.</P>
+
+<P><B>Usage</B> 栏显示的是测试时所占用的 CPU 使用比率。它只以一个线程的比率进行显示，比如说，两个线程时会显示 180% 的 CPU 使用率，则意味着每个线程平均为 90% 的使用率。</P>
+
+<P><B>R / U</B> 显示的是 CPU 使用率的得分。此栏目显示的是一个 CPU 线程的性能。</P>
+
+<P><B>Avr</B> 显示的是不同字典大小的平均得分。</P>
+
+<P><B>Tot</B> 显示的是压缩及解压缩的平均得分。</P>
+
+<P>压缩的处理速度直接取决于 CPU 的整数运算能力。</P>
+
+<P>解压缩的处理速度直接取决于内存(RAM)的响应时间。对于多处理器系统，那么压缩速度将提升 70-80%。对于 Pentium 4 超线程处理器，压缩速度将提升 25% 左右。但解压缩时只使用单独线程。</P>
+
+<P>您同样可以通过 -mm=crc 选项来进行 CRC 计算。此测试将显示以 MB/秒 来显示 CRC 的计算速度。第一栏显示区块的大小，下一栏显示单独进程的 CRC 计算速度，另一栏为多进程的 CRC 计算结果。</P> 
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z b
+</PRE>
+进行基准测试。
+
+<PRE class="example">
+7z b -mmt1 -md26
+</PRE>
+使用单线程及 64 MB 字典大小进行基准测试。
+
+<PRE class="example">
+7z b 30
+</PRE>
+<P>进行 30 次基准测试。</P>
+
+</BODY>
+</HTML>

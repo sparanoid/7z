@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-so (从 stdout 写入数据) 选项</TITLE>
+  <LINK href="../../style.css" rel="stylesheet" type="text/css"></HEAD>
+
+<BODY>
+
+<H1>-so (从 stdout 写入数据) 选项</H1>
+
+<P>使 7-Zip 从 stdout 中使用数据(标准输出流)。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-so
+</PRE>
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z x archive.gz -so > Doc.txt
+</PRE>
+
+<P>解压缩 <SPAN class="filename">archive.gz</SPAN> 输出流并将该输出流写入到 <SPAN class="filename">Doc.txt</SPAN> 文件。</P>
+
+
+<PRE class="example">
+7z a dummy -tgzip -so Doc.txt > archive.gz
+</PRE>
+
+<P>压缩 <SPAN class="filename">Doc.txt</SPAN> 输出流并将该输出流写入到 <SPAN class="filename">archive.gz</SPAN> 压缩包。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/update.htm">u (更新)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+</BODY>
+</HTML>

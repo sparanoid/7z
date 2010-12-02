@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-o (设置输出文件夹) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-o (设置输出文件夹) 选项</H1>
+
+<P>指定释放文件的输出文件夹。</P>
+<P>此选项只能和释放命令配合使用。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-o{dir_path}
+</PRE>
+
+<DL>
+  <DT>{dir_path}</DT>
+  <DD>指定释放文件的输出文件夹路径。路径的结尾不一定要求有反斜线(“\”)</DD>
+</DL>
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z x archive.zip -oc:\Doc
+</PRE>
+
+<P>从 <SPAN class="filename">archive.zip</SPAN> 压缩包释放所有文件到 <SPAN class="filename">c:\Doc</SPAN> 文件夹。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/extract.htm">e (释放)</A>，
+  <A href="../commands/extract_full.htm">x (完整路径释放)</A>
+</P>
+
+</BODY>
+</HTML>

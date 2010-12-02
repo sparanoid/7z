@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <TITLE>-w (设置工作目录) 选项</TITLE>
+  <LINK href="../../style.css" rel=stylesheet type="text/css">
+</HEAD>
+
+<BODY>
+
+<H1>-w (设置工作目录) 选项</H1>
+
+<P>为文件压缩设置临时的工作目录。默认情况下，7-Zip 新建一个压缩包时，会临时在当前目录创建一个基本压缩包。然而通过指定此选项，您可以设置基本压缩包的生成目录，也就是工作目录。当压缩完成时，它将会被重命名为压缩前您所指定的文件名，然后删除在临时目录中的原始压缩包。</P>
+
+<H4>语法</H4>
+
+<PRE class="syntax">
+-w[<A class="parameter" href="#dir_path">{dir_path}</A>]
+</PRE>
+
+<DL>
+  <DT><A name="dir_path"></A>{dir_path}</DT>
+  <DD>
+    <P>指定目标文件夹。</P>
+    <P>如果 &lt;dir_path> 未指定，那么 7-Zip 将使用 Windows 默认的临时目录。</P>
+  </DD>
+</DL>
+
+
+<H4>示例</H4>
+
+<PRE class="example">
+7z a -tzip archive.zip *.cpp -wc:\temp
+</PRE>
+
+<P>添加 <SPAN class="filename">*.cpp</SPAN> 文件到 <SPAN class="filename">archive.zip</SPAN> 压缩包，并将临时压缩包创建到 <SPAN class="filename">c:\temp</SPAN> 文件夹。</P>
+
+<H4>可以和此选项结合使用的命令</H4>
+
+<P>
+  <A href="../commands/add.htm">a (添加)</A>，
+  <A href="../commands/delete.htm">d (删除)</A>，
+  <A href="../commands/update.htm">u (更新)</A>
+</P>
+
+</BODY>
+</HTML>
