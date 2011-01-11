@@ -7,17 +7,17 @@
 
 软件特征：
 
-  - 更新了算法来加大 7z 格式的压缩比
+  - 使用了 LZMA 与 LZMA2 算法的 7z 格式 拥有极高的压缩比
   - 支持格式：
      - 压缩 / 解压缩：7z、XZ、BZIP2、GZIP、TAR、ZIP
      - 仅解压缩：ARJ、CAB、CHM、CPIO、CramFS、DEB、DMG、FAT、HFS、ISO、LZH、LZMA、
                  MBR、MSI、NSIS、NTFS、RAR、RPM、SquashFS、UDF、VHD、WIM、XAR、Z
   - 更快的压缩和解压缩速度
-  - 7z 格式支持创建自释放(SFX)压缩档案
+  - 7z 格式支持创建自释放压缩包
   - 为 7z 与 ZIP 提供更完善的 AES-256 加密算法
-  - 集成 Windows 外壳扩展
-  - 强大的的文件管理
-  - 强大的命令行版本
+  - Windows 资源管理器集成
+  - 强大的的文件管理器
+  - 更给力的命令行版本
   - 共 79 种界面语言
 
 
