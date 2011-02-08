@@ -1,0 +1,16 @@
+# Jekyll specified
+_site
+*.min.css
+
+# Mac OS X files
+.DS_Store
+
+# Image, font original files
+*.psd
+*.ai
+*.vfb
+
+# Logs, Leftovers
+*.log
+!errors.log
+*.bak
