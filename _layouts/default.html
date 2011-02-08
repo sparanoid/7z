@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<!-- CACHE HIT {{ site.time | date_to_xmlschema }} -->
+<META http-equiv="CONTENT-TYPE" content="TEXT/HTML; CHARSET=UTF-8">
+<LINK href="a.min.css" rel="stylesheet" type="text/css">
+<LINK href="/lab/7z/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<TITLE>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</TITLE>
+<META name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
+</HEAD>
+<BODY>
+
+<TABLE cellspacing=10 cellpadding=10 border=0 width="100%"><TR>
+<TD class="MenuColumn" valign="top">
+<TABLE cellpadding=2 cellspacing=0 border=0 width="100%">
+<TR><TD><IMG width=110 height=63 src="http://static.sparanoid.com/7z/7ziplogo.png" alt="7-Zip" border=0></TD></TR>
+<TR><TD><HR></TD></TR></TABLE>
+
+<TABLE cellpadding="2" cellspacing="0" border="0">
+	<TR><TD><a{% if page.short != 'home' %} href="./"{% endif %}{% if page.short == 'home' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>首页</a></TR></TD>
+	<TR><TD><a{% if page.short != '7z' %} href="7z.html"{% endif %}{% if page.short == '7z' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>7z 格式</a></TR></TD>
+	<TR><TD><a{% if page.short != 'sdk' %} href="sdk.html"{% endif %}{% if page.short == 'sdk' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>LZMA SDK</a></TR></TD>
+	<TR><TD><a{% if page.short != 'download' %} href="download.html"{% endif %}{% if page.short == 'download' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>软件下载</a></TR></TD>
+	<TR><TD><a{% if page.short != 'faq' %} href="faq.html"{% endif %}{% if page.short == 'faq' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>常见问题</a></TR></TD>
+	<TR><TD><a{% if page.short != 'support' %} href="support.html"{% endif %}{% if page.short == 'support' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>技术支持</a></TR></TD>
+	<TR><TD><a{% if page.short != 'links' %} href="links.html"{% endif %}{% if page.short == 'links' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>相关链接</a></TR></TD>
+	{% if page.short == 'links' %}
+		<TR><TD>&nbsp&nbsp<a href="http://www.7-zip.org/logos.html">软件标徽</a></TR></TD>
+	{% endif %}
+</TABLE>
+
+<TABLE cellpadding=2 cellspacing=0 border=0 width="100%">
+<TR><TD><HR></TD></TR>
+<TR><TD><A href="http://sourceforge.net/projects/sevenzip/"><IMG src="http://static.sparanoid.com/7z/sflogo.gif" width=120 height=30 border=0 alt="SourceForge.net 上的 7-Zip"></A></TD></TR>
+<TR><TD><HR></TD></TR>
+</TABLE>
+<P>
+<A href="http://www.developershome.com/7-zip/">正體中文</A><BR>
+<A href="http://www.7-zip.org/">Other Languages</A><BR>
+</P>
+
+</TD><!-- .MenuColumn -->
+<TD valign="top">
+
+{{ content }}
+
+<HR><P><SMALL>Copyright (C) 2011 Igor Pavlov, Translated by <A href="/">Sparanoid</A>.</SMALL>
+</P>
+</TD><!-- Main Content --></TR></TABLE>
+
+</BODY>
+</HTML>
