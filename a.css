@@ -1,0 +1,33 @@
+BODY { color: black; background-color: white; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px }
+TH { font-size: 12px }
+TD { font-size: 12px }
+H1 { text-align: center; font-size: 24px }
+H2 { text-align: center; font-size: 18px }
+H4 { font-size: 14px }
+
+TABLE.News { background-color: silver; width:220px}
+TR.NewsHeader { background-color: #8080E0 }
+TR.News { background-color: #FFF8F8 }
+TD.NewsTitle { color: white; font-weight: bold; width:55%}
+TD.NewsDate { color: white; font-weight: bold; text-align: right}
+
+A.MenuLink { text-align: left; font-weight: bold; color: blue; text-decoration: none }
+A.MenuLink:hover { color: green }
+.MenuCurrent { text-align: left; font-weight: bold }
+
+TD.MenuColumn { background-color: #E0E0E0; width: 120px}
+
+TD.Layout { background-color: white}
+TH.Title { background-color: #A0E0A0}
+TD.Item { background-color: #E8E8E8}
+TD.SubItem { background-color: #FFFFFF}
+TD.ExternalProgram { background-color: #E8D0E8}
+
+a { text-decoration: none; }
+
+.yoggrtad-wrap { width: 160px; }
+	.yoggrtad-wrap a { color: #999; }
+	.yoggrtad-wrap a:hover { color: #000; }
+	.yoggrtad-wrap:hover a { color: #000; }
+		.yoggrtad img { margin-bottom: 10px; }
+	.adby { font-size: 10px; }

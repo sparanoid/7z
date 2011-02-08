@@ -1,0 +1,36 @@
+# folder settings
+source: .
+destination: ./_site
+
+# site settings
+markdown: rdiscount
+
+# custom vars
+name: 7-Zip
+twitter: 7zip
+url: sparanoid.com/lab/7z
+
+# version info, put them in quotes to avoid rounding off
+beta:         '9.20'
+beta-short:   '920'
+beta-date:    '2010-11-18'
+
+stable:       '9.20'
+stable-short: '920'
+stable-date:  '2010-11-18'
+
+sdk:          '9.20'
+sdk-short:    '920'
+sdk-date:     '2010-11-18'
+
+# fire up a localhost and auto generate when files change
+auto: true
+server: ture
+server_port: 5432
+
+# exclude files for generated site
+exclude: 
+- README.md
+- LICENSE
+#- a.css
+- Rakefile

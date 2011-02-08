@@ -1,0 +1,285 @@
+---
+layout: default
+short: home
+title: 7-Zip 官方中文主页
+---
+
+<TABLE cellspacing ="4" cellpadding ="4">
+<TR>
+<TD>
+
+<H1>欢迎来到 7-Zip 官方中文主页！</H1>
+
+<P><B>7-Zip</B> 是一款拥有极高压缩比的开源压缩软件。</P>
+
+{% assign latest = site.posts.first %}
+<P><B>下载 7-Zip {{ site.stable }} 稳定版 ({{ site.stable-date }}) for Windows：</B></P>
+<TABLE cellspacing ="1" cellpadding ="6" border = "0">
+  <TR>
+    <TH class="Title" align="center" width=60>链接</TH>
+    <TH class="Title" align="center" width=60>格式</TH>
+    <TH class="Title" align="center" width=80>系统</TH>
+    <TH class="Title" align="center" width=55>大小</TH>
+  </TR>
+  <TR>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.exe">下载</A></TD>
+    <TD class="Item" align="center">.exe</TD>
+    <TD class="Item" align="center">32 位</TD>
+    <TD class="Item" align="center">1 MB</TD>
+  </TR>
+  <TR>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-x64.msi">下载</A></TD>
+    <TD class="Item" align="center">.msi</TD>
+    <TD class="Item" align="center">64 位</TD>
+    <TD class="Item" align="center">1 MB</TD>
+  </TR>
+</TABLE>
+
+<!--<P><B>下载 7-Zip {{ site.beta }} 测试版 ({{ site.beta-date }}) for Windows：</B></P>
+<TABLE cellspacing ="1" cellpadding ="6" border = "0">
+  <TR>
+    <TH class="Title" align="center" width=60>链接</TH>
+    <TH class="Title" align="center" width=60>格式</TH>
+    <TH class="Title" align="center" width=80>系统</TH>
+    <TH class="Title" align="center" width=55>大小</TH>
+  </TR>
+  <TR>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}.exe">下载</A></TD>
+    <TD class="Item" align="center">.exe</TD>
+    <TD class="Item" align="center">32 位</TD>
+    <TD class="Item" align="center">1 MB</TD>
+  </TR>
+  <TR>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}-x64.msi">下载</A></TD>
+    <TD class="Item" align="center">.msi</TD>
+    <TD class="Item" align="center">64 位</TD>
+    <TD class="Item" align="center">1 MB</TD>
+  </TR>
+</TABLE>-->
+
+<P>上述下载链接将会转至 SourceForge.net</P>
+
+<P><B>中文版附加内容 ({{ site.stable-date }})，适用于 {{ site.beta }}：</B><BR>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</P>
+<TABLE cellspacing ="1" cellpadding ="6" border = "0">
+  <TR>
+    <TH class="Title" align="center" width=60>链接</TH>
+    <TH class="Title" align="center" width=60>格式</TH>
+    <TH class="Title" align="center" width=80>系统</TH>
+    <TH class="Title" align="center" width=55>大小</TH>
+  </TR>
+  <TR>
+    <TD class="Item" align="center"><A href="http://7-zip.googlecode.com/files/7z-extra-{{ site.beta-short }}.7z">下载</A></TD>
+    <TD class="Item" align="center">.7z</TD>
+    <TD class="Item" align="center">32/64 位</TD>
+    <TD class="Item" align="center">700 KB</TD>
+  </TR>
+</TABLE>
+
+<P>上述下载链接将会转至 <a href="http://code.google.com/p/7-zip/">googlecode.com</a></P>
+
+<H2>许可协议</H2>
+
+<P><B>7-Zip</B> 是一款 <B>开源</B> 软件。大多数源代码都基于 <B>GNU LGPL</B> 许可协议下发布。AES 代码基于 BSD 许可下发布。unRAR 代码基于两种许可：GNU LGPL 和 unRAR 限制许可。更多下许可信息请查看：<A href="license.txt">7-Zip 许可</A>。</P> 
+
+<P>您可以在任何一台计算机上使用 7-Zip ，包括用在商业用途的计算机，不对 7-Zip 进行捐赠或支付并不影响您的使用。</P>
+
+<H2>7-Zip 主要特征</H2>
+<UL>
+  <LI>使用了 <B>LZMA</B> 与 <B>LZMA2</B> 算法的 <A href ="7z.html">7z 格式</A> 拥有极高的压缩比</LI>
+  <LI>支持格式：
+    <UL>
+     <LI>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</LI>
+     <LI>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA, 
+                       MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</LI>
+    </UL>
+  </LI>
+  <LI>对于 ZIP 及 GZIP 格式，<B>7-Zip</B> 能提供比使用 PKZip 及 WinZip 高 2-10% 的压缩比</LI>
+  <LI>为 7z 与 ZIP 提供更完善的 AES-256 加密算法</LI>
+  <LI>7z 格式支持创建自释放压缩包</LI>
+  <LI>Windows 资源管理器集成</LI>
+  <LI>强大的的文件管理器</LI>
+  <LI>更给力的命令行版本</LI>
+  <LI>支持 FAR Manager 插件</LI>
+  <LI>支持 79 种语言</LI>
+</UL>
+
+<IMG width="430" height="420" src="http://static.sparanoid.com/7z/7zfm-win7.png" alt="7-Zip" border="0">
+
+<P><B>7-Zip</B> 适用于 Windows 7 / Vista / XP / 2008 / 2003 / 2000 / NT / ME / 98。并且有面向 Mac OS X、Linux、Unix 平台的命令行版本。</P>
+
+<P>在 <A href="http://sourceforge.net/projects/sevenzip/">Source Forge 的 7-Zip 页面</A> 中您可以找到相关的论坛、错误汇报及系统需求。 </P>
+
+<H2>压缩比</H2>
+
+<P>让我们把 <B>7-Zip</B> 和常用的压缩软件进行比较。</P>
+
+<P><B>文件设置：</B>完整安装后的 <A href="http://www.mozilla.org/products/firefox/" target="_blank">Mozilla Firefox</A> 1.0.7 for Windows 和 <A href="http://earth.google.com/" target="_blank">Google Earth</A> 3.0.0616 for Windows。</P>
+
+<TABLE cellspacing ="2" cellpadding ="6">
+  <TR>
+    <TH class="Title" rowspan = 3>软件名称</TH>
+    <TH class="Title" align="center" colspan = 2>Mozilla Firefox</TH>
+    <TH class="Title" align="center" colspan = 2>Google Earth</TH>
+  </TR>
+  <TR>
+    <TH class="Title" align="center" colspan = 2>161 个文件<BR>15,684,168 字节</TH>
+    <TH class="Title" align="center" colspan = 2>115 个文件<BR>23,530,652 字节</TH>
+  </TR>
+  <TR>
+    <TH class="Title" align="center">压缩后</TH>
+    <TH class="Title" align="center">压缩比</TH>
+    <TH class="Title" align="center">压缩后</TH>
+    <TH class="Title" align="center">压缩比</TH>
+  </TR>
+  <TR>
+    <TD class="Item"><B>7-Zip 4.23（7z 格式）</B></TD>
+    <TD class="Item" align="center"><B>4621135</B></TD>
+    <TD class="Item" align="center"><B>100%</B></TD>
+    <TD class="Item" align="center"><B>6109183</B></TD>
+    <TD class="Item" align="center"><B>100%</B></TD>
+  </TR>
+  <TR>
+    <TD class="Item">WinRAR 3.50</TD>
+    <TD class="Item" align="center">5021556</TD>
+    <TD class="Item" align="center">109%</TD>
+    <TD class="Item" align="center">6824892</TD>
+    <TD class="Item" align="center">112%</TD>
+  </TR>
+  <TR>
+    <TD class="Item">CABARC 5.1</TD>
+    <TD class="Item" align="center">5131393</TD>
+    <TD class="Item" align="center">111%</TD>
+    <TD class="Item" align="center">7434325</TD>
+    <TD class="Item" align="center">122%</TD>
+  </TR>
+  <TR>
+    <TD class="Item">WinZip 10.0 beta（maximum-PPMd）</TD>
+    <TD class="Item" align="center">5277118</TD>
+    <TD class="Item" align="center">114%</TD>
+    <TD class="Item" align="center">8200708</TD>
+    <TD class="Item" align="center">134%</TD>
+  </TR>
+  <TR>
+    <TD class="Item"><B>7-Zip 4.23（zip 格式）</B></TD>
+    <TD class="Item" align="center"><B>6222627</B></TD>
+    <TD class="Item" align="center"><B>135%</B></TD>
+    <TD class="Item" align="center"><B>8909446</B></TD>
+    <TD class="Item" align="center"><B>146%</B></TD>
+  </TR>
+  <TR>
+    <TD class="Item">WinZip 10.0 beta（maximum-portable）</TD>
+    <TD class="Item" align="center">6448666</TD>
+    <TD class="Item" align="center">140%</TD>
+    <TD class="Item" align="center">9153898</TD>
+    <TD class="Item" align="center">150%</TD>
+  </TR>
+</TABLE>
+
+<P>压缩比结果由被压缩的数据大小而定。通常使用 <B>7-Zip</B> 的 7z 格式能比使用 zip 格式的压缩档案小 30-70%。并且使用 <B>7-Zip</B> 创建的 zip 格式比大多数其它压缩软件创建的都小 2-10%。</P>
+
+</TD>
+
+<TD vAlign=top align=right width=210>
+
+<!--TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+    <P><A href="http://sourceforge.net/community/index.php/landing-pages/cca07/">
+        <IMG src="http://www.7-zip.org/bestProjectTech.gif" alt="7-Zip CCA 奖项" width="200" height="45"></A></P>
+    <P>7-Zip 荣获 2007 年 SourceForge.net 社区选择奖的两项殊荣：</P>
+    <UL>
+      <LI>最佳工程</LI>
+      <LI>最佳技术设计</LI>
+    </UL>
+    </TD>
+  </TR>
+</TABLE-->
+
+<TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=NewsHeader>
+    <TD class=NewsTitle>7-Zip 9.20</TD>
+    <TD class=NewsDate>2010-11-18</TD></TR>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+      <A href="history.txt">查看更新历史</A>
+    </TD>
+  </TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=NewsHeader>
+    <TD class=NewsTitle>7-Zip 9.18 beta</TD>
+    <TD class=NewsDate>2010-11-02</TD></TR>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+      支持 SquashFS 和 CramFS
+    </TD>
+  </TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=NewsHeader>
+    <TD class=NewsTitle>7-Zip 9.17 beta</TD>
+    <TD class=NewsDate>2010-10-04</TD></TR>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+      修正 7-Zip 创建 ZIP 压缩包时产生多余磁盘碎片的问题
+    </TD>
+  </TR>
+</TABLE>
+
+<BR><BR>
+<TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=NewsHeader>
+    <TD class=NewsTitle>7-Zip 9.16 beta</TD>
+    <TD class=NewsDate>2010-09-08</TD></TR>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+      完善对 TAR 和 NSIS 的支持
+    </TD>
+  </TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=NewsHeader>
+    <TD class=NewsTitle>LZMA SDK 9.12 beta</TD>
+    <TD class=NewsDate>2010-03-24</TD></TR>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+      <A href="./sdk.html">支持 PPMd</A>
+    </TD>
+  </TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE class=News cellpadding=3 cellspacing=1 border=0>
+  <TR class=NewsHeader>
+    <TD class=NewsTitle style="background-color:#808040;">了解 7-Zip 最新动态</TD></TR>
+  <TR class=News>
+    <TD class=NewsText colSpan=2>
+      <P><IMG src="http://static.sparanoid.com/7z/twitter-14x14.png" alt="RSS" width="14" height="14"> <A href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</A></P>
+    </TD>
+  </TR>
+</TABLE>
+
+<BR><BR>
+
+<div class=yoggrtad-wrap>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	document.write('<scr' + 'ipt type="text/javascript" src="http://ads.yoggrt.com/www/delivery/ajs.php?zoneid=72&charset=UTF-8&withtext=1&referer='+ escape(document.referrer) +'&loc='+ escape(window.location) +'&cb=' + Math.floor(Math.random() * 99999999999) + '"></scr' + 'ipt>');
+	/* ]]> */ 
+	</script>
+	<p class="adby"><a href="http://www.yoggrt.com">由 Yoggrt 提供的广告</a></p>
+</div>
+
+</TD>
+</TR>
+</TABLE>
