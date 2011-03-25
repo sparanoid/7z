@@ -33,5 +33,5 @@ server_port: 5432
 exclude: 
 - README.md
 - LICENSE
-#- a.css
 - Rakefile
+- 7z.tmproj
