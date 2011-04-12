@@ -1,9 +1,9 @@
 ﻿;!@Lang@!UTF-8!
-; 7-Zip 9.15
-; translated by Sparanoid
+; 7-Zip 9.21
+; translated by Tunghsiao Liu
 ; http://sparanoid.com/lab/7z/
-; last updated: 2010-06-29
-; revision: 0207
+; last updated: 2011-04-12
+; revision: 0937
 ;
 
 00000000="Chinese Simplified"
@@ -256,7 +256,7 @@
 02000D06="参数(&P)："
 02000D07="选项"
 02000D08="创建自释放程序(&X)"
-02000D09="多线程支持(Pentium 4 HT 或多处理器)"
+02000D09="多线程支持 (奔腾 4 HT 或多处理器)"
 02000D0A="加密文件名(&N)"
 02000D0B="压缩等级(&L)："
 02000D0C="字典大小(&D)："
