@@ -1,4 +1,4 @@
-﻿7-Zip 附加包 9.20
+﻿7-Zip 附加包 9.21
 -----------------
 
 7-Zip 附加包包含了一些额外的 7-Zip 模块。
@@ -14,6 +14,7 @@
 7zSD.sfx        - 安装包 SFX 模块（需调用 msvcrt.dll）
 7zS2.sfx        - 精简版 SFX 模块（GUI 版本，需调用 msvcrt.dll）
 7zS2con.sfx     - 精简版 SFX 模块（命令行版本，需调用 msvcrt.dll）
+7zr.exe      - 独立的 7-Zip 命令行版本
 7zr.exe      - 低版本的 7za.exe 命令行
 7zxa.dll     - 7z 档案释放运行库。
 history.txt  - 7-Zip 历史
@@ -31,7 +32,16 @@ x64\            - x64 DLL 文件
   - 内置编码器：LZMA、LZMA2、PPMD、BCJ、BCJ2、COPY、AES-256 加密。
   - 内置解码器：LZMA、LZMA2、PPMD、BCJ、BCJ2、COPY、AES-256 加密、BZip2、Deflate。
 7zxa.dll 则只支持解压缩 .7z 格式。
-    
+
+7za.exe 特征：
+  - 支持高压缩比的 7z 格式
+  - 支持下列其他格式：
+      - 压缩 / 解压缩：7z、xz、ZIP、GZIP、BZIP2、TAR 
+      - 仅解压缩：Z、lzma
+  - 为 ZIP 和 GZIP 格式提供最高的压缩比
+  - 较快的压缩和解压所速度
+  - 为 7z 和 ZIP 提供强大的 AES-256 加密
+
 
 7-Zip 是一款免费软件。您可以查看 License.txt 文档了解详细的版权信息。
 
