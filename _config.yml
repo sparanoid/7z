@@ -12,9 +12,9 @@ url: sparanoid.com/lab/7z
 file: http://a1.sparanoid.com
 
 # version info, put them in quotes to avoid rounding off
-beta:         '9.20'
-beta-short:   '920'
-beta-date:    '2010-11-18'
+beta:         '9.22 beta'
+beta-short:   '922'
+beta-date:    '2011-04-18'
 
 stable:       '9.20'
 stable-short: '920'
