@@ -1,4 +1,4 @@
-﻿7-Zip 附加包 9.21
+﻿7-Zip 附加包 9.22
 -----------------
 
 7-Zip 附加包包含了一些额外的 7-Zip 模块。
@@ -8,23 +8,25 @@
 当前的版本中包含以下文件：
 
 7za.dll      - 7z 档案运行库。
-7z.sfx          - 自释放模块（GUI 版本）
-7zCon.sfx       - 自释放模块（命令行版本）
+7zxa.dll     - 7z 档案释放运行库。
 7zS.sfx         - 安装包 SFX 模块。
 7zSD.sfx        - 安装包 SFX 模块（需调用 msvcrt.dll）
 7zS2.sfx        - 精简版 SFX 模块（GUI 版本，需调用 msvcrt.dll）
 7zS2con.sfx     - 精简版 SFX 模块（命令行版本，需调用 msvcrt.dll）
 7zr.exe      - 独立的 7-Zip 命令行版本
 7zr.exe      - 低版本的 7za.exe 命令行
-7zxa.dll     - 7z 档案释放运行库。
-history.txt  - 7-Zip 历史
+7-zip.chm    - 帮助文件 
 License.txt  - 版权许可信息
 readme.txt   - 自述文档（当前文件）
-zh-cn.txt    - 最新版本语言文件（Nightly Build）
-Docs\           - 7-Zip 自述、历史更新、帮助文件
+history.txt  - 7-Zip 历史
 Far\            - FAR 管理器插件
 Installer\      - 制作安装包所需文件
 x64\            - x64 DLL 文件
+
+zh-cn.txt    - 最新版本语言文件（Nightly Build）
+7z.sfx          - 自释放模块（GUI 版本）
+7zCon.sfx       - 自释放模块（命令行版本）
+Docs\           - 7-Zip 自述、历史更新、帮助文件
 
 
 7za.dll 特征：
