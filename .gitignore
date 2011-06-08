@@ -1,6 +1,8 @@
 # Jekyll specified
 _site
 *.min.css
+*.min.js
+Rakefile
 
 # Mac OS X files
 .DS_Store
@@ -8,7 +10,6 @@ _site
 # Image, font original files
 *.psd
 *.ai
-*.vfb
 
 # Logs, Leftovers
 *.log
