@@ -9,7 +9,7 @@ markdown: rdiscount
 name: 7-Zip
 twitter: 7zip
 url: sparanoid.com/lab/7z
-file: http://a1.sparanoid.com
+file: http://rsrc.sparanoid.com
 
 # version info, put them in quotes to avoid rounding off
 beta:         '9.22 beta'
