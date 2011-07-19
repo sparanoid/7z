@@ -1,3 +1,5 @@
+# TUNGHSIAO LIU'S FAVORITE GITIGNORE
+
 # Jekyll specified
 _site
 *.min.css
@@ -16,3 +18,4 @@ Rakefile
 !errors.log
 *.bak
 *.tmproj
+*.esproj
