@@ -25,9 +25,14 @@ TD.ExternalProgram { background-color: #E8D0E8}
 
 a { text-decoration: none; }
 
-.yoggrtad-wrap { width: 160px; }
-	.yoggrtad-wrap a { color: #999; }
-	.yoggrtad-wrap a:hover { color: #000; }
-	.yoggrtad-wrap:hover a { color: #000; }
-		.yoggrtad img { margin-bottom: 10px; }
-	.adby { font-size: 10px; }
+.bsap { width: 160px; }
+.bsap a, .ads_here a { color: #999; }
+.bsap a:hover, .ads_here a:hover { color: #000; }
+/*image */
+.bsa_it_i { display: block; text-align: right; padding-bottom: 10px; }
+/*ads text title */
+.bsa_it_t { display: none; }
+/*ads text content */
+.bsa_it_d { line-height: 1.6; }
+/*hide ads by */
+.one .bsa_it_p { display:none; }
