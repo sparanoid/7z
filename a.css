@@ -25,11 +25,12 @@ TD.ExternalProgram { background-color: #E8D0E8}
 
 a { text-decoration: none; }
 
-.bsap { width: 160px; }
+.bsap { width: 120px; }
 .bsap a, .ads_here a { color: #999; }
 .bsap a:hover, .ads_here a:hover { color: #000; }
 /*image */
 .bsa_it_i { display: block; text-align: right; padding-bottom: 10px; }
+.bsa_it_i img { width: 120px; height: auto; }
 /*ads text title */
 .bsa_it_t { display: none; }
 /*ads text content */
