@@ -45,14 +45,14 @@ Docs\           - 7-Zip 自述、历史更新、帮助文件
   - 为 7z 和 ZIP 提供强大的 AES-256 加密
 
 
-7-Zip 是一款免费软件。您可以查看 License.txt 文档了解详细的版权信息。
+7-Zip 是一款自由软件。您可以查看 License.txt 文档了解详细的版权信息。
 
 7za.dll 以及 7-Zip（包括所有的界面以及示例程序）的源代码可以在以下地址找到：
 
 http://www.7-zip.org/
 
 7za.dll 以及 7zxa.dll 可以在 Windows 95/98/ME/NT/2000/XP/2003 上正常运行。
-7za.dll 以及 7zxa.dll 通过 COM 界面运行。但这些 DLL 并不使用标准 COM 界面来创建物件。
+7za.dll 以及 7zxa.dll 通过 COM 界面运行。但这些 DLL 并不使用标准 COM 界面来创建对象。
 
 ---
 文档末端
