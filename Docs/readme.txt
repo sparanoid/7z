@@ -21,7 +21,7 @@
   - 共 83 种界面语言
 
 
-7-Zip 是一款发布于 GNU LGPL 协议下的免费软件（除 unRar 代码及 AES 代码）
+7-Zip 是一款发布于 GNU LGPL 协议下的自由软件（除 unRar 代码及 AES 代码）
 您可以查看 License.txt 文档了解详细的版权信息。
 
 
