@@ -1,0 +1,22 @@
+# TUNGHSIAO LIU'S FAVORITE GITIGNORE
+
+# Jekyll specified
+_site
+*.min.css
+*.min.js
+Rakefile
+
+# Mac OS X files
+.DS_Store
+
+# Image, font original files
+*.psd
+*.ai
+
+# Logs, Leftovers
+*.log
+!errors.log
+*.bak
+*.tmproj
+*.esproj
+*.sublime*
