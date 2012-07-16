@@ -2,9 +2,8 @@
 
 # Jekyll specified
 _site
+_build
 *.min.css
-*.min.js
-Rakefile
 
 # Mac OS X files
 .DS_Store
@@ -15,7 +14,4 @@ Rakefile
 
 # Logs, Leftovers
 *.log
-!errors.log
 *.bak
-*.tmproj
-*.esproj
