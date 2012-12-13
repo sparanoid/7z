@@ -1,25 +1,34 @@
-# folder settings
-source: .
-destination: ./_site
+# Jekyll configurations
+source:         .
+destination:    ./_site
+markdown:       rdiscount
 
-# site settings
-markdown: rdiscount
+# Jekyll server settings
+auto:           true
+server:         ture
+server_port:    5432
+exclude:
+- README.md
+- LICENSE
+- Rakefile
 
-# custom vars
-name: 7-Zip
-twitter: 7zip
-url: sparanoid.com/lab/7z
-file: http://rsrc.sparanoid.com
+# Custom settings
+name:           7-Zip
+twitter:        7zip
+url:            sparanoid.com/lab/7z
+# file:           http://rsrc.sparanoid.com
+# file:           http://d349cztnlupsuf.cloudfront.net
+file:           http://c1288.orca.io
 
-# version info, put them in quotes to avoid rounding off
+# 7-Zip version info, put them in quotes to avoid rounding off
 beta:           '9.22 beta'
 beta-short:     '922'
 beta-date:      '2011-04-18'
-                
+
 stable:         '9.20'
 stable-short:   '920'
 stable-date:    '2010-11-18'
-                
+
 sdk:            '9.20'
 sdk-short:      '920'
 sdk-date:       '2010-11-18'
@@ -27,14 +36,3 @@ sdk-date:       '2010-11-18'
 sdk-beta:       '9.22 beta'
 sdk-beta-short: '920'
 sdk-beta-date:  '2011-04-19'
-
-# fire up a localhost and auto generate when files change
-auto: true
-server: ture
-server_port: 5432
-
-# exclude files for generated site
-exclude: 
-- README.md
-- LICENSE
-- Rakefile
