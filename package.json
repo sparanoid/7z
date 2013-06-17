@@ -1,7 +1,7 @@
 {
   "name": "7z-web",
   "version": "3.20.1",
-  "description": "Jekyll runing on sparanoid.com",
+  "description": "7-Zip Chinese Simplified Website",
   "author": "Tunghsiao Liu",
   "homepage": "http://sparanoid.com/",
   "main": "Gruntfile.coffee",
