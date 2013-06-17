@@ -1,0 +1,38 @@
+{
+  "name": "7z-web",
+  "version": "3.20.1",
+  "description": "Jekyll runing on sparanoid.com",
+  "author": "Tunghsiao Liu",
+  "homepage": "http://sparanoid.com/",
+  "main": "Gruntfile.coffee",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sparanoid/7z-web.git"
+  },
+  "bugs": {
+    "url": "http://github.com/sparanoid/7z-web/issues"
+  },
+  "keywords": [
+    "jekyll",
+    "less",
+    "css"
+  ],
+  "license": "LGPL",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-contrib-less": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-coffeelint": "0.0.6",
+    "grunt-concurrent": "~0.3.0",
+    "grunt-recess": "~0.3.3",
+    "grunt-shell": "~0.2.2",
+    "matchdep": "~0.1.2"
+  }
+}

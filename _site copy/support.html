@@ -3,7 +3,7 @@
 <HEAD>
 <LINK href="a.css" rel="stylesheet" type="text/css">
 <LINK href="/lab/7z/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<TITLE>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</TITLE>
+<TITLE>7-Zip - 技术支持</TITLE>
 <META name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
 </HEAD>
 <BODY>
@@ -11,20 +11,18 @@
 <TABLE cellspacing=10 cellpadding=10 border=0 width="100%"><TR>
 <TD class="MenuColumn" valign="top">
 <TABLE cellpadding=2 cellspacing=0 border=0 width="100%">
-<TR><TD><IMG width=110 height=63 src="{{ site.file }}/7z/7ziplogo.png" alt="7-Zip" border=0></TD></TR>
+<TR><TD><IMG width=110 height=63 src="http://d349cztnlupsuf.cloudfront.net/7z/7ziplogo.png" alt="7-Zip" border=0></TD></TR>
 <TR><TD><HR></TD></TR></TABLE>
 
 <TABLE cellpadding="2" cellspacing="0" border="0">
-  <TR><TD><a{% if page.short != 'home' %} href="./"{% endif %}{% if page.short == 'home' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>首页</a></TR></TD>
-  <TR><TD><a{% if page.short != '7z' %} href="7z.html"{% endif %}{% if page.short == '7z' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>7z 格式</a></TR></TD>
-  <TR><TD><a{% if page.short != 'sdk' %} href="sdk.html"{% endif %}{% if page.short == 'sdk' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>LZMA SDK</a></TR></TD>
-  <TR><TD><a{% if page.short != 'download' %} href="download.html"{% endif %}{% if page.short == 'download' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>软件下载</a></TR></TD>
-  <TR><TD><a{% if page.short != 'faq' %} href="faq.html"{% endif %}{% if page.short == 'faq' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>常见问题</a></TR></TD>
-  <TR><TD><a{% if page.short != 'support' %} href="support.html"{% endif %}{% if page.short == 'support' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>技术支持</a></TR></TD>
-  <TR><TD><a{% if page.short != 'links' %} href="links.html"{% endif %}{% if page.short == 'links' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>相关链接</a></TR></TD>
-  {% if page.short == 'links' %}
-    <TR><TD>&nbsp&nbsp<a href="http://www.7-zip.org/logos.html">软件标徽</a></TR></TD>
-  {% endif %}
+  <TR><TD><a href="./" class="MenuLink">首页</a></TR></TD>
+  <TR><TD><a href="7z.html" class="MenuLink">7z 格式</a></TR></TD>
+  <TR><TD><a href="sdk.html" class="MenuLink">LZMA SDK</a></TR></TD>
+  <TR><TD><a href="download.html" class="MenuLink">软件下载</a></TR></TD>
+  <TR><TD><a href="faq.html" class="MenuLink">常见问题</a></TR></TD>
+  <TR><TD><a class="MenuCurrent">技术支持</a></TR></TD>
+  <TR><TD><a href="links.html" class="MenuLink">相关链接</a></TR></TD>
+  
 </TABLE>
 
 <TABLE cellpadding=2 cellspacing=0 border=0 width="100%">
@@ -45,34 +43,60 @@
 <A href="http://www.7-zip.org/">Other Languages</A><BR>
 <!-- </P> -->
 <HR>
-{% if page.short == 'home' %}
-<P><STRONG>捐赠汉化者</STRONG>：7-Zip 是一款免费的开源软件，简体中文由 Sparanoid 从 2005 年维护至今，如果您喜欢本软件，可以考虑为本人捐赠，金额不限，所得捐款将用于增加本人的汉化动力以及为服务器进行续费</P>
-<A href="http://me.alipay.com/sparanoid"><IMG src="{{ site.file }}/7z/donate.png" width=92 height=26 border=0 alt="捐赠汉化者"></A>
-<HR>
-{% endif %}
 
-<!-- BuySellAds.com Zone Code -->
-<div id="bsap_1270519" class="bsarocks bsap_61b6b15e100a568b32633d727ebeb3b4"></div>
-<!-- End BuySellAds.com Zone Code -->
-
-<!-- BuySellAds.com Ad Code -->
-<script type="text/javascript">
-(function(){
-  var bsa = document.createElement('script');
-     bsa.type = 'text/javascript';
-     bsa.async = true;
-     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
-  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
-})();
-</script>
-<!-- End BuySellAds.com Ad Code -->
 
 </TD><!-- .MenuColumn -->
 <TD valign="top">
 
-{{ content }}
+<H1>技术支持</H1>
 
-<HR><P><SMALL>Copyright (C) {{ site.time | date: "%Y" }} Igor Pavlov.</SMALL>
+<P>在您请求 7-Zip 帮助之前，请先：</P>
+<UL>
+  <LI>检查您使用的是最新版本的 7-Zip。
+  <LI>如果您使用的是 64 位 Windows，确认您使用的 7-Zip 也是 x64 版本的。
+  <LI>查看 7-Zip 的帮助文件。
+  <LI>阅读 <A href ="faq.html">常见问题解答（FAQ）</A> 文档。
+</UL>
+
+<P>搜索 7-Zip 论坛 (英文)：</P>
+<style type="text/css">
+@import url(http://www.google.com/cse/api/branding.css);
+</style>
+<div class="cse-branding-bottom" style="background-color:#FFFFFF;color:#000000">
+  <div class="cse-branding-form">
+    <form action="http://www.google.com/cse" id="cse-search-box">
+      <div>
+        <input type="hidden" name="cx" value="partner-pub-8875464887834608:k0wg3h-ys9l" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" name="q" size="70" />
+        <input type="submit" name="sa" value="搜索" />
+      </div>
+    </form>
+  </div>
+  <div class="cse-branding-logo">
+    <img src="http://www.google.com/images/poweredby_transparent/poweredby_FFFFFF.gif" alt="Google" />
+  </div>
+  <div class="cse-branding-text">
+    自定义搜索
+  </div>
+</div>
+
+<P>请到 7-Zip 论坛发布您所遇到的所有常的见问题。在那里您可以获得 7-Zip 开发者和其它 7-Zip 用户的帮助：</P>
+<P>请使用英语。</P>
+
+<P><A href="http://sourceforge.net/forum/forum.php?forum_id=45797">Source Forge 上的 7-Zip 论坛</A></P>
+
+<P>如果您使用 7-Zip 时遇到了问题，请提供下列系统信息：</P>
+<UL>
+  <LI>7-Zip 版本及类型 (32-bit / 64-bit)
+  <LI>Windows 版本及类型 (32-bit / 64-bit)
+  <LI>CPU 类型
+  <LI>RAM 大小
+</UL>
+
+<P>如果您在使用简体中文版时遇到了翻译错误，请到 <A href="https://github.com/sparanoid/7z/issues">这里</A> 进行提交。</P>
+
+<HR><P><SMALL>Copyright (C) 2013 Igor Pavlov.</SMALL>
 </P>
 </TD><!-- Main Content --></TR></TABLE>
 

@@ -1,17 +1,7 @@
-# TUNGHSIAO LIU'S FAVORITE GITIGNORE
-
-# Jekyll specified
+node_modules
 _site
-_build
-*.min.css
-
-# Mac OS X files
-.DS_Store
-
-# Image, font original files
-*.psd
-*.ai
-
-# Logs, Leftovers
+Gemfile.lock
 *.log
-*.bak
+
+# ./_source/a.css
+a.css
