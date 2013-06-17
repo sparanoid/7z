@@ -29,7 +29,6 @@ twitter:        7zip
 url:            sparanoid.com/lab/7z
 # file:           http://rsrc.sparanoid.com
 file:           http://d349cztnlupsuf.cloudfront.net
-# file:           http://c1288.orca.io
 
 # 7-Zip version info, put them in quotes to avoid rounding off
 beta:           '9.22 beta'
@@ -55,8 +54,3 @@ sdk-beta-date:  '2011-04-19'
 remote_user:  root@sparanoid.com # SSH user used by rsync
 remote_dir:   /srv/www/sparanoid.com/public_html/lab/7z # Remote root directory
 ignore_files: '' # Prevent them from being deleted on server (rsync --delete)
-# static_files: ~/Dropbox/Sites/static.sparanoid.com/ # Media assets sync'ed using s3cmd
-# s3_bucket:    s3://sparanoid/ # Amazon S3 Bucket
-# assets_dev:   http://sparanoid.s3-website-us-east-1.amazonaws.com # Media assets hosted on S3
-# assets:       http://d349cztnlupsuf.cloudfront.net # For production site
-# assets:       http://rsrc.sparanoid.com
