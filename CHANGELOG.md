@@ -1,5 +1,0 @@
-# Changelog
-
-## Head
-
-- Upate changelog
