@@ -46,11 +46,3 @@ sdk-date:       '2010-11-18'
 sdk-beta:       '9.22 beta'
 sdk-beta-short: '920'
 sdk-beta-date:  '2011-04-19'
-
-#
-# Custom distribution variables
-#
-
-remote_user:  root@sparanoid.com # SSH user used by rsync
-remote_dir:   /srv/www/sparanoid.com/public_html/lab/7z # Remote root directory
-ignore_files: '' # Prevent them from being deleted on server (rsync --delete)

@@ -109,9 +109,6 @@ module.exports = (grunt) ->
       dist:
         command: "jekyll build"
 
-      sync:
-        command: "rsync -avz --delete <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_user %>:<%= core.cfg.remote_dir %> > rsync.log"
-
       log:
         command: "git log <%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
 
