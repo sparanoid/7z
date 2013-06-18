@@ -155,5 +155,4 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
   grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "concurrent:dist"]
   grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
-  grunt.registerTask "log", ["shell:log"]
   grunt.registerTask "default", ["build"]
