@@ -115,6 +115,16 @@ module.exports = (grunt) ->
       log:
         command: "git log <%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
 
+    copy:
+      sync:
+        files: [
+          expand: true
+          dot: true
+          cwd: "<%= core.dist %>/"
+          src: ["**"]
+          dest: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
+        ]
+
     concurrent:
       options:
         logConcurrentOutput: true
@@ -126,12 +136,24 @@ module.exports = (grunt) ->
         # tasks: ["htmlmin", "cssmin"]
         tasks: ["cssmin"]
 
+    clean:
+      dist:
+        files: [
+          dot: true
+          src: [".tmp", "<%= core.dist %>/*"]
+        ]
 
-    clean: [".tmp", "<%= core.dist %>/*"]
+      sync:
+        options:
+          force: true
+
+        files: [
+          src: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
+        ]
 
   grunt.registerTask "server", ["less:server", "concurrent:server"]
   grunt.registerTask "test", ["coffeelint", "recess"]
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
-  grunt.registerTask "sync", ["build", "shell:sync"]
+  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "concurrent:dist"]
+  grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
   grunt.registerTask "log", ["shell:log"]
   grunt.registerTask "default", ["build"]
