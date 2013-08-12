@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sparanoid/7z-web.git"
+    "url": "git://github.com/sparanoid/7z.git"
   },
   "bugs": {
-    "url": "http://github.com/sparanoid/7z-web/issues"
+    "url": "http://github.com/sparanoid/7z/issues"
   },
   "keywords": [
     "jekyll",
