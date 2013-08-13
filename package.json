@@ -20,7 +20,10 @@
     "less",
     "css"
   ],
-  "license": "LGPL",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://github.com/sparanoid/7z/blob/site/LICENSE"
+  },
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "~0.4.1",
