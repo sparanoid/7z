@@ -24,16 +24,16 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-less": "~0.6.0",
-    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-htmlmin": "~0.1.3",
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-coffeelint": "0.0.6",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-coffeelint": "0.0.7",
     "grunt-concurrent": "~0.3.0",
     "grunt-recess": "~0.3.3",
-    "grunt-shell": "~0.2.2",
+    "grunt-shell": "~0.3.1",
     "matchdep": "~0.1.2"
   }
 }
