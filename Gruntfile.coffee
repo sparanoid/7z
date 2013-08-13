@@ -16,7 +16,7 @@ module.exports = (grunt) ->
       banner += " * (c) <%= core.pkg.author %>.\n *\n"
       banner += " * <%= core.pkg.name %> - v<%= core.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
       banner += " * <%= core.pkg.homepage %>\n"
-      banner += " * <%= core.pkg.license.type %> - <%= core.pkg.license.url %>\n"
+      banner += " * <%= core.pkg.licenses.type %> - <%= core.pkg.licenses.url %>\n"
       banner += " */"
       banner
 
@@ -41,7 +41,7 @@ module.exports = (grunt) ->
     recess:
       test:
         files:
-          src: ["<%= core.app %>/a.less"]
+          src: ["<%= core.app %>/css/a.less"]
 
     watch:
       coffee:
@@ -55,18 +55,18 @@ module.exports = (grunt) ->
     less:
       server:
         options:
-          paths: ["<%= core.app %>"]
+          paths: ["<%= core.app %>/css"]
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.app %>/a.css": ["<%= core.app %>/a.less"]
+          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
 
       dist:
         options:
-          paths: ["<%= core.app %>"]
+          paths: ["<%= core.app %>/css"]
 
         files:
-          "<%= core.app %>/a.css": ["<%= core.app %>/a.less"]
+          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
 
     htmlmin:
       dist:
@@ -90,6 +90,15 @@ module.exports = (grunt) ->
           dest: "<%= core.dist %>/"
         ]
 
+    xmlmin:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>"
+          src: "**/*.xml"
+          dest: "<%= core.dist %>/"
+        ]
+
     cssmin:
       dist:
         options:
@@ -97,30 +106,35 @@ module.exports = (grunt) ->
           report: "gzip"
 
         files:
-          "<%= core.dist %>/a.css": ["<%= core.dist %>/*.css"]
+          "<%= core.dist %>/css/a.css": ["<%= core.dist %>/css/*.css"]
+
+      # html:
+      #   expand: true
+      #   cwd: "<%= core.dist %>"
+      #   src: "**/*.html"
+      #   dest: "<%= core.dist %>"
 
     shell:
       options:
         stdout: true
 
       server:
-        command: "jekyll serve --watch"
+        command: "jekyll serve --watch --future"
 
       dist:
         command: "jekyll build"
 
-      log:
-        command: "git log <%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
+      archive:
+        command: "jekyll build --baseurl <%= core.cfg.base %>/ -d <%= core.cfg.destination %><%= core.cfg.base %>/"
 
-    copy:
       sync:
-        files: [
-          expand: true
-          dot: true
-          cwd: "<%= core.dist %>/"
-          src: ["**"]
-          dest: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
-        ]
+        command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
+
+      s3:
+        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
+
+      log:
+        command: "git log v<%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
 
     concurrent:
       options:
@@ -130,26 +144,31 @@ module.exports = (grunt) ->
         tasks: ["shell:server", "watch"]
 
       dist:
-        # tasks: ["htmlmin", "cssmin"]
-        tasks: ["cssmin"]
+        tasks: ["htmlmin", "xmlmin", "cssmin"]
 
-    clean:
-      dist:
-        files: [
-          dot: true
-          src: [".tmp", "<%= core.dist %>/*"]
-        ]
 
-      sync:
-        options:
-          force: true
+    clean: [".tmp", "<%= core.dist %>/*"]
 
-        files: [
-          src: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
-        ]
+  # Fire up a server on local machine for development
+  grunt.registerTask "server", ["less:server", "concurrent"]
 
-  grunt.registerTask "server", ["less:server", "concurrent:server"]
+  # Test task
   grunt.registerTask "test", ["coffeelint", "recess"]
-  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "concurrent:dist"]
-  grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
+
+  # Build site with `jekyll`
+  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
+
+  # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
+  grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
+
+  # Build site + rsync static files to remote server
+  grunt.registerTask "sync", ["build", "shell:sync"]
+
+  # Sync image assets with `s3cmd`
+  grunt.registerTask "s3", ["shell:s3"]
+
+  # Dump git log
+  grunt.registerTask "log", ["shell:log"]
+
+  # Default task aka. build task
   grunt.registerTask "default", ["build"]
