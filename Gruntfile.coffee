@@ -41,7 +41,7 @@ module.exports = (grunt) ->
     recess:
       test:
         files:
-          src: ["<%= core.app %>/css/a.less"]
+          src: ["<%= core.app %>/a.less"]
 
     watch:
       coffee:
@@ -55,18 +55,18 @@ module.exports = (grunt) ->
     less:
       server:
         options:
-          paths: ["<%= core.app %>/css"]
+          paths: ["<%= core.app %>"]
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
+          "<%= core.app %>/a.css": ["<%= core.app %>/a.less"]
 
       dist:
         options:
-          paths: ["<%= core.app %>/css"]
+          paths: ["<%= core.app %>"]
 
         files:
-          "<%= core.app %>/css/a.css": ["<%= core.app %>/css/a.less"]
+          "<%= core.app %>/a.css": ["<%= core.app %>/a.less"]
 
     htmlmin:
       dist:
@@ -79,7 +79,7 @@ module.exports = (grunt) ->
           removeAttributeQuotes: true
           removeRedundantAttributes: true
           useShortDoctype: false
-          removeEmptyAttributes: true
+          removeEmptyAttributes: false
           removeOptionalTags: false
           removeEmptyElements: false
 
@@ -90,15 +90,6 @@ module.exports = (grunt) ->
           dest: "<%= core.dist %>/"
         ]
 
-    xmlmin:
-      dist:
-        files: [
-          expand: true
-          cwd: "<%= core.dist %>"
-          src: "**/*.xml"
-          dest: "<%= core.dist %>/"
-        ]
-
     cssmin:
       dist:
         options:
@@ -106,13 +97,7 @@ module.exports = (grunt) ->
           report: "gzip"
 
         files:
-          "<%= core.dist %>/css/a.css": ["<%= core.dist %>/css/*.css"]
-
-      # html:
-      #   expand: true
-      #   cwd: "<%= core.dist %>"
-      #   src: "**/*.html"
-      #   dest: "<%= core.dist %>"
+          "<%= core.dist %>/a.css": ["<%= core.dist %>/*.css"]
 
     shell:
       options:
@@ -124,17 +109,8 @@ module.exports = (grunt) ->
       dist:
         command: "jekyll build"
 
-      archive:
-        command: "jekyll build --baseurl <%= core.cfg.base %>/ -d <%= core.cfg.destination %><%= core.cfg.base %>/"
-
       sync:
         command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
-
-      s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --exclude '.DS_Store' <%= core.cfg.static_files %> <%= core.cfg.s3_bucket %>"
-
-      log:
-        command: "git log v<%= core.pkg.version %>..HEAD --reverse --format=%B | sed '/^$/d' | sed 's/^/- /'"
 
     concurrent:
       options:
@@ -144,7 +120,8 @@ module.exports = (grunt) ->
         tasks: ["shell:server", "watch"]
 
       dist:
-        tasks: ["htmlmin", "xmlmin", "cssmin"]
+        # tasks: ["htmlmin", "cssmin"]
+        tasks: ["cssmin"]
 
 
     clean: [".tmp", "<%= core.dist %>/*"]
@@ -158,17 +135,8 @@ module.exports = (grunt) ->
   # Build site with `jekyll`
   grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
 
-  # Archive old version with specific URL prefix, all old versions goes to http://sparanoid.com/lab/version/
-  grunt.registerTask "archive", ["build", "shell:archive", "concurrent:dist"]
-
   # Build site + rsync static files to remote server
   grunt.registerTask "sync", ["build", "shell:sync"]
-
-  # Sync image assets with `s3cmd`
-  grunt.registerTask "s3", ["shell:s3"]
-
-  # Dump git log
-  grunt.registerTask "log", ["shell:log"]
 
   # Default task aka. build task
   grunt.registerTask "default", ["build"]
