@@ -112,6 +112,31 @@ module.exports = (grunt) ->
       sync:
         command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
 
+    copy:
+      sync:
+        files: [
+          expand: true
+          dot: true
+          cwd: "<%= core.dist %>/"
+          src: ["**"]
+          dest: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
+        ]
+
+    clean:
+      dist:
+        files: [
+          dot: true
+          src: [".tmp", "<%= core.dist %>/*"]
+        ]
+
+      sync:
+        options:
+          force: true
+
+        files: [
+          src: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
+        ]
+
     concurrent:
       options:
         logConcurrentOutput: true
@@ -123,9 +148,6 @@ module.exports = (grunt) ->
         # tasks: ["htmlmin", "cssmin"]
         tasks: ["cssmin"]
 
-
-    clean: [".tmp", "<%= core.dist %>/*"]
-
   # Fire up a server on local machine for development
   grunt.registerTask "server", ["less:server", "concurrent"]
 
@@ -133,10 +155,10 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean", "test", "less:dist", "shell:dist", "concurrent:dist"]
+  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "concurrent:dist"]
 
   # Build site + rsync static files to remote server
-  grunt.registerTask "sync", ["build", "shell:sync"]
+  grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
 
   # Default task aka. build task
   grunt.registerTask "default", ["build"]
