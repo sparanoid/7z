@@ -145,6 +145,7 @@ module.exports = (grunt) ->
         tasks: ["shell:server", "watch"]
 
       dist:
+        # `htmlmin` doens't work well with 7z's old table-layout template
         # tasks: ["htmlmin", "cssmin"]
         tasks: ["cssmin"]
 
