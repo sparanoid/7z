@@ -58,16 +58,12 @@ module.exports = (grunt) ->
     less:
       server:
         options:
-          paths: ["<%= core.app %>"]
           dumpLineNumbers: "all"
 
         files:
           "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
 
       dist:
-        options:
-          paths: ["<%= core.app %>"]
-
         files:
           "<%= core.app %>/assets/css/app.css": ["<%= recess.test.files.src %>"]
 
