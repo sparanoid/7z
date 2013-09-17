@@ -41,7 +41,7 @@ module.exports = (grunt) ->
     recess:
       test:
         files:
-          src: ["<%= core.app %>/a.less"]
+          src: ["<%= core.app %>/app.less"]
 
     watch:
       coffee:
@@ -59,14 +59,14 @@ module.exports = (grunt) ->
           dumpLineNumbers: "all"
 
         files:
-          "<%= core.app %>/a.css": ["<%= core.app %>/a.less"]
+          "<%= core.app %>/app.css": ["<%= recess.test.files.src %>"]
 
       dist:
         options:
           paths: ["<%= core.app %>"]
 
         files:
-          "<%= core.app %>/a.css": ["<%= core.app %>/a.less"]
+          "<%= core.app %>/app.css": ["<%= recess.test.files.src %>"]
 
     htmlmin:
       dist:
@@ -97,7 +97,7 @@ module.exports = (grunt) ->
           report: "gzip"
 
         files:
-          "<%= core.dist %>/a.css": ["<%= core.dist %>/*.css"]
+          "<%= core.dist %>/app.css": ["<%= core.dist %>/*.css"]
 
     shell:
       options:
