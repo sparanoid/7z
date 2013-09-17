@@ -95,8 +95,12 @@ module.exports = (grunt) ->
           banner: "<%= core.banner %>"
           report: "gzip"
 
-        files:
-          "<%= core.dist %>/assets/css/app.css": ["<%= core.dist %>/assets/css/*.css"]
+        files: [
+          expand: true
+          cwd: "<%= core.dist %>/assets/css/"
+          src: ["*.css", "!*.min.css"]
+          dest: "<%= core.dist %>/assets/css/"
+        ]
 
     rev:
       options:
@@ -174,7 +178,7 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "useminPrepare", "concurrent:dist", "rev", "usemin"]
+  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "useminPrepare", "rev", "usemin", "concurrent:dist"]
 
   # Build site + rsync static files to remote server
   grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
