@@ -4,7 +4,7 @@
 
 source:         ./_source
 destination:    ./_site
-exclude:        ['a.less']
+exclude:        ['app.less']
 timezone:       Asia/Hong_Kong
 markdown:       rdiscount
 
