@@ -4,4 +4,4 @@ Gemfile.lock
 *.log
 
 # ./_source/a.css
-a.css
+app.css
