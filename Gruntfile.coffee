@@ -39,6 +39,9 @@ module.exports = (grunt) ->
           src: ["Gruntfile.coffee"]
 
     recess:
+      options:
+        noUniversalSelectors: false
+
       test:
         files:
           src: ["<%= core.app %>/app.less"]
@@ -99,6 +102,25 @@ module.exports = (grunt) ->
         files:
           "<%= core.dist %>/app.css": ["<%= core.dist %>/*.css"]
 
+    rev:
+      options:
+        encoding: "utf8"
+        algorithm: "md5"
+        length: 6
+
+      files:
+        src: ["<%= core.dist %>/*.css"]
+
+    useminPrepare:
+      html: "<%= core.dist %>/index.html"
+
+    usemin:
+      options:
+        dirs: ["<%= core.dist %>"]
+
+      html: ["<%= core.dist %>/**/*.html"]
+      css: ["<%= core.dist %>/**/*.css"]
+
     shell:
       options:
         stdout: true
@@ -156,7 +178,7 @@ module.exports = (grunt) ->
   grunt.registerTask "test", ["coffeelint", "recess"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "concurrent:dist"]
+  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "useminPrepare", "concurrent:dist", "rev", "usemin"]
 
   # Build site + rsync static files to remote server
   grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
