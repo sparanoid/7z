@@ -1,4 +1,4 @@
-﻿7-Zip 附加包 9.22
+﻿7-Zip 附加包 9.30
 -----------------
 
 7-Zip 附加包包含了一些额外的 7-Zip 模块。
@@ -15,7 +15,7 @@
 7zS2con.sfx     - 精简版 SFX 模块（命令行版本，需调用 msvcrt.dll）
 7zr.exe      - 独立的 7-Zip 命令行版本
 7zr.exe      - 低版本的 7za.exe 命令行
-7-zip.chm    - 帮助文件 
+7-zip.chm    - 帮助文件
 License.txt  - 版权许可信息
 readme.txt   - 自述文档（当前文件）
 history.txt  - 7-Zip 历史
@@ -38,7 +38,7 @@ Docs\           - 7-Zip 自述、历史更新、帮助文件
 7za.exe 特征：
   - 支持高压缩比的 7z 格式
   - 支持下列其他格式：
-      - 压缩 / 解压缩：7z、xz、ZIP、GZIP、BZIP2、TAR 
+      - 压缩 / 解压缩：7z、xz、ZIP、GZIP、BZIP2、TAR
       - 仅解压缩：Z、lzma
   - 为 ZIP 和 GZIP 格式提供最高的压缩比
   - 较快的压缩和解压所速度

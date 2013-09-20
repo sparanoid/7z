@@ -1,9 +1,9 @@
-﻿7-Zip 9.25
+﻿7-Zip 9.30
 ----------
 
 7-Zip 适用于 Windows 95/98/ME/NT/2000/2003/XP/Vista/7。
 
-7-Zip 版权所有 (C) 1999-2011 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2013 Igor Pavlov。
 
 软件特征：
 
