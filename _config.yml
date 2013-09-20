@@ -27,8 +27,9 @@ future:         false
 name:           7-Zip
 twitter:        7zip
 url:            sparanoid.com/lab/7z
-# file:           http://rsrc.sparanoid.com
-file:           http://d349cztnlupsuf.cloudfront.net
+# file:           http://rsrc.sparanoid.com/7z
+# file:           http://d349cztnlupsuf.cloudfront.net/7z
+file:           assets/img
 
 # 7-Zip version info, put them in quotes to avoid rounding off
 beta:           '9.22 beta'
