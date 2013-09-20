@@ -1,9 +1,9 @@
-7-Zip 安装程序 9.22
+7-Zip 安装程序 9.30
 -------------------
 
-7-Zip 一是款 Windows 98/ME/NT/2000/2003/XP 平台下的压缩软件。
+7-Zip 一是款 Windows 95/98/ME/NT/2000/2003/XP/Vista/7 平台下的压缩软件。
 
-7-Zip 版权所有 (C) 1999-2011 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2013 Igor Pavlov。
 
 这个库免是费的，您可以在基于自由软件基金会颁布的 GNU 宽通用公共许可（版本 2.1，
 或任意更早的版本）许可下重新发布它，并且/或修改它。
@@ -36,7 +36,7 @@ copy /b 7zSD.sfx + config.txt + archive.7z archive.exe
 格式：
 ID_String="Value"
 
-ID_String          描述 
+ID_String          描述
 
 Title              窗口标题
 BeginPrompt        安装前提示文字
@@ -51,7 +51,7 @@ ExecuteParameters  “ExecuteFile”的参数
 上述任何值都可以省略
 
 有两种运行程序的方法：RunProgram 和 ExecuteFile。如果您想从 .7z 压缩包中运行程序，
-请使用 RunProgram；如果您想从 .7z 压缩包中打开某个文件（例如文本文件），或者从 
+请使用 RunProgram；如果您想从 .7z 压缩包中打开某个文件（例如文本文件），或者从
 Windows 中执行某个命令，请使用 ExecuteFile，
 
 如果使用 RunProgram 参数并且目录前缀为空（Directory=""），系统将会按下列顺序搜索
@@ -151,5 +151,5 @@ copy /b 7zS2.sfx + g.7z 7zgCompr.exe
 3) 执行文件：
 
 7z a h.7z readme.txt -mx
-copy /b 7zS2.sfx + h.7z 7zTxt.exe 
+copy /b 7zS2.sfx + h.7z 7zTxt.exe
 7zTxt.exe
