@@ -1,7 +1,7 @@
-﻿7-Zip 9.30
+﻿7-Zip 9.32
 ----------
 
-7-Zip 适用于 Windows 95/98/ME/NT/2000/2003/XP/Vista/7。
+7-Zip 适用于 Windows NT / 2000 / 2003 / 2008 / XP / Vista / 7 / 8。
 
 7-Zip 版权所有 (C) 1999-2013 Igor Pavlov。
 
@@ -11,7 +11,7 @@
   - 支持格式：
      - 压缩 / 解压缩：7z、XZ、BZIP2、GZIP、TAR、ZIP
      - 仅解压缩：ARJ、CAB、CHM、CPIO、CramFS、DEB、DMG、FAT、HFS、ISO、LZH、LZMA、
-                 MBR、MSI、NSIS、NTFS、RAR、RPM、SquashFS、UDF、VHD、WIM、XAR、Z
+               MBR、MSI、NSIS、NTFS、RAR、RPM、SquashFS、UDF、VHD、WIM、XAR、Z
   - 更快的压缩和解压缩速度
   - 7z 格式支持创建自释放压缩包
   - 为 7z 与 ZIP 提供更完善的 AES-256 加密算法
