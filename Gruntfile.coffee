@@ -46,7 +46,7 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ["<%= coffeelint.test.files.src %>"]
+        files: ["<%= coffeelint.test.src %>"]
         tasks: ["coffeelint"]
 
       less:
