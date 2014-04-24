@@ -1,5 +1,5 @@
 ﻿;!@Lang2@!UTF-8!
-;  9.25 : 2011-11-10 : Sparanoid : http://sparanoid.com/lab/7z/
+;  9.32 : 2014-04-24 : Sparanoid : http://sparanoid.com/lab/7z/
 ;
 ;
 ;
