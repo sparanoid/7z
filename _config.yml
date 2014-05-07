@@ -2,23 +2,36 @@
 # Jekyll basic configurations
 #
 
-source:         ./_source
-destination:    ./_site
-exclude:        ['app.less']
-timezone:       Asia/Hong_Kong
-markdown:       rdiscount
+source:       ./_app
+destination:  ./_site
+timezone:     Asia/Hong_Kong
+markdown:     redcarpet
+highlighter:  pygments
 
 #
 # Jekyll serve settings
 #
 
-port:           5432
+port:         5432
 
 #
 # Jekyll build settings
 #
 
-future:         false
+future:       false
+
+#
+# Additional Markdown settings
+#
+
+redcarpet:
+  extensions:
+    - footnotes
+    - no_intra_emphasis
+    - smart
+    - space_after_headers
+    - superscript
+    - tables
 
 #
 # Custom site variables

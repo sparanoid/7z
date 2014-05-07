@@ -2,27 +2,23 @@
 module.exports = (grunt) ->
 
   # Load all grunt tasks
-  matchdep = require("matchdep")
-  matchdep.filterDev("grunt-*").forEach grunt.loadNpmTasks
-
-  # Configurable paths
-  coreConfig =
-    cfg: grunt.file.readYAML("_config.yml")
-    pkg: grunt.file.readJSON("package.json")
-    app: "<%= core.cfg.source %>"
-    dist: "<%= core.cfg.destination %>"
-    banner: do ->
-      banner = "/*!\n"
-      banner += " * (c) <%= core.pkg.author %>.\n *\n"
-      banner += " * <%= core.pkg.name %> - v<%= core.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
-      banner += " * <%= core.pkg.homepage %>\n"
-      banner += " * <%= core.pkg.licenses.type %> - <%= core.pkg.licenses.url %>\n"
-      banner += " */"
-      banner
+  require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
 
   # Project configurations
   grunt.initConfig
-    core: coreConfig
+    config:
+      cfg: grunt.file.readYAML("_config.yml")
+      pkg: grunt.file.readJSON("package.json")
+      app: "<%= config.cfg.source %>"
+      dist: "<%= config.cfg.destination %>"
+      banner: do ->
+        banner = "/*!\n"
+        banner += " * (c) <%= config.pkg.author %>.\n *\n"
+        banner += " * <%= config.pkg.name %> - v<%= config.pkg.version %> (<%= grunt.template.today('mm-dd-yyyy') %>)\n"
+        banner += " * <%= config.pkg.homepage %>\n"
+        banner += " * <%= config.pkg.licenses.type %> - <%= config.pkg.licenses.url %>\n"
+        banner += " */"
+        banner
 
     coffeelint:
       options:
@@ -37,32 +33,29 @@ module.exports = (grunt) ->
       test:
         src: ["Gruntfile.coffee"]
 
-    recess:
-      options:
-        noUniversalSelectors: false
-
-      test:
-        src: ["<%= core.app %>/assets/less/app.less"]
-
     watch:
       coffee:
         files: ["<%= coffeelint.test.src %>"]
         tasks: ["coffeelint"]
 
       less:
-        files: ["<%= recess.test.src %>"]
-        tasks: ["less:server", "recess"]
+        files: ["<%= config.app %>/assets/less/**/*.less"]
+        tasks: ["less:server"]
 
     less:
       server:
         options:
-          dumpLineNumbers: "all"
+          strictMath: true
+          sourceMap: true
+          outputSourceFiles: true
+          sourceMapURL: "app.css.map"
+          sourceMapFilename: "<%= config.app %>/assets/css/app.css.map"
 
-        src: ["<%= recess.test.src %>"]
-        dest: "<%= core.app %>/assets/css/app.css"
+        src: ["<%= config.app %>/assets/less/app.less"]
+        dest: "<%= config.app %>/assets/css/app.css"
 
       dist:
-        src: ["<%= recess.test.src %>"]
+        src: ["<%= less.server.src %>"]
         dest: "<%= less.server.dest %>"
 
     htmlmin:
@@ -82,22 +75,22 @@ module.exports = (grunt) ->
 
         files: [
           expand: true
-          cwd: "<%= core.dist %>"
+          cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= core.dist %>/"
+          dest: "<%= config.dist %>/"
         ]
 
     cssmin:
       dist:
         options:
-          banner: "<%= core.banner %>"
+          banner: "<%= config.banner %>"
           report: "gzip"
 
         files: [
           expand: true
-          cwd: "<%= core.dist %>/assets/css/"
+          cwd: "<%= config.dist %>/assets/css/"
           src: ["*.css", "!*.min.css"]
-          dest: "<%= core.dist %>/assets/css/"
+          dest: "<%= config.dist %>/assets/css/"
         ]
 
     rev:
@@ -107,17 +100,30 @@ module.exports = (grunt) ->
         length: 6
 
       files:
-        src: ["<%= core.dist %>/assets/css/*.css"]
+        src: ["<%= config.dist %>/assets/css/*.css"]
 
     useminPrepare:
-      html: "<%= core.dist %>/index.html"
+      html: "<%= config.dist %>/index.html"
 
     usemin:
       options:
-        dirs: ["<%= core.dist %>"]
+        dirs: ["<%= config.dist %>"]
 
-      html: ["<%= core.dist %>/**/*.html"]
-      css: ["<%= core.dist %>/assets/css/**/*.css"]
+      html: ["<%= config.dist %>/**/*.html"]
+      css: ["<%= config.dist %>/assets/css/**/*.css"]
+
+    smoosher:
+      options:
+        jsDir: "<%= config.dist %>"
+        cssDir: "<%= config.dist %>"
+
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>/"
+        ]
 
     shell:
       options:
@@ -130,23 +136,23 @@ module.exports = (grunt) ->
         command: "jekyll build"
 
       sync:
-        command: "rsync -avz --delete --progress <%= core.cfg.ignore_files %> <%= core.dist %>/ <%= core.cfg.remote_host %>:<%= core.cfg.remote_dir %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
 
     copy:
       sync:
         files: [
           expand: true
           dot: true
-          cwd: "<%= core.dist %>/"
+          cwd: "<%= config.dist %>/"
           src: ["**"]
-          dest: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
+          dest: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= config.pkg.name %>/"
         ]
 
     clean:
       dist:
         files: [
           dot: true
-          src: [".tmp", "<%= core.dist %>/*"]
+          src: [".tmp", "<%= config.dist %>/*"]
         ]
 
       sync:
@@ -154,7 +160,7 @@ module.exports = (grunt) ->
           force: true
 
         files: [
-          src: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= core.pkg.name %>/"
+          src: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= config.pkg.name %>/"
         ]
 
     concurrent:
@@ -170,16 +176,32 @@ module.exports = (grunt) ->
         tasks: ["cssmin"]
 
   # Fire up a server on local machine for development
-  grunt.registerTask "server", ["less:server", "concurrent"]
+  grunt.registerTask "serve", [
+    "less:server"
+    "concurrent"
+  ]
 
   # Test task
-  grunt.registerTask "test", ["coffeelint", "recess"]
+  grunt.registerTask "test", ["coffeelint"]
 
   # Build site with `jekyll`
-  grunt.registerTask "build", ["clean:dist", "test", "less:dist", "shell:dist", "useminPrepare", "rev", "usemin", "concurrent:dist"]
+  grunt.registerTask "build", [
+    "clean:dist"
+    "test"
+    "less:dist"
+    "shell:dist"
+    "useminPrepare"
+    "rev"
+    "usemin"
+    "concurrent:dist"
+  ]
 
   # Build site + rsync static files to remote server
-  grunt.registerTask "sync", ["build", "clean:sync", "copy:sync"]
+  grunt.registerTask "sync", [
+    "build"
+    "clean:sync"
+    "copy:sync"
+  ]
 
   # Default task aka. build task
   grunt.registerTask "default", ["build"]
