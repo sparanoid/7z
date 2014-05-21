@@ -13,7 +13,7 @@
 7zSD.sfx        - 安装包 SFX 模块（需调用 msvcrt.dll）
 7zS2.sfx        - 精简版 SFX 模块（GUI 版本，需调用 msvcrt.dll）
 7zS2con.sfx     - 精简版 SFX 模块（命令行版本，需调用 msvcrt.dll）
-7zr.exe      - 独立的 7-Zip 命令行版本
+7za.exe      - 独立的 7-Zip 命令行版本
 7zr.exe      - 低版本的 7za.exe 命令行
 7-zip.chm    - 帮助文件
 License.txt  - 版权许可信息
