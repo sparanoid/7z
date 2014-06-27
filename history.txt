@@ -1,6 +1,12 @@
 ﻿7-Zip 附加包更新记录
 --------------------
 
+9.34 alpha          2014-06-22
+------------------------------
+  - EXE 与 DLL 文件的最低系统要求提高至 Windows 2000。
+  - 所有 EXE 与 DLL 文件均使用 msvcrt.dll。
+
+
 9.18                2010-11-02
 ------------------------------
   - 新增用于安装包的精简版 SFX 自释放模块。
@@ -38,7 +44,7 @@
   - ISetProperties::SetProperties:
       现在可以指定想要使用的 CPU 线程数：
            PROPVARIANT: name=L"mt", vt = VT_UI4, ulVal = NumberOfThreads
-      如果没有定义“mt”的值，7za.dll 将会查询系统的 CPU 来自动决定要使用的线程数。 
+      如果没有定义“mt”的值，7za.dll 将会查询系统的 CPU 来自动决定要使用的线程数。
       现在 7za.dll 可以使用：
         2 线程用于 LZMA 压缩
         N 线程用于 BZip2 压缩
