@@ -1,7 +1,7 @@
 ;!@Lang2@!UTF-8!
 ;                    : Modern Tiger, kaZek, Hutu Li
 ;                    : Sparanoid
-;  9.32 : 2014-04-24 : Tunghsiao Liu : http://sparanoid.com/lab/7z/
+;  9.34 : 2014-10-21 : Tunghsiao Liu : http://sparanoid.com/lab/7z/
 ;
 ;
 ;
@@ -57,7 +57,7 @@ Chinese Simplified
 合并文件(&B)...
 属性(&R)
 注释(&N)
-文件效验
+文件校验
 文件比较
 新建文件夹
 新建文件
@@ -294,7 +294,7 @@ iNode
 数据「{0}」发生错误，文件已损坏。
 CRC 校验「{0}」失败，文件已损坏。
 加密文件「{0}」数据有误，密码错误？
-加密文件「{0}」CRC 数据效验有误，密码错误？
+加密文件「{0}」CRC 数据校验有误，密码错误？
 3710
 密码错误？
 3721
@@ -448,10 +448,10 @@ CPU 线程数：
 无法识别文件为压缩分卷
 无法找到其他压缩分卷
 7500
-正在效验...
-效验信息
-CRC 数据效验：
-CRC 数据及文件名效验：
+正在校验...
+校验信息
+CRC 数据校验：
+CRC 数据及文件名校验：
 7600
 基准测试
 内存使用：
@@ -474,4 +474,4 @@ CPU 使用率
 硬链接
 文件符号链接（Symbolic Link）
 目录符号链接（Symbolic Link）
-目录对应连接（Directory Junction）
+目录接合点（Directory Junction）
