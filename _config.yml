@@ -1,24 +1,31 @@
 #
+# More configuration examples at:
+# http://jekyllrb.com/docs/configuration/
+#
+
+#
 # Jekyll basic configurations
 #
 
-source:       ./_app
-destination:  ./_site
-timezone:     Asia/Hong_Kong
-markdown:     redcarpet
-highlighter:  pygments
+source:         ./_app
+destination:    ./_site
+timezone:       Asia/Hong_Kong
+permalink:      /:title.html
+markdown:       redcarpet
+highlighter:    pygments
+include:        ["_pages"]
 
 #
 # Jekyll serve settings
 #
 
-port:         5432
+port:           4321
 
 #
 # Jekyll build settings
 #
 
-future:       false
+future:         false
 
 #
 # Additional Markdown settings
@@ -34,15 +41,104 @@ redcarpet:
     - tables
 
 #
-# Custom site variables
+# User defined settings
 #
 
+# Site name
 name:           7-Zip
-twitter:        7zip
-url:            sparanoid.com/lab/7z
-# file:           http://rsrc.sparanoid.com/7z
-# file:           http://d349cztnlupsuf.cloudfront.net/7z
+
+# Site description, will appear in the document meta and Atom feed subtitle
+description:    I make things that don’t suck.
+
+# Base URL, this is useful when I need to build site in a sub-directory (like GitHub Pages for Projects), it provides a specific URL prefix, for example, if the production site URL is http://sparanoid.com/lab/version/, set `base` to `/lab/version/24`, without trailing slash.
+# Default:      null
+base:           null
+
+# CSS path used in templates
+# Default:      /assets
+assets:         /assets
+
+# Since I use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+# Default:      /feed
+feed:           /feed
+
+# Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full URLs for these fields
+url:            http://sparanoid.com/lab/7z
+
+# Media assets URL used in posts, without trailing slash. ie. `<img href="{{ site.file }}/image.png">`. In the most cases this URL should be powered by a CDN provider
+# file:           http://rsrc.sparanoid.com
 file:           assets/img
+
+# Download files URL used in posts, ie. href="{{ site.download }}/package.zip", this should also be a CDN link just like `site.url`. There's no differences in `site.url` and `site.download`, I just use one CDN for post images and another for large download files. That's it. Remove or ignore this if you don't need it
+download:       http://dl.sparanoid.com
+
+# Site Twitter account handle
+twitter:        7zip
+
+# Site donate link, used in several posts
+donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
+
+# Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
+# Default:      false
+force_utf_8:    false
+
+# Enable this settings to make your feed Daring Fireball-like link blog
+# (This basically change your <link> value to external link you defined in your posts)
+# Default:      false
+link_blog:      false
+
+# Change the value to true to use post excerpt for RSS feeds
+# Default:      false
+rss_excerpt:    false
+
+# Hide footer from your homepage, example: sparanoid.com
+# Default:      false
+clean_homepage: false
+
+# Style post link color (if defined) for article list
+# Default:      false
+colorful_list:  false
+
+# Show generator credits
+# Default:      true
+credits:        true
+
+# Show email subscription link in footer
+# Default:      false
+subscription:   false
+
+#
+# Custom distribution variables
+#
+
+# SSH remote server hostname
+remote_host:    caladbolg
+
+# Prevent them from being deleted on server (rsync --delete), these files and directories are available on the remote server but outside this git repo. I need to ignore them.
+ignore_files:   --exclude=lab
+
+# Media assets sync'ed using s3cmd
+static_files:   ~/Dropbox/Sites/static.sparanoid.com/
+
+# Remote server root directory
+remote_dir:     /srv/www/sparanoid.com/public_html
+
+# Amazon S3 Bucket variable for s3cmd
+s3_bucket:      s3://sparanoid/
+
+
+
+
+
+
+
+
+
+
+
+
+# Custom site variables
+#
 
 # 7-Zip version info, put them in quotes to avoid rounding off
 beta:           '9.35 beta'

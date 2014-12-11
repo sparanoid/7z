@@ -1,0 +1,13 @@
+<!-- Main navigation with current page / categoriy highlighted -->
+<nav class=navigation>
+  <ul>
+    {% for item in site.data.nav %}
+      {% assign lowercased_title = item.title | downcase %}
+      <li {% if page.permalink == item.url or page.category == lowercased_title %}class=current{% endif %}>
+        <a href="{{ item.url | prepend: site.base }}">
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
