@@ -1,0 +1,19 @@
+# Author information
+# Assign to a variable before using them:
+# assign author = site.data.authors[page.author]
+#
+# {{ author.name }}: author name, used in post pages, and atom feed
+# {{ author.email }}: used in atom feed, homepage
+# {{ author.web }}: used in atom feed
+# {{ author.twitter }}: used by Twitter Cards
+default:
+  name:         Tunghsiao Liu
+  email:        t@sparanoid.com
+  web:          http://sparanoid.com/
+  twitter:      tunghsiao
+
+tester:
+  name:         Tester
+  email:        test@test.com
+  web:          http://tester.com/
+  twitter:      tester

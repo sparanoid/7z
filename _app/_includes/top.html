@@ -1,0 +1,43 @@
+<!doctype html>
+
+{% if site.force_utf_8 %}
+  <meta charset=utf-8>
+{% endif %}
+
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ site.description }}">
+
+{% capture site_title %}
+  {% if page.title != site.name %}
+    · {{ site.name }}
+  {% endif %}
+{% endcapture %}
+
+<title>
+  {{ page.title | strip_html | xml_escape }}{{ site_title }}
+</title>
+
+<link rel=alternate href="{{ site.feed | prepend: site.base }}/" type=application/atom+xml>
+
+<!-- There is no prepend: site.base here, it'll cause error 404 when site.base it defined -->
+<link rel=stylesheet href="{{ '/css/app.css' | prepend: site.assets }}">
+
+<!-- browser-sync, don't remove this -->
+<!-- BS_INSERT -->
+
+{% if page.title == site.name %}<link rel=dns-prefetch href="{{ site.file }}">{% endif %}
+
+<!-- Define a description for better SEO result, exclude homepage -->
+{% capture content_description %}
+  {{ page.content | markdownify | strip_html | strip_newlines | xml_escape | truncatewords: 50 | truncate: 210 | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' }}
+{% endcapture %}
+
+{% if page.permalink != '/' %}
+  {% if page.excerpt %}
+    <meta name=description content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncatewords: 30 }}">
+  {% elsif page.desc %}
+    <meta name=description content="{{ page.desc | strip_html | strip_newlines | xml_escape }}">
+  {% else %}
+    <meta name=description content="{{ content_description }}">
+  {% endif %}
+{% endif %}

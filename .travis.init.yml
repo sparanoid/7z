@@ -5,6 +5,3 @@ before_install:
   - bundle install
 before_script:
   - npm install -g grunt-cli
-branches:
-  only:
-    - site

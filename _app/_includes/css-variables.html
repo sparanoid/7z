@@ -1,0 +1,90 @@
+<!-- Post / page specified styles -->
+{% if page.title == 'Error‽' %}
+  <style>
+    :root {
+      -webkit-filter: invert(100%);
+      -webkit-backface-visibility: hidden;
+    }
+  </style>
+{% endif %}
+
+<!-- Post specified styles -->
+<style>
+  body {
+    {% if page.scheme-text %}
+    color: {{ page.scheme-text }};
+    {% endif %}
+    {% if page.scheme-bg %}
+    background-color: {{ page.scheme-bg }};
+    {% endif %}
+  }
+
+  {% if page.scheme-text %}
+  a,
+  button {
+    color: {{ page.scheme-text }};
+  }
+  {% endif %}
+
+  {% if page.scheme-link %}
+  ::selection {
+    color: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-text %}
+  body:before, .logo {
+    background: {{ page.scheme-text }};
+  }
+  {% endif %}
+    {% if page.scheme-link %}
+    .logo:hover {
+      background: {{ page.scheme-link }};
+    }
+    {% endif %}
+
+  {% if page.scheme-hover %}
+  .navigation li a:hover,
+  .navigation li a:focus {
+    color: {{ page.scheme-hover }};
+  }
+  {% endif %}
+
+  {% if page.scheme-link %}
+  .current a {
+    color: {{ page.scheme-link }};
+  }
+
+  .content a {
+    color: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-code %}
+  .content code,
+  .content pre {
+    color: {{ page.scheme-code }};
+  }
+  {% endif %}
+
+  {% if page.scheme-text and page.scheme-link %}
+  .note,
+  .store,
+  .download {
+    border-left-color: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-link %}
+  .external span {
+    background: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-hover %}
+  :target [rev=footnote],
+  :target [rel=footnote] {
+    color: {{ page.scheme-hover }};
+  }
+  {% endif %}
+</style>

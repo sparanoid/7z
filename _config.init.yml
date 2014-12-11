@@ -45,7 +45,7 @@ redcarpet:
 #
 
 # Site name
-name:           7-Zip
+name:           Almace Scaffolding
 
 # Site description, will appear in the document meta and Atom feed subtitle
 description:    I make things that don’t suck.
@@ -63,17 +63,16 @@ assets:         /assets
 feed:           /feed
 
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full URLs for these fields
-url:            http://sparanoid.com/lab/7z
+url:            http://sparanoid.com
 
 # Media assets URL used in posts, without trailing slash. ie. `<img href="{{ site.file }}/image.png">`. In the most cases this URL should be powered by a CDN provider
-# file:           http://rsrc.sparanoid.com
-file:           assets/img
+file:           http://rsrc.sparanoid.com
 
 # Download files URL used in posts, ie. href="{{ site.download }}/package.zip", this should also be a CDN link just like `site.url`. There's no differences in `site.url` and `site.download`, I just use one CDN for post images and another for large download files. That's it. Remove or ignore this if you don't need it
 download:       http://dl.sparanoid.com
 
 # Site Twitter account handle
-twitter:        7zip
+twitter:        sparanoid
 
 # Site donate link, used in several posts
 donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
@@ -125,34 +124,3 @@ remote_dir:     /srv/www/sparanoid.com/public_html
 
 # Amazon S3 Bucket variable for s3cmd
 s3_bucket:      s3://sparanoid/
-
-
-
-
-
-
-
-
-
-
-
-
-# Custom site variables
-#
-
-# 7-Zip version info, put them in quotes to avoid rounding off
-beta:           '9.35 beta'
-beta-short:     '935'
-beta-date:      '2014-12-07'
-
-stable:         '9.20'
-stable-short:   '920'
-stable-date:    '2010-11-18'
-
-sdk:            '9.20'
-sdk-short:      '920'
-sdk-date:       '2010-11-18'
-
-sdk-beta:       '9.22 beta'
-sdk-beta-short: '922'
-sdk-beta-date:  '2011-04-19'
