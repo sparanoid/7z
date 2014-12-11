@@ -5,294 +5,306 @@ title: 7-Zip 官方中文主页
 permalink: /
 ---
 
-<TABLE cellspacing ="4" cellpadding ="4">
-<TR>
-<TD>
+<table cellspacing="4" cellpadding="4">
+  <tbody>
+    <tr>
+      <td>
+        <h1>欢迎来到 7-Zip 官方中文主页！</h1>
 
-<H1>欢迎来到 7-Zip 官方中文主页！</H1>
+        <p><b>7-Zip</b> 是一款拥有极高压缩比的开源压缩软件。</p>
 
-<P><B>7-Zip</B> 是一款拥有极高压缩比的开源压缩软件。</P>
+        {% assign latest = site.posts.first %}
+        <p><b>下载 7-Zip {{ site.stable }} 稳定版（{{ site.stable-date }}）：</b></p>
 
-{% assign latest = site.posts.first %}
-<P><B>下载 7-Zip {{ site.stable }} 稳定版（{{ site.stable-date }}）：</B></P>
-<TABLE cellspacing ="1" cellpadding ="6" border = "0">
-  <TR>
-    <TH class="Title" align="center" width=60>链接</TH>
-    <TH class="Title" align="center" width=60>格式</TH>
-    <TH class="Title" align="center" width=80>系统</TH>
-    <TH class="Title" align="center" width=55>大小</TH>
-  </TR>
-  <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.exe">下载</A></TD>
-    <TD class="Item" align="center">.exe</TD>
-    <TD class="Item" align="center">32 位</TD>
-    <TD class="Item" align="center">1 MB</TD>
-  </TR>
-  <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-x64.msi">下载</A></TD>
-    <TD class="Item" align="center">.msi</TD>
-    <TD class="Item" align="center">64 位</TD>
-    <TD class="Item" align="center">1 MB</TD>
-  </TR>
-</TABLE>
+        <table cellspacing="1" cellpadding="6" border="0">
+          <tbody>
+            <tr>
+              <th class="Title" align="center" width="60">链接</th>
+              <th class="Title" align="center" width="60">格式</th>
+              <th class="Title" align="center" width="80">系统</th>
+              <th class="Title" align="center" width="55">大小</th>
+            </tr>
+            <tr>
+              <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.exe">下载</a></td>
+              <td class="Item" align="center">.exe</td>
+              <td class="Item" align="center">32 位</td>
+              <td class="Item" align="center">1 MB</td>
+            </tr>
+            <tr>
+              <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-x64.msi">下载</a></td>
+              <td class="Item" align="center">.msi</td>
+              <td class="Item" align="center">64 位</td>
+              <td class="Item" align="center">1 MB</td>
+            </tr>
+          </tbody>
+        </table>
 
-<!--<P><B>下载 7-Zip {{ site.beta }} 测试版（{{ site.beta-date }}）：</B></P>
-<TABLE cellspacing ="1" cellpadding ="6" border = "0">
-  <TR>
-    <TH class="Title" align="center" width=60>链接</TH>
-    <TH class="Title" align="center" width=60>格式</TH>
-    <TH class="Title" align="center" width=80>系统</TH>
-    <TH class="Title" align="center" width=55>大小</TH>
-  </TR>
-  <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}.exe">下载</A></TD>
-    <TD class="Item" align="center">.exe</TD>
-    <TD class="Item" align="center">32 位</TD>
-    <TD class="Item" align="center">1 MB</TD>
-  </TR>
-  <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}-x64.msi">下载</A></TD>
-    <TD class="Item" align="center">.msi</TD>
-    <TD class="Item" align="center">64 位</TD>
-    <TD class="Item" align="center">1 MB</TD>
-  </TR>
-</TABLE>-->
+        <!--<p><b>下载 7-Zip {{ site.beta }} beta 测试版（{{ site.beta-date }}）：</b></p>
+        <table cellspacing ="1" cellpadding ="6" border = "0">
+          <tr>
+            <th class="title" align="center" width=60>链接</th>
+            <th class="title" align="center" width=60>格式</th>
+            <th class="title" align="center" width=80>系统</th>
+            <th class="title" align="center" width=55>大小</th>
+          </tr>
+          <tr>
+            <td class="item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}.exe">下载</a></td>
+            <td class="item" align="center">.exe</td>
+            <td class="item" align="center">32 位</td>
+            <td class="item" align="center">1 mb</td>
+          </tr>
+          <tr>
+            <td class="item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}-x64.msi">下载</a></td>
+            <td class="item" align="center">.msi</td>
+            <td class="item" align="center">64 位</td>
+            <td class="item" align="center">1 mb</td>
+          </tr>
+        </table>-->
 
-<P>上述下载链接将会转至 SourceForge.net</P>
+        <p>上述下载链接将会转至 SourceForge.net</p>
 
-<P><B>中文版附加内容（{{ site.stable-date }}），适用于 {{ site.stable }}：</B><BR>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</P>
-<TABLE cellspacing ="1" cellpadding ="6" border = "0">
-  <TR>
-    <TH class="Title" align="center" width=60>链接</TH>
-    <TH class="Title" align="center" width=60>格式</TH>
-    <TH class="Title" align="center" width=80>系统</TH>
-    <TH class="Title" align="center" width=55>大小</TH>
-  </TR>
-  <TR>
-    <TD class="Item" align="center"><A href="http://7-zip.googlecode.com/files/7z-extra-{{ site.stable-short }}.7z">下载</A></TD>
-    <TD class="Item" align="center">.7z</TD>
-    <TD class="Item" align="center">32/64 位</TD>
-    <TD class="Item" align="center">700 KB</TD>
-  </TR>
-</TABLE>
+        <p><b>中文版附加内容（{{ site.stable-date }}），适用于 {{ site.stable }}：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
 
-<P><B>中文版附加内容（{{ site.beta-date }}），适用于 {{ site.beta }}：</B><BR>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</P>
-<TABLE cellspacing ="1" cellpadding ="6" border = "0">
-  <TR>
-    <TH class="Title" align="center" width=60>链接</TH>
-    <TH class="Title" align="center" width=60>格式</TH>
-    <TH class="Title" align="center" width=80>系统</TH>
-    <TH class="Title" align="center" width=55>大小</TH>
-  </TR>
-  <TR>
-    <TD class="Item" align="center"><A href="http://7-zip.googlecode.com/files/7z-extra-{{ site.beta-short }}.7z">下载</A></TD>
-    <TD class="Item" align="center">.7z</TD>
-    <TD class="Item" align="center">32/64 位</TD>
-    <TD class="Item" align="center">700 KB</TD>
-  </TR>
-</TABLE>
+        <table cellspacing="1" cellpadding="6" border="0">
+          <tbody>
+            <tr>
+              <th class="Title" align="center" width="60">链接</th>
+              <th class="Title" align="center" width="60">格式</th>
+              <th class="Title" align="center" width="80">系统</th>
+              <th class="Title" align="center" width="55">大小</th>
+            </tr>
+            <tr>
+              <td class="Item" align="center"><a href="http://7-zip.googlecode.com/files/7z-extra-{{ site.stable-short }}.7z">下载</a></td>
+              <td class="Item" align="center">.7z</td>
+              <td class="Item" align="center">32/64 位</td>
+              <td class="Item" align="center">700 KB</td>
+            </tr>
+          </tbody>
+        </table>
 
-<P>上述下载链接将会转至 <a href="http://code.google.com/p/7-zip/">googlecode.com</a></P>
+        <p><b>中文版附加内容（{{ site.beta-date }}），适用于 {{ site.beta }}：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
 
-<H2>许可协议</H2>
+        <table cellspacing="1" cellpadding="6" border="0">
+          <tbody>
+            <tr>
+              <th class="Title" align="center" width="60">链接</th>
+              <th class="Title" align="center" width="60">格式</th>
+              <th class="Title" align="center" width="80">系统</th>
+              <th class="Title" align="center" width="55">大小</th>
+            </tr>
+            <tr>
+              <td class="Item" align="center"><a href="http://7-zip.googlecode.com/files/7z-extra-{{ site.beta-short }}.7z">下载</a></td>
+              <td class="Item" align="center">.7z</td>
+              <td class="Item" align="center">32/64 位</td>
+              <td class="Item" align="center">700 KB</td>
+            </tr>
+          </tbody>
+        </table>
 
-<P><B>7-Zip</B> 是一款 <B>开源</B> 软件。大多数源代码都基于 <B>GNU LGPL</B> 许可协议下发布。AES 代码基于 BSD 许可下发布。unRAR 代码基于两种许可：GNU LGPL 和 unRAR 限制许可。更多下许可信息请查看：<A href="http://code.google.com/p/7-zip/source/browse/Docs/License.txt">7-Zip 许可</A>。</P>
+        <p>上述下载链接将会转至 <a href="http://code.google.com/p/7-zip/">googlecode.com</a></p>
 
-<P>您可以在任何一台计算机上使用 7-Zip ，包括用在商业用途的计算机，不对 7-Zip 进行捐赠或支付并不影响您的使用。</P>
+        <h2>许可协议</h2>
 
-<H2>7-Zip 主要特征</H2>
-<UL>
-  <LI>使用了 <B>LZMA</B> 与 <B>LZMA2</B> 算法的 <A href ="7z.html">7z 格式</A> 拥有极高的压缩比</LI>
-  <LI>支持格式：
-    <UL>
-     <LI>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</LI>
-     <LI>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA,
-                       MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</LI>
-    </UL>
-  </LI>
-  <LI>对于 ZIP 及 GZIP 格式，<B>7-Zip</B> 能提供比使用 PKZip 及 WinZip 高 2-10% 的压缩比</LI>
-  <LI>为 7z 与 ZIP 提供更完善的 AES-256 加密算法</LI>
-  <LI>7z 格式支持创建自释放压缩包</LI>
-  <LI>Windows 资源管理器集成</LI>
-  <LI>强大的的文件管理器</LI>
-  <LI>更给力的命令行版本</LI>
-  <LI>支持 FAR Manager 插件</LI>
-  <LI>支持 79 种语言</LI>
-</UL>
+        <p><b>7-Zip</b> 是一款 <b>开源</b> 软件。大多数源代码都基于 <b>GNU LGPL</b> 许可协议下发布。AES 代码基于 BSD 许可下发布。unRAR 代码基于两种许可：GNU LGPL 和 unRAR 限制许可。更多下许可信息请查看：<a href="http://code.google.com/p/7-zip/source/browse/Docs/License.txt">7-Zip 许可</a>。</p>
 
-<IMG width="430" height="420" src="{{ site.file }}/7zfm-win7.png" alt="7-Zip" border="0">
+        <p>您可以在任何一台计算机上使用 7-Zip ，包括用在商业用途的计算机，不对 7-Zip 进行捐赠或支付并不影响您的使用。</p>
 
-<P><B>7-Zip</B> 适用于 Windows 7 / Vista / XP / 2008 / 2003 / 2000 / NT / ME / 98。并且有面向 Mac OS X、Linux、Unix 平台的命令行版本。</P>
+        <h2>7-Zip 主要特征</h2>
+        <ul>
+          <li>使用了 <b>LZMA</b> 与 <b>LZMA2</b> 算法的 <a href="7z.html">7z 格式</a> 拥有极高的压缩比</li>
+          <li>支持格式：
+            <ul>
+             <li>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</li>
+             <li>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA,
+                               MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</li>
+            </ul>
+          </li>
+          <li>对于 ZIP 及 GZIP 格式，<b>7-Zip</b> 能提供比使用 PKZip 及 WinZip 高 2-10% 的压缩比</li>
+          <li>为 7z 与 ZIP 提供更完善的 AES-256 加密算法</li>
+          <li>7z 格式支持创建自释放压缩包</li>
+          <li>Windows 资源管理器集成</li>
+          <li>强大的的文件管理器</li>
+          <li>更给力的命令行版本</li>
+          <li>支持 FAR Manager 插件</li>
+          <li>支持 79 种语言</li>
+        </ul>
 
-<P>在 <A href="http://sourceforge.net/projects/sevenzip/">Source Forge 的 7-Zip 页面</A> 中您可以找到相关的论坛、错误汇报及系统需求。 </P>
+        <img width="430" height="420" src="{{ site.file }}/7zfm-win7.png" alt="7-Zip" border="0">
 
-<H2>压缩比</H2>
+        <p><b>7-Zip</b> 适用于 Windows 7 / Vista / XP / 2008 / 2003 / 2000 / NT / ME / 98。并且有面向 Mac OS X、Linux、Unix 平台的命令行版本。</p>
 
-<P>让我们把 <B>7-Zip</B> 和常用的压缩软件进行比较。</P>
+        <p>在 <a href="http://sourceforge.net/projects/sevenzip/">Source Forge 的 7-Zip 页面</a> 中您可以找到相关的论坛、错误汇报及系统需求。 </p>
 
-<P><B>文件设置：</B>完整安装后的 <A href="http://www.mozilla.org/products/firefox/" target="_blank">Mozilla Firefox</A> 1.0.7 for Windows 和 <A href="http://earth.google.com/" target="_blank">Google Earth</A> 3.0.0616 for Windows。</P>
+        <h2>压缩比</h2>
 
-<TABLE cellspacing ="2" cellpadding ="6">
-  <TR>
-    <TH class="Title" rowspan = 3>软件名称</TH>
-    <TH class="Title" align="center" colspan = 2>Mozilla Firefox</TH>
-    <TH class="Title" align="center" colspan = 2>Google Earth</TH>
-  </TR>
-  <TR>
-    <TH class="Title" align="center" colspan = 2>161 个文件<BR>15,684,168 字节</TH>
-    <TH class="Title" align="center" colspan = 2>115 个文件<BR>23,530,652 字节</TH>
-  </TR>
-  <TR>
-    <TH class="Title" align="center">压缩后</TH>
-    <TH class="Title" align="center">压缩比</TH>
-    <TH class="Title" align="center">压缩后</TH>
-    <TH class="Title" align="center">压缩比</TH>
-  </TR>
-  <TR>
-    <TD class="Item"><B>7-Zip 4.23（7z 格式）</B></TD>
-    <TD class="Item" align="center"><B>4621135</B></TD>
-    <TD class="Item" align="center"><B>100%</B></TD>
-    <TD class="Item" align="center"><B>6109183</B></TD>
-    <TD class="Item" align="center"><B>100%</B></TD>
-  </TR>
-  <TR>
-    <TD class="Item">WinRAR 3.50</TD>
-    <TD class="Item" align="center">5021556</TD>
-    <TD class="Item" align="center">109%</TD>
-    <TD class="Item" align="center">6824892</TD>
-    <TD class="Item" align="center">112%</TD>
-  </TR>
-  <TR>
-    <TD class="Item">CABARC 5.1</TD>
-    <TD class="Item" align="center">5131393</TD>
-    <TD class="Item" align="center">111%</TD>
-    <TD class="Item" align="center">7434325</TD>
-    <TD class="Item" align="center">122%</TD>
-  </TR>
-  <TR>
-    <TD class="Item">WinZip 10.0 beta（maximum-PPMd）</TD>
-    <TD class="Item" align="center">5277118</TD>
-    <TD class="Item" align="center">114%</TD>
-    <TD class="Item" align="center">8200708</TD>
-    <TD class="Item" align="center">134%</TD>
-  </TR>
-  <TR>
-    <TD class="Item"><B>7-Zip 4.23（zip 格式）</B></TD>
-    <TD class="Item" align="center"><B>6222627</B></TD>
-    <TD class="Item" align="center"><B>135%</B></TD>
-    <TD class="Item" align="center"><B>8909446</B></TD>
-    <TD class="Item" align="center"><B>146%</B></TD>
-  </TR>
-  <TR>
-    <TD class="Item">WinZip 10.0 beta（maximum-portable）</TD>
-    <TD class="Item" align="center">6448666</TD>
-    <TD class="Item" align="center">140%</TD>
-    <TD class="Item" align="center">9153898</TD>
-    <TD class="Item" align="center">150%</TD>
-  </TR>
-</TABLE>
+        <p>让我们把 <b>7-Zip</b> 和常用的压缩软件进行比较。</p>
 
-<P>压缩比结果由被压缩的数据大小而定。通常使用 <B>7-Zip</B> 的 7z 格式能比使用 zip 格式的压缩档案小 30-70%。并且使用 <B>7-Zip</B> 创建的 zip 格式比大多数其它压缩软件创建的都小 2-10%。</P>
+        <p><b>文件设置：</b>完整安装后的 <a href="http://www.mozilla.org/products/firefox/" target="_blank">Mozilla Firefox</a> 1.0.7 for Windows 和 <a href="http://earth.google.com/" target="_blank">Google Earth</a> 3.0.0616 for Windows。</p>
 
-</TD>
+        <table cellspacing="2" cellpadding="6">
+          <tbody>
+            <tr>
+              <th class="Title" rowspan="3">软件名称</th>
+              <th class="Title" align="center" colspan="2">Mozilla Firefox</th>
+              <th class="Title" align="center" colspan="2">Google Earth</th>
+            </tr>
+            <tr>
+              <th class="Title" align="center" colspan="2">161 个文件<br>15,684,168 字节</th>
+              <th class="Title" align="center" colspan="2">115 个文件<br>23,530,652 字节</th>
+            </tr>
+            <tr>
+              <th class="Title" align="center">压缩后</th>
+              <th class="Title" align="center">压缩比</th>
+              <th class="Title" align="center">压缩后</th>
+              <th class="Title" align="center">压缩比</th>
+            </tr>
+            <tr>
+              <td class="Item"><b>7-Zip 4.23（7z 格式）</b></td>
+              <td class="Item" align="center"><b>4621135</b></td>
+              <td class="Item" align="center"><b>100%</b></td>
+              <td class="Item" align="center"><b>6109183</b></td>
+              <td class="Item" align="center"><b>100%</b></td>
+            </tr>
+            <tr>
+              <td class="Item">WinRAR 3.50</td>
+              <td class="Item" align="center">5021556</td>
+              <td class="Item" align="center">109%</td>
+              <td class="Item" align="center">6824892</td>
+              <td class="Item" align="center">112%</td>
+            </tr>
+            <tr>
+              <td class="Item">CABARC 5.1</td>
+              <td class="Item" align="center">5131393</td>
+              <td class="Item" align="center">111%</td>
+              <td class="Item" align="center">7434325</td>
+              <td class="Item" align="center">122%</td>
+            </tr>
+            <tr>
+              <td class="Item">WinZip 10.0 beta（maximum-PPMd）</td>
+              <td class="Item" align="center">5277118</td>
+              <td class="Item" align="center">114%</td>
+              <td class="Item" align="center">8200708</td>
+              <td class="Item" align="center">134%</td>
+            </tr>
+            <tr>
+              <td class="Item"><b>7-Zip 4.23（zip 格式）</b></td>
+              <td class="Item" align="center"><b>6222627</b></td>
+              <td class="Item" align="center"><b>135%</b></td>
+              <td class="Item" align="center"><b>8909446</b></td>
+              <td class="Item" align="center"><b>146%</b></td>
+            </tr>
+            <tr>
+              <td class="Item">WinZip 10.0 beta（maximum-portable）</td>
+              <td class="Item" align="center">6448666</td>
+              <td class="Item" align="center">140%</td>
+              <td class="Item" align="center">9153898</td>
+              <td class="Item" align="center">150%</td>
+            </tr>
+          </tbody>
+        </table>
 
-<TD vAlign=top align=right width=210>
+        <p>压缩比结果由被压缩的数据大小而定。通常使用 <b>7-Zip</b> 的 7z 格式能比使用 zip 格式的压缩档案小 30-70%。并且使用 <b>7-Zip</b> 创建的 zip 格式比大多数其它压缩软件创建的都小 2-10%。</p>
 
-<BR><BR>
-<BR><BR>
+      </td>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle>7-Zip 9.35 beta</TD>
-    <TD class=NewsDate>2014-12-07</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-        <a href="http://sourceforge.net/p/sevenzip/discussion/45797/thread/fd0e61b0/">7-Zip 9.35 beta</a>
-    </TD>
-  </TR>
-</TABLE>
+      <td valign="top" align="right" width="210">
 
-<BR>
+        <br><br>
+        <br><br>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle>7-Zip 9.34 alpha</TD>
-    <TD class=NewsDate>2014-06-22</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-        <a href="http://sourceforge.net/p/sevenzip/discussion/45797/thread/07d5c851/">7-Zip 9.34 alpha</a>
-    </TD>
-  </TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 9.35 beta</td>
+            <td class="NewsDate">2014-12-07</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+                <a href="http://sourceforge.net/p/sevenzip/discussion/45797/thread/fd0e61b0/">7-Zip 9.35 beta</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-<BR>
+        <br>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle>7-Zip 9.30 alpha</TD>
-    <TD class=NewsDate>2012-10-26</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-        <a href="http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/6063877">7-Zip 9.30 alpha</a>
-    </TD>
-  </TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 9.34 alpha</td>
+            <td class="NewsDate">2014-06-22</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+                <a href="http://sourceforge.net/p/sevenzip/discussion/45797/thread/07d5c851/">7-Zip 9.34 alpha</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-<BR>
+        <br>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle>7-Zip 9.25 alpha</TD>
-    <TD class=NewsDate>2011-09-16</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-        <A href="http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/4711128">论坛：7-Zip 9.25 alpha 测试版</A><br>
-        <A href="http://dl.7-zip.org/7z925.exe">下载 7-Zip 9.25 32 位</A><br>
-        <A href="http://dl.7-zip.org/7z925-x64.msi">下载 7-Zip 9.25 x64</A>
-    </TD>
-  </TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 9.30 alpha</td>
+            <td class="NewsDate">2012-10-26</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+                <a href="http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/6063877">7-Zip 9.30 alpha</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-<BR>
+        <br>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle>7-Zip 9.22 beta</TD>
-    <TD class=NewsDate>2011-04-18</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-        <A href="http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/4492007">7-Zip 9.22 测试版</A>
-    </TD>
-  </TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 9.25 alpha</td>
+            <td class="NewsDate">2011-09-16</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+                <a href="http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/4711128">论坛：7-Zip 9.25 alpha 测试版</a><br>
+                <a href="http://dl.7-zip.org/7z925.exe">下载 7-Zip 9.25 32 位</a><br>
+                <a href="http://dl.7-zip.org/7z925-x64.msi">下载 7-Zip 9.25 x64</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-<BR>
+        <br>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle>7-Zip 9.20</TD>
-    <TD class=NewsDate>2010-11-18</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-      <A href="https://github.com/sparanoid/7z/blob/master/Docs/History.txt">查看更新历史</A>
-    </TD>
-  </TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 9.22 beta</td>
+            <td class="NewsDate">2011-04-18</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+                <a href="http://sourceforge.net/projects/sevenzip/forums/forum/45797/topic/4492007">7-Zip 9.22 测试版</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-<BR><BR>
+        <br>
 
-<TABLE class=News cellpadding=3 cellspacing=1 border=0>
-  <TR class=NewsHeader>
-    <TD class=NewsTitle style="background-color:#55acee;">了解 7-Zip 最新动态</TD></TR>
-  <TR class=News>
-    <TD class=NewsText colSpan=2>
-      <P><A href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</A></P>
-    </TD>
-  </TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 9.20</td>
+            <td class="NewsDate">2010-11-18</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+              <a href="https://github.com/sparanoid/7z/blob/master/Docs/History.txt">查看更新历史</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-<BR><BR>
+        <br><br>
 
-</TD>
-</TR>
-</TABLE>
+        <table class="News" cellpadding="3" cellspacing="1" border="0">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle" style="background-color:#55acee;">了解 7-Zip 最新动态</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+              <p><a href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <br><br>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
