@@ -1,3 +1,6 @@
+# Variables
+EXCLUDES              = "{_site,node_modules}"
+
 # Exclude search list
-excludeInFolderSearch = "{_site,node_modules}"
-excludeInFileChooser  = "{_site,node_modules}"
+excludeInFolderSearch = "$EXCLUDES"
+excludeInFileChooser  = "$EXCLUDES"
