@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
+<html>
+<head>
 
 <!-- build:css assets/css/app.css -->
   <link rel="stylesheet" href="assets/css/app.css">
@@ -9,63 +9,107 @@
 <!-- browser-sync, don't remove this -->
 <!-- BS_INSERT -->
 
-<LINK href="/lab/7z/favicon.ico" rel="shortcut icon">
-<TITLE>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</TITLE>
-<META name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
-</HEAD>
-<BODY>
+<link href="/lab/7z/favicon.ico" rel="shortcut icon">
+<title>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+<meta name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
+</head>
+<body>
 
-<TABLE cellspacing=10 cellpadding=10 border=0 width="100%"><TR>
-<TD class="MenuColumn" valign="top">
-<TABLE cellpadding=2 cellspacing=0 border=0 width="100%">
-<TR><TD><IMG width=110 height=63 src="{{ site.file }}/7ziplogo.png" alt="7-Zip" border=0></TD></TR>
-<TR><TD><HR></TD></TR></TABLE>
+<table cellspacing="10" cellpadding="10" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td class="MenuColumn" valign="top">
+        <table cellpadding="2" cellspacing="0" border="0" width="100%">
+          <tbody>
+            <tr>
+              <td>
+                <img width="110" height="63" src="{{ site.file }}/7ziplogo.png" alt="7-Zip" border="0">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <hr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-<TABLE cellpadding="2" cellspacing="0" border="0">
-  <TR><TD><a{% if page.short != 'home' %} href="./"{% endif %}{% if page.short == 'home' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>首页</a></TR></TD>
-  <TR><TD><a{% if page.short != '7z' %} href="7z.html"{% endif %}{% if page.short == '7z' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>7z 格式</a></TR></TD>
-  <TR><TD><a{% if page.short != 'sdk' %} href="sdk.html"{% endif %}{% if page.short == 'sdk' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>LZMA SDK</a></TR></TD>
-  <TR><TD><a{% if page.short != 'download' %} href="download.html"{% endif %}{% if page.short == 'download' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>软件下载</a></TR></TD>
-  <TR><TD><a{% if page.short != 'faq' %} href="faq.html"{% endif %}{% if page.short == 'faq' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>常见问题</a></TR></TD>
-  <TR><TD><a{% if page.short != 'support' %} href="support.html"{% endif %}{% if page.short == 'support' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>技术支持</a></TR></TD>
-  <TR><TD><a{% if page.short != 'links' %} href="links.html"{% endif %}{% if page.short == 'links' %} class="MenuCurrent"{% else %} class="MenuLink"{% endif %}>相关链接</a></TR></TD>
-  {% if page.short == 'links' %}
-    <TR><TD>&nbsp&nbsp<a href="http://www.7-zip.org/logos.html">软件标徽</a></TR></TD>
-  {% endif %}
-</TABLE>
+        <table cellpadding="2" cellspacing="0" border="0">
+          <tbody>
+            <tr><td><a{% if page.short != 'home' %} href="./"{% endif %}{% if page.short == 'home' %} class="menu-current"{% else %} class="menu-link"{% endif %}>首页</a></tr></td>
+            <tr><td><a{% if page.short != '7z' %} href="7z.html"{% endif %}{% if page.short == '7z' %} class="menu-current"{% else %} class="menu-link"{% endif %}>7z 格式</a></tr></td>
+            <tr><td><a{% if page.short != 'sdk' %} href="sdk.html"{% endif %}{% if page.short == 'sdk' %} class="menu-current"{% else %} class="menu-link"{% endif %}>LZMA SDK</a></tr></td>
+            <tr><td><a{% if page.short != 'download' %} href="download.html"{% endif %}{% if page.short == 'download' %} class="menu-current"{% else %} class="menu-link"{% endif %}>软件下载</a></tr></td>
+            <tr><td><a{% if page.short != 'faq' %} href="faq.html"{% endif %}{% if page.short == 'faq' %} class="menu-current"{% else %} class="menu-link"{% endif %}>常见问题</a></tr></td>
+            <tr><td><a{% if page.short != 'support' %} href="support.html"{% endif %}{% if page.short == 'support' %} class="menu-current"{% else %} class="menu-link"{% endif %}>技术支持</a></tr></td>
+            <tr><td><a{% if page.short != 'links' %} href="links.html"{% endif %}{% if page.short == 'links' %} class="menu-current"{% else %} class="menu-link"{% endif %}>相关链接</a></tr></td>
+            {% if page.short == 'links' %}
+              <tr><td>&nbsp&nbsp<a href="http://www.7-zip.org/logos.html">软件标徽</a></tr></td>
+            {% endif %}
+          </tbody>
+        </table>
 
-<TABLE cellpadding=2 cellspacing=0 border=0 width="100%">
-<TR><TD><HR></TD></TR>
+        <table cellpadding="2" cellspacing="0" border="0" width="100%">
+          <tbody>
+            <tr>
+              <td>
+                <hr>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://www.7-zip.org/">捐助开发者</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://sourceforge.net/projects/sevenzip/"><b>SourceForge</b></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <hr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-<TR><TD>
-<a href="http://www.7-zip.org/">捐助开发者</a>
-</TD></TR>
+        <strong>简体中文</strong>
+        <br>
+        <a href="http://www.developershome.com/7-zip/">正體中文</a>
+        <br>
+        <a href="http://www.7-zip.org/">Other Languages</a>
+        <br>
 
-<TR><TD><A href="http://sourceforge.net/projects/sevenzip/"><b>SourceForge</b></A></TD></TR>
-<TR><TD><HR></TD></TR>
-</TABLE>
-<!-- <P> -->
-<STRONG>简体中文</STRONG><BR>
-<A href="http://www.developershome.com/7-zip/">正體中文</A><BR>
-<A href="http://www.7-zip.org/">Other Languages</A><BR>
-<!-- </P> -->
-<HR>
-{% if page.short == 'home' %}
-<div class="donate-wrap">
-  <a href="https://qr.alipay.com/apl1pubpvqly5larc4"><IMG src="{{ site.file }}/donate-qr-7z.png" width=124 height=124 border=0 alt="捐赠汉化者"></a>
-  <p align="center"><strong>支付宝手机捐赠</strong></p>
-  <P class="donate-tip"><STRONG>捐赠汉化者</STRONG>：7-Zip 是一款免费的开源软件，简体中文由 Sparanoid 从 2005 年维护至今，如果您喜欢本软件，可以考虑为本人捐赠，金额不限，所得捐款将用于增加本人的汉化动力以及为服务器进行续费</P>
-</div>
-{% endif %}
+        <hr>
 
-</TD><!-- .MenuColumn -->
-<TD valign="top">
+        {% if page.short == 'home' %}
+        <div class="donate-wrap">
+          <a href="https://qr.alipay.com/apl1pubpvqly5larc4"><img src="{{ site.file }}/donate-qr-7z.png" width="120" height="120" border="0" alt="捐赠汉化者"></a>
+          <p align="center"><strong>支付宝手机捐赠</strong></p>
+          <p class="donate-tip"><strong>捐赠汉化者</strong>：7-Zip 是一款免费的开源软件，简体中文由 Sparanoid 从 2005 年维护至今，如果您喜欢本软件，可以考虑为本人捐赠，金额不限，所得捐款将用于增加本人的汉化动力以及为服务器进行续费</p>
+        </div>
+        {% endif %}
 
-{{ content }}
+      </td><!-- .MenuColumn -->
 
-<HR><P><SMALL>Copyright (C) {{ site.time | date: "%Y" }} Igor Pavlov.</SMALL>
-</P>
-</TD><!-- Main Content --></TR></TABLE>
+      <td valign="top">
 
-</BODY>
-</HTML>
+        {{ content }}
+
+        <hr>
+
+        <p>
+          <small>Copyright (C) {{ site.time | date: "%Y" }} Igor Pavlov.</small>
+        </p>
+
+      </td><!-- Main Content -->
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+</body>
+</html>
