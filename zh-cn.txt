@@ -1,7 +1,7 @@
 ;!@Lang2@!UTF-8!
 ;                    : Modern Tiger, kaZek, Hutu Li
 ;                    : Sparanoid
-;  9.34 : 2014-10-21 : Tunghsiao Liu : http://sparanoid.com/lab/7z/
+;  9.35 : 2014-12-14 : Tunghsiao Liu : http://sparanoid.com/lab/7z/
 ;
 ;
 ;
