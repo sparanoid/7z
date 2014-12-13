@@ -249,7 +249,8 @@ module.exports = (grunt) ->
           dot: true
           cwd: "<%= config.dist %>/"
           src: ["**"]
-          dest: "~/Dropbox/Sites/sparanoid.com/lab/<%= config.pkg.name %>/"
+          # Tilde symbol doesn't work here
+          dest: "/Users/sparanoid/Dropbox/Sites/sparanoid.com/lab/<%= config.pkg.name %>/"
         ]
 
     concurrent:
