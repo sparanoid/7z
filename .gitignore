@@ -1,4 +1,5 @@
 node_modules
+_app
 _site
 Gemfile.lock
 *.log
