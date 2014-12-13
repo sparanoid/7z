@@ -14,7 +14,8 @@ permalink: /
         <p><b>7-Zip</b> 是一款拥有极高压缩比的开源压缩软件。</p>
 
         {% assign latest = site.posts.first %}
-        <p><b>下载 7-Zip {{ site.stable }} 稳定版（{{ site.stable-date }}）：</b></p>
+        {% assign ver = site.data.versions %}
+        <p><b>下载 7-Zip {{ ver.stable.long }} 稳定版（{{ ver.stable.date }}）：</b></p>
 
         <table cellspacing="1" cellpadding="6" border="0">
           <tbody>
@@ -25,13 +26,13 @@ permalink: /
               <th class="Title" align="center" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.exe">下载</a></td>
+              <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}.exe">下载</a></td>
               <td class="Item" align="center">.exe</td>
               <td class="Item" align="center">32 位</td>
               <td class="Item" align="center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-x64.msi">下载</a></td>
+              <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
               <td class="Item" align="center">.msi</td>
               <td class="Item" align="center">64 位</td>
               <td class="Item" align="center">1 MB</td>
@@ -39,7 +40,7 @@ permalink: /
           </tbody>
         </table>
 
-        <p><b>下载 7-Zip {{ site.beta }} beta 测试版（{{ site.beta-date }}）：</b></p>
+        <p><b>下载 7-Zip {{ ver.beta.long }} 测试版（{{ ver.beta.date }}）：</b></p>
         <table cellspacing ="1" cellpadding ="6" border = "0">
           <tr>
             <th class="title" align="center" width=60>链接</th>
@@ -48,13 +49,13 @@ permalink: /
             <th class="title" align="center" width=55>大小</th>
           </tr>
           <tr>
-            <td class="item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}.exe">下载</a></td>
+            <td class="item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}.exe">下载</a></td>
             <td class="item" align="center">.exe</td>
             <td class="item" align="center">32 位</td>
             <td class="item" align="center">1 mb</td>
           </tr>
           <tr>
-            <td class="item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ site.beta-short }}-x64.msi">下载</a></td>
+            <td class="item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}-x64.msi">下载</a></td>
             <td class="item" align="center">.msi</td>
             <td class="item" align="center">64 位</td>
             <td class="item" align="center">1 mb</td>
@@ -63,7 +64,7 @@ permalink: /
 
         <p>上述下载链接将会转至 SourceForge.net</p>
 
-        <p><b>中文版附加内容（{{ site.stable-date }}），适用于 {{ site.stable }}：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
+        <p><b>中文版附加内容，适用于 {{ ver.stable.long }}：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
 
         <table cellspacing="1" cellpadding="6" border="0">
           <tbody>
@@ -74,7 +75,7 @@ permalink: /
               <th class="Title" align="center" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="http://7-zip.googlecode.com/files/7z-extra-{{ site.stable-short }}.7z">下载</a></td>
+              <td class="Item" align="center"><a href="http://7-zip.googlecode.com/files/7z-extra-{{ ver.stable.short }}.7z">下载</a></td>
               <td class="Item" align="center">.7z</td>
               <td class="Item" align="center">32/64 位</td>
               <td class="Item" align="center">700 KB</td>
@@ -82,7 +83,7 @@ permalink: /
           </tbody>
         </table>
 
-        <p><b>中文版附加内容（{{ site.beta-date }}），适用于 {{ site.beta }}：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
+        <p><b>中文版附加内容，适用于 {{ ver.beta.long }}：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
 
         <table cellspacing="1" cellpadding="6" border="0">
           <tbody>
@@ -93,7 +94,7 @@ permalink: /
               <th class="Title" align="center" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="http://7-zip.googlecode.com/files/7z-extra-{{ site.beta-short }}.7z">下载</a></td>
+              <td class="Item" align="center"><a href="http://7-zip.googlecode.com/files/7z-extra-{{ ver.beta.short }}.7z">下载</a></td>
               <td class="Item" align="center">.7z</td>
               <td class="Item" align="center">32/64 位</td>
               <td class="Item" align="center">700 KB</td>

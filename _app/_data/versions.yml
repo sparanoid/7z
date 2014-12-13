@@ -1,15 +1,17 @@
-beta:           '9.35 beta'
-beta-short:     '935'
-beta-date:      '2014-12-07'
+stable:
+  long:          "9.20"
+  short:         "920"
+  date:          2010-11-18
+  sdk:
+    long:        "9.20"
+    short:       "920"
+    date:        2010-11-18
 
-stable:         '9.20'
-stable-short:   '920'
-stable-date:    '2010-11-18'
-
-sdk:            '9.20'
-sdk-short:      '920'
-sdk-date:       '2010-11-18'
-
-sdk-beta:       '9.22 beta'
-sdk-beta-short: '922'
-sdk-beta-date:  '2011-04-19'
+beta:
+  long:          "9.35 beta"
+  short:         "935"
+  date:          2014-12-07
+  sdk:
+    long:        "9.35 beta"
+    short:       "935"
+    date:        2014-12-07
