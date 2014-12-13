@@ -125,34 +125,3 @@ remote_dir:     /srv/www/sparanoid.com/public_html
 
 # Amazon S3 Bucket variable for s3cmd
 s3_bucket:      s3://sparanoid/
-
-
-
-
-
-
-
-
-
-
-
-
-# Custom site variables
-#
-
-# 7-Zip version info, put them in quotes to avoid rounding off
-beta:           '9.35 beta'
-beta-short:     '935'
-beta-date:      '2014-12-07'
-
-stable:         '9.20'
-stable-short:   '920'
-stable-date:    '2010-11-18'
-
-sdk:            '9.20'
-sdk-short:      '920'
-sdk-date:       '2010-11-18'
-
-sdk-beta:       '9.35 beta'
-sdk-beta-short: '935'
-sdk-beta-date:  '2014-12-07'
