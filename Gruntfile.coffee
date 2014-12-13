@@ -368,9 +368,9 @@ module.exports = (grunt) ->
         "csscomb"
         "jekyll:dist"
         "concurrent:dist"
-        "smoosher"
+        # "smoosher"
         "usebanner"
-        "clean:postDist"
+        # "clean:postDist"
         "reset"
       ]
 
