@@ -7,7 +7,8 @@ title: 程序下载
 
 <H1>{{ page.title }}</H1>
 
-<p><b>下载 7-Zip {{ site.beta }} 测试版（{{ site.beta-date }}，Windows）</B>：</P>
+{% assign ver = site.data.versions %}
+<p><b>下载 7-Zip {{ ver.beta.long }} 测试版（{{ ver.beta.date }}，Windows）</B>：</P>
 
 <table cellspacing="1" cellpadding="6" border="0">
   <tbody><tr>
@@ -17,42 +18,42 @@ title: 程序下载
     <th class="Title" align="center">Description</th>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://sourceforge.net/projects/sevenzip/files/7-Zip/9.35/7z935.exe/download">下载</a></td>
+    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}.exe">下载</a></td>
     <td class="Item" align="center">.exe</td>
     <td class="Item" align="center" rowspan="2">32-bit x86</td>
     <td class="Item" rowspan="2">7-Zip Windows 32 位</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://sourceforge.net/projects/sevenzip/files/7-Zip/9.35/7z935.msi/download">下载</a></td>
+    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}.msi">下载</a></td>
     <td class="Item" align="center">.msi</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://sourceforge.net/projects/sevenzip/files/7-Zip/9.35/7z935-x64.msi/download">下载</a></td>
+    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}-x64.msi">下载</a></td>
     <td class="Item" align="center">.msi</td>
     <td class="Item" align="center">64-bit x64</td>
     <td class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://sourceforge.net/projects/sevenzip/files/7-Zip/9.35/7z935-extra.7z/download">下载</a></td>
+    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}-extra.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">32-bit</td>
     <td class="Item">7-Zip 附加包：7z 程序库、安装模式自释放模块、FAR 管理器插件</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://sourceforge.net/projects/sevenzip/files/7-Zip/9.35/7z935-src.7z/download">下载</a></td>
+    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.beta.short }}-src.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">Any</td>
     <td class="Item">7-Zip 源代码</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/lzma935.7z">下载</a></td>
+    <td class="Item" align="center"><a href="http://downloads.sourceforge.net/sevenzip/lzma{{ ver.beta.short }}.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">Any / x86 / x64</td>
     <td class="Item" rowspan="2">LZMA SDK（C、C++、C#、Java）</td>
   </tr>
 </tbody></table>
 
-<P><B>下载 7-Zip {{ site.stable }}（{{ site.stable-date }}，Windows）</B>：</P>
+<P><B>下载 7-Zip {{ ver.stable.long }}（{{ ver.stable.date }}，Windows）</B>：</P>
 <TABLE cellspacing ="1" cellpadding ="6" border = "0">
   <TR>
   <TH class="Title" align="center" width=90>链接</TH>
@@ -61,53 +62,53 @@ title: 程序下载
     <TH class="Title" align="center">描述</TH>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.exe">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}.exe">下载</A></TD>
     <TD class="Item" align="center">.exe</TD>
     <TD class="Item" align="center" rowspan=2>32 位 x86</TD>
     <TD class="Item" rowspan=2>7-Zip Windows 32 位</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.msi">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}.msi">下载</A></TD>
     <TD class="Item" align="center">.msi</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-x64.msi">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}-x64.msi">下载</A></TD>
     <TD class="Item" align="center">.msi</TD>
     <TD class="Item" align="center">64 位 x64</TD>
     <TD class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-ia64.msi">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}-ia64.msi">下载</A></TD>
     <TD class="Item" align="center">.msi</TD>
     <TD class="Item" align="center">IA-64</TD>
     <TD class="Item">7-Zip 64 位（IA-64 安腾 Itanium CPU）</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}-arm.exe">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}-arm.exe">下载</A></TD>
     <TD class="Item" align="center">.exe</TD>
     <TD class="Item" align="center">ARM-WinCE</TD>
     <TD class="Item">7-Zip for Windows Mobile / Windows CE (ARM)</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7za{{ site.stable-short }}.zip">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7za{{ ver.stable.short }}.zip">下载</A></TD>
     <TD class="Item" align="center">.zip</TD>
     <TD class="Item" align="center">32 位</TD>
     <TD class="Item">7-Zip 命令行版本</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}.tar.bz2">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}.tar.bz2">下载</A></TD>
     <TD class="Item" align="center">.tar.bz2</TD>
     <TD class="Item" align="center">任意</TD>
     <TD class="Item">7-Zip 源代码</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ site.stable-short }}_extra.7z">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/7z{{ ver.stable.short }}_extra.7z">下载</A></TD>
     <TD class="Item" align="center">.7z</TD>
     <TD class="Item" align="center">32 位</TD>
     <TD class="Item">7-Zip 附加包：7z 程序库、安装模式自释放模块、FAR 管理器插件</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/lzma{{ site.stable-short }}.tar.bz2">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://downloads.sourceforge.net/sevenzip/lzma{{ ver.stable.short }}.tar.bz2">下载</A></TD>
     <TD class="Item" align="center">.tar.bz2</TD>
     <TD class="Item" align="center">任意</TD>
     <TD class="Item" rowspan=2>LZMA SDK（C、C++、C#、Java）</TD>
@@ -115,9 +116,6 @@ title: 程序下载
 </TABLE>
 
 <p>以上链接会重新转向至 Source Forge 站点上的 7-Zip 下载页面。</p>
-
-<!--<P><B>下载 7-Zip {{ site.beta }} beta 测试版（2010-11-11）：</B><br>
-<p><A href="http://sourceforge.net/projects/sevenzip/files/">Source Forge 上的 7-Zip 文件页面</A></P>-->
 
 <P><B>7-Zip 旧版本存档：</B>
 <p><A href="http://sourceforge.net/projects/sevenzip/files/">英文</A> / <A href="http://code.google.com/p/7-zip/downloads/list">中文（Google Code）</A> / <A href="http://db.tt/shjMYzeY">中文（Dropbox）</A></P>
