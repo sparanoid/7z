@@ -1,7 +1,7 @@
 ;!@Lang2@!UTF-8!
 ;                    : Modern Tiger, kaZek, Hutu Li
-;                    : Sparanoid
-;  9.35 : 2014-12-14 : Sparanoid : http://sparanoid.com/lab/7z/
+;                    : Sparanoid (aka. Sparanoid)
+;  9.38 : 2015-01-07 : Sparanoid : http://sparanoid.com/lab/7z/
 ;
 ;
 ;
