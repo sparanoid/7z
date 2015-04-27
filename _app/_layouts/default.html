@@ -2,6 +2,8 @@
 <html>
 <head>
 
+<title>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+
 <!-- build:css assets/css/app.css -->
   <link rel="stylesheet" href="assets/css/app.css">
 <!-- endbuild -->
@@ -10,7 +12,8 @@
 <!-- BS_INSERT -->
 
 <link href="/lab/7z/favicon.ico" rel="shortcut icon">
-<title>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+<link rel="canonical" href="{{ page.url | prepend: site.base | prepend: site.url }}">
+
 <meta name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
 </head>
 <body>
