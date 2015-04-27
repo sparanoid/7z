@@ -7,8 +7,8 @@
 # Jekyll basic configurations
 #
 
-source:         ./_app
-destination:    ./_site
+source:         _app
+destination:    _site
 timezone:       Asia/Hong_Kong
 permalink:      /:title.html
 markdown:       redcarpet
