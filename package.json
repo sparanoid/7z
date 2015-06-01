@@ -3,7 +3,7 @@
   "version": "9.36.0",
   "description": "7-Zip Chinese Simplified Website",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/",
+  "homepage": "http://sparanoid.com/lab/7z/",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
