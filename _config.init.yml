@@ -117,7 +117,7 @@ remote_host:    caladbolg
 ignore_files:   --exclude=lab
 
 # Media assets sync'ed using s3cmd
-static_files:   ~/Dropbox/Sites/static.sparanoid.com/
+static_files:   ~/Workspace/Sites/static.sparanoid.com/
 
 # Remote server root directory
 remote_dir:     /srv/www/sparanoid.com/public_html
