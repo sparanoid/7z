@@ -8,10 +8,10 @@ stable:
     date:        2010-11-18
 
 beta:
-  long:          "9.38"
-  short:         "938"
-  date:          2015-01-03
+  long:          "15.05"
+  short:         "1505"
+  date:          2015-06-14
   sdk:
-    long:        "9.38"
-    short:       "938"
-    date:        2015-01-03
+    long:        "15.05"
+    short:       "1505"
+    date:        2015-06-14
