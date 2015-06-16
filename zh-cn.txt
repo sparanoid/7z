@@ -141,7 +141,7 @@ Chinese Simplified
 分卷
 
 64 位
-大字节序
+大端序
 CPU
 物理大小
 文件头大小
