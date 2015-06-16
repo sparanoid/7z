@@ -1,5 +1,5 @@
-﻿7-Zip 9.38
-----------
+﻿7-Zip 15.05 beta
+----------------
 
 7-Zip 适用于 Windows NT / 2000 / 2003 / 2008 / XP / Vista / 7 / 8 / 10。
 
@@ -28,19 +28,21 @@
   7-Zip 当前的版本中包含以下文件：
 
   7zFM.exe      - 7-Zip 文件管理器
-  7-zip.dll     - 7-Zip 插件
-  7zg.exe       - 7-Zip 7-Zip GUI 插件模块
-  7z.exe        - 7-Zip 命令行版本
-  7z.dll        - 7z 运行库
+  7-zip.dll     - Windows 扩展插件
+  7-zip32.dll   - Windows 扩展插件（为 64 位系统准备的 32 位版本插件）
+  7zg.exe       - 用户界面模块
+  7z.exe        - 命令行版本
+  7z.dll        - 7-Zip 引擎模块
   7z.sfx        - 自释放模块（Windows 版本）
   7zCon.sfx     - 自释放模块（命令行版本）
 
   License.txt   - 版权许可信息
   readme.txt    - 自述文档（当前文件）
-  History.txt   - 7-Zip 历史
+  History.txt   - 7-Zip 更新记录
   7-zip.chm     - 用户手册（已编译的帮助文件）
+  descript.ion  - 文件描述
 
-  Lang\en.txt   - 英语语言文件
+  Lang\en.ttt   - 英语语言文件
   Lang\*.txt    - 其它本地化语言文件
 
 

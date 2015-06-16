@@ -1,0 +1,14 @@
+7-zip.chm 用户手册（已编译的帮助文件）
+7-Zip.dll 7-Zip Windows 扩展插件
+7-Zip32.dll 7-Zip Windows 扩展插件 32 位
+7z.dll 7-Zip 引擎
+7z.exe 7-Zip 命令行
+7z.sfx 7-Zip GUI 自释放模块
+7zCon.sfx 7-Zip 命令行自释放模块
+7zFM.exe 7-Zip 文件管理器
+7zg.exe 7-Zip GUI
+descript.ion 7-Zip 文件描述
+history.txt 7-Zip 更新记录
+Lang 7-Zip 语言文件
+license.txt 7-Zip 版权许可信息
+readme.txt 7-Zip 自述文档
