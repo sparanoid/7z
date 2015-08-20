@@ -1,0 +1,85 @@
+<!--
+  Side-wide varible assigns
+-->
+
+<!-- Page author meta -->
+{% if page.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.data.authors["default"] %}
+{% endif %}
+
+
+<!--
+  Site-wide captures
+-->
+
+<!-- Site title -->
+{% capture amsf_site_title %}
+  {% if page.title != site.name %}
+    · {{ site.name }}
+  {% endif %}
+{% endcapture %}
+
+<!-- Site description -->
+{% capture amsf_site_desc %}
+  {% if page.permalink != '/' %}
+    {% if page.desc %}
+      {{ page.desc | strip_html | strip_newlines | xml_escape }}
+    {% elsif page.excerpt %}
+      {{ page.excerpt | strip_html | strip_newlines | xml_escape | truncatewords: 50 }}
+    {% else %}
+      {{ page.content | markdownify | strip_html | xml_escape | truncatewords: 50 | truncate: 210 }}
+    {% endif %}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
+
+<!-- Theme base URL -->
+{% capture amsf_theme_base %}{{ site.theme | prepend: '/themes/' }}{% endcapture %}
+
+<!-- Theme assets base URL -->
+{% capture amsf_theme_assets %}{{ site.theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
+
+<!-- User assets base URL -->
+{% capture amsf_user_assets %}{{ site.assets | prepend: site.base }}{% endcapture %}
+
+<!-- Feed URL -->
+{% capture amsf_feed_url %}{{ site.feed | prepend: site.base }}{% endcapture %}
+
+<!-- Page title -->
+{% capture amsf_page_title %}{{ page.title | strip_html | xml_escape }}{% endcapture %}
+
+<!-- Page URL -->
+{% capture amsf_page_url %}{{ page.url | prepend: site.base | prepend: site.url }}{% endcapture %}
+
+<!-- Page type (used by Open Graph) -->
+{% capture amsf_page_type %}
+  {% if page.permalink == '/' %}
+    website
+  {% else %}
+    article
+  {% endif %}
+{% endcapture %}
+
+<!-- Page language tag -->
+{% capture amsf_page_lang %}
+  {% if page.lang %}
+    lang={{ page.lang }}
+  {% endif %}
+{% endcapture %}
+
+<!-- Page custom CSS -->
+{% capture amsf_page_css %}
+  {% if page.css %}
+    <style>
+      {{ page.css }}
+    </style>
+  {% endif %}
+{% endcapture %}
+
+<!-- Page thumbnail -->
+{% capture amsf_page_thumb %}
+  {{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}
+{% endcapture %}

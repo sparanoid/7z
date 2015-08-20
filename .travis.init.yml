@@ -1,8 +1,10 @@
 sudo: false
 language: node_js
+cache:
+  - bundler
 node_js:
   - "0.12"
-  - "0.13"
+  - iojs
 before_install:
   - rvm use 2.2.2 --install --fuzzy
   - bundle install
@@ -11,4 +13,8 @@ before_script:
 matrix:
   fast_finish: true
   allow_failures:
-    - node_js: "0.13"
+    - node_js: iojs
+notifications:
+  email: false
+  slack:
+    secure: P/ngpvqinM/t9tdXZO2qHQvq2XCkcerKM+KwNJlQoVHnkl/Z/EtzB1yxiZZ6LGdHp+r3nShBhfW+gJVojU80EObt0iWHbFTkUUMFf6WI6c056937CksQI4atmDBiCJxMAnkd6DCLWfBexVtKDhkc5vX0bYhgoiXEzCYUhFd8pZ4=
