@@ -4,9 +4,9 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     colorator (0.1)
-    ffi (1.9.8)
+    ffi (1.9.10)
     hitimes (1.2.2)
-    jekyll (3.0.0.pre.beta2)
+    jekyll (3.0.0.pre.beta8)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
@@ -19,19 +19,20 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
-    kramdown (1.6.0)
-    liquid (3.0.1)
-    listen (2.10.0)
+    kramdown (1.8.0)
+    liquid (3.0.6)
+    listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
-    rb-fsevent (0.9.4)
+    rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rouge (1.8.0)
+    rouge (1.9.1)
     safe_yaml (1.0.4)
-    sass (3.4.13)
+    sass (3.4.16)
+    stringex (2.5.2)
     timers (4.0.1)
       hitimes
 
@@ -39,4 +40,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (>= 3.0.0.beta2)
+  jekyll (>= 3.0.0.pre.beta8)
+  stringex
+
+BUNDLED WITH
+   1.10.6
