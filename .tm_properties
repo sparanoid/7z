@@ -1,5 +1,5 @@
 # Variables
-EXCLUDES              = "{_site,node_modules}"
+EXCLUDES              = "{_amsf,_site,node_modules}"
 
 # Exclude search list
 excludeInFolderSearch = "$EXCLUDES"
