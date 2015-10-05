@@ -4,7 +4,6 @@ cache:
   - bundler
 node_js:
   - "0.12"
-  - iojs
 before_install:
   - rvm use 2.2.2 --install --fuzzy
   - bundle install
@@ -12,8 +11,6 @@ before_script:
   - npm install -g grunt-cli
 matrix:
   fast_finish: true
-  allow_failures:
-    - node_js: iojs
 notifications:
   email: false
   slack:
