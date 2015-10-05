@@ -1,3 +1,192 @@
+<a name="0.0.46"></a>
+## [0.0.46](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.45...v0.0.46) (2015-09-29)
+
+
+### Bug Fixes
+
+* **docs:** typos ([613d4ae](https://github.com/sparanoid/almace-scaffolding/commit/613d4ae))
+* **grunt:** bundle should update ([72b840e](https://github.com/sparanoid/almace-scaffolding/commit/72b840e))
+
+
+
+<a name="0.0.45"></a>
+## [0.0.45](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.44...v0.0.45) (2015-09-29)
+
+
+### Features
+
+* **gemfile:** use 3.0.0.pre.beta9 ([b6d3b7b](https://github.com/sparanoid/almace-scaffolding/commit/b6d3b7b))
+* **jekyll:** add `config.user.js` support ([555a5db](https://github.com/sparanoid/almace-scaffolding/commit/555a5db))
+* **template:** add modified date support ([ffbb3f3](https://github.com/sparanoid/almace-scaffolding/commit/ffbb3f3))
+* **template:** use `user.less` and `user.js` ([00e0d72](https://github.com/sparanoid/almace-scaffolding/commit/00e0d72))
+
+
+### BREAKING CHANGES
+
+* Now you can define your custom config in `config.user.js` without touching the built-in configuration.
+
+
+<a name="0.0.44"></a>
+## [0.0.44](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.43...v0.0.44) (2015-09-27)
+
+
+### Bug Fixes
+
+* **grunt:** Less sourcemaps not recognized ([5357aab](https://github.com/sparanoid/almace-scaffolding/commit/5357aab))
+
+### Features
+
+* **grunt:** add new task `grunt init` for initializing new projects ([d026cb5](https://github.com/sparanoid/almace-scaffolding/commit/d026cb5))
+* **style:** better fontstack variables ([5af01d9](https://github.com/sparanoid/almace-scaffolding/commit/5af01d9))
+* **styles:** update text decoration ([5f604ba](https://github.com/sparanoid/almace-scaffolding/commit/5f604ba))
+
+
+### BREAKING CHANGES
+
+* You have to double check if you're overriding `@sans-serif`, `@serif`, or `@monospace` to use custom fontstacks, these variables have been changed to `@fontstack-sans-serif`, `@fontstack-serif`, and `@fontstack-monospace`.
+
+
+<a name="0.0.43"></a>
+## [0.0.43](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.42...v0.0.43) (2015-09-15)
+
+
+### Bug Fixes
+
+* **docs:** wrong heading ([8b7dc00](https://github.com/sparanoid/almace-scaffolding/commit/8b7dc00))
+* **grunt:** wrong build order ([1ae038d](https://github.com/sparanoid/almace-scaffolding/commit/1ae038d))
+* **package:** wrong dep version ([deaed34](https://github.com/sparanoid/almace-scaffolding/commit/deaed34))
+
+### Features
+
+* **docs:** update SVG title guide ([e1c39bd](https://github.com/sparanoid/almace-scaffolding/commit/e1c39bd))
+* **grunt:** update dependencies ([9702f97](https://github.com/sparanoid/almace-scaffolding/commit/9702f97))
+* **style:** avoid transition delay ([a00cc6d](https://github.com/sparanoid/almace-scaffolding/commit/a00cc6d))
+* **style:** minor tweak ([de7ddfb](https://github.com/sparanoid/almace-scaffolding/commit/de7ddfb))
+* **template:** disable language tag for post list ([c2824da](https://github.com/sparanoid/almace-scaffolding/commit/c2824da))
+* **template:** use `data-assets-inline` attribute for `grunt-assets-inline` ([02c96e0](https://github.com/sparanoid/almace-scaffolding/commit/02c96e0))
+* **travis:** remove iojs (now stable) ([3b2873c](https://github.com/sparanoid/almace-scaffolding/commit/3b2873c))
+
+
+
+<a name="0.0.42"></a>
+## [0.0.42](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.41...v0.0.42) (2015-09-07)
+
+
+### Bug Fixes
+
+* **grunt:** `leading_quotes` not invoked for `serve` task ([2bb107a](https://github.com/sparanoid/almace-scaffolding/commit/2bb107a))
+* **grunt:** missing `leading_quotes` for build ([2fb2862](https://github.com/sparanoid/almace-scaffolding/commit/2fb2862))
+* **grunt:** wrong `amsf-update` task ([ea0c0ce](https://github.com/sparanoid/almace-scaffolding/commit/ea0c0ce))
+
+### Features
+
+* **grunt:** deploy sites conditionally ([3c5c2aa](https://github.com/sparanoid/almace-scaffolding/commit/3c5c2aa))
+* **grunt:** move deployment variables to a separate file ([80fe55b](https://github.com/sparanoid/almace-scaffolding/commit/80fe55b))
+* **grunt:** preprocess leading quotes ([aa640bf](https://github.com/sparanoid/almace-scaffolding/commit/aa640bf))
+* **grunt:** update config options ([483e08f](https://github.com/sparanoid/almace-scaffolding/commit/483e08f))
+* **grunt:** use `newer` for `leading_quotes` ([4cd149c](https://github.com/sparanoid/almace-scaffolding/commit/4cd149c))
+
+
+
+<a name="0.0.41"></a>
+## [0.0.41](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.40...v0.0.41) (2015-09-01)
+
+
+### Features
+
+* **grunt:** add `update` command ([fc013d3](https://github.com/sparanoid/almace-scaffolding/commit/fc013d3))
+* **grunt:** remove originals after assets being smooshed ([95e8b22](https://github.com/sparanoid/almace-scaffolding/commit/95e8b22))
+* **grunt:** use rsync for them operations ([58ed513](https://github.com/sparanoid/almace-scaffolding/commit/58ed513))
+* **template:** simplify template structure ([8c9d31f](https://github.com/sparanoid/almace-scaffolding/commit/8c9d31f))
+* **travis:** update test tasks ([0dd2cc5](https://github.com/sparanoid/almace-scaffolding/commit/0dd2cc5))
+
+
+
+<a name="0.0.40"></a>
+## [0.0.40](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.39...v0.0.40) (2015-08-30)
+
+
+### Features
+
+* **grunt:** cleanup syntax ([2aab508](https://github.com/sparanoid/almace-scaffolding/commit/2aab508))
+* **grunt:** use hashes for assets, help reduce CloudFront invalidation cost ([d54e8ff](https://github.com/sparanoid/almace-scaffolding/commit/d54e8ff))
+* **sitemap:** simpler timestamps ([aa09ab7](https://github.com/sparanoid/almace-scaffolding/commit/aa09ab7))
+
+
+
+<a name="0.0.39"></a>
+## [0.0.39](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.38...v0.0.39) (2015-08-26)
+
+
+### Bug Fixes
+
+* **grunt:** avoid removing dev deps ([5e1fdde](https://github.com/sparanoid/almace-scaffolding/commit/5e1fdde))
+
+
+
+<a name="0.0.38"></a>
+## [0.0.38](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.37...v0.0.38) (2015-08-26)
+
+
+### Bug Fixes
+
+* **grunt:** JSON template not updated ([92487a9](https://github.com/sparanoid/almace-scaffolding/commit/92487a9))
+* **style:** add `.no-enlarge` to exclude specific images ([9a78b77](https://github.com/sparanoid/almace-scaffolding/commit/9a78b77))
+* **style:** better image, video, and iframe handling ([1e68a60](https://github.com/sparanoid/almace-scaffolding/commit/1e68a60))
+* **template:** missing post language tag ([ed468ee](https://github.com/sparanoid/almace-scaffolding/commit/ed468ee))
+* **theme:** code not break in list ([486372e](https://github.com/sparanoid/almace-scaffolding/commit/486372e))
+
+### Features
+
+* **grunt:** add theme dev task ([d8380d4](https://github.com/sparanoid/almace-scaffolding/commit/d8380d4))
+* **style:** use `no-intense` instead of `nointese` ([5076db8](https://github.com/sparanoid/almace-scaffolding/commit/5076db8))
+* **template:** better post / page language support ([6dd7a77](https://github.com/sparanoid/almace-scaffolding/commit/6dd7a77))
+* **template:** rename JSON output ([87dfd51](https://github.com/sparanoid/almace-scaffolding/commit/87dfd51))
+
+
+### BREAKING CHANGES
+
+* This will break your current layout if you're using `nointense` for your images, please rename the classes to `no-intense`, sorry for the inconvenience.
+* Now you can add `.no-enlarge` to images that you'd like to keep it in normal width in smaller devices:
+```html
+<img class="no-enlarge" src="/ipad-frame-01.png">
+```
+
+
+<a name="0.0.37"></a>
+## [0.0.37](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.36...v0.0.37) (2015-08-24)
+
+
+### Bug Fixes
+
+* **bundle:** celluloid release was pulled (yanked) ([78d8f3d](https://github.com/sparanoid/almace-scaffolding/commit/78d8f3d))
+* **grunt:** remove untracked directories when cleaning cache ([2486cac](https://github.com/sparanoid/almace-scaffolding/commit/2486cac))
+* **post:** wrong URL ([2c5506a](https://github.com/sparanoid/almace-scaffolding/commit/2c5506a))
+* **style:** some images not stretched on mobile devices ([6776c4b](https://github.com/sparanoid/almace-scaffolding/commit/6776c4b))
+
+### Features
+
+* **grunt:** cleanup theme files before updating ([21099b7](https://github.com/sparanoid/almace-scaffolding/commit/21099b7))
+* **grunt:** minify JSON for production ([b26e182](https://github.com/sparanoid/almace-scaffolding/commit/b26e182))
+* **grunt:** watch config changes ([eeb9e38](https://github.com/sparanoid/almace-scaffolding/commit/eeb9e38))
+* **jekyll:** include `jekyll-last-modified-at` by default ([6cf59bd](https://github.com/sparanoid/almace-scaffolding/commit/6cf59bd))
+* **sitemap:** hide posts with `hidden` attributes ([a81046b](https://github.com/sparanoid/almace-scaffolding/commit/a81046b))
+* **style:** list minor tweaks ([5d0e9f4](https://github.com/sparanoid/almace-scaffolding/commit/5d0e9f4))
+* **tempalte:** update Atom feed `id` tags ([0553e2d](https://github.com/sparanoid/almace-scaffolding/commit/0553e2d))
+* **template:** add Google Analytics support ([adde9c7](https://github.com/sparanoid/almace-scaffolding/commit/adde9c7))
+* **template:** add JSON output support ([8c88fec](https://github.com/sparanoid/almace-scaffolding/commit/8c88fec))
+* **template:** remove excerpt feed ([554d3ba](https://github.com/sparanoid/almace-scaffolding/commit/554d3ba))
+* **theme:** simplify custom styles ([0362e62](https://github.com/sparanoid/almace-scaffolding/commit/0362e62))
+* update Atom feed / sitemap structure ([a5ca52b](https://github.com/sparanoid/almace-scaffolding/commit/a5ca52b))
+* **theme:** update blockquotes style ([99ffe5a](https://github.com/sparanoid/almace-scaffolding/commit/99ffe5a))
+* **travis:** update build notification ([f35c467](https://github.com/sparanoid/almace-scaffolding/commit/f35c467))
+
+
+### BREAKING CHANGES
+
+* This may make all your posts reappeared in some RSS readers, sorry for the inconvenience.
+
+
 <a name="0.0.36"></a>
 ## [0.0.36](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.35...v0.0.36) (2015-08-19)
 
@@ -495,7 +684,7 @@ Author information can be added in `./_app/_data/authors.yml`
 
 * Now `<h1>` become the primary post / page title instead of `<h2>`, you should update your post to use the new structure
  ([a85184a9](http://github.com/sparanoid/sparanoid.com/commit/a85184a9ce785fc679e6ce95f7f17323109ed6f5))
-* Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages, it's useful for local development since local server doesn't send charset in their respond header.
+* Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to the head of your pages, it's useful for local development since local server doesn't send charset in their respond header.
  ([0fb4c702](http://github.com/sparanoid/sparanoid.com/commit/0fb4c702aeaa5dd5306f0b19f40aaacb3f2f5b5f))
 
 
@@ -800,7 +989,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 
 #### Breaking Changes
 
-* Removal of `.txt` CSS class may break your existing post layout. Now `.txt` is replaced with `main.content`, a global content wrapper. To fix layout breaks for your existing site: simply remove all `<div class=txt>` containers from your posts
+* Removal of `.txt` CSS class may break your existing post layout. Now `.txt` is replaced with `main.content`, a global content wrapper. To fix layout breaks for your existing site: simply remove all `<div class="txt">` containers from your posts
  ([1f400475](http://github.com/sparanoid/sparanoid.com/commit/1f400475e3f3611919299fdcccad73779539fd16))
 
 
