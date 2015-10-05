@@ -85,10 +85,16 @@ file:           //d349cztnlupsuf.cloudfront.net
 # Download files URL used in posts, ie. href="{{ site.download }}/package.zip", this should also be a CDN link just like `site.url`. There's no differences in `site.url` and `site.download`, I just use one CDN for post images and another for large download files. That's it. Remove or ignore this if you don't need it
 download:       http://dl.sparanoid.com
 
+# Google Analytics tracking code
+google_analytics:
+  enabled:      false
+  id:           UA-xxxxxxx
+  url:          //www.google-analytics.com/analytics.js
+
 # Site Twitter account handle
 twitter:        sparanoid
 
-# Force UTF-8 encoding, enable this will simply add <meta charset=utf-8> to the head of your pages
+# Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to the head of your pages
 # Default:      false
 force_utf_8:    false
 
@@ -104,22 +110,3 @@ rss_excerpt:    false
 # Show generator credits
 # Default:      true
 credits:        true
-
-#
-# Custom distribution variables
-#
-
-# SSH remote server hostname
-remote_host:    caladbolg
-
-# Prevent them from being deleted on server (rsync --delete), these files and directories are available on the remote server but outside this git repo. I need to ignore them.
-ignore_files:   --exclude=lab
-
-# Media assets sync'ed using s3cmd
-static_files:   ~/Workspace/Sites/static.sparanoid.com/
-
-# Remote server root directory
-remote_dir:     /srv/www/sparanoid.com/public_html
-
-# Amazon S3 Bucket variable for s3cmd
-s3_bucket:      s3://sparanoid/

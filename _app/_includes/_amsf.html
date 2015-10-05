@@ -1,27 +1,33 @@
-<!--
-  Side-wide varible assigns
--->
+{% comment %}
+  Post author meta
+{% endcomment %}
+{% if post.author %}
+  {% assign author = site.data.authors[post.author] %}
+{% else %}
+  {% assign author = site.data.authors["default"] %}
+{% endif %}
 
-<!-- Page author meta -->
+{% comment %}
+  Page author meta
+{% endcomment %}
 {% if page.author %}
   {% assign author = site.data.authors[page.author] %}
 {% else %}
   {% assign author = site.data.authors["default"] %}
 {% endif %}
 
-
-<!--
-  Site-wide captures
--->
-
-<!-- Site title -->
+{% comment %}
+  Site title
+{% endcomment %}
 {% capture amsf_site_title %}
   {% if page.title != site.name %}
     · {{ site.name }}
   {% endif %}
 {% endcapture %}
 
-<!-- Site description -->
+{% comment %}
+  Site description
+{% endcomment %}
 {% capture amsf_site_desc %}
   {% if page.permalink != '/' %}
     {% if page.desc %}
@@ -36,25 +42,44 @@
   {% endif %}
 {% endcapture %}
 
-<!-- Theme base URL -->
+{% comment %}
+  Site base URL
+{% endcomment %}
+{% capture amsf_site_base %}{{ site.base | prepend: site.url }}{% endcapture %}
+
+{% comment %}
+  Theme base URL
+{% endcomment %}
 {% capture amsf_theme_base %}{{ site.theme | prepend: '/themes/' }}{% endcapture %}
 
-<!-- Theme assets base URL -->
+{% comment %}
+  Theme assets base URL
+{% endcomment %}
 {% capture amsf_theme_assets %}{{ site.theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
 
-<!-- User assets base URL -->
+{% comment %}
+  User assets base URL
+{% endcomment %}
 {% capture amsf_user_assets %}{{ site.assets | prepend: site.base }}{% endcapture %}
 
-<!-- Feed URL -->
+{% comment %}
+  Feed URL
+{% endcomment %}
 {% capture amsf_feed_url %}{{ site.feed | prepend: site.base }}{% endcapture %}
 
-<!-- Page title -->
+{% comment %}
+  Page title
+{% endcomment %}
 {% capture amsf_page_title %}{{ page.title | strip_html | xml_escape }}{% endcapture %}
 
-<!-- Page URL -->
-{% capture amsf_page_url %}{{ page.url | prepend: site.base | prepend: site.url }}{% endcapture %}
+{% comment %}
+  Page URL
+{% endcomment %}
+{% capture amsf_page_url %}{{ page.url | prepend: amsf_site_base }}{% endcapture %}
 
-<!-- Page type (used by Open Graph) -->
+{% comment %}
+  Page type (used by Open Graph)
+{% endcomment %}
 {% capture amsf_page_type %}
   {% if page.permalink == '/' %}
     website
@@ -63,14 +88,22 @@
   {% endif %}
 {% endcapture %}
 
-<!-- Page language tag -->
+{% comment %}
+  Page language tag
+{% endcomment %}
 {% capture amsf_page_lang %}
-  {% if page.lang %}
-    lang={{ page.lang }}
+  {% if page.languages %}
+    {% if page.languages[0] != null %}
+      lang="{{ page.languages | first }}"
+    {% else %}
+      lang="{{ page.languages }}"
+    {% endif %}
   {% endif %}
 {% endcapture %}
 
-<!-- Page custom CSS -->
+{% comment %}
+  Page custom CSS
+{% endcomment %}
 {% capture amsf_page_css %}
   {% if page.css %}
     <style>
@@ -79,7 +112,26 @@
   {% endif %}
 {% endcapture %}
 
-<!-- Page thumbnail -->
+{% comment %}
+  Page thumbnail
+{% endcomment %}
 {% capture amsf_page_thumb %}
   {{ site.file }}/thumb/{% if page.thumb %}{{ page.thumb }}{% else %}na.png{% endif %}
+{% endcapture %}
+
+{% comment %}
+  Google Analytics tracking code
+{% endcomment %}
+{% capture amsf_google_analytics %}
+  {% if site.google_analytics.enabled %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','{{ site.google_analytics.url }}','ga');
+
+      ga('create', '{{ site.google_analytics.id }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
 {% endcapture %}
