@@ -1,0 +1,74 @@
+---
+permalink: /feed.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+{% include _amsf.html %}
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  {% assign site_domain = site.url | replace:'http://', '' | replace:'https://', '' %}
+  <id>{{ site.feed | prepend: amsf_site_base | xml_escape }}</id>
+  <link rel="alternate" type="text/html" hreflang="en" href="{{ amsf_site_base }}/" />
+  <link rel="self" type="application/atom+xml" href="{{ site.feed | prepend: amsf_site_base }}" />
+  <rights>Copyright © {{ site.time | date: "%Y" }}, {{ site.data.authors.default.name }}</rights>
+
+  <author>
+    <name>{{ site.data.authors.default.name }}</name>
+    <uri>{{ amsf_site_base }}/</uri>
+    <email>{{ site.data.authors.default.email }}</email>
+  </author>
+
+  {% for post in site.posts limit:300 %}
+    {% if post.hidden != true %}
+      {% if site.link_blog and post.link %}
+        {% assign entry_link = post.link %}
+      {% else %}
+        {% assign entry_link = post.url | prepend: amsf_site_base %}
+      {% endif %}
+
+      {% capture entry_permalink %}
+        {% if site.link_blog and post.link %}
+          <p><a href="{{ post.url | prepend: amsf_site_base }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”"><small>◉ Permalink</small></a></p>
+        {% elsif site.link_blog != true and post.link %}
+          <p><a href="{{ post.link }}"><small>◉ Direct Link to Original Site</small></a></p>
+        {% endif %}
+      {% endcapture %}
+
+      <entry>
+        <title>{{ post.title | strip_html | xml_escape }}</title>
+        <id>{{ post.url | prepend: amsf_site_base | xml_escape }}</id>
+        <link rel="alternate" type="text/html" href="{{ entry_link }}" />
+        <published>{{ post.date | date_to_xmlschema }}</published>
+
+        {% if post.last_modified_at %}
+          <updated>{{ post.last_modified_at | date_to_xmlschema }}</updated>
+        {% else %}
+          <updated>{{ post.date | date_to_xmlschema }}</updated>
+        {% endif %}
+
+        <author>
+          <name>{{ author.name }}</name>
+          <uri>{{ author.web }}</uri>
+          <email>{{ author.email }}</email>
+        </author>
+
+        <content type="html" xml:base="{{ amsf_site_base }}/">
+          {% if site.rss_excerpt %}
+            {{ post.excerpt | markdownify | xml_escape }}
+          {% else %}
+            {{ post.content | markdownify | xml_escape }}
+          {% endif %}
+          {{ entry_permalink | xml_escape}}
+        </content>
+
+        {% if post.excerpt and post.excerpt != empty %}
+          <summary>{{ post.excerpt | markdownify | strip_html | strip_newlines | xml_escape }}</summary>
+        {% endif %}
+      </entry>
+    {% endif %}
+  {% endfor %}
+</feed>

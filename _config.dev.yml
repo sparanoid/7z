@@ -1,13 +1,19 @@
 #
-# Jekyll serve settings
+# Jekyll basic configurations
+#
+
+# Re-include theme example pages for development
+exclude:        []
+
+#
+# Almace Scaffolding settings
 #
 
 # Reset base to root for localhost development
 base:           null
 
 # CDN location for development
-# file:           http://sparanoid.s3-website-us-east-1.amazonaws.com
-# file:           http://d349cztnlupsuf.cloudfront.net
+file:           /assets/img
 
 # Force UTF-8 since local server doesn't send charset in their respond header
 force_utf_8:    true
