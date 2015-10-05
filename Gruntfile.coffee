@@ -21,6 +21,7 @@ module.exports = (grunt) ->
       cfg: grunt.file.readYAML("_config.yml")
       pkg: grunt.file.readJSON("package.json")
       amsf: grunt.file.readYAML("_amsf/_config.yml")
+      deploy: grunt.file.readYAML("_deploy.yml")
       app: "<%= config.cfg.source %>"
       dist: "<%= config.cfg.destination %>"
       base: "<%= config.cfg.base %>"
@@ -39,8 +40,8 @@ module.exports = (grunt) ->
       theme:
         assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
         current: "<%= config.amsf.theme %>"
-        new_name: grunt.option('theme') or "<%= amsf.theme.current %>"
-        new_author: grunt.option('user') or "amsf"
+        new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
+        new_author: grunt.option("user") or "amsf"
 
     coffeelint:
       options:
@@ -87,8 +88,11 @@ module.exports = (grunt) ->
           interrupt: true
 
       jekyll:
-        files: ["<%= config.app %>/**/*", "!_*"]
-        tasks: ['jekyll:serve']
+        files: ["<%= config.app %>/**/*", "!_*", "_config*.yml"]
+        tasks: [
+          "jekyll:serve"
+          "newer:leading_quotes"
+        ]
 
     uglify:
       dist:
@@ -119,8 +123,8 @@ module.exports = (grunt) ->
       serve:
         options:
           sourceMap: true
+          sourceMapFileInline: true
           outputSourceFiles: true
-          dumpLineNumbers: "comments"
 
         files: [
           expand: true
@@ -138,16 +142,16 @@ module.exports = (grunt) ->
         src: "<%= amsf.theme.assets %>/css/*.css"
         options:
           map:
-            inline: false
+            inline: true
           processors: [
-            require("autoprefixer-core")(browsers: "last 1 versions")
+            require("autoprefixer")(browsers: "last 1 versions")
           ]
 
       dist:
         src: "<%= postcss.serve.src %>"
         options:
           processors: [
-            require("autoprefixer-core")(browsers: "last 2 versions")
+            require("autoprefixer")(browsers: "last 2 versions")
           ]
 
     csscomb:
@@ -172,14 +176,14 @@ module.exports = (grunt) ->
           collapseWhitespace: true
           conservativeCollapse: true
           collapseBooleanAttributes: true
-          removeAttributeQuotes: false
+          removeAttributeQuotes: true
           removeRedundantAttributes: true
           useShortDoctype: false
           removeEmptyAttributes: true
           removeOptionalTags: true
           removeEmptyElements: false
           lint: false
-          keepClosingSlash: true
+          keepClosingSlash: false
           caseSensitive: true
           minifyJS: true
           minifyCSS: true
@@ -188,7 +192,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
     xmlmin:
@@ -197,7 +201,16 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.xml"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
+        ]
+
+    minjson:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.json"
+          dest: "<%= config.dist %>"
         ]
 
     cssmin:
@@ -209,7 +222,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= config.dist %>"
           src: ["**/*.css", "!*.min.css"]
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
         ]
 
       # html:
@@ -228,13 +241,44 @@ module.exports = (grunt) ->
         inlineSvg: true
         inlineSvgBase64: false
         assetsUrlPrefix: "<%= config.base %>/assets/"
+        deleteOriginals: true
 
       dist:
         files: [
           expand: true
           cwd: "<%= config.dist %>"
           src: "**/*.html"
-          dest: "<%= config.dist %>/"
+          dest: "<%= config.dist %>"
+        ]
+
+    leading_quotes:
+      options:
+        elements: "p, li, h1, h2, h3, h4, h5, h6"
+        class: "leading-indent-fix"
+        verbose: true
+
+      main:
+        files: [
+          expand: true
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
+        ]
+
+    cacheBust:
+      options:
+        encoding: "utf8"
+        algorithm: "md5"
+        length: 8
+        deleteOriginals: true
+
+      dist:
+        files: [
+          expand: true
+          baseDir: "<%= config.dist %>"
+          cwd: "<%= config.dist %>"
+          src: "**/*.html"
+          dest: "<%= config.dist %>"
         ]
 
     usebanner:
@@ -252,13 +296,13 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.dev.yml,_config.user.yml"
           drafts: true
           future: true
 
       dist:
         options:
-          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml"
+          config: "_config.yml,_amsf/_config.yml,<%= config.app %>/_data/<%= amsf.theme.current %>.yml,_config.user.yml"
           dest: "<%= config.dist %><%= config.base %>"
 
     shell:
@@ -267,15 +311,43 @@ module.exports = (grunt) ->
 
       # Direct sync compiled static files to remote server
       sync_server:
-        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= config.dist %>/ <%= config.cfg.remote_host %>:<%= config.cfg.remote_dir %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.deploy.ignore_files %> <%= config.dist %>/ <%= config.deploy.sftp.host %>:<%= config.deploy.sftp.dest %> > rsync-sftp.log"
 
       # Copy compiled static files to local directory for further post-process
       sync_local:
-        command: "rsync -avz --delete --progress <%= config.cfg.ignore_files %> <%= jekyll.dist.options.dest %>/ /Users/sparanoid/Workspace/Sites/sparanoid.com<%= config.base %> > rsync.log"
+        command: "rsync -avz --delete --progress <%= config.deploy.ignore_files %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.dest %>/site/<%= config.base %> > rsync-s3_website.log"
 
-      # Sync images to a separate CloudFront
-      s3:
-        command: "s3cmd sync -rP --guess-mime-type --delete-removed --no-preserve --cf-invalidate --add-header=Cache-Control:max-age=31536000 --exclude '.DS_Store' <%= config.cfg.static_files %> <%= config.cfg.s3_bucket %>"
+      # Auto commit untracked files sync'ed from sync_local
+      sync_commit:
+        command: "sh <%= config.deploy.s3_website.dest %>/auto-commit"
+
+      amsf__core__update_deps:
+        command: [
+          "bundle update"
+          "bundle install"
+          "npm install"
+        ].join("&&")
+
+      amsf__theme__to_app:
+        command: [
+          "rsync -avz --delete --progress <%= amsf.base %>/themes/<%= amsf.theme.new_name %>/config.yml <%= config.app %>/_data/<%= amsf.theme.new_name %>.yml"
+          "rsync -avz --delete --progress <%= amsf.base %>/themes/<%= amsf.theme.new_name %>/includes/  <%= config.app %>/_includes/themes/<%= amsf.theme.new_name %>/includes/"
+          "rsync -avz --delete --progress <%= amsf.base %>/themes/<%= amsf.theme.new_name %>/layouts/   <%= config.app %>/_includes/themes/<%= amsf.theme.new_name %>/layouts/"
+          "rsync -avz --delete --progress <%= amsf.base %>/themes/<%= amsf.theme.new_name %>/assets/    <%= config.app %>/assets/themes/<%= amsf.theme.new_name %>/"
+          "rsync -avz --delete --progress <%= amsf.base %>/themes/<%= amsf.theme.new_name %>/pages/     <%= config.app %>/_pages/themes/<%= amsf.theme.new_name %>/"
+        ].join("&&")
+
+      amsf__theme__to_cache:
+        command: [
+          "rsync -avz --delete --progress <%= config.app %>/_data/<%= amsf.theme.current %>.yml                  <%= amsf.base %>/themes/<%= amsf.theme.current %>/config.yml"
+          "rsync -avz --delete --progress <%= config.app %>/_includes/themes/<%= amsf.theme.current %>/includes/ <%= amsf.base %>/themes/<%= amsf.theme.current %>/includes/"
+          "rsync -avz --delete --progress <%= config.app %>/_includes/themes/<%= amsf.theme.current %>/layouts/  <%= amsf.base %>/themes/<%= amsf.theme.current %>/layouts/"
+          "rsync -avz --delete --progress <%= config.app %>/assets/themes/<%= amsf.theme.current %>/             <%= amsf.base %>/themes/<%= amsf.theme.current %>/assets/"
+          "rsync -avz --delete --progress <%= config.app %>/_pages/themes/<%= amsf.theme.current %>/             <%= amsf.base %>/themes/<%= amsf.theme.current %>/pages/"
+        ].join("&&")
+
+      amsf__theme__to_dev_repo:
+        command: "rsync -avz --delete --progress --exclude=.git --exclude=node_modules <%= amsf.base %>/themes/<%= amsf.theme.current %>/ /Users/sparanoid/Git/amsf-<%= amsf.theme.current %> > rsync-theme-dev.log"
 
     concurrent:
       options:
@@ -285,7 +357,7 @@ module.exports = (grunt) ->
         tasks: [
           "htmlmin"
           "xmlmin"
-          "cssmin"
+          "minjson"
         ]
 
     copy:
@@ -312,7 +384,7 @@ module.exports = (grunt) ->
           {
             expand: true
             dot: true
-            cwd: "<%= amsf.core %>/"
+            cwd: "<%= amsf.core %>"
             src: [
               ".*"
               "*.json"
@@ -332,10 +404,11 @@ module.exports = (grunt) ->
             dot: true
             cwd: "<%= amsf.core %>/_app/"
             src: [
-              "*.xml"
+              "*.json"
               "*.txt"
+              "*.xml"
             ]
-            dest: "<%= config.app %>/"
+            dest: "<%= config.app %>"
           }
           {
             expand: true
@@ -352,78 +425,6 @@ module.exports = (grunt) ->
             cwd: "<%= amsf.core %>/_app/_layouts/"
             src: ["**"]
             dest: "<%= config.app %>/_layouts/"
-          }
-        ]
-
-      amsf__theme__to_app:
-        files: [
-          {
-            src: ["<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/config.yml"]
-            dest: "<%= config.app %>/_data/<%= amsf.theme.new_name %>.yml"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/includes/"
-            src: ["**"]
-            dest: "<%= config.app %>/_includes/themes/<%= amsf.theme.new_name %>/includes/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/layouts/"
-            src: ["**"]
-            dest: "<%= config.app %>/_includes/themes/<%= amsf.theme.new_name %>/layouts/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/assets/"
-            src: ["**"]
-            dest: "<%= config.app %>/assets/themes/<%= amsf.theme.new_name %>/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/pages/"
-            src: ["**"]
-            dest: "<%= config.app %>/_pages/themes/<%= amsf.theme.new_name %>/"
-          }
-        ]
-
-      amsf__theme__to_cache:
-        files: [
-          {
-            src: ["<%= config.app %>/_data/<%= amsf.theme.current %>.yml"]
-            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/config.yml"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= config.app %>/_includes/themes/<%= amsf.theme.current %>/includes/"
-            src: ["**"]
-            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/includes/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= config.app %>/_includes/themes/<%= amsf.theme.current %>/layouts/"
-            src: ["**"]
-            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/layouts/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= config.app %>/assets/themes/<%= amsf.theme.current %>/"
-            src: ["**"]
-            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/assets/"
-          }
-          {
-            expand: true
-            dot: true
-            cwd: "<%= config.app %>/_pages/themes/<%= amsf.theme.current %>/"
-            src: ["**"]
-            dest: "<%= amsf.base %>/themes/<%= amsf.theme.current %>/pages/"
           }
         ]
 
@@ -475,7 +476,7 @@ module.exports = (grunt) ->
           cwd: "<%= gitpull.amsf__theme__update_remote.options.cwd %>"
 
     clean:
-      default:
+      main:
         src: [
           ".tmp"
           "<%= config.dist %>"
@@ -484,14 +485,6 @@ module.exports = (grunt) ->
           "<%= amsf.theme.assets %>/js/"
           "<%= amsf.user.assets %>/css/"
           "<%= amsf.user.assets %>/js/"
-        ]
-
-      amsf__theme__cleanup:
-        src: [
-          "<%= copy.amsf__theme__to_cache.files.1.cwd %>"
-          "<%= copy.amsf__theme__to_cache.files.2.cwd %>"
-          "<%= copy.amsf__theme__to_cache.files.3.cwd %>"
-          "<%= copy.amsf__theme__to_cache.files.4.cwd %>"
         ]
 
     cleanempty:
@@ -561,32 +554,23 @@ module.exports = (grunt) ->
       options:
         files: ["package.json"]
         updateConfigs: ["config.pkg"]
-        commitMessage: 'chore: release v%VERSION%'
+        commitMessage: "chore: release v%VERSION%"
         commitFiles: ["-a"]
-        tagMessage: 'chore: create tag %VERSION%'
+        tagMessage: "chore: create tag %VERSION%"
         push: false
 
-  grunt.registerTask "serve", "Fire up a server on local machine for development", [
-    "clean:default"
-    "copy:serve"
-    "less:serve"
-    "postcss:serve"
-    "jekyll:serve"
-    "browserSync"
-    "watch"
-  ]
-
-  grunt.registerTask "test", "Build test task", [
-    "build"
-  ]
-
   grunt.registerTask "theme-upgrade", "Upgrade specific theme from AMSF cache to app", [
-    "copy:amsf__theme__to_app"
+    "shell:amsf__theme__to_app"
   ]
 
-  grunt.registerTask "theme-save", "Save current (previously activated) theme to AMSF cache", [
-    "copy:amsf__theme__to_cache"
-  ]
+  grunt.registerTask "theme-save", "Save current (previously activated) theme to AMSF cache", ->
+    grunt.task.run [
+      "shell:amsf__theme__to_cache"
+    ]
+    if grunt.option("dev")
+      grunt.task.run [
+        "shell:amsf__theme__to_dev_repo"
+      ]
 
   grunt.registerTask "theme-activate", "Activate specific theme", [
     "theme-upgrade"
@@ -603,7 +587,6 @@ module.exports = (grunt) ->
     "gitreset:amsf__theme__reset_git"
     "gitclean:amsf__theme__clean_git"
     "gitpull:amsf__theme__update_remote"
-    "clean:amsf__theme__cleanup"
     "theme-upgrade"
   ]
 
@@ -614,16 +597,50 @@ module.exports = (grunt) ->
         "gitreset:amsf__core__reset_git"
         "gitclean:amsf__core__clean_git"
         "gitpull:amsf__core__update_remote"
-        "copy:amsf__core__to_app"
       ]
     else
       grunt.task.run [
         "gitclone:amsf__core__add_remote"
-        "copy:amsf__core__to_app"
+      ]
+    grunt.task.run [
+      "copy:amsf__core__to_app"
+      "shell:amsf__core__update_deps"
+    ]
+
+  grunt.registerTask "init", "Initialize new project", [
+    "theme-add"
+  ]
+
+  grunt.registerTask "update", "Update AMSF and the activated theme", [
+    "amsf-update"
+    "theme-update"
+  ]
+
+  grunt.registerTask "serve", "Fire up a server on local machine for development", [
+    "clean:main"
+    "copy:serve"
+    "less:serve"
+    "postcss:serve"
+    "jekyll:serve"
+    "leading_quotes:main"
+    "browserSync"
+    "watch"
+  ]
+
+  grunt.registerTask "test", "Build test task", ->
+    grunt.task.run [
+      "build"
+    ]
+    if !grunt.option("local")
+      grunt.task.run [
+        "theme-add"
+        "theme-update"
+        "theme-save"
+        "amsf-update"
       ]
 
   grunt.registerTask "build", "Build site with jekyll", [
-    "clean:default"
+    "clean:main"
     "coffeelint"
     "uglify"
     "lesslint"
@@ -631,8 +648,11 @@ module.exports = (grunt) ->
     "postcss:dist"
     "csscomb"
     "jekyll:dist"
-    "concurrent:dist"
+    "leading_quotes:main"
+    "cssmin"
     "assets_inline"
+    "cacheBust"
+    "concurrent:dist"
     "usebanner"
     "cleanempty"
   ]
@@ -646,14 +666,15 @@ module.exports = (grunt) ->
       "bump-commit"
     ]
 
-  grunt.registerTask "sync", "Build site + rsync static files to remote server", [
-    "build"
-    "shell:sync_local"
-  ]
-
-  grunt.registerTask "s3", "Sync image assets with `s3cmd`", [
-    "shell:s3"
-  ]
+  grunt.registerTask "sync", "Build site + rsync static files to remote server",  ->
+    grunt.task.run [
+      "build"
+      "shell:sync_local"
+    ]
+    if grunt.option("deploy")
+      grunt.task.run [
+        "shell:sync_commit"
+      ]
 
   grunt.registerTask "default", "Default task aka. build task", [
     "build"
