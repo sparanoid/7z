@@ -319,7 +319,7 @@ module.exports = (grunt) ->
 
       # Auto commit untracked files sync'ed from sync_local
       sync_commit:
-        command: "sh <%= config.deploy.s3_website.dest %>/auto-commit"
+        command: "sh <%= config.deploy.s3_website.dest %>/auto-commit '<%= config.pkg.name %>'"
 
       amsf__core__update_deps:
         command: [
