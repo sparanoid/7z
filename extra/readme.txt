@@ -1,25 +1,25 @@
-﻿7-Zip 附加包 15.05
+﻿7-Zip 附加包 15.12
 -----------------
 
 7-Zip 附加包包含了一些额外的 7-Zip 模块。
 
 7-Zip 版权所有 (C) 1999-2015 Igor Pavlov。
 
+7-Zip 是一款免费的软件，阅读 License.txt 了解许可协议的相关信息。
+
+二进制源代码可以在下方的地址找到：
+  http://www.7-zip.org/
+
 当前的版本中包含以下文件：
 
-7za.exe      - 独立的 7-Zip 命令行版本
-7za.dll      - 7z 档案运行库。
-7zxa.dll     - 7z 档案释放运行库。
-7-zip.chm    - 帮助文件
-License.txt  - 版权许可信息
-readme.txt   - 自述文档（当前文件）
-history.txt  - 7-Zip 历史
+7za.exe     - 独立的 7-Zip 命令行版本
+7za.dll     - 7z 档案运行库。
+7zxa.dll    - 7z 档案释放运行库。
+License.txt - 版权许可信息
+readme.txt  - 自述文档（当前文件）
 
-Far\         - FAR 管理器插件
-Installer\   - 制作安装包所需文件
-
-zh-cn.txt    - 最新版本语言文件（Nightly Build）
-Docs\        - 7-Zip 自述、历史更新、帮助文件
+Far\        - FAR 管理器插件
+x64\        - x64 二进制文件
 
 
 所有 32 位二进制文件可以在下列操作系统中运行：
