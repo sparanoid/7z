@@ -3,6 +3,7 @@ language: node_js
 cache:
   - bundler
 node_js:
+  - "4"
   - "0.12"
 before_install:
   - rvm use 2.2.2 --install --fuzzy

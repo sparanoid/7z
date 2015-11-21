@@ -43,6 +43,7 @@ kramdown:
   hard_wrap:                 false
   syntax_highlighter:        rouge
   transliterated_header_ids: true
+  footnote_backlink:         "&#8617;&#xfe0e;"
 
 redcarpet:
   extensions:
@@ -55,8 +56,18 @@ redcarpet:
     - tables
 
 #
+# Jekyll plugins
+#
+
+gems:
+  - jekyll-last-modified-at
+
+#
 # Almace Scaffolding settings
 #
+
+# Development mode
+dev:            false
 
 # Site name
 name:           Almace Scaffolding
@@ -72,9 +83,13 @@ base:           null
 # Default:      /assets
 assets:         /assets
 
-# Define feed path. If you use `/feed/index.xml` as feed permalink, `{{ page.url }}` won't pass feed validation with "Self reference doesn't match document location" error
+# Define your main feed URL, this will be only used in your templates
 # Default:      /feed.xml
 feed:           /feed.xml
+
+# PubSubHubbub Hub
+# Default:      https://pubsubhubbub.appspot.com/
+pshh:           https://pubsubhubbub.appspot.com/
 
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full URLs for these fields
 url:            http://sparanoid.com
@@ -110,3 +125,13 @@ rss_excerpt:    false
 # Show generator credits
 # Default:      true
 credits:        true
+
+# Custom records in robots.txt
+# For example:
+# robots:
+#   - "User-agent: *"
+#   - "Disallow: /ajax/"
+#   - "Disallow: /@async"
+#   - "Disallow: /log/"
+# Default:      "User-agent: *"
+robots:         "User-agent: *"
