@@ -8,7 +8,7 @@ title: 程序下载
 <H1>{{ page.title }}</H1>
 
 {% assign ver = site.data.versions %}
-<p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}，Windows）</B>：</P>
+<!-- <p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}，Windows）</B>：</P>
 
 <table cellspacing="1" cellpadding="6" border="0">
   <tbody><tr>
@@ -47,9 +47,9 @@ title: 程序下载
     <td class="Item" align="center">任意 / x86 / x64</td>
     <td class="Item" rowspan="2">LZMA SDK（C、C++、C#、Java）</td>
   </tr>
-</tbody></table>
+</tbody></table> -->
 
-<p><b>下载 7-Zip 9.38 beta 测试版（2015-01-03，Windows）</b>：</p>
+<P><B>下载 7-Zip {{ ver.stable.long }}（{{ ver.stable.date }}，Windows）</B>：</P>
 
 <table cellspacing="1" cellpadding="6" border="0">
   <tbody><tr>
@@ -59,42 +59,46 @@ title: 程序下载
     <th class="Title" align="center">描述</th>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z938.exe">下载</a></td>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
     <td class="Item" align="center">.exe</td>
     <td class="Item" align="center" rowspan="2">32 位 x86</td>
     <td class="Item" rowspan="2">7-Zip Windows 32 位</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z938.msi">下载</a></td>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</a></td>
     <td class="Item" align="center">.msi</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z938-x64.msi">下载</a></td>
-    <td class="Item" align="center">.msi</td>
-    <td class="Item" align="center">64 位 x64</td>
-    <td class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
+    <td class="Item" align="center">.exe</td>
+    <td class="Item" align="center" rowspan="2">64 位 x64</td>
+    <td class="Item" rowspan="2">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z938-extra.7z">下载</a></td>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
+    <td class="Item" align="center">.msi</td>
+  </tr>
+  <tr>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-extra.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">x86 / x64</td>
     <td class="Item">7-Zip 附加包：独立命令行、7z 程序库、Far 管理器插件</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z938-src.7z">下载</a></td>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-src.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">任意</td>
     <td class="Item">7-Zip 源代码</td>
   </tr>
   <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/lzma938.7z">下载</a></td>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/lzma{{ ver.stable.short }}.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">任意 / x86 / x64</td>
     <td class="Item" rowspan="2">LZMA SDK（C、C++、C#、Java）</td>
   </tr>
 </tbody></table>
 
-<P><B>下载 7-Zip {{ ver.stable.long }}（{{ ver.stable.date }}，Windows）</B>：</P>
+<p><b>下载 7-Zip 9.20（2010-11-18，Windows）</b>：</p>
 <TABLE cellspacing ="1" cellpadding ="6" border = "0">
   <TR>
   <TH class="Title" align="center" width=90>链接</TH>
@@ -103,53 +107,53 @@ title: 程序下载
     <TH class="Title" align="center">描述</TH>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920.exe">下载</A></TD>
     <TD class="Item" align="center">.exe</TD>
     <TD class="Item" align="center" rowspan=2>32 位 x86</TD>
     <TD class="Item" rowspan=2>7-Zip Windows 32 位</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920.msi">下载</A></TD>
     <TD class="Item" align="center">.msi</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920-x64.msi">下载</A></TD>
     <TD class="Item" align="center">.msi</TD>
     <TD class="Item" align="center">64 位 x64</TD>
     <TD class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-ia64.msi">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920-ia64.msi">下载</A></TD>
     <TD class="Item" align="center">.msi</TD>
     <TD class="Item" align="center">IA-64</TD>
     <TD class="Item">7-Zip 64 位（IA-64 安腾 Itanium CPU）</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-arm.exe">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920-arm.exe">下载</A></TD>
     <TD class="Item" align="center">.exe</TD>
     <TD class="Item" align="center">ARM-WinCE</TD>
     <TD class="Item">7-Zip for Windows Mobile / Windows CE (ARM)</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7za{{ ver.stable.short }}.zip">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920.zip">下载</A></TD>
     <TD class="Item" align="center">.zip</TD>
     <TD class="Item" align="center">32 位</TD>
     <TD class="Item">7-Zip 命令行版本</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.tar.bz2">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920.tar.bz2">下载</A></TD>
     <TD class="Item" align="center">.tar.bz2</TD>
     <TD class="Item" align="center">任意</TD>
     <TD class="Item">7-Zip 源代码</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z{{ ver.stable.short }}_extra.7z">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/7z920_extra.7z">下载</A></TD>
     <TD class="Item" align="center">.7z</TD>
     <TD class="Item" align="center">32 位</TD>
     <TD class="Item">7-Zip 附加包：7z 程序库、安装模式自释放模块、FAR 管理器插件</TD>
   </TR>
   <TR>
-    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/lzma{{ ver.stable.short }}.tar.bz2">下载</A></TD>
+    <TD class="Item" align="center"><A href="http://www.7-zip.org/a/lzma920.tar.bz2">下载</A></TD>
     <TD class="Item" align="center">.tar.bz2</TD>
     <TD class="Item" align="center">任意</TD>
     <TD class="Item" rowspan=2>LZMA SDK（C、C++、C#、Java）</TD>
