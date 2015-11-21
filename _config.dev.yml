@@ -9,6 +9,9 @@ exclude:        []
 # Almace Scaffolding settings
 #
 
+# Enable development mode
+dev:            true
+
 # Reset base to root for localhost development
 base:           null
 
@@ -17,3 +20,6 @@ file:           /assets/img
 
 # Force UTF-8 since local server doesn't send charset in their respond header
 force_utf_8:    true
+
+# Disalbe custom gems (jekyll-last-modified-at) for better performance
+gems:           []

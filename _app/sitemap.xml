@@ -14,7 +14,7 @@
   {% for page in site.html_pages %}
     {% if page.hidden != true %}
       <url>
-        <loc>{{ page.url | replace:'/index.html', '/' | prepend: amsf_site_base }}</loc>
+        <loc>{{ page.url | prepend: amsf_site_base | replace: '/index.html', '/' }}</loc>
         {% if page.last_modified_at %}
           <lastmod>{{ page.last_modified_at | date: "%F" }}</lastmod>
         {% endif %}
