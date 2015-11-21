@@ -19,11 +19,7 @@
 {% comment %}
   Site title
 {% endcomment %}
-{% capture amsf_site_title %}
-  {% if page.title != site.name %}
-    · {{ site.name }}
-  {% endif %}
-{% endcapture %}
+{% capture amsf_site_title %}{% if page.title != site.name %} · {{ site.name }}{% endif %}{% endcapture %}
 
 {% comment %}
   Site description
@@ -65,7 +61,7 @@
 {% comment %}
   Feed URL
 {% endcomment %}
-{% capture amsf_feed_url %}{{ site.feed | prepend: site.base }}{% endcapture %}
+{% capture amsf_feed_url %}{{ site.feed | prepend: site.base | replace: '/index.xml', '/' }}{% endcapture %}
 
 {% comment %}
   Page title
@@ -75,7 +71,7 @@
 {% comment %}
   Page URL
 {% endcomment %}
-{% capture amsf_page_url %}{{ page.url | prepend: amsf_site_base }}{% endcapture %}
+{% capture amsf_page_url %}{{ page.url | prepend: amsf_site_base | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture %}
 
 {% comment %}
   Page type (used by Open Graph)
