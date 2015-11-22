@@ -95,7 +95,7 @@ pshh:           https://pubsubhubbub.appspot.com/
 url:            http://sparanoid.com/lab/7z
 
 # Media assets URL used in posts, without trailing slash. ie. `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be powered by a CDN provider
-file:           //d349cztnlupsuf.cloudfront.net
+file:           /assets/img
 
 # Download files URL used in posts, ie. href="{{ site.download }}/package.zip", this should also be a CDN link just like `site.url`. There's no differences in `site.url` and `site.download`, I just use one CDN for post images and another for large download files. That's it. Remove or ignore this if you don't need it
 download:       http://dl.sparanoid.com
