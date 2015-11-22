@@ -16,7 +16,7 @@ dev:            true
 base:           null
 
 # CDN location for development
-file:           /assets/img
+# file:           http://sparanoid.s3-website-us-east-1.amazonaws.com
 
 # Force UTF-8 since local server doesn't send charset in their respond header
 force_utf_8:    true

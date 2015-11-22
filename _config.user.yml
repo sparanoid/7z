@@ -1,6 +1,0 @@
-#
-# Jekyll user configurations
-#
-
-# Media assets URL used in posts, without trailing slash. ie. `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be powered by a CDN provider
-file:           /lab/7z/assets/img
