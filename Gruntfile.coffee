@@ -272,6 +272,9 @@ module.exports = (grunt) ->
           "link[rel*=icon]": ->
             @attribs.href
         }
+        ignorePatterns: [
+          "no-cache-bust"
+        ]
         algorithm: "md5"
         length: 8
         deleteOriginals: true
