@@ -74,6 +74,80 @@
 {% capture amsf_page_url %}{{ page.url | prepend: amsf_site_base | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture %}
 
 {% comment %}
+  Page publish date
+{% endcomment %}
+{% capture amsf_page_pubdate %}{{ page.date }}{% endcapture %}
+
+
+{% comment %}
+  Page update date
+{% endcomment %}
+{% capture amsf_page_update %}
+  {% assign date_publish = page.date | date: "%b %-d, %Y" %}
+  {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+
+  {% if date_publish != date_update %}
+    {{ page.last_modified_at }}
+  {% else %}
+    {{ page.date }}
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
+  Page words and reading time
+{% endcomment %}
+{% assign amsf_page_words_raw = page.content | number_of_words %}
+{% assign amsf_page_reading_time_raw = amsf_page_words_raw | divided_by: 200 %}
+
+{% capture amsf_page_words %}
+  {% if amsf_page_words_raw == 0 %}
+    No word
+  {% elsif amsf_page_words_raw == 1 %}
+    1 word
+  {% else %}
+    {{ amsf_page_words_raw }} words
+  {% endif %}
+{% endcapture %}
+
+{% capture amsf_page_reading_time %}
+  {% if amsf_page_reading_time_raw == 0 %}
+    Less than 1 min
+  {% elsif amsf_page_reading_time_raw == 1 %}
+    1 min
+  {% elsif amsf_page_reading_time_raw >= 60 %}
+
+    {% assign amsf_page_reading_time_hr = amsf_page_reading_time_raw | divided_by: 60 %}
+    {% assign amsf_page_reading_time_min = amsf_page_reading_time_raw | modulo: 60 %}
+
+    {% capture amsf_page_reading_time_hr_unit %}
+      {% if amsf_page_reading_time_hr == 1 %}
+        hr
+      {% else %}
+        hrs
+      {% endif %}
+    {% endcapture %}
+
+    {% capture amsf_page_reading_time_min_unit %}
+      {% if amsf_page_reading_time_min > 1 %}
+        mins
+      {% elsif amsf_page_reading_time_min == 1 %}
+        min
+      {% endif %}
+    {% endcapture %}
+
+    {% capture amsf_page_reading_time_min_figure %}
+      {% if amsf_page_reading_time_min != 0 %}
+        {{ amsf_page_reading_time_min }}
+      {% endif %}
+    {% endcapture %}
+
+    {{ amsf_page_reading_time_hr }} {{ amsf_page_reading_time_hr_unit | strip }} {{ amsf_page_reading_time_min_figure | strip }} {{ amsf_page_reading_time_min_unit | strip }}
+  {% else %}
+    {{ amsf_page_reading_time_raw }} mins
+  {% endif %}
+{% endcapture %}
+
+{% comment %}
   Page type (used by Open Graph)
 {% endcomment %}
 {% capture amsf_page_type %}

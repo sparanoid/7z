@@ -3,10 +3,12 @@
 #
 
 # Prevent them from being deleted on server (rsync --delete), these files and directories are available on the remote server but outside this git repo. I need to ignore them.
-ignore_files:   --exclude=lab
+ignore_files: --exclude=lab
 
-sftp:
-  host: caladbolg
+rsync:
+  user: rsync
+  port: 22
+  host: caladbolg.sparanoid.com
   dest: /srv/www/sparanoid.com/public_html
 
 s3_website:

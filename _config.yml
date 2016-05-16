@@ -45,16 +45,6 @@ kramdown:
   transliterated_header_ids: true
   footnote_backlink:         "&#8617;&#xfe0e;"
 
-redcarpet:
-  extensions:
-    - footnotes
-    - no_intra_emphasis
-    - smart
-    - space_after_headers
-    - strikethrough
-    - superscript
-    - tables
-
 #
 # Jekyll plugins
 #
@@ -76,7 +66,7 @@ name:           7-Zip
 description:    Almace Scaffolding - Super-fast Jekyll framework
 
 # Base URL, this is useful when I need to build site in a subdirectory (like GitHub Pages for Projects), it provides a specific URL prefix, for example, if the production site URL is http://sparanoid.com/lab/version/, set `base` to `/lab/version/24`, without trailing slash.
-# Default:      null
+# Default:      ""
 base:           /lab/7z
 
 # CSS path used in templates
@@ -97,7 +87,7 @@ url:            http://sparanoid.com/lab/7z
 # Media assets URL used in posts, without trailing slash. ie. `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be powered by a CDN provider
 file:           /assets/img
 
-# Download files URL used in posts, ie. href="{{ site.download }}/package.zip", this should also be a CDN link just like `site.url`. There's no differences in `site.url` and `site.download`, I just use one CDN for post images and another for large download files. That's it. Remove or ignore this if you don't need it
+# Download files URL used in posts, ie. href="{{ site.download }}/package.zip", this should also be a CDN link just like `site.file`. There're no notable differences in `site.file` and `site.download`, I just use the one for post images and the other for large download files. That's it. Remove or ignore this if you don't need it.
 download:       http://dl.sparanoid.com
 
 # Google Analytics tracking code

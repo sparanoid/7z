@@ -26,7 +26,6 @@ nbproject
 
 # Folders to ignore
 node_modules
-bower_components
 
 # AMSF specified
 _amsf/themes

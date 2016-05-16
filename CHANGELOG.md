@@ -1,3 +1,368 @@
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.3...v0.1.4) (2016-05-12)
+
+
+### Bug Fixes
+
+* **grunt:** cannot enter passphrase for GPG signing script ([5a6ee76](https://github.com/sparanoid/almace-scaffolding/commit/5a6ee76))
+* **theme:** adjust header height ([e644cdd](https://github.com/sparanoid/almace-scaffolding/commit/e644cdd))
+
+
+
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.2...v0.1.3) (2016-05-04)
+
+
+### Features
+
+* **theme:** update header height ([cad3c1c](https://github.com/sparanoid/almace-scaffolding/commit/cad3c1c))
+
+
+
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.1...v0.1.2) (2016-04-15)
+
+
+### Bug Fixes
+
+* **styles:** wrong logo width on larger screens ([31fa168](https://github.com/sparanoid/almace-scaffolding/commit/31fa168))
+* **traivs:** try force npm@3 to avoid hard errors ([4823ddc](https://github.com/sparanoid/almace-scaffolding/commit/4823ddc))
+* **travis:** update deps ([300b0e1](https://github.com/sparanoid/almace-scaffolding/commit/300b0e1))
+
+### Features
+
+* **styles:** optimize for iPad Pro portrait direction ([edd776b](https://github.com/sparanoid/almace-scaffolding/commit/edd776b))
+* **template:** add `data-title` for later use ([b673e72](https://github.com/sparanoid/almace-scaffolding/commit/b673e72))
+* **travis:** simplify build process ([68537f7](https://github.com/sparanoid/almace-scaffolding/commit/68537f7))
+
+
+
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.0...v0.1.1) (2016-03-31)
+
+
+### Bug Fixes
+
+* **template:** use custom variable for “Home” placeholder ([8eaa29b](https://github.com/sparanoid/almace-scaffolding/commit/8eaa29b))
+
+### Features
+
+* **styles:** better heading space for small screens ([e56fcc1](https://github.com/sparanoid/almace-scaffolding/commit/e56fcc1))
+
+
+
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.58...v0.1.0) (2016-03-30)
+
+
+### Bug Fixes
+
+* **grunt:** disable `leading_quotes` for list, this could help avoid unwanted list style off ([ff19591](https://github.com/sparanoid/almace-scaffolding/commit/ff19591))
+* **styles:** missing monospace for Windows ([d547628](https://github.com/sparanoid/almace-scaffolding/commit/d547628))
+
+### Features
+
+* **script:** update LIghtense Images ([5cb16c9](https://github.com/sparanoid/almace-scaffolding/commit/5cb16c9))
+* **styles:** brand-new headings ([442d46f](https://github.com/sparanoid/almace-scaffolding/commit/442d46f))
+* **styles:** visual aligin tweak ([d6240a4](https://github.com/sparanoid/almace-scaffolding/commit/d6240a4))
+
+
+### BREAKING CHANGES
+
+* styles: I've redesigned the site headings this time, and also introduces some new variables for you to customize them, you can use your favorite color site-wide or specific post in post front-matter field:
+
+```yaml
+scheme-hero-text: "#00ebff"
+scheme-hero-link: "#00ebff"
+scheme-hero-bg: "#0029ff"
+```
+
+
+
+<a name="0.0.58"></a>
+## [0.0.58](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.57...v0.0.58) (2016-03-18)
+
+
+### Features
+
+* **grunt:** better deploy options ([59ffbe3](https://github.com/sparanoid/almace-scaffolding/commit/59ffbe3))
+
+
+### BREAKING CHANGES
+
+* grunt: Original `sftp` directive has been changed to `rsync` due to new grunt task deployment method changes.
+
+
+
+<a name="0.0.57"></a>
+## [0.0.57](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.56...v0.0.57) (2016-03-18)
+
+
+### Bug Fixes
+
+* **grunt:** assets in subdirectories are not correctly watched ([cfd273e](https://github.com/sparanoid/almace-scaffolding/commit/cfd273e))
+* **styles:** "double" scroller issue on some platforms with codeblocks ([b4a608c](https://github.com/sparanoid/almace-scaffolding/commit/b4a608c))
+
+### Features
+
+* **styles:** tweak leading quote indents ([f7a810e](https://github.com/sparanoid/almace-scaffolding/commit/f7a810e))
+
+
+
+<a name="0.0.56"></a>
+## [0.0.56](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.55...v0.0.56) (2016-03-17)
+
+
+### Bug Fixes
+
+* **styles:** avoid override custom list style ([01c3b24](https://github.com/sparanoid/almace-scaffolding/commit/01c3b24))
+* **styles:** wrong table stripes on mobile devices ([edca9fc](https://github.com/sparanoid/almace-scaffolding/commit/edca9fc))
+* **template:** avoid link indicators being removed by `html-minifier` ([07ef24f](https://github.com/sparanoid/almace-scaffolding/commit/07ef24f))
+
+### Features
+
+* **grunt:** use custom regex for leading quotes fix ([917639c](https://github.com/sparanoid/almace-scaffolding/commit/917639c))
+* **styles:** better leading quote indent with custom `letter-spacing` support ([5d19263](https://github.com/sparanoid/almace-scaffolding/commit/5d19263))
+* **styles:** better list styles ([792fdf3](https://github.com/sparanoid/almace-scaffolding/commit/792fdf3))
+* **styles:** smaller splitter ([66ca21c](https://github.com/sparanoid/almace-scaffolding/commit/66ca21c))
+* **styles:** update leading quotes indent based on characters ([ea82707](https://github.com/sparanoid/almace-scaffolding/commit/ea82707))
+
+
+
+<a name="0.0.55"></a>
+## [0.0.55](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.54...v0.0.55) (2016-03-11)
+
+
+### Bug Fixes
+
+* **grunt:** avoid excluding minified scripts, it causes errors when building the site ([6b271d0](https://github.com/sparanoid/almace-scaffolding/commit/6b271d0))
+* **script:** missing box sizing reset for Lightense ([088995a](https://github.com/sparanoid/almace-scaffolding/commit/088995a))
+* **script:** update default image styles reset ([b5adce4](https://github.com/sparanoid/almace-scaffolding/commit/b5adce4))
+* **template:** use `amsf_user_assets` variable ([ad87e86](https://github.com/sparanoid/almace-scaffolding/commit/ad87e86))
+
+### Features
+
+* **docs:** update library URL ([0588039](https://github.com/sparanoid/almace-scaffolding/commit/0588039))
+* **grunt:** it's safe to remove empty elements ([e93ee80](https://github.com/sparanoid/almace-scaffolding/commit/e93ee80))
+* **grunt:** simplify update process ([1866305](https://github.com/sparanoid/almace-scaffolding/commit/1866305))
+* **script:** allow arbitrary element for Lightense ([488683c](https://github.com/sparanoid/almace-scaffolding/commit/488683c))
+* **script:** inline Lightense ([3a58b97](https://github.com/sparanoid/almace-scaffolding/commit/3a58b97))
+* **script:** update Lightense Images ([13300b2](https://github.com/sparanoid/almace-scaffolding/commit/13300b2))
+* **styles:** darker codeblock background ([6da2f98](https://github.com/sparanoid/almace-scaffolding/commit/6da2f98))
+* **styles:** lighter blockquotes ([53b49da](https://github.com/sparanoid/almace-scaffolding/commit/53b49da))
+* **template:** simplifed banners ([3e264d3](https://github.com/sparanoid/almace-scaffolding/commit/3e264d3))
+
+
+
+<a name="0.0.54"></a>
+## [0.0.54](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.53...v0.0.54) (2016-03-09)
+
+
+### Features
+
+* **docs:** cleanup todos ([62240db](https://github.com/sparanoid/almace-scaffolding/commit/62240db))
+* **scripts:** replace `intense.js` with `lightense.js` ([d66189c](https://github.com/sparanoid/almace-scaffolding/commit/d66189c))
+
+
+### BREAKING CHANGES
+
+* scripts: I've rewrote the `intense.js` from the ground up and rebranded it as `lightense.js`, a minimalism “lightbox” script less than 2 KB (not gzipped!).
+
+If you have used Intensed Images, you have to change the plugin keyword in your front-matter fields from:
+
+```yml
+plugin: intense
+```
+
+to:
+
+```yml
+plugin: lightense
+```
+
+
+
+<a name="0.0.53"></a>
+## [0.0.53](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.52...v0.0.53) (2016-03-05)
+
+
+### Features
+
+* **grunt:** checkout relase branch for AMSF update ([294594d](https://github.com/sparanoid/almace-scaffolding/commit/294594d))
+
+
+
+<a name="0.0.52"></a>
+## [0.0.52](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.51...v0.0.52) (2016-03-01)
+
+
+### Bug Fixes
+
+* **styles:** missing top navbar ([3dc6d04](https://github.com/sparanoid/almace-scaffolding/commit/3dc6d04))
+
+### Features
+
+* **jekyll:** update jekyll, this fix https://github.com/sparanoid/almace-scaffolding/commit/d ([87a8f06](https://github.com/sparanoid/almace-scaffolding/commit/87a8f06))
+
+
+
+<a name="0.0.51"></a>
+## [0.0.51](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.50...v0.0.51) (2016-03-01)
+
+
+### Bug Fixes
+
+* **grunt:** update config for new version ([3dd888c](https://github.com/sparanoid/almace-scaffolding/commit/3dd888c))
+* **package:** wrong version fails test ([533a1a2](https://github.com/sparanoid/almace-scaffolding/commit/533a1a2))
+* **styles:** error page not shown correct in Chrome (possibly browser bug) ([aed0d4e](https://github.com/sparanoid/almace-scaffolding/commit/aed0d4e))
+* **styles:** missing custom `hr` css scope ([0ef9579](https://github.com/sparanoid/almace-scaffolding/commit/0ef9579))
+* **styles:** missing placeholder styles for Firefox and other browsers ([784112b](https://github.com/sparanoid/almace-scaffolding/commit/784112b))
+
+### Features
+
+* **styles:** update scope for text styles ([057fbe2](https://github.com/sparanoid/almace-scaffolding/commit/057fbe2))
+
+
+### BREAKING CHANGES
+
+* grunt: Now it will no longer bust favicons and other assets outside the `<%= amsf.user.assets %>`.
+
+
+
+<a name="0.0.50"></a>
+## [0.0.50](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.49...v0.0.50) (2016-02-02)
+
+
+### Bug Fixes
+
+* **jekyll:** lock jekyll version https://github.com/jekyll/jekyll/issues/4427 ([dec98b3](https://github.com/sparanoid/almace-scaffolding/commit/dec98b3))
+* **jekyll:** reset config with empty strings ([c0cb69a](https://github.com/sparanoid/almace-scaffolding/commit/c0cb69a))
+* **styles:** missing padding variable for offset elements ([f83f2cb](https://github.com/sparanoid/almace-scaffolding/commit/f83f2cb))
+
+### Features
+
+* **deploy:** use traditional rsync command ([1ec5dda](https://github.com/sparanoid/almace-scaffolding/commit/1ec5dda))
+* **style:** update `::selection` style ([d721226](https://github.com/sparanoid/almace-scaffolding/commit/d721226))
+
+
+### BREAKING CHANGES
+
+* deploy: Now you have to define your SSH user, port, and host in `_deploy.yml` in order to use `rsync` deployment. It no longer uses predefined hosts in your SSH config file, however this should work for most CI/DI services.
+
+
+
+<a name="0.0.49"></a>
+## [0.0.49](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.48...v0.0.49) (2015-12-20)
+
+
+### Bug Fixes
+
+* **style:** add missing variables for splitter ([410b94d](https://github.com/sparanoid/almace-scaffolding/commit/410b94d))
+* **style:** avoid redundant classes ([760bbf6](https://github.com/sparanoid/almace-scaffolding/commit/760bbf6))
+* **styles:** missing custom footnote decorations color ([03d6841](https://github.com/sparanoid/almace-scaffolding/commit/03d6841))
+* **template:** avoid extra meta for non-post page ([68a2071](https://github.com/sparanoid/almace-scaffolding/commit/68a2071))
+
+### Features
+
+* **docs:** add new variables for templates ([5a48662](https://github.com/sparanoid/almace-scaffolding/commit/5a48662))
+* **docs:** add notice for “Unique Post Styling via Custom CSS” ([b74d109](https://github.com/sparanoid/almace-scaffolding/commit/b74d109))
+* **grunt:** add ignore patterns for cache busting ([f454547](https://github.com/sparanoid/almace-scaffolding/commit/f454547))
+* **styles:** add position offset for `pre` and `table` ([1217e01](https://github.com/sparanoid/almace-scaffolding/commit/1217e01))
+* **styles:** brand new spliter for `hr` and `.footnotes` ([d3a4864](https://github.com/sparanoid/almace-scaffolding/commit/d3a4864))
+* **styles:** break Less into files ([1b993ab](https://github.com/sparanoid/almace-scaffolding/commit/1b993ab))
+* **styles:** CSS cleanup ([fad460b](https://github.com/sparanoid/almace-scaffolding/commit/fad460b))
+* **styles:** use CSS comments for branding ([edca955](https://github.com/sparanoid/almace-scaffolding/commit/edca955))
+* **template:** add `article:published_time` and `article:modified_time` support ([8f64b24](https://github.com/sparanoid/almace-scaffolding/commit/8f64b24))
+* **template:** experiments with custom data (Words and Reading time Open Graph support) ([0ff110b](https://github.com/sparanoid/almace-scaffolding/commit/0ff110b))
+
+
+### BREAKING CHANGES
+
+* template: Open Graph support with `article:published_time` and `article:modified_time` allow your site to gain better embedding support for third-party platforms. For example users will be able to see your post date in Slack chat log.
+
+
+
+<a name="0.0.48"></a>
+## [0.0.48](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.47...v0.0.48) (2015-12-04)
+
+
+### Bug Fixes
+
+* **deps:** Add peer dependency for grunt-coffeelint ([3132689](https://github.com/sparanoid/almace-scaffolding/commit/3132689))
+* **jekyll:** avoid `footnote_backlink` conversion to an Emoji graphic on iOS ([170dd42](https://github.com/sparanoid/almace-scaffolding/commit/170dd42))
+* **style:** avoid unwanted scrollers for `pre` blocks ([82f25e2](https://github.com/sparanoid/almace-scaffolding/commit/82f25e2))
+* **styles:** make line numbers not selectable ([8f28573](https://github.com/sparanoid/almace-scaffolding/commit/8f28573))
+
+### Features
+
+* **config:** remove `_config.user.yml` support ([64ee055](https://github.com/sparanoid/almace-scaffolding/commit/64ee055))
+* **docs:** better highlighting examples ([f93d80a](https://github.com/sparanoid/almace-scaffolding/commit/f93d80a))
+* **gem:** use jekyll 3.0.0 stable ([4475503](https://github.com/sparanoid/almace-scaffolding/commit/4475503))
+* **style:** gapless border for blockquotes, fixes https://github.com/amsf/amsf-curtana/issue ([9aeb5df](https://github.com/sparanoid/almace-scaffolding/commit/9aeb5df))
+* **styles:** add basic `lineno` support ([9b09e93](https://github.com/sparanoid/almace-scaffolding/commit/9b09e93))
+* **styles:** avoid calculating code color ([4273000](https://github.com/sparanoid/almace-scaffolding/commit/4273000))
+* **styles:** update default code color ([dc290bb](https://github.com/sparanoid/almace-scaffolding/commit/dc290bb))
+* **styles:** use brand-new fully automatic generated syntax highlighting ([426c09d](https://github.com/sparanoid/almace-scaffolding/commit/426c09d))
+* **template:** add `site.robots` support ([0ddab1b](https://github.com/sparanoid/almace-scaffolding/commit/0ddab1b))
+* **template:** update base urls for feeds ([3c13efe](https://github.com/sparanoid/almace-scaffolding/commit/3c13efe))
+* **travis:** test node.js 4 ([ccd2399](https://github.com/sparanoid/almace-scaffolding/commit/ccd2399))
+
+
+### BREAKING CHANGES
+
+* style: Now paragraphs in a blockquote will get a single gapless border on the left side, you don't need special markup to achieve this now:
+
+```markdown
+> … these mean that in many fields the rule will be: Build it, and they will come.
+>
+> Paul Graham
+```
+* jekyll: Appending &#xfe0e; to the Unicode-represenation of the reversed arrow will prevent the conversion to an Emoji graphic on iOS. You should update Kramdown settings `footnote_backlink` in your exisitng config.
+
+Reference:
+
+- https://github.com/jekyll/jekyll/issues/3751
+- https://twitter.com/jasoncodes/status/590356654790574080
+- https://github.com/sparanoid/almace-scaffolding/commit/d9d14a9f9088e66407c8c82098fcc02bfa1d2c10
+* config: `_config.user.yml` is deprecated and no longer supported in the future, please keep config changes in `_config.yml`.
+* template: Now you can define your custom `robots.txt` records in configuration file:
+
+```yaml
+robots:
+  - "User-agent: *"
+  - "Disallow: /ajax/"
+  - "Disallow: /@async"
+  - "Disallow: /log/"
+```
+* styles: This will change your syntax highlighting color scheme, you can now tweak it with `@code-color`, have fun.
+
+
+
+<a name="0.0.47"></a>
+## [0.0.47](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.46...v0.0.47) (2015-10-25)
+
+
+### Bug Fixes
+
+* **amsf:** missing title whitespace ([abd7f2f](https://github.com/sparanoid/almace-scaffolding/commit/abd7f2f))
+* **feed:** missing base url for PSHH ([54271c4](https://github.com/sparanoid/almace-scaffolding/commit/54271c4))
+* **jekyll:** empty config causes Jekyll ignoring later configs ([86decb2](https://github.com/sparanoid/almace-scaffolding/commit/86decb2))
+
+### Features
+
+* **feed:** basic PubSubHubbub support ([0d72326](https://github.com/sparanoid/almace-scaffolding/commit/0d72326))
+* **feed:** remove PubSubHubbub support ([6df22eb](https://github.com/sparanoid/almace-scaffolding/commit/6df22eb))
+* **gem:** bump and test latest Jeklly release ([190a5fe](https://github.com/sparanoid/almace-scaffolding/commit/190a5fe))
+* **grunt:** add `mask-icon` support for Safari ([2560253](https://github.com/sparanoid/almace-scaffolding/commit/2560253))
+* **grunt:** pass project name when deploy ([3f60155](https://github.com/sparanoid/almace-scaffolding/commit/3f60155))
+* **style:** remove abbr styles ([bde59df](https://github.com/sparanoid/almace-scaffolding/commit/bde59df))
+* **style:** smaller blockquotes font size ([e5da89e](https://github.com/sparanoid/almace-scaffolding/commit/e5da89e))
+* **style:** tweak default code color ([b1535a1](https://github.com/sparanoid/almace-scaffolding/commit/b1535a1))
+* **template:** disable `jekyll-last-modified-at` for dev mod for better performance ([0b30446](https://github.com/sparanoid/almace-scaffolding/commit/0b30446))
+* **template:** use variable for mask-icon color ([be3d208](https://github.com/sparanoid/almace-scaffolding/commit/be3d208))
+
+
+
 <a name="0.0.46"></a>
 ## [0.0.46](https://github.com/sparanoid/almace-scaffolding/compare/v0.0.45...v0.0.46) (2015-09-29)
 
