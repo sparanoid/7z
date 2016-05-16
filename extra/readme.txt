@@ -1,9 +1,9 @@
-﻿7-Zip 附加包 15.12
+﻿7-Zip 附加包 16.00
 -----------------
 
 7-Zip 附加包包含了一些额外的 7-Zip 模块。
 
-7-Zip 版权所有 (C) 1999-2015 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2016 Igor Pavlov。
 
 7-Zip 是一款免费的软件，阅读 License.txt 了解许可协议的相关信息。
 
@@ -33,16 +33,16 @@ Windows 2000、2003、2008、XP、Vista、7、8、10
 7za.exe
 -------
 
-7za.exe - is a standalone console version of 7-Zip with reduced formats support.
+7za.exe - 独立的 7-Zip 命令行版本，提供部分格式支持。
 
-  Extra: 7za.exe             : support for only some formats of 7-Zip.
-  7-Zip: 7z.exe with 7z.dll  : support for all formats of 7-Zip.
+  附加包：7za.exe            ：仅支持部分 7-Zip 格式。
+  7-Zip：7z.exe + 7z.dll    ：支持所有 7-Zip 格式。
 
-7za.exe and 7z.exe from 7-Zip have same command line interface.
-7za.exe doesn't use external DLL files.
+7-Zip 中的 7za.exe 以及 7z.exe 使用完全相同的命令行介面。
+7za.exe 不使用额外的 DLL 文件。
 
-You can read Help File (7-zip.chm) from 7-Zip package for description
-of all commands and switches for 7za.exe and 7z.exe.
+您可以从 7-Zip 安装包中的帮助文件（7-zip.chm）获取所有 7za.exe 和 7z.exe 有关的命令行
+和相应选项的详细描述。
 
 7za.exe 特征：
   - 支持高压缩比的 7z 格式
@@ -53,8 +53,8 @@ of all commands and switches for 7za.exe and 7z.exe.
   - 较快的压缩和解压所速度
   - 为 7z 和 ZIP 提供强大的 AES-256 加密
 
-Note: LZMA SDK contains 7zr.exe - more reduced version of 7za.exe.
-But you can use 7zr.exe as "public domain" code.
+注意：LZMA SDK 中所包含的 7zr.exe——是一个比 7za.exe 更加精简的版本。
+因此您可以将 7zr.exe 做为「公共领域」的代码来使用。
 
 
 DLL 文件
