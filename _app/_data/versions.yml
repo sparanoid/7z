@@ -1,11 +1,11 @@
 stable:
-  long:          "15.14"
-  short:         "1514"
-  date:          2015-12-31
+  long:          "16.00"
+  short:         "1600"
+  date:          2016-05-10
   sdk:
-    long:        "15.14"
-    short:       "1514"
-    date:        2015-12-31
+    long:        "16.00"
+    short:       "1600"
+    date:        2016-05-10
 
 beta:
   long:          "15.11"
