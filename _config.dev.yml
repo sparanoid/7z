@@ -5,6 +5,9 @@
 # Re-include theme example pages for development
 exclude:        []
 
+# Disalbe custom gems (jekyll-last-modified-at) for better performance
+gems:           []
+
 #
 # Almace Scaffolding settings
 #
@@ -12,14 +15,11 @@ exclude:        []
 # Enable development mode
 dev:            true
 
-# Reset base to root for localhost development
-base:           null
+# Reset base to / for localhost development
+base:           ""
 
 # CDN location for development
-# file:           http://sparanoid.s3-website-us-east-1.amazonaws.com
+file:           http://sparanoid.s3-website-us-east-1.amazonaws.com
 
 # Force UTF-8 since local server doesn't send charset in their respond header
 force_utf_8:    true
-
-# Disalbe custom gems (jekyll-last-modified-at) for better performance
-gems:           []
