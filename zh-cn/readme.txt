@@ -1,17 +1,18 @@
-﻿7-Zip 15.12
+7-Zip 16.00
 -----------
 
 7-Zip 适用于 Windows NT / 2000 / 2003 / 2008 / XP / Vista / 7 / 8 / 10。
 
-7-Zip 版权所有 (C) 1999-2015 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2016 Igor Pavlov。
 
 软件特征：
 
-  - 使用了 LZMA 与 LZMA2 算法的 7z 格式 拥有极高的压缩比
+  - 拥有极高的压缩比的 7z 格式
   - 支持格式：
      - 压缩 / 解压缩：7z、XZ、BZIP2、GZIP、TAR、ZIP、WIM
-     - 仅解压缩：ARJ、CAB、CHM、CPIO、CramFS、DEB、DMG、FAT、HFS、ISO、LZH、LZMA、
-               MBR、MSI、NSIS、NTFS、RAR、RPM、SquashFS、UDF、UEFI、VHD、WIM、XAR、Z
+     - 仅解压缩：AR、ARJ、CAB、CHM、CPIO、CramFS、DMG、EXT、FAT、GPT、HFS、
+               IHEX、ISO、LZH、LZMA、MBR、MSI、NSIS、NTFS、QCOW2、RAR、
+               RPM、SquashFS、UDF、UEFI、VDI、VHD、VMDK、WIM、XAR 以及 Z。
   - 更快的压缩和解压缩速度
   - 7z 格式支持创建自释放压缩包
   - 为 7z 与 ZIP 提供更完善的 AES-256 加密算法
