@@ -1,7 +1,7 @@
 ;!@Lang2@!UTF-8!
-;                    : Modern Tiger, kaZek, Hutu Li
-;                    : Sparanoid (aka. Tunghsiao Liu)
-; 15.05 : 2015-06-15 : Tunghsiao Liu : http://sparanoid.com/lab/7z/
+;  2.30 : 2002-09-07 : Modern Tiger, kaZek, Hutu Li
+;  3.08 : 2003-08-29 : Tunghsiao Liu (aka. Sparanoid)
+; 16.00 : 2016-05-16 : Tunghsiao Liu (aka. Sparanoid)
 ;
 ;
 ;
