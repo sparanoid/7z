@@ -1,11 +1,11 @@
 stable:
-  long:          "16.01"
-  short:         "1601"
-  date:          2016-05-19
+  long:          "16.02"
+  short:         "1602"
+  date:          2016-05-21
   sdk:
-    long:        "16.01"
-    short:       "1601"
-    date:        2016-05-19
+    long:        "16.02"
+    short:       "1602"
+    date:        2016-05-21
 
 beta:
   long:          "15.11"
