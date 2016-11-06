@@ -46,12 +46,12 @@
 {% comment %}
   Theme base URL
 {% endcomment %}
-{% capture amsf_theme_base %}{{ site.theme | prepend: '/themes/' }}{% endcapture %}
+{% capture amsf_theme_base %}{{ site.amsf_theme | prepend: '/themes/' }}{% endcapture %}
 
 {% comment %}
   Theme assets base URL
 {% endcomment %}
-{% capture amsf_theme_assets %}{{ site.theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
+{% capture amsf_theme_assets %}{{ site.amsf_theme | prepend: '/themes/' | prepend: site.assets | prepend: site.base }}{% endcapture %}
 
 {% comment %}
   User assets base URL
