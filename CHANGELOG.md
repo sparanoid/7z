@@ -1,3 +1,141 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.12...v1.0.0) (2016-10-08)
+
+
+### Features
+
+* **jekyll:** compatible with latest jekyll ([3e7421c](https://github.com/sparanoid/almace-scaffolding/commit/3e7421c))
+
+
+### BREAKING CHANGES
+
+* jekyll: Now AMSF is updated with latest version of Jekyll, with native theme support.
+
+So the  in AMSF is now conflicted with Jekyll's theme directive. I have to rename it to  in order to compatible with built-in theme feature.
+
+
+
+<a name="0.1.12"></a>
+## [0.1.12](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.11...v0.1.12) (2016-10-08)
+
+
+### Bug Fixes
+
+* **deploy:** wrong prod deploy path ([a61535e](https://github.com/sparanoid/almace-scaffolding/commit/a61535e))
+* **grunt:** avoid cleaning empty files ([32c7d4c](https://github.com/sparanoid/almace-scaffolding/commit/32c7d4c))
+* **package:**  causes task hanging in macOS Sierra (also potentially in other platforms), should fix https://github.com/sparanoid/almace-scaffolding/issues/54 ([f7b4b8a](https://github.com/sparanoid/almace-scaffolding/commit/f7b4b8a))
+* **post:** typo ([e87bf30](https://github.com/sparanoid/almace-scaffolding/commit/e87bf30))
+* **travis:** remove node v0.12 support (lack of ES6) ([42ce9d9](https://github.com/sparanoid/almace-scaffolding/commit/42ce9d9))
+
+
+### Features
+
+* **config:** go HTTPS ([d2c4d5a](https://github.com/sparanoid/almace-scaffolding/commit/d2c4d5a))
+* **grunt:** add custom envrionment deployment ([0b460bc](https://github.com/sparanoid/almace-scaffolding/commit/0b460bc))
+* **grunt:** add user  support ([e775595](https://github.com/sparanoid/almace-scaffolding/commit/e775595))
+* **style:** tweak typography for San Francisco for macOS with OpenType features support ([dde96bc](https://github.com/sparanoid/almace-scaffolding/commit/dde96bc))
+
+
+
+<a name="0.1.11"></a>
+## [0.1.11](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.10...v0.1.11) (2016-06-13)
+
+
+### Bug Fixes
+
+* **grunt:** config not corectly checked before upgrading ([60ef187](https://github.com/sparanoid/almace-scaffolding/commit/60ef187))
+
+
+
+<a name="0.1.10"></a>
+## [0.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.9...v0.1.10) (2016-06-13)
+
+
+### Bug Fixes
+
+* **grunt:** version confg not updated ([bfe15af](https://github.com/sparanoid/almace-scaffolding/commit/bfe15af))
+
+
+
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.8...v0.1.9) (2016-06-13)
+
+
+### Features
+
+* **feed:** add  tag for Atom output ([6ee388e](https://github.com/sparanoid/almace-scaffolding/commit/6ee388e))
+* **grunt:** remove banner support for minified HTMLs ([dfed2be](https://github.com/sparanoid/almace-scaffolding/commit/dfed2be))
+* **theme:** remove CSS comments ([6c04f11](https://github.com/sparanoid/almace-scaffolding/commit/6c04f11))
+* update AMSF config structure ([542a59b](https://github.com/sparanoid/almace-scaffolding/commit/542a59b))
+
+
+### BREAKING CHANGES
+
+* Now the `./_amsf/` directory is obsolete, config `_amsf.yml` and cache directory `.amsf-cache` are introduced, if you see errors when update the AMSF, try create `_amsf.yml` from the AMSF source code
+
+
+
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.7...v0.1.8) (2016-06-06)
+
+
+### Features
+
+* **config:** update comment for better readability ([16911d8](https://github.com/sparanoid/almace-scaffolding/commit/16911d8))
+* **style:** remove obsoleted option ([9110848](https://github.com/sparanoid/almace-scaffolding/commit/9110848))
+* **style:** remove site specific styles ([6617343](https://github.com/sparanoid/almace-scaffolding/commit/6617343))
+
+
+
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.6...v0.1.7) (2016-06-03)
+
+
+### Bug Fixes
+
+* **config:** wrong URL ([3493955](https://github.com/sparanoid/almace-scaffolding/commit/3493955))
+* **post:** typo post name ([9c0677d](https://github.com/sparanoid/almace-scaffolding/commit/9c0677d))
+
+
+### Features
+
+* **grunt:** auto release task ([6c33090](https://github.com/sparanoid/almace-scaffolding/commit/6c33090))
+* **grunt:** update deploy script ([a519d61](https://github.com/sparanoid/almace-scaffolding/commit/a519d61))
+
+
+
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.5...v0.1.6) (2016-06-01)
+
+
+### Features
+
+* **config:** update default timezone ([0489949](https://github.com/sparanoid/almace-scaffolding/commit/0489949))
+* **deploy:** update rsync deploy parameter ([a63ae8e](https://github.com/sparanoid/almace-scaffolding/commit/a63ae8e))
+* **grunt:** add  support for better minified output ([1934283](https://github.com/sparanoid/almace-scaffolding/commit/1934283))
+* **grunt:** add project specific deploy task ([69766fb](https://github.com/sparanoid/almace-scaffolding/commit/69766fb))
+* **post:** introducing theme Curtana ([b91aea6](https://github.com/sparanoid/almace-scaffolding/commit/b91aea6))
+
+
+### BREAKING CHANGES
+
+* deploy: now the original  are removed, all additional  parameters should be passed through  option, you can view  for more information about this change.
+
+
+
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.4...v0.1.5) (2016-05-16)
+
+
+### Features
+
+* **docs:** semantic file name ([d123853](https://github.com/sparanoid/almace-scaffolding/commit/d123853))
+* **style:** add header background image example ([dab7482](https://github.com/sparanoid/almace-scaffolding/commit/dab7482))
+* **style:** merge  into ([de33477](https://github.com/sparanoid/almace-scaffolding/commit/de33477))
+* **theme:** useful comment for site specific styles ([07f2f96](https://github.com/sparanoid/almace-scaffolding/commit/07f2f96))
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.3...v0.1.4) (2016-05-12)
 

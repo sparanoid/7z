@@ -28,9 +28,12 @@ nbproject
 node_modules
 
 # AMSF specified
-_amsf/themes
-_amsf/core
+.amsf-cache
+.jekyll-metadata
 _site
 _app/assets/**/js
 _app/assets/**/css
-.jekyll-metadata
+
+# AMSF deprecated, leave them for compatibility
+_amsf/themes
+_amsf/core
