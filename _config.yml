@@ -96,7 +96,7 @@ pshh:           https://pubsubhubbub.appspot.com/
 
 # Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full
 # URLs for these fields
-url:            http://sparanoid.com/lab/7z
+url:            https://sparanoid.com/lab/7z
 
 # Media assets URL used in posts, without trailing slash. ie.
 # `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be
