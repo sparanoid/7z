@@ -179,7 +179,7 @@ module.exports = (grunt) ->
           useShortDoctype: false
           removeEmptyAttributes: true
           removeOptionalTags: true
-          removeEmptyElements: true
+          removeEmptyElements: false
           lint: false
           keepClosingSlash: false
           caseSensitive: true
@@ -251,7 +251,8 @@ module.exports = (grunt) ->
 
     uncss_inline:
       options:
-        uncssrc: ".uncssrc"
+        htmlroot: "<%= config.dist %>"
+        stylesheets: []
 
       dist:
         files: [
