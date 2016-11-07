@@ -1,3 +1,19 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.0...v1.0.1) (2016-11-07)
+
+
+### Bug Fixes
+
+* **grunt:** external `.uncssrc` causes unexpected result when `raw` is empty ([e26088a](https://github.com/sparanoid/almace-scaffolding/commit/e26088a))
+* **grunt:** missing `htmlroot` for `uncss_inline` ([7f98e12](https://github.com/sparanoid/almace-scaffolding/commit/7f98e12))
+
+
+### Features
+
+* **grunt:** disable `removeEmptyElements` by default since it causes too much troble in the past, also props [@Cee](https://github.com/Cee), should fix https://github.com/sparanoid/almace-scaffolding/issues/56 ([c541844](https://github.com/sparanoid/almace-scaffolding/commit/c541844))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/sparanoid/almace-scaffolding/compare/v0.1.12...v1.0.0) (2016-10-08)
 
