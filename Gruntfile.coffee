@@ -38,8 +38,9 @@ module.exports = (grunt) ->
         branch: "master"
         assets: "<%= amsf.user.assets %>/themes/<%= amsf.theme.current %>"
         current: "<%= config.amsf.amsf_theme %>"
+        current_url: "<%= config.amsf.amsf_theme_url %>"
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
-        new_author: grunt.option("user") or "amsf"
+        new_url: grunt.option("url") or "<%= amsf.theme.current_url %>"
 
     coffeelint:
       options:
@@ -251,8 +252,8 @@ module.exports = (grunt) ->
 
     uncss_inline:
       options:
+        uncssrc: ".uncssrc"
         htmlroot: "<%= config.dist %>"
-        stylesheets: []
 
       dist:
         files: [
@@ -327,7 +328,7 @@ module.exports = (grunt) ->
 
       # Copy compiled static files to local directory for further post-process
       amsf__deploy__sparanoid__copy_to_local:
-        command: "rsync -avz --delete --progress <%= config.deploy.rsync.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.#{deploy_env}.dest %>/site/<%= config.base %> > deploy-s3_website-#{deploy_env}.log"
+        command: "rsync -avz --delete --progress <%= config.deploy.rsync.#{deploy_env}.params %> <%= jekyll.dist.options.dest %>/ <%= config.deploy.s3_website.#{deploy_env}.dest %>/site/<%= config.base %> > deploy-s3_website-#{deploy_env}.log"
 
       # Auto commit untracked files sync'ed from sync_local
       amsf__deploy__sparanoid__auto_commit:
@@ -466,7 +467,7 @@ module.exports = (grunt) ->
 
       amsf__theme__add_remote:
         options:
-          repository: "https://github.com/<%= amsf.theme.new_author %>/amsf-<%= amsf.theme.new_name %>.git"
+          repository: "<%= amsf.theme.new_url %>.git"
           branch: "<%= amsf.theme.branch %>"
           directory: "<%= amsf.base %>/themes/<%= amsf.theme.new_name %>/"
 
@@ -503,6 +504,10 @@ module.exports = (grunt) ->
           {
             from: /(amsf_theme: +)(.+)/g
             to: "$1<%= amsf.theme.new_name %>"
+          }
+          {
+            from: /(amsf_theme_url: +)(.+)/g
+            to: "$1<%= amsf.theme.new_url %>"
           }
         ]
 
@@ -570,6 +575,7 @@ module.exports = (grunt) ->
         updateConfigs: ["config.pkg"]
         commitMessage: "chore: release v%VERSION%"
         commitFiles: ["-a"]
+        gitCommitOptions: "-S"
         tagMessage: "chore: create tag %VERSION%"
         push: false
 
