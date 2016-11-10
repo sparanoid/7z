@@ -1,3 +1,71 @@
+<a name="1.0.6"></a>
+## [1.0.6](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.5...v1.0.6) (2016-11-10)
+
+
+### Bug Fixes
+
+* **grunt:** missing deploy environment variable ([bb3d6a7](https://github.com/sparanoid/almace-scaffolding/commit/bb3d6a7))
+
+
+
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.4...v1.0.5) (2016-11-09)
+
+
+### Features
+
+* **grunt:** signed release commit ([f9999f3](https://github.com/sparanoid/almace-scaffolding/commit/f9999f3))
+
+
+
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.3...v1.0.4) (2016-11-08)
+
+
+### Bug Fixes
+
+* **grunt:** removing `.uncssrc` causes upgrading errors and missing stylesheets got uncssed, need a better solution, just add it back for now for backward compatibility ([acc75e9](https://github.com/sparanoid/almace-scaffolding/commit/acc75e9))
+
+
+
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.2...v1.0.3) (2016-11-08)
+
+
+### Bug Fixes
+
+* **grunt:** bump `grunt-uncss-inline` to avoid unrelated css files inlined ([2777eed](https://github.com/sparanoid/almace-scaffolding/commit/2777eed))
+
+
+### Features
+
+* **docs:** better update guide ([0cd3a66](https://github.com/sparanoid/almace-scaffolding/commit/0cd3a66))
+* **post:** add new post "Jekyll Theme Compatibility" ([4f76f56](https://github.com/sparanoid/almace-scaffolding/commit/4f76f56))
+
+
+
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.1...v1.0.2) (2016-11-07)
+
+
+### Features
+
+* **grunt:** add custom theme URL support ([5d2efc6](https://github.com/sparanoid/almace-scaffolding/commit/5d2efc6))
+* **theme:** use latest Lightense Images ([4a2c6a1](https://github.com/sparanoid/almace-scaffolding/commit/4a2c6a1))
+
+
+### BREAKING CHANGES
+
+* grunt: Then you can simply run `grunt update` to process the update. But after upgrading, you need to set `amsf_theme_url` in `_amsf.yml` to support the latest version of Almace Scaffolding:
+
+```yaml
+amsf_theme_url: https://github.com/amsf/amsf-curtana # or your own if you've already using a custom theme from me)
+```
+
+This could be more complex for end users but it also allows users to use custom theme hosted wherever they want.
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.0...v1.0.1) (2016-11-07)
 
