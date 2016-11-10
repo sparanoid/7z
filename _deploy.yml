@@ -20,7 +20,7 @@ rsync:
     dest: /srv/www/sparanoid.com/public_html
     # Extra rsync parameters
     # I use `--rsync-path` here to run `rsync` with sudo permission.
-    params: --rsync-path="sudo rsync"
+    params: --rsync-path="sudo rsync" --exclude=lab
 
 s3_website:
   default:
