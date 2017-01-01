@@ -3,7 +3,8 @@
 #
 
 # AMSF version
-version:        1.0.1
+version:        1.0.9
 
 # Current theme
 amsf_theme:     7z
+amsf_theme_url: https://github.com/amsf/amsf-7z

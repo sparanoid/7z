@@ -19,15 +19,16 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-last-modified-at (0.3.4)
       jekyll
-    jekyll-sass-converter (1.4.0)
+    jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.12.0)
+    kramdown (1.13.1)
     liquid (3.0.6)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    match_regex (0.1.0)
     mercenary (0.3.6)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
@@ -37,7 +38,7 @@ GEM
       ffi (>= 0.5.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.4.22)
+    sass (3.4.23)
     stringex (2.6.1)
 
 PLATFORMS
@@ -46,7 +47,8 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.3.0)
   jekyll-last-modified-at
+  match_regex
   stringex
 
 BUNDLED WITH
-   1.11.2
+   1.13.7

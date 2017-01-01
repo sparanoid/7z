@@ -698,7 +698,7 @@ module.exports = (grunt) ->
       "replace:amsf__site__update_version"
       "bump-commit"
     ]
-    if grunt.option("publish")
+    if grunt.option("push")
       grunt.task.run [
         "shell:amsf__release"
       ]

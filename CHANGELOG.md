@@ -1,3 +1,55 @@
+<a name="1.0.9"></a>
+## [1.0.9](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.8...v1.0.9) (2016-12-29)
+
+
+### Features
+
+* **amsf:** update site title separator ([419f5cd](https://github.com/sparanoid/almace-scaffolding/commit/419f5cd))
+* **curtana:** more specific decoration color ([4c6f164](https://github.com/sparanoid/almace-scaffolding/commit/4c6f164))
+* **curtana:** smaller inline codes to match general text ([d53d715](https://github.com/sparanoid/almace-scaffolding/commit/d53d715))
+* **curtana:** visual align tweak for list decorations ([4c3db6b](https://github.com/sparanoid/almace-scaffolding/commit/4c3db6b))
+* **theme:** smaller header for small screens ([ccbb1f2](https://github.com/sparanoid/almace-scaffolding/commit/ccbb1f2))
+* **theme:** update Lightense Images ([9cdf6d1](https://github.com/sparanoid/almace-scaffolding/commit/9cdf6d1))
+
+
+
+<a name="1.0.8"></a>
+## [1.0.8](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.7...v1.0.8) (2016-12-12)
+
+
+### Features
+
+* simplify push arg ([616ce2a](https://github.com/sparanoid/almace-scaffolding/commit/616ce2a))
+* **amsf:** `thumb_force_logo` to force using site logo regardless first image of a post ([dec56bc](https://github.com/sparanoid/almace-scaffolding/commit/dec56bc))
+* **curtana:** add description list styles ([27feb67](https://github.com/sparanoid/almace-scaffolding/commit/27feb67))
+* **grunt:** support ignore js generated styles via `grunt-uncss-inline` ([ccf4428](https://github.com/sparanoid/almace-scaffolding/commit/ccf4428))
+* **post:** update “Configuration” list ([e1072b8](https://github.com/sparanoid/almace-scaffolding/commit/e1072b8))
+
+
+
+<a name="1.0.7"></a>
+## [1.0.7](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.6...v1.0.7) (2016-11-29)
+
+
+### Bug Fixes
+
+* **amsf:** missing `match_regex` gem ([8c1ba3a](https://github.com/sparanoid/almace-scaffolding/commit/8c1ba3a))
+* **curtana:** wrong condition for detecting favicon ([ba60f33](https://github.com/sparanoid/almace-scaffolding/commit/ba60f33))
+
+
+### Features
+
+* **amsf:** a simpler and more reliable way to get first image ([5c131b2](https://github.com/sparanoid/almace-scaffolding/commit/5c131b2))
+* **amsf:** add `logo.png` for Open Graph and Twitter Cards ([c3c8591](https://github.com/sparanoid/almace-scaffolding/commit/c3c8591))
+* **amsf:** vanity Google Analytics code ([8cb6e54](https://github.com/sparanoid/almace-scaffolding/commit/8cb6e54))
+* **config:** enable large image for Twitter Cards by default ([056e455](https://github.com/sparanoid/almace-scaffolding/commit/056e455))
+* **curtana:** better meddia detection for Twitter Cards and Open Graph ([0594582](https://github.com/sparanoid/almace-scaffolding/commit/0594582))
+* **curtana:** link style button ([e923d8b](https://github.com/sparanoid/almace-scaffolding/commit/e923d8b))
+* **curtana:** remove donate variables ([345d1ac](https://github.com/sparanoid/almace-scaffolding/commit/345d1ac))
+* **template:** better Twitter Cards and Open Graph support ([fec052b](https://github.com/sparanoid/almace-scaffolding/commit/fec052b))
+
+
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/sparanoid/almace-scaffolding/compare/v1.0.5...v1.0.6) (2016-11-10)
 
