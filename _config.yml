@@ -61,6 +61,7 @@ redcarpet:
 
 gems:
   - jekyll-last-modified-at
+  - match_regex
 
 #
 # Almace Scaffolding settings
@@ -101,14 +102,17 @@ url:            https://sparanoid.com/lab/7z
 # Media assets URL used in posts, without trailing slash. ie.
 # `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be
 # powered by a CDN provider
-file:           //d349cztnlupsuf.cloudfront.net
+# Note: you should avoid protocol-free (ie. //cdn.mysite.tld) address here
+# because Twitter Cards doesn't work well with protocol-free assets when AMSF
+# grabs the first image of your post as post featured image.
+file:           https://d349cztnlupsuf.cloudfront.net
 
 # Download files URL used in posts, ie. href="{{ site.download }}/package.zip",
 # this should also be a CDN link just like `site.file`. There're no notable
 # differences in `site.file` and `site.download`, I just use the one for post
 # images and the other for large download files. That's it. Remove or ignore
 # this if you don't need it.
-download:       //d1bmx7s6749k4k.cloudfront.net
+download:       https://d1bmx7s6749k4k.cloudfront.net
 
 # Google Analytics tracking code
 google_analytics:
@@ -118,6 +122,10 @@ google_analytics:
 
 # Site Twitter account handle
 twitter:        7zip
+
+# Use summary card with large image for Twitter Cards, require theme support
+# Default:      true
+tc_large_image: true
 
 # Force UTF-8 encoding, enable this will simply add <meta charset="utf-8"> to
 # the head of your pages
@@ -133,7 +141,7 @@ link_blog:      false
 # Default:      false
 rss_excerpt:    false
 
-# Show generator credits
+# Show or hide generator credits, require theme support
 # Default:      true
 credits:        true
 

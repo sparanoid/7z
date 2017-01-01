@@ -2,6 +2,13 @@
 # Custom deployment variables
 #
 
+# Usage:
+# $ grunt deploy:[deploy_method] --env=[deploy_environment]
+#
+# Examples:
+# $ grunt && grunt deploy:rsync
+# $ grunt && grunt deploy:rsync --env=prod
+# $ grunt && grunt deploy:s3_website
 rsync:
   default:
     user: rsync

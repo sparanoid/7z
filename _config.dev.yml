@@ -6,7 +6,8 @@
 exclude:        []
 
 # Disalbe custom gems (jekyll-last-modified-at) for better performance
-gems:           []
+gems:
+  - match_regex
 
 #
 # Almace Scaffolding settings
