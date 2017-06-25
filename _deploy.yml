@@ -9,6 +9,14 @@
 # $ grunt && grunt deploy:rsync
 # $ grunt && grunt deploy:rsync --env=prod
 # $ grunt && grunt deploy:s3_website
+#
+# You can also create your own deployment method, `default` environment is
+# required if no `--env` parameter passed:
+# ftp:
+#   default:
+#     user: ftp_user
+#     port: 123
+#     blah: blah
 rsync:
   default:
     user: rsync
@@ -29,6 +37,6 @@ rsync:
     # I use `--rsync-path` here to run `rsync` with sudo permission.
     params: --rsync-path="sudo rsync" --exclude=lab
 
-s3_website:
+sparanoid:
   default:
     dest: ~/Git/sparanoid.com-prod

@@ -1,0 +1,14 @@
+{% comment %}
+  Site description
+{% endcomment %}
+{% capture amsf_site_desc %}
+  {% if page.permalink != '/' %}
+    {% if page.desc %}
+      {{ page.desc | strip_html | strip_newlines | xml_escape }}
+    {% else %}
+      {{ page.content | markdownify | strip_html | normalize_whitespace | xml_escape | truncate: 300 | truncatewords: 40 }}
+    {% endif %}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
