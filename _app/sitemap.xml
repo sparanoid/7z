@@ -3,18 +3,18 @@
 
 <?xml version="1.0" encoding="utf-8"?>
 
-{% include _amsf.html %}
+{% include amsf/core %}
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ amsf_site_base }}/</loc>
+    <loc>{{ "/" | absolute_url }}</loc>
     <lastmod>{{ site.time | date: "%F" }}</lastmod>
   </url>
 
   {% for page in site.html_pages %}
     {% if page.hidden != true %}
       <url>
-        <loc>{{ page.url | prepend: amsf_site_base | replace: '/index.html', '/' }}</loc>
+        <loc>{{ page.url | absolute_url | replace: '/index.html', '/' }}</loc>
         {% if page.last_modified_at %}
           <lastmod>{{ page.last_modified_at | date: "%F" }}</lastmod>
         {% endif %}
@@ -25,7 +25,7 @@
   {% for post in site.posts %}
     {% if post.hidden != true %}
       <url>
-        <loc>{{ post.url | prepend: amsf_site_base }}</loc>
+        <loc>{{ post.url | absolute_url }}</loc>
         {% if post.last_modified_at %}
           <lastmod>{{ post.last_modified_at | date: "%F" }}</lastmod>
         {% else %}
