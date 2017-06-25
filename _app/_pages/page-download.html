@@ -8,7 +8,7 @@ title: 程序下载
 <H1>{{ page.title }}</H1>
 
 {% assign ver = site.data.versions %}
-<!-- <p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}，Windows）</B>：</P>
+<p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}，Windows）</B>：</P>
 
 <table cellspacing="1" cellpadding="6" border="0">
   <tbody><tr>
@@ -45,9 +45,21 @@ title: 程序下载
     <td class="Item" align="center"><a href="http://www.7-zip.org/a/lzma{{ ver.beta.short }}.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">任意 / x86 / x64</td>
-    <td class="Item" rowspan="2">LZMA SDK（C、C++、C#、Java）</td>
+    <td class="Item">LZMA SDK（C、C++、C#、Java）</td>
   </tr>
-</tbody></table> -->
+  <tr>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.beta.short }}.msi">下载</a></td>
+    <td class="Item" align="center">.msi</td>
+    <td class="Item" align="center">32 位 x86</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.msi">下载</a></td>
+    <td class="Item" align="center">.msi</td>
+    <td class="Item" align="center">64 位 x64</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+</tbody></table>
 
 <P><B>下载 7-Zip {{ ver.stable.long }}（{{ ver.stable.date }}，Windows）</B>：</P>
 
@@ -61,22 +73,14 @@ title: 程序下载
   <tr>
     <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
     <td class="Item" align="center">.exe</td>
-    <td class="Item" align="center" rowspan="2">32 位 x86</td>
-    <td class="Item" rowspan="2">7-Zip Windows 32 位</td>
-  </tr>
-  <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</a></td>
-    <td class="Item" align="center">.msi</td>
+    <td class="Item" align="center">32 位 x86</td>
+    <td class="Item">7-Zip Windows 32 位</td>
   </tr>
   <tr>
     <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
     <td class="Item" align="center">.exe</td>
-    <td class="Item" align="center" rowspan="2">64 位 x64</td>
-    <td class="Item" rowspan="2">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
-  </tr>
-  <tr>
-    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
-    <td class="Item" align="center">.msi</td>
+    <td class="Item" align="center">64 位 x64</td>
+    <td class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
   </tr>
   <tr>
     <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-extra.7z">下载</a></td>
@@ -94,7 +98,19 @@ title: 程序下载
     <td class="Item" align="center"><a href="http://www.7-zip.org/a/lzma{{ ver.stable.short }}.7z">下载</a></td>
     <td class="Item" align="center">.7z</td>
     <td class="Item" align="center">任意 / x86 / x64</td>
-    <td class="Item" rowspan="2">LZMA SDK（C、C++、C#、Java）</td>
+    <td class="Item">LZMA SDK（C、C++、C#、Java）</td>
+  </tr>
+  <tr>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</a></td>
+    <td class="Item" align="center">.msi</td>
+    <td class="Item" align="center">32 位 x86</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
+    <td class="Item" align="center">.msi</td>
+    <td class="Item" align="center">64 位 x64</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
   </tr>
 </tbody></table>
 
