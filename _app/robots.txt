@@ -5,4 +5,4 @@
   %}{{ post | strip }}
 {% endfor %}
 
-Sitemap: {{ '/sitemap.xml' | prepend: site.base | prepend: site.url }}
+Sitemap: {{ "/sitemap.xml" | absolute_url }}

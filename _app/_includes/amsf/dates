@@ -1,0 +1,18 @@
+{% comment %}
+  Page publish date
+{% endcomment %}
+{% capture amsf_page_pubdate %}{{ page.date }}{% endcapture %}
+
+{% comment %}
+  Page update date
+{% endcomment %}
+{% capture amsf_page_update %}
+  {% assign date_publish = page.date | date: "%b %-d, %Y" %}
+  {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+
+  {% if date_publish != date_update %}
+    {{ page.last_modified_at }}
+  {% else %}
+    {{ page.date }}
+  {% endif %}
+{% endcapture %}

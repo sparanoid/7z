@@ -17,7 +17,7 @@ gems:
 dev:            true
 
 # Reset base to / for localhost development
-base:           ""
+baseurl:        ""
 
 # CDN location for development
 file:           //sparanoid.s3-website-us-east-1.amazonaws.com
