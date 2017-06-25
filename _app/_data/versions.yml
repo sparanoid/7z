@@ -8,10 +8,10 @@ stable:
     date:        2016-10-04
 
 beta:
-  long:          "15.11"
-  short:         "1511"
-  date:          2015-11-14
+  long:          "17.00"
+  short:         "1700"
+  date:          2017-04-29
   sdk:
-    long:        "15.11"
-    short:       "1511"
-    date:        2015-11-14
+    long:        "17.00"
+    short:       "1700"
+    date:        2017-04-29
