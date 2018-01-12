@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
@@ -20,28 +20,34 @@ GEM
     jekyll-last-modified-at (1.0.1)
       jekyll (~> 3.3)
       posix-spawn (~> 0.3.9)
-    jekyll-sass-converter (1.5.0)
+    jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
-    jekyll-watch (1.5.0)
-      listen (~> 3.0, < 3.1)
-    kramdown (1.13.2)
+    jekyll-watch (1.5.1)
+      listen (~> 3.0)
+    kramdown (1.16.2)
     liquid (3.0.6)
-    listen (3.0.8)
+    listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     match_regex (0.1.0)
     mercenary (0.3.6)
-    pathutil (0.14.0)
+    pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     posix-spawn (0.3.13)
-    public_suffix (2.0.5)
-    rb-fsevent (0.9.8)
+    public_suffix (3.0.1)
+    rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rouge (1.11.1)
+    ruby_dep (1.5.0)
     safe_yaml (1.0.4)
-    sass (3.4.24)
-    stringex (2.7.1)
+    sass (3.5.5)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    stringex (2.8.2)
 
 PLATFORMS
   ruby
@@ -53,4 +59,4 @@ DEPENDENCIES
   stringex
 
 BUNDLED WITH
-   1.13.7
+   1.16.0
