@@ -8,10 +8,10 @@ stable:
     date:        2016-10-04
 
 beta:
-  long:          "17.00"
-  short:         "1700"
-  date:          2017-04-29
+  long:          "18.00"
+  short:         "1800"
+  date:          2018-01-10
   sdk:
-    long:        "17.00"
-    short:       "1700"
-    date:        2017-04-29
+    long:        "18.00"
+    short:       "1800"
+    date:        2018-01-10
