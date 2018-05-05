@@ -3,14 +3,12 @@
 {% endcomment %}
 {% capture amsf_google_analytics %}
   {% if site.google_analytics.enabled %}
+    <script async src="{{ site.google_analytics.url }}?id={{ site.google_analytics.id }}"></script>
     <script>
-      (function(a,m,s,f,j,k,l){a['GoogleAnalyticsObject']=j;a[j]=a[j]||function(){
-      (a[j].q=a[j].q||[]).push(arguments)},a[j].l=1*new Date();k=m.createElement(s),
-      l=m.getElementsByTagName(s)[0];k.async=1;k.src=f;l.parentNode.insertBefore(k,l)
-      })(window,document,'script','{{ site.google_analytics.url }}','ga');
-
-      ga('create', '{{ site.google_analytics.id }}', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics.id }}');
     </script>
   {% endif %}
 {% endcapture %}
