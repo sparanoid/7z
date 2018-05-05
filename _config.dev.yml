@@ -5,8 +5,8 @@
 # Re-include theme example pages for development
 exclude:        []
 
-# Disalbe custom gems (jekyll-last-modified-at) for better performance
-gems:
+# Disalbe custom plugins (jekyll-last-modified-at) for better performance
+plugins:
   - match_regex
 
 #
