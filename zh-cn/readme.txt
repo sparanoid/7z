@@ -1,9 +1,9 @@
-7-Zip 16.00
------------
+7-Zip 18.04 beta
+----------------
 
-7-Zip 适用于 Windows NT / 2000 / 2003 / 2008 / XP / Vista / 7 / 8 / 10。
+7-Zip 是一款 Windows 文件压缩软件。
 
-7-Zip 版权所有 (C) 1999-2016 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2018 Igor Pavlov。
 
 软件特征：
 
