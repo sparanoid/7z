@@ -1,17 +1,17 @@
 stable:
-  long:          "16.04"
-  short:         "1604"
-  date:          2016-10-04
+  long:          "18.05"
+  short:         "1805"
+  date:          2018-04-30
   sdk:
-    long:        "16.04"
-    short:       "1604"
-    date:        2016-10-04
+    long:        "18.05"
+    short:       "1805"
+    date:        2018-04-30
 
 beta:
-  long:          "18.00"
-  short:         "1800"
-  date:          2018-01-10
+  long:          "18.05"
+  short:         "1805"
+  date:          2018-04-30
   sdk:
-    long:        "18.00"
-    short:       "1800"
-    date:        2018-01-10
+    long:        "18.05"
+    short:       "1805"
+    date:        2018-04-30
