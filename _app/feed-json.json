@@ -23,8 +23,8 @@ permalink: /feed.json
         "url": {{ author.web | jsonify }},
         "email": {{ author.email | jsonify }}
       },
-      "content": {{ post.content | markdownify | strip_html | jsonify }},
-      "excerpt": {{ post.excerpt | markdownify | strip_html | jsonify }},
+      "content": {{ post.content | markdownify | strip | jsonify }},
+      "excerpt": {{ post.excerpt | markdownify | strip_html | strip | jsonify }},
       "languages": {{ post.languages | jsonify }},
       "categories": {{ post.categories | jsonify }},
       "tags": {{ post.tags | jsonify }}

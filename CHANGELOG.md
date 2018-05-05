@@ -1,3 +1,40 @@
+<a name="1.1.10"></a>
+## [1.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.9...v1.1.10) (2018-02-01)
+
+
+### Features
+
+* **jekyll:** use native livereload for better performance ([5a75298](https://github.com/sparanoid/almace-scaffolding/commit/5a75298))
+
+
+
+<a name="1.1.9"></a>
+## [1.1.9](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.8...v1.1.9) (2018-01-24)
+
+
+### Bug Fixes
+
+* **css:** uninherited input text color ([eddba33](https://github.com/sparanoid/almace-scaffolding/commit/eddba33))
+* **css:** wrong syntax highlight scope ([745603b](https://github.com/sparanoid/almace-scaffolding/commit/745603b))
+* **curtana:** wrong ruby appearance for asian language ([da6ef36](https://github.com/sparanoid/almace-scaffolding/commit/da6ef36))
+* **feed-json:** wrong rendered content output ([a55f662](https://github.com/sparanoid/almace-scaffolding/commit/a55f662))
+* **index:** wrong og image ([acfd4fc](https://github.com/sparanoid/almace-scaffolding/commit/acfd4fc))
+* **tempalte:** empty not pass through correctly with liquid version 4 ([fe7aa57](https://github.com/sparanoid/almace-scaffolding/commit/fe7aa57))
+
+
+### Features
+
+* **grunt:** open default browser only ([304dbe8](https://github.com/sparanoid/almace-scaffolding/commit/304dbe8))
+* use google analytics gtag script ([c8ef051](https://github.com/sparanoid/almace-scaffolding/commit/c8ef051))
+* **license:** bump year ([07fc737](https://github.com/sparanoid/almace-scaffolding/commit/07fc737))
+* **site:** use SVG for homepage ([13dc144](https://github.com/sparanoid/almace-scaffolding/commit/13dc144))
+* **style:** match link space in header and footer ([9286c63](https://github.com/sparanoid/almace-scaffolding/commit/9286c63))
+* **style:** simplify default user styles ([ea6392f](https://github.com/sparanoid/almace-scaffolding/commit/ea6392f))
+* **template:** iphone x support ([4e4d067](https://github.com/sparanoid/almace-scaffolding/commit/4e4d067))
+* **template:** remove `grunt-leading-quotes` support, use native `hanging-punctuation` CSS feature ([9a86786](https://github.com/sparanoid/almace-scaffolding/commit/9a86786))
+
+
+
 <a name="1.1.8"></a>
 ## [1.1.8](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.7...v1.1.8) (2017-03-13)
 
