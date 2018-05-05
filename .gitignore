@@ -2,6 +2,7 @@ node_modules
 _amsf
 _app
 _site
+.amsf-cache
 Gemfile.lock
 *.log
 
