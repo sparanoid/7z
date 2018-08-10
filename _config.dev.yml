@@ -2,6 +2,9 @@
 # Jekyll basic configurations
 #
 
+# Expose site to local network
+host:           0.0.0.0
+
 # Re-include theme example pages for development
 exclude:        []
 

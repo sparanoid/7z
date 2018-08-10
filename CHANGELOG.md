@@ -1,3 +1,52 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.0...v2.0.1) (2018-07-23)
+
+
+### Bug Fixes
+
+* **css:** invalid font stack when `--fontstack-prefix` is empty ([6757818](https://github.com/sparanoid/almace-scaffolding/commit/6757818))
+* **css:** wrong variable ([0ba92a0](https://github.com/sparanoid/almace-scaffolding/commit/0ba92a0))
+
+
+### Features
+
+* **css:** update color variables ([02110f2](https://github.com/sparanoid/almace-scaffolding/commit/02110f2))
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.10...v2.0.0) (2018-07-23)
+
+
+### Bug Fixes
+
+* wrong color manipulation ([4212591](https://github.com/sparanoid/almace-scaffolding/commit/4212591))
+* **css:** user override not working ([23944c3](https://github.com/sparanoid/almace-scaffolding/commit/23944c3))
+* **deploy:** rsync `s3_website` config ([7c6855c](https://github.com/sparanoid/almace-scaffolding/commit/7c6855c))
+* **grunt:** wrong sass dist output ([c943b14](https://github.com/sparanoid/almace-scaffolding/commit/c943b14))
+
+
+### Features
+
+* **amsf:** basic i18n support ([be880b5](https://github.com/sparanoid/almace-scaffolding/commit/be880b5))
+* **config:** expose site to local network ([7b5e418](https://github.com/sparanoid/almace-scaffolding/commit/7b5e418))
+* **css:** basic css variables and scss support ([0128020](https://github.com/sparanoid/almace-scaffolding/commit/0128020))
+* **css:** remove less leftovers ([6b62668](https://github.com/sparanoid/almace-scaffolding/commit/6b62668))
+* **css:** sassy randomized ([33bccf9](https://github.com/sparanoid/almace-scaffolding/commit/33bccf9))
+* **css:** simplify variables ([5ab37ca](https://github.com/sparanoid/almace-scaffolding/commit/5ab37ca))
+* **css:** update default code color ([1f486b1](https://github.com/sparanoid/almace-scaffolding/commit/1f486b1))
+* larger favicon ([955461c](https://github.com/sparanoid/almace-scaffolding/commit/955461c))
+* **docs:** update feature stack [ci skip] ([0215318](https://github.com/sparanoid/almace-scaffolding/commit/0215318))
+* **grunt:** esify uglify ([207fb28](https://github.com/sparanoid/almace-scaffolding/commit/207fb28))
+* **grunt:** switch to ([2d07dc3](https://github.com/sparanoid/almace-scaffolding/commit/2d07dc3))
+* **index:** simplify index title handling ([a687398](https://github.com/sparanoid/almace-scaffolding/commit/a687398))
+* **post:** Upgrading Guide from v1 to v2 [skip ci] ([18744f4](https://github.com/sparanoid/almace-scaffolding/commit/18744f4))
+* **template:** better output with liquid v4 whitespace control ([9520109](https://github.com/sparanoid/almace-scaffolding/commit/9520109))
+* **template:** refine whitespace ([dbe1a41](https://github.com/sparanoid/almace-scaffolding/commit/dbe1a41))
+* **themes:** atom link removed, not that important nowadays ([974968f](https://github.com/sparanoid/almace-scaffolding/commit/974968f))
+
+
+
 <a name="1.1.10"></a>
 ## [1.1.10](https://github.com/sparanoid/almace-scaffolding/compare/v1.1.9...v1.1.10) (2018-02-01)
 

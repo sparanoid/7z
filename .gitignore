@@ -30,6 +30,7 @@ node_modules
 # AMSF specified
 .amsf-cache
 .jekyll-metadata
+.sass-cache
 _site
 _app/assets/**/js
 _app/assets/**/css

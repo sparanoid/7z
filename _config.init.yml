@@ -93,8 +93,8 @@ name_short:     AMSF
 #
 # Will be used in the document meta and Atom feed subtitle
 #
-# Default:      Almace Scaffolding - Super-fast Jekyll framework
-description:    Almace Scaffolding - Super-fast Jekyll framework
+# Default:      Super-fast Jekyll framework
+description:    Super-fast Jekyll framework
 
 # Base URL
 #

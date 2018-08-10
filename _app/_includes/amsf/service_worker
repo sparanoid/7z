@@ -1,8 +1,8 @@
-{% comment %}
+{%- comment -%}
   Service Worker
-{% endcomment %}
-{% capture amsf_service_worker %}
-  {% if site.service_worker.enabled == true and site.dev == false %}
+{%- endcomment -%}
+{%- capture amsf_service_worker -%}
+  {%- if site.service_worker.enabled == true and site.dev == false -%}
     <script>
       if ('serviceWorker' in navigator && window.location.hostname === '{{ amsf_hostname }}') {
         navigator.serviceWorker.register('{{ "/service-worker.js" | relative_url }}').then(function (registration) {
@@ -12,5 +12,5 @@
         });
       }
     </script>
-  {% endif %}
-{% endcapture %}
+  {%- endif -%}
+{%- endcapture -%}

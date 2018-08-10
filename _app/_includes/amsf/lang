@@ -1,12 +1,12 @@
-{% comment %}
+{%- comment -%}
   Page language tag
-{% endcomment %}
-{% capture amsf_page_lang %}
-  {% if page.languages %}
-    {% if page.languages[0] != null %}
+{%- endcomment -%}
+{%- capture amsf_page_lang -%}
+  {%- if page.languages -%}
+    {%- if page.languages[0] != null -%}
       lang="{{ page.languages | first }}"
-    {% else %}
+    {%- else -%}
       lang="{{ page.languages }}"
-    {% endif %}
-  {% endif %}
-{% endcapture %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
