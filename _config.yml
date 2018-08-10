@@ -87,14 +87,14 @@ name:           7-Zip
 # - name_short: Sparanoid
 #
 # Default:      AMSF
-name_short:     AMSF
+name_short:     7-Zip
 
 # Site description
 #
 # Will be used in the document meta and Atom feed subtitle
 #
-# Default:      Almace Scaffolding - Super-fast Jekyll framework
-description:    Almace Scaffolding - Super-fast Jekyll framework
+# Default:      Super-fast Jekyll framework
+description:    一款拥有极高压缩比的开源压缩软件
 
 # Base URL
 #

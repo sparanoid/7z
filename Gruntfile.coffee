@@ -2,12 +2,16 @@
 
 module.exports = (grunt) ->
 
+  # Load Sass deps
+  sass = require('node-sass')
+
   # Load all grunt tasks
   require("jit-grunt") grunt,
     "bump-commit": "grunt-bump"
     "bump-only": "grunt-bump"
     gitclone: "grunt-git"
     replace: "grunt-text-replace"
+    uglify: "grunt-contrib-uglify-es"
 
   # Track tasks load time
   require("time-grunt") grunt
@@ -59,7 +63,7 @@ module.exports = (grunt) ->
 
     watch:
       options:
-        spawn: false
+        spawn: true
 
       coffee:
         files: ["<%= coffeelint.gruntfile.src %>"]
@@ -77,6 +81,15 @@ module.exports = (grunt) ->
         files: ["<%= config.app %>/**/_less/**/*.less"]
         tasks: [
           "less:serve"
+          "postcss:serve"
+        ]
+        options:
+          interrupt: true
+
+      sass:
+        files: ["<%= config.app %>/**/_scss/**/*.scss"]
+        tasks: [
+          "sass:serve"
           "postcss:serve"
         ]
         options:
@@ -127,6 +140,31 @@ module.exports = (grunt) ->
 
       dist:
         files: "<%= less.serve.files %>"
+
+    sass:
+      options:
+        implementation: sass
+        precision: 10
+
+      serve:
+        options:
+          outputStyle: "nested"
+          sourceMapContents: true
+          sourceMapEmbed: true
+
+        files: [
+          expand: true
+          cwd: "<%= amsf.theme.assets %>/_scss/"
+          src: ["**/app*.scss"]
+          dest: "<%= amsf.theme.assets %>/css/"
+          ext: ".css"
+        ]
+
+      dist:
+        options:
+          outputStyle: "compressed"
+
+        files: "<%= sass.serve.files %>"
 
     postcss:
       options:
@@ -632,7 +670,7 @@ module.exports = (grunt) ->
   grunt.registerTask "serve", "Fire up a server on local machine for development", [
     "clean:main"
     "copy:serve"
-    "less:serve"
+    "sass:serve"
     "postcss:serve"
     "concurrent:serve"
   ]
@@ -653,7 +691,7 @@ module.exports = (grunt) ->
     "clean:main"
     "coffeelint"
     "uglify:dist"
-    "less:dist"
+    "sass:dist"
     "postcss:dist"
     "csscomb"
     "jekyll:dist"

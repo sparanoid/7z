@@ -1,0 +1,22 @@
+{%- comment -%}
+  Site description
+{%- endcomment -%}
+{%- capture amsf_site_desc -%}
+  {%- if page.permalink != '/' -%}
+    {%- if page.desc -%}
+      {%- if page.desc.first -%}
+        {{ page.desc[site.active_lang] | strip_html | strip_newlines | xml_escape }}
+      {%- else -%}
+        {{ page.desc | strip_html | strip_newlines | xml_escape }}
+      {%- endif -%}
+    {%- else -%}
+      {{ page.content | markdownify | strip_html | normalize_whitespace | xml_escape | truncate: 300 | truncatewords: 40 }}
+    {%- endif -%}
+  {%- else -%}
+    {%- if site.description.first -%}
+      {{ site.description[site.active_lang] }}
+    {%- else -%}
+      {{ site.description }}
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}

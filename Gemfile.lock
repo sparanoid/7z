@@ -8,13 +8,13 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    eventmachine (1.2.6)
-    ffi (1.9.23)
+    eventmachine (1.2.7)
+    ffi (1.9.25)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.7.0)
+    jekyll (3.8.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -34,7 +34,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (2.0.0)
       listen (~> 3.0)
-    kramdown (1.16.2)
+    kramdown (1.17.0)
     liquid (4.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -49,10 +49,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rouge (3.1.1)
+    rouge (3.2.0)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
-    sass (3.5.6)
+    sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -63,10 +63,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 3.7.0)
+  jekyll (= 3.8.3)
   jekyll-last-modified-at
   match_regex
   stringex
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
