@@ -1975,11 +1975,11 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Simplified grunt task
 - Update license year
 - Fix typo, props @gordianz
-- Draft folder, more info: http://jekyllrb.com/docs/drafts/
+- Draft folder, more info: https://jekyllrb.com/docs/drafts/
 - Switch to Jekyll default markdown template
 - Split main template into multiple partials
 - `list-item.html` -> `page-item.html`
-- Move custom variables into `_data`, more info: http://jekyllrb.com/docs/datafiles/
+- Move custom variables into `_data`, more info: https://jekyllrb.com/docs/datafiles/
 - `_source` -> `_app`
 - Fix variable condition
 - Better nav solution is here
@@ -1999,7 +1999,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Fix line-height since refactor
 - Update `archive` grunt
 - Update changelog
-- Add `cite` for blockquotes, more info see http://html5doctor.com/cite-and-blockquote-reloaded/
+- Add `cite` for blockquotes, more info see https://html5doctor.com/cite-and-blockquote-reloaded/
 - Increase feed post limit
 - Adds setup instructions
 - Update post “Delicious.com”
@@ -2318,7 +2318,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 
 - New header design
 - Better comments
-- Increase nav menu links spacing, since we've compressed and removed white spaces for HTML output. we need to add more space between links. More info: http://stackoverflow.com/questions/588356/
+- Increase nav menu links spacing, since we've compressed and removed white spaces for HTML output. we need to add more space between links. More info: https://stackoverflow.com/questions/588356/
 - Wrap all width-sensitive elements into `.wrapper`, prepared for the upcoming header
 - Simplify deploy script
 - Update project name
@@ -2368,7 +2368,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Update logo
 - Remove useless CSS define
 - Add image lazy load support, more info at https://github.com/vvo/lazyload
-- Use nginx empty gif module instead of data URI to small generated HTML size, read more info about nginx empty gif module: http://wiki.nginx.org/HttpEmptyGifModule
+- Use nginx empty gif module instead of data URI to small generated HTML size, read more info about nginx empty gif module: https://wiki.nginx.org/HttpEmptyGifModule
 - `∞` (&#8734) -> `▲` (&#9650)
 
 ## 20.1 (October 7, 2012) [#][20.1]
@@ -2396,7 +2396,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Better font size
 - Update pagination position
 - Add new post 'Safari 6 Loads Page Faster'
-- Update clearfix method: http://nicolasgallagher.com/micro-clearfix-hack/
+- Update clearfix method: https://nicolasgallagher.com/micro-clearfix-hack/
 - Update comment for clearfix hack
 - Simplified CSS and HTML code
 - Inverted color for Error page
@@ -2484,7 +2484,7 @@ You can read more about the footnote syntax at https://github.com/vmg/redcarpet
 - Compress feeds
 - Update h3 margin
 - Remove whitespaces
-- Add byline for Google Authorship, more information at http://support.google.com/webmasters/bin/answer.py?hl=en&answer=1408986
+- Add byline for Google Authorship, more information at https://support.google.com/webmasters/bin/answer.py?hl=en&answer=1408986
 - Update complier path
 - Update codename, bump to (real) version 20
 
