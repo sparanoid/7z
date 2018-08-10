@@ -1,14 +1,15 @@
---- layout: default short: faq permalink: faq.html title: 常见问题解答（FAQ） ---
+---
+layout: default
+short: faq
+permalink: faq.html
+title: 常见问题解答（FAQ）
+---
 
 <H1>{{ page.title }}</H1>
 
 <UL>
-  <LI>
-    <A href="#user_faq">用户常见问题解答</A>
-  </LI>
-  <LI>
-    <A href="#developer_faq">开发者常见问题解答</A>
-  </LI>
+  <LI><A href="#user_faq">用户常见问题解答</A></LI>
+  <LI><A href="#developer_faq">开发者常见问题解答</A></LI>
 </UL>
 
 <H2><a name="user_faq"></a>用户常见问题解答</H2>
@@ -22,7 +23,7 @@
 <H4>哪些版本的 7-Zip 更加稳定？</H4>
 <P>目前 7-Zip 的稳定版本：</P>
 <UL>
-  <LI>7-Zip 9.20 - 7-Zip 9 系列的第 20 次修订（开始于 2009）
+<LI>7-Zip 9.20 - 7-Zip 9 系列的第 20 次修订（开始于 2009）
 </UL>
 <P>最新的 beta 测试版可能会修复之前版本的错误。所以有些时候可能也会更稳定。通常情况下使用测试版一样不会有什么危险。</P>
 
@@ -77,14 +78,13 @@
   <li>当您尝试打开压缩包时，出现错误提示「无法作为压缩包打开文件『a.7z』」。</li>
 </ul>
 <P>如果遇到上述情形，恢复部分数据是有可能的，请查看数据恢复流程：</P>
-<P><a href="https://www.7-zip.org/recover.html">恢复受损 7z 压缩包</a>（英文，由于此页面会时常更新，并包含较多术语，原作者要求此页面保留英文）</P>
+<P><a href="http://www.7-zip.org/recover.html">恢复受损 7z 压缩包</a>（英文，由于此页面会时常更新，并包含较多术语，原作者要求此页面保留英文）</P>
 
 <H2><a name="developer_faq"></a>开发者常见问题解答</H2>
 
 <H4>为何我在使用 Visual C++ 6.0 编译 7-Zip 或 LZMA SDK 时会出现链接错误？</H4>
 
-<A href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdk-full.htm"><B>http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdk-full.htm</B></A> 或
-<A href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate/"><B>http://www.microsoft.com/msdownload/platformsdk/sdkupdate/</B></A>
+<A href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdk-full.htm"><B>http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdk-full.htm</B></A> 或 <A href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate/"><B>http://www.microsoft.com/msdownload/platformsdk/sdkupdate/</B></A>
 
 <P>如果您使用 MSVC，请在目录列表上方的“包括文件”及“工具 / 选项 / 目录”中的“库文件”中指定 SDK 目录。</P>
 <P>最新的 Platform SDK 与 MSVC6 不兼容。所以您必须使用 Windows Server 2003 PSDK（2003 二月）。</P>
@@ -101,6 +101,4 @@
 
 <H4>我能否在商业应用程序中使用 7-Zip 源代码？</H4>
 
-<P>7-Zip 基于 GNU LGPL 许可发布。所以您必须遵守此许可中的条款。简单的说，那意味着任何 LGPL 的代码必须在 LGPL 许可中保持完整性。例如，您可以更改 7-Zip 源代码，并且将它们编译成 DLL。但是这些更改后的 DLL 的源代码（包括您更改、增加、删除的内容）必须遵守 LGPL 或 GPL 许可。您的应用程序的其它源代码可以是属于任何许可的。想设想允许用户及开发者更改基于 LGPL 发布的代码并重编成 DLL。请到
-  <A href="http://www.gnu.org/">http://www.gnu.org/</A> 了解更多信息。同样请参考
-  <A href="sdk.html">LZMA SDK</A> 来了解更多高自由度的许可。</P>
+<P>7-Zip 基于 GNU LGPL 许可发布。所以您必须遵守此许可中的条款。简单的说，那意味着任何 LGPL 的代码必须在 LGPL 许可中保持完整性。例如，您可以更改 7-Zip 源代码，并且将它们编译成 DLL。但是这些更改后的 DLL 的源代码（包括您更改、增加、删除的内容）必须遵守 LGPL 或 GPL 许可。您的应用程序的其它源代码可以是属于任何许可的。想设想允许用户及开发者更改基于 LGPL 发布的代码并重编成 DLL。请到 <A href="http://www.gnu.org/">http://www.gnu.org/</A> 了解更多信息。同样请参考 <A href="sdk.html">LZMA SDK</A> 来了解更多高自由度的许可。</P>

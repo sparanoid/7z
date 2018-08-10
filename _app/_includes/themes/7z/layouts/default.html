@@ -1,114 +1,84 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-
 <head>
 
-  <title>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+<title>{% if page.short != 'home' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
-  <!-- build:css assets/css/app.css -->
+<!-- build:css assets/css/app.css -->
   <link rel="stylesheet" href="{{ '/css/app.css?assets-inline' | prepend: amsf_theme_assets }}">
-  <!-- endbuild -->
+<!-- endbuild -->
 
-  <!-- browser-sync, don't remove this -->
-  <!-- BS_INSERT -->
+<!-- browser-sync, don't remove this -->
+<!-- BS_INSERT -->
 
-  <link href="/lab/7z/favicon.ico" rel="shortcut icon">
-  <link rel="canonical" href="{{ amsf_page_url }}">
+<link href="/lab/7z/favicon.ico" rel="shortcut icon">
+<link rel="canonical" href="{{ amsf_page_url }}">
 
-  <meta name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
+<meta name="keywords" content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32">
 </head>
-
 <body>
 
-  <table cellspacing="10" cellpadding="10" border="0" width="100%">
-    <tbody>
-      <tr>
-        <td class="MenuColumn" valign="top">
-          <table cellpadding="2" cellspacing="0" border="0" width="100%">
-            <tbody>
-              <tr>
-                <td>
-                  <img width="110" height="63" src="{{ amsf_user_assets }}/img/7ziplogo.png" alt="7-Zip" border="0">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <hr>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+<table cellspacing="10" cellpadding="10" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td class="MenuColumn" valign="top">
+        <table cellpadding="2" cellspacing="0" border="0" width="100%">
+          <tbody>
+            <tr>
+              <td>
+                <img width="110" height="63" src="{{ amsf_user_assets }}/img/7ziplogo.png" alt="7-Zip" border="0">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <hr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-          <table cellpadding="2" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>
-                  <a{% if page.short !='home' %} href="./" {% endif %}{% if page.short=='home' %} class="menu-current" {% else %} class="menu-link" {% endif %}>首页</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a{% if page.short !='7z' %} href="7z.html" {% endif %}{% if page.short=='7z' %} class="menu-current" {% else %} class="menu-link" {% endif %}>7z 格式</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a{% if page.short !='sdk' %} href="sdk.html" {% endif %}{% if page.short=='sdk' %} class="menu-current" {% else %} class="menu-link" {% endif %}>LZMA SDK</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a{% if page.short !='download' %} href="download.html" {% endif %}{% if page.short=='download' %} class="menu-current" {% else %} class="menu-link" {% endif %}>下载</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a{% if page.short !='faq' %} href="faq.html" {% endif %}{% if page.short=='faq' %} class="menu-current" {% else %} class="menu-link" {% endif %}>常见问题</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a{% if page.short !='support' %} href="support.html" {% endif %}{% if page.short=='support' %} class="menu-current" {% else %} class="menu-link" {% endif %}>支持</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a{% if page.short !='links' %} href="links.html" {% endif %}{% if page.short=='links' %} class="menu-current" {% else %} class="menu-link" {% endif %}>链接</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <table cellpadding="2" cellspacing="0" border="0">
+          <tbody>
+            <tr><td><a{% if page.short != 'home' %} href="./"{% endif %}{% if page.short == 'home' %} class="menu-current"{% else %} class="menu-link"{% endif %}>首页</a></td></tr>
+            <tr><td><a{% if page.short != '7z' %} href="7z.html"{% endif %}{% if page.short == '7z' %} class="menu-current"{% else %} class="menu-link"{% endif %}>7z 格式</a></td></tr>
+            <tr><td><a{% if page.short != 'sdk' %} href="sdk.html"{% endif %}{% if page.short == 'sdk' %} class="menu-current"{% else %} class="menu-link"{% endif %}>LZMA SDK</a></td></tr>
+            <tr><td><a{% if page.short != 'download' %} href="download.html"{% endif %}{% if page.short == 'download' %} class="menu-current"{% else %} class="menu-link"{% endif %}>下载</a></td></tr>
+            <tr><td><a{% if page.short != 'faq' %} href="faq.html"{% endif %}{% if page.short == 'faq' %} class="menu-current"{% else %} class="menu-link"{% endif %}>常见问题</a></td></tr>
+            <tr><td><a{% if page.short != 'support' %} href="support.html"{% endif %}{% if page.short == 'support' %} class="menu-current"{% else %} class="menu-link"{% endif %}>支持</a></td></tr>
+            <tr><td><a{% if page.short != 'links' %} href="links.html"{% endif %}{% if page.short == 'links' %} class="menu-current"{% else %} class="menu-link"{% endif %}>链接</a></td></tr>
+          </tbody>
+        </table>
 
-          <table cellpadding="2" cellspacing="0" border="0" width="100%">
-            <tbody>
-              <!-- <tr>
+        <table cellpadding="2" cellspacing="0" border="0" width="100%">
+          <tbody>
+            <!-- <tr>
               <td>
                 <hr>
               </td>
             </tr>
             <tr>
               <td>
-                <a href="https://www.7-zip.org/">捐助开发者</a>
+                <a href="http://www.7-zip.org/">捐助开发者</a>
               </td>
             </tr> -->
-              <tr>
-                <td>
-                  <hr>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <tr>
+              <td>
+                <hr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-          <p>
-            <strong>简体中文</strong>
-            <br>
-            <a href="https://www.developershome.com/7-zip/">正體中文</a>
-            <br>
-            <a href="https://www.7-zip.org/">Other Languages</a>
-            <br>
-          </p>
+        <p>
+          <strong>简体中文</strong>
+          <br>
+          <a href="http://www.developershome.com/7-zip/">正體中文</a>
+          <br>
+          <a href="http://www.7-zip.org/">Other Languages</a>
+          <br>
+        </p>
 
-          <!-- <hr>
+        <!-- <hr>
 
         {% if page.short == 'home' %}
         <div class="donate-wrap">
@@ -120,28 +90,25 @@
         </div>
         {% endif %} -->
 
-        </td>
-        <!-- .MenuColumn -->
+      </td><!-- .MenuColumn -->
 
-        <td valign="top">
+      <td valign="top">
 
-          {{ content }}
+        {{ content }}
 
-          <hr>
+        <hr>
 
-          <p>
-            <small>Copyright (C) {{ site.time | date: "%Y" }} Igor Pavlov. The site is hosted at <a href="https://aws.amazon.com/">AWS</a></small>
-          </p>
+        <p>
+          <small>Copyright (C) {{ site.time | date: "%Y" }} Igor Pavlov. The site is hosted at <a href="https://aws.amazon.com/">AWS</a></small>
+        </p>
 
-        </td>
-        <!-- Main Content -->
+      </td><!-- Main Content -->
 
-      </tr>
+    </tr>
 
-    </tbody>
+  </tbody>
 
-  </table>
+</table>
 
 </body>
-
 </html>
