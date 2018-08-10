@@ -1,9 +1,4 @@
----
-layout: default
-short: home
-title: 7-Zip 官方中文主页
-permalink: /
----
+--- layout: default short: home title: 7-Zip 官方中文主页 permalink: / ---
 
 <table cellspacing="4" cellpadding="4">
   <tbody>
@@ -13,8 +8,7 @@ permalink: /
 
         <p><b>7-Zip</b> 是一款拥有极高压缩比的开源压缩软件。</p>
 
-        {% assign latest = site.posts.first %}
-        {% assign ver = site.data.versions %}
+        {% assign latest = site.posts.first %} {% assign ver = site.data.versions %}
         <p><b>下载 7-Zip {{ ver.stable.long }} 稳定版（{{ ver.stable.date }}）：</b></p>
 
         <table cellspacing="1" cellpadding="6" border="0">
@@ -26,13 +20,13 @@ permalink: /
               <th class="Title" align="center" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
+              <td class="Item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
               <td class="Item" align="center">.exe</td>
               <td class="Item" align="center">32 位 x86</td>
               <td class="Item" align="center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
+              <td class="Item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
               <td class="Item" align="center">.exe</td>
               <td class="Item" align="center">64 位 x64</td>
               <td class="Item" align="center">1 MB</td>
@@ -50,13 +44,13 @@ permalink: /
             <th class="title" align="center" width=55>大小</th>
           </tr>
           <tr>
-            <td class="item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.beta.short }}.exe">下载</a></td>
+            <td class="item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}.exe">下载</a></td>
             <td class="item" align="center">.exe</td>
             <td class="item" align="center">32 位</td>
             <td class="item" align="center">1 mb</td>
           </tr>
           <tr>
-            <td class="item" align="center"><a href="http://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.exe">下载</a></td>
+            <td class="item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.exe">下载</a></td>
             <td class="item" align="center">.exe</td>
             <td class="item" align="center">64 位</td>
             <td class="item" align="center">1 mb</td>
@@ -95,9 +89,8 @@ permalink: /
           <li>使用了 <b>LZMA</b> 与 <b>LZMA2</b> 算法的 <a href="7z.html">7z 格式</a> 拥有极高的压缩比</li>
           <li>支持格式：
             <ul>
-             <li>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</li>
-             <li>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA,
-                               MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</li>
+              <li>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</li>
+              <li>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</li>
             </ul>
           </li>
           <li>对于 ZIP 及 GZIP 格式，<b>7-Zip</b> 能提供比使用 PKZip 及 WinZip 高 2-10% 的压缩比</li>
@@ -112,9 +105,9 @@ permalink: /
 
         <p><b>7-Zip</b> 适用于 Windows 10 / 8 / 7 / Vista / XP / 2016 / 2012 / 2008 / 2003 / 2000 / NT。</p>
 
-        <p><a href="http://sourceforge.net/projects/p7zip/">p7zip</a> - Linux/Posix 平台的命令行移植版本。</p>
+        <p><a href="https://sourceforge.net/projects/p7zip/">p7zip</a> - Linux/Posix 平台的命令行移植版本。</p>
 
-        <p>在 <a href="http://sourceforge.net/projects/sevenzip/">Source Forge 的 7-Zip 页面</a>（英文）中您可以找到相关的论坛、错误汇报及系统需求。 </p>
+        <p>在 <a href="https://sourceforge.net/projects/sevenzip/">Source Forge 的 7-Zip 页面</a>（英文）中您可以找到相关的论坛、错误汇报及系统需求。 </p>
 
         <h2>压缩比</h2>
 
@@ -166,67 +159,82 @@ permalink: /
         <br><br>
 
         <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle">7-Zip 18.05</td>
-            <td class="NewsDate">2018-04-30</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/adc65bfa/">7-Zip 18.05</a>
-            </td>
-          </tr>
-        </tbody></table>
+          <tbody>
+            <tr class="NewsHeader">
+              <td class="NewsTitle">7-Zip 18.05</td>
+              <td class="NewsDate">2018-04-30</td>
+            </tr>
+            <tr class="News">
+              <td class="NewsText" colspan="2">
+                <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/adc65bfa/">7-Zip 18.05</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <br>
 
         <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle">7-Zip 18.03 beta 测试版</td>
-            <td class="NewsDate">2018-03-04</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/7058918a/">7-Zip 18.03 beta 测试版</a>
-            </td>
-          </tr>
-        </tbody></table>
+          <tbody>
+            <tr class="NewsHeader">
+              <td class="NewsTitle">7-Zip 18.03 beta 测试版</td>
+              <td class="NewsDate">2018-03-04</td>
+            </tr>
+            <tr class="News">
+              <td class="NewsText" colspan="2">
+                <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/7058918a/">7-Zip 18.03 beta 测试版</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <br>
 
         <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle">7-Zip 18.01</td>
-            <td class="NewsDate">2018-01-28</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/c89dff27/">7-Zip 18.01</a>
-            </td>
-          </tr>
-        </tbody></table>
+          <tbody>
+            <tr class="NewsHeader">
+              <td class="NewsTitle">7-Zip 18.01</td>
+              <td class="NewsDate">2018-01-28</td>
+            </tr>
+            <tr class="News">
+              <td class="NewsText" colspan="2">
+                <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/c89dff27/">7-Zip 18.01</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <br>
 
         <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle">7-Zip 更新历史</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <a href="https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt">查看更新历史（中文）</a>
-              <br>
-              <a href="https://www.7-zip.org/history.txt">查看更新历史（英文）</a>
-            </td>
-          </tr>
-        </tbody></table>
+          <tbody>
+            <tr class="NewsHeader">
+              <td class="NewsTitle">7-Zip 更新历史</td>
+            </tr>
+            <tr class="News">
+              <td class="NewsText" colspan="2">
+                <a href="https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt">查看更新历史（中文）</a>
+                <br>
+                <a href="https://www.7-zip.org/history.txt">查看更新历史（英文）</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <br><br>
 
         <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle" style="background-color:#55acee;">了解 7-Zip 最新动态</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <p><a href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></p>
-            </td>
-          </tr>
-        </tbody></table>
+          <tbody>
+            <tr class="NewsHeader">
+              <td class="NewsTitle" style="background-color:#55acee;">了解 7-Zip 最新动态</td>
+            </tr>
+            <tr class="News">
+              <td class="NewsText" colspan="2">
+                <p><a href="https://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <br><br>
 

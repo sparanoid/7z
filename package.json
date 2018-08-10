@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "7-Zip Chinese Simplified Website",
   "author": "Tunghsiao Liu",
-  "homepage": "http://sparanoid.com/lab/7z/",
+  "homepage": "https://sparanoid.com/lab/7z/",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
@@ -13,7 +13,7 @@
     "url": "git://github.com/sparanoid/7z.git"
   },
   "bugs": {
-    "url": "http://github.com/sparanoid/7z/issues"
+    "url": "https://github.com/sparanoid/7z/issues"
   },
   "license": "MIT",
   "keywords": [
