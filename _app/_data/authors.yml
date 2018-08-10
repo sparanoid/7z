@@ -9,11 +9,11 @@
 default:
   name:         Tunghsiao Liu
   email:        t@sparanoid.com
-  web:          https://sparanoid.com/
+  web:          http://sparanoid.com/
   twitter:      tunghsiao
 
 tester:
   name:         Tester
   email:        test@test.com
-  web:          https://tester.com/
+  web:          http://tester.com/
   twitter:      tester

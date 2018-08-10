@@ -1,9 +1,9 @@
 # Theme facts
 meta:
   name:         Curtana
-  url:          https://github.com/amsf/amsf-curtana
+  url:          http://github.com/amsf/amsf-curtana
   author:       Tunghsiao Liu
-  author_url:   https://sparanoid.com/
+  author_url:   http://sparanoid.com/
 
 # {{ site.data.curtana.free }}: used in homepage, not implimented at the moment
 free:           true
