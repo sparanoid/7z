@@ -6,7 +6,6 @@
 #
 # Jekyll basic configurations
 #
-
 source:         _app
 destination:    _site
 timezone:       America/Los_Angeles
@@ -19,19 +18,16 @@ exclude:        ["_pages/themes"]
 #
 # Jekyll serve settings
 #
-
 port:           4321
 
 #
 # Jekyll build settings
 #
-
 future:         false
 
 #
 # Markdown settings
 #
-
 kramdown:
   input:                     GFM
   auto_ids:                  true
@@ -50,10 +46,9 @@ kramdown:
 #
 # Jekyll plugins
 #
-
+# Plugins inside `jekyll_plugins` group in `Gemfile` will be actived by default
 plugins:
   - jekyll-last-modified-at
-  - match_regex
 
 #
 # Almace Scaffolding settings
@@ -168,7 +163,7 @@ service_worker:
 google_analytics:
   enabled:      false
   id:           UA-xxxxxxx
-  url:          https://www.googletagmanager.com/gtag/js
+  url:          https://www.google-analytics.com/analytics.js
 
 # Site Twitter account handle
 twitter:        sparanoid
