@@ -25,7 +25,7 @@ permalink: /feed.json
       },
       "content": {{ post.content | markdownify | strip | jsonify }},
       "excerpt": {{ post.excerpt | markdownify | strip_html | strip | jsonify }},
-      "languages": {{ post.languages | jsonify }},
+      "languages": {{ post.lang | jsonify }},
       "categories": {{ post.categories | jsonify }},
       "tags": {{ post.tags | jsonify }}
     }

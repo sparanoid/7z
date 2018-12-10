@@ -1,3 +1,141 @@
+<a name="2.0.8"></a>
+## [2.0.8](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.7...v2.0.8) (2018-12-01)
+
+
+### Bug Fixes
+
+* **amsf:** no page/post title fallback ([176d3a0](https://github.com/sparanoid/almace-scaffolding/commit/176d3a0))
+
+
+### Features
+
+* **footer:** add dynamic footer links support ([b64617f](https://github.com/sparanoid/almace-scaffolding/commit/b64617f))
+* **pages:** hide error page in sitemap ([ad72fda](https://github.com/sparanoid/almace-scaffolding/commit/ad72fda))
+* **robots.txt:** better output ([fd3fd55](https://github.com/sparanoid/almace-scaffolding/commit/fd3fd55))
+
+
+### BREAKING CHANGES
+
+* **footer:** If you already defined your custom footer links in `footer.html`, you need to remove them and defined them in `footer.yml` for further compatibility
+
+
+
+<a name="2.0.7"></a>
+## [2.0.7](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.6...v2.0.7) (2018-11-09)
+
+
+### Bug Fixes
+
+* **css:** image position overwritten with `:not` pseudo selector ([4f7e623](https://github.com/sparanoid/almace-scaffolding/commit/4f7e623))
+* **css:** list decorations not aligned to the baseline ([9d2ee52](https://github.com/sparanoid/almace-scaffolding/commit/9d2ee52))
+
+
+### Features
+
+* **css:** reimplement `no-resize` separately ([752b521](https://github.com/sparanoid/almace-scaffolding/commit/752b521))
+
+
+
+<a name="2.0.6"></a>
+## [2.0.6](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.5...v2.0.6) (2018-11-09)
+
+
+### Bug Fixes
+
+* **css:** wrong mixin order ([4c26c69](https://github.com/sparanoid/almace-scaffolding/commit/4c26c69))
+* **css:** wrong variable definition ([4057f9e](https://github.com/sparanoid/almace-scaffolding/commit/4057f9e))
+* **grunt:** `uncss_inline` v1.2.4 causes `cacheBust` not triggered anymore, reorder task ([d2672c8](https://github.com/sparanoid/almace-scaffolding/commit/d2672c8))
+
+
+### Features
+
+* rebrand description ([7362fe5](https://github.com/sparanoid/almace-scaffolding/commit/7362fe5))
+* rebrand logo to v2 ([4eb9a46](https://github.com/sparanoid/almace-scaffolding/commit/4eb9a46))
+* **amsf:** fallback to site name if page title not defined ([725521b](https://github.com/sparanoid/almace-scaffolding/commit/725521b))
+* **config:** revert back to original analytics.js instead of ga.js for better performance ([54c826f](https://github.com/sparanoid/almace-scaffolding/commit/54c826f))
+* **css:** add a simple way to avoid default image resizing ([cd66a6c](https://github.com/sparanoid/almace-scaffolding/commit/cd66a6c))
+* **grunt:** add `grunt-doctype` support ([092b498](https://github.com/sparanoid/almace-scaffolding/commit/092b498))
+
+
+
+<a name="2.0.5"></a>
+## [2.0.5](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.4...v2.0.5) (2018-09-23)
+
+
+### Bug Fixes
+
+* **css:** wrong summary appearance in firefox ([9ba87cb](https://github.com/sparanoid/almace-scaffolding/commit/9ba87cb))
+
+
+### Features
+
+* **css:** add opentype feature modifier ([333afb0](https://github.com/sparanoid/almace-scaffolding/commit/333afb0))
+* **css:** better details > summary deco appearance ([3dc4fe4](https://github.com/sparanoid/almace-scaffolding/commit/3dc4fe4))
+* **css:** remove typography detect hack for windows ([000339a](https://github.com/sparanoid/almace-scaffolding/commit/000339a))
+* **css:** simplify list decoration font size ([cf109a3](https://github.com/sparanoid/almace-scaffolding/commit/cf109a3))
+* **css:** update blockquote cite margin ([5df8803](https://github.com/sparanoid/almace-scaffolding/commit/5df8803))
+* **css:** update list style ([5a4aef9](https://github.com/sparanoid/almace-scaffolding/commit/5a4aef9))
+* **gem:** preload jekyll plugins ([cf7ab9d](https://github.com/sparanoid/almace-scaffolding/commit/cf7ab9d))
+* **template:** update lang attribute ([0d518d0](https://github.com/sparanoid/almace-scaffolding/commit/0d518d0))
+
+
+### BREAKING CHANGES
+
+* **template:** old `languages` is now depreacted, in place of a more common attribute `lang`
+
+
+
+<a name="2.0.4"></a>
+## [2.0.4](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.3...v2.0.4) (2018-09-01)
+
+
+### Bug Fixes
+
+* **css:** missing varibles ([0865587](https://github.com/sparanoid/almace-scaffolding/commit/0865587))
+* **css:** wrong list deco position ([5225640](https://github.com/sparanoid/almace-scaffolding/commit/5225640))
+* **css:** wrong summary position on small screens ([89ece87](https://github.com/sparanoid/almace-scaffolding/commit/89ece87))
+
+
+### Features
+
+* **css:** add summary support ([781c5dc](https://github.com/sparanoid/almace-scaffolding/commit/781c5dc))
+* **css:** apply font features to `:root` ([6831f2b](https://github.com/sparanoid/almace-scaffolding/commit/6831f2b))
+* **css:** better font-feature-settings ([17804b8](https://github.com/sparanoid/almace-scaffolding/commit/17804b8))
+* **css:** refine header, footer appearance ([94ca740](https://github.com/sparanoid/almace-scaffolding/commit/94ca740))
+* **css:** update footer font size and decos ([53cb2ce](https://github.com/sparanoid/almace-scaffolding/commit/53cb2ce))
+* **docs:** update quick start guide ([753b9ec](https://github.com/sparanoid/almace-scaffolding/commit/753b9ec))
+* **getting-started:** use https clone by default ([0692b3e](https://github.com/sparanoid/almace-scaffolding/commit/0692b3e))
+
+
+
+<a name="2.0.3"></a>
+## [2.0.3](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.2...v2.0.3) (2018-08-21)
+
+
+### Bug Fixes
+
+* **grunt:** wrong hash generated ([52a6ff1](https://github.com/sparanoid/almace-scaffolding/commit/52a6ff1))
+
+
+### Features
+
+* **docs:** brand badge first ([dbe9cb0](https://github.com/sparanoid/almace-scaffolding/commit/dbe9cb0))
+* **grunt:** add  support ([3eb03a8](https://github.com/sparanoid/almace-scaffolding/commit/3eb03a8))
+
+
+
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.1...v2.0.2) (2018-08-20)
+
+
+### Features
+
+* **google_analytics:** enable ip anonymization by default ([b361f1f](https://github.com/sparanoid/almace-scaffolding/commit/b361f1f))
+* **grunt:** remove deprecated csscomb support ([70bd4b2](https://github.com/sparanoid/almace-scaffolding/commit/70bd4b2))
+* **post:** use lighter arrow for “Welcome” ([6d0d843](https://github.com/sparanoid/almace-scaffolding/commit/6d0d843))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.0...v2.0.1) (2018-07-23)
 

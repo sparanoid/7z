@@ -3,12 +3,12 @@
 {%- endcomment -%}
 {%- capture amsf_google_analytics -%}
   {%- if site.google_analytics.enabled -%}
-    <script async src="{{ site.google_analytics.url }}?id={{ site.google_analytics.id }}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics.id }}');
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', '{{ site.google_analytics.id }}', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
     </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
   {%- endif -%}
 {%- endcapture -%}

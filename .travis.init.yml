@@ -3,12 +3,11 @@ language: node_js
 cache:
   - bundler
 node_js:
-  - "5"
-  - "4"
-  - "0.12"
+  - "9"
+  - "10"
 before_install:
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-  - rvm use 2.2.2 --install --fuzzy
+  - rvm use 2.5.0 --install --fuzzy
   - bundle install
 matrix:
   fast_finish: true
