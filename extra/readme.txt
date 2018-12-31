@@ -3,7 +3,7 @@
 
 7-Zip 附加包包含了一些额外的 7-Zip 模块。
 
-7-Zip 版权所有 (C) 1999-2016 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2019 Igor Pavlov。
 
 7-Zip 是一款免费的软件，阅读 License.txt 了解许可协议的相关信息。
 
