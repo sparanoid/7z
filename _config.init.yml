@@ -101,6 +101,16 @@ description:    Super-fast Jekyll framework
 # Default:      ""
 baseurl:        ""
 
+# Flatten base
+#
+# This is useful when you generate your static site for GitHub Pages. By default
+# the generated pages will have full hierarchy with `baseurl` you defined. This
+# behavior will causes wrong URLs when using GitHub Pages under `docs/`. So
+# enable this option if you're using GitHub Pages.
+#
+# Default:      false
+flatten_base:   false
+
 # CSS path used in templates
 #
 # Default:      /assets
