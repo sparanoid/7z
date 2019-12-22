@@ -33,13 +33,17 @@
   {%- endif -%}
 
   {%- if page_title == site_name or page.permalink == '/' -%}
-    {%- comment -%}
-      force using `page.title` if defined in homepage
-    {%- endcomment -%}
-    {%- if page.title -%}
-      {{ page_title }} - {{ site_name }}
+    {%- if page.title_no_desc == true -%}
+      {{ page_title }}
     {%- else -%}
-      {{ site_name }} - {{ site_description }}
+      {%- comment -%}
+        force using `page.title` if defined in homepage
+      {%- endcomment -%}
+      {%- if page.title -%}
+        {{ page_title }} - {{ site_name }}
+      {%- else -%}
+        {{ site_name }} - {{ site_description }}
+      {%- endif -%}
     {%- endif -%}
   {%- else -%}
     {{ page_title }} - {{ site_name }}

@@ -8,7 +8,7 @@
 #
 source:         _app
 destination:    _site
-timezone:       Asia/Hong_Kong
+timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
@@ -66,7 +66,7 @@ dev:            false
 # Site name
 #
 # Default:      Almace Scaffolding
-name:           7-Zip
+name:           Almace Scaffolding
 
 # Site short name
 #
@@ -82,14 +82,14 @@ name:           7-Zip
 # - name_short: Sparanoid
 #
 # Default:      AMSF
-name_short:     7-Zip
+name_short:     AMSF
 
 # Site description
 #
 # Will be used in the document meta and Atom feed subtitle
 #
 # Default:      Super-fast Jekyll framework
-description:    一款拥有极高压缩比的开源压缩软件
+description:    Super-fast Jekyll framework
 
 # Base URL
 #
@@ -99,7 +99,7 @@ description:    一款拥有极高压缩比的开源压缩软件
 # `/my-project`, without trailing slash.
 #
 # Default:      ""
-baseurl:        /lab/7z
+baseurl:        ""
 
 # Flatten base
 #
@@ -158,7 +158,7 @@ download:       https://d1bmx7s6749k4k.cloudfront.net
 #
 # Used by Safari mask-icon, Chrome Web App theme color
 colors:
-  theme:        "#303030"
+  theme:        "#ff00b4"
   background:   "#fff"
 
 # Service Worker Precache
@@ -176,7 +176,7 @@ google_analytics:
   url:          https://www.google-analytics.com/analytics.js
 
 # Site Twitter account handle
-twitter:        7zip
+twitter:        sparanoid
 
 # Twitter Cards large images
 #
