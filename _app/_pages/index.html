@@ -15,71 +15,73 @@ permalink: /
 
         {% assign latest = site.posts.first %}
         {% assign ver = site.data.versions %}
-        <p><b>下载 7-Zip {{ ver.stable.long }} 稳定版（{{ ver.stable.date }}）：</b></p>
+        <p><b>下载 7-Zip {{ ver.stable.long }} 稳定版适用于 Windows 操作系统（{{ ver.stable.date }}）：</b></p>
 
-        <table cellspacing="1" cellpadding="6" border="0">
+        <table cellspacing="1" cellpadding="6">
           <tbody>
             <tr>
-              <th class="Title" align="center" width="60">链接</th>
-              <th class="Title" align="center" width="60">格式</th>
-              <th class="Title" align="center" width="80">系统</th>
-              <th class="Title" align="center" width="55">大小</th>
+              <th class="Title" width="60">链接</th>
+              <th class="Title" width="60">格式</th>
+              <th class="Title" width="80">系统</th>
+              <th class="Title" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
-              <td class="Item" align="center">.exe</td>
-              <td class="Item" align="center">32 位 x86</td>
-              <td class="Item" align="center">1 MB</td>
+              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
+              <td class="Item text-center">.exe</td>
+              <td class="Item text-center">32 位 x86</td>
+              <td class="Item text-center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
-              <td class="Item" align="center">.exe</td>
-              <td class="Item" align="center">64 位 x64</td>
-              <td class="Item" align="center">1 MB</td>
+              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
+              <td class="Item text-center">.exe</td>
+              <td class="Item text-center">64 位 x64</td>
+              <td class="Item text-center">1 MB</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <br>
-        <p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}）：</b></p>
-        <table cellspacing ="1" cellpadding ="6" border = "0">
-          <tr>
-            <th class="title" align="center" width=60>链接</th>
-            <th class="title" align="center" width=60>格式</th>
-            <th class="title" align="center" width=80>系统</th>
-            <th class="title" align="center" width=55>大小</th>
-          </tr>
-          <tr>
-            <td class="item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}.exe">下载</a></td>
-            <td class="item" align="center">.exe</td>
-            <td class="item" align="center">32 位</td>
-            <td class="item" align="center">1 mb</td>
-          </tr>
-          <tr>
-            <td class="item" align="center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.exe">下载</a></td>
-            <td class="item" align="center">.exe</td>
-            <td class="item" align="center">64 位</td>
-            <td class="item" align="center">1 mb</td>
-          </tr>
-        </table> -->
+        <br>
+        <p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版适用于 Windows 操作系统（{{ ver.beta.date }}）：</b></p>
+        <table cellspacing="1" cellpadding="6">
+          <tbody>
+            <tr>
+              <th class="Title" width="60">链接</th>
+              <th class="Title" width="60">格式</th>
+              <th class="Title" width="80">系统</th>
+              <th class="Title" width="55">大小</th>
+            </tr>
+            <tr>
+              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
+              <td class="Item text-center">.exe</td>
+              <td class="Item text-center">32 位 x86</td>
+              <td class="Item text-center">1 MB</td>
+            </tr>
+            <tr>
+              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
+              <td class="Item text-center">.exe</td>
+              <td class="Item text-center">64 位 x64</td>
+              <td class="Item text-center">1 MB</td>
+            </tr>
+          </tbody>
+        </table>
 
         <p><b>中文版附加内容</b>请 <a href="https://github.com/sparanoid/7z">访问 GitHub 查看</a>。</p>
 
         <!-- <p><b>中文版附加内容，适用于 {{ ver.beta.long }} beta：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
 
-        <table cellspacing="1" cellpadding="6" border="0">
+        <table cellspacing="1" cellpadding="6">
           <tbody>
             <tr>
-              <th class="Title" align="center" width="60">链接</th>
-              <th class="Title" align="center" width="60">格式</th>
-              <th class="Title" align="center" width="80">系统</th>
-              <th class="Title" align="center" width="55">大小</th>
+              <th class="Title" width="60">链接</th>
+              <th class="Title" width="60">格式</th>
+              <th class="Title" width="80">系统</th>
+              <th class="Title" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item" align="center"><a href="https://dl.sparanoid.com/7z/7z-extra-{{ ver.beta.short }}.7z">下载</a></td>
-              <td class="Item" align="center">.7z</td>
-              <td class="Item" align="center">32/64 位</td>
-              <td class="Item" align="center">700 KB</td>
+              <td class="Item"><a href="https://dl.sparanoid.com/7z/7z-extra-{{ ver.beta.short }}.7z">下载</a></td>
+              <td class="Item">.7z</td>
+              <td class="Item">32/64 位</td>
+              <td class="Item">700 KB</td>
             </tr>
           </tbody>
         </table> -->
@@ -95,9 +97,9 @@ permalink: /
           <li>使用了 <b>LZMA</b> 与 <b>LZMA2</b> 算法的 <a href="7z.html">7z 格式</a> 拥有极高的压缩比</li>
           <li>支持格式：
             <ul>
-             <li>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</li>
-             <li>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA,
-                               MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</li>
+              <li>压缩 / 解压缩：7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM</li>
+              <li>仅解压缩：ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA,
+                  MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR, Z</li>
             </ul>
           </li>
           <li>对于 ZIP 及 GZIP 格式，<b>7-Zip</b> 能提供比使用 PKZip 及 WinZip 高 2-10% 的压缩比</li>
@@ -126,32 +128,32 @@ permalink: /
           <tbody>
             <tr>
               <th class="Title" rowspan="3">软件名称</th>
-              <th class="Title" align="center" colspan="2">Mozilla Firefox</th>
-              <th class="Title" align="center" colspan="2">Google Earth</th>
+              <th class="Title" colspan="2">Mozilla Firefox</th>
+              <th class="Title" colspan="2">Google Earth</th>
             </tr>
             <tr>
-              <th class="Title" align="center" colspan="2">65 个文件<br>85 280 391 字节</th>
-              <th class="Title" align="center" colspan="2">483 个文件<br>110 700 519 字节</th>
+              <th class="Title" colspan="2">65 个文件<br>85 280 391 字节</th>
+              <th class="Title" colspan="2">483 个文件<br>110 700 519 字节</th>
             </tr>
             <tr>
-              <th class="Title" align="center">压缩后</th>
-              <th class="Title" align="center">压缩比</th>
-              <th class="Title" align="center">压缩后</th>
-              <th class="Title" align="center">压缩比</th>
+              <th class="Title">压缩后</th>
+              <th class="Title">压缩比</th>
+              <th class="Title">压缩后</th>
+              <th class="Title">压缩比</th>
             </tr>
             <tr>
               <td class="Item"><b>7-Zip 9.35<br>-mx</b></td>
-              <td class="Item" align="center"><b>39 357 375</b></td>
-              <td class="Item" align="center"><b>100%</b></td>
-              <td class="Item" align="center"><b>15 964 369</b></td>
-              <td class="Item" align="center"><b>100%</b></td>
+              <td class="Item"><b>39 357 375</b></td>
+              <td class="Item"><b>100%</b></td>
+              <td class="Item"><b>15 964 369</b></td>
+              <td class="Item"><b>100%</b></td>
             </tr>
             <tr>
               <td class="Item">WinRAR 5.20<br>-m5 -s -ma5 -md128m</td>
-              <td class="Item" align="center">41 789 543</td>
-              <td class="Item" align="center">106%</td>
-              <td class="Item" align="center">17 035 432</td>
-              <td class="Item" align="center">107%</td>
+              <td class="Item">41 789 543</td>
+              <td class="Item">106%</td>
+              <td class="Item">17 035 432</td>
+              <td class="Item">107%</td>
             </tr>
           </tbody>
         </table>
@@ -160,12 +162,22 @@ permalink: /
 
       </td>
 
-      <td valign="top" align="right" width="210">
+      <td valign="top" width="210">
 
-        <br><br>
-        <br><br>
+        <table class="News" cellpadding="3" cellspacing="1">
+          <tbody><tr class="NewsHeader">
+            <td class="NewsTitle">7-Zip 19.02</td>
+            <td class="NewsDate">2019-09-05</td></tr>
+          <tr class="News">
+            <td class="NewsText" colspan="2">
+              <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/2839b954b9/">7-Zip 19.02</a>
+            </td>
+          </tr>
+        </tbody></table>
 
-        <table class="News" cellpadding="3" cellspacing="1" border="0">
+        <br>
+
+        <table class="News" cellpadding="3" cellspacing="1">
           <tbody><tr class="NewsHeader">
             <td class="NewsTitle">7-Zip 19.00</td>
             <td class="NewsDate">2019-02-21</td></tr>
@@ -178,7 +190,7 @@ permalink: /
 
         <br>
 
-        <table class="News" cellpadding="3" cellspacing="1" border="0">
+        <table class="News" cellpadding="3" cellspacing="1">
           <tbody><tr class="NewsHeader">
             <td class="NewsTitle">2019-02-01</td>
           <tr class="News">
@@ -189,34 +201,10 @@ permalink: /
         </tbody></table>
 
         <br>
-
-        <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle">7-Zip 18.06</td>
-            <td class="NewsDate">2018-12-30</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/f1a142fa03/">7-Zip 18.06</a>
-            </td>
-          </tr>
-        </tbody></table>
-
+        <br>
         <br>
 
-        <table class="News" cellpadding="3" cellspacing="1" border="0">
-          <tbody><tr class="NewsHeader">
-            <td class="NewsTitle">7-Zip 18.05</td>
-            <td class="NewsDate">2018-04-30</td></tr>
-          <tr class="News">
-            <td class="NewsText" colspan="2">
-              <a href="https://sourceforge.net/p/sevenzip/discussion/45797/thread/adc65bfa/">7-Zip 18.05</a>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <br>
-
-        <table class="News" cellpadding="3" cellspacing="1" border="0">
+        <table class="News" cellpadding="3" cellspacing="1">
           <tbody><tr class="NewsHeader">
             <td class="NewsTitle">7-Zip 更新历史</td></tr>
           <tr class="News">
@@ -228,9 +216,9 @@ permalink: /
           </tr>
         </tbody></table>
 
-        <br><br>
+        <br>
 
-        <table class="News" cellpadding="3" cellspacing="1" border="0">
+        <table class="News" cellpadding="3" cellspacing="1">
           <tbody><tr class="NewsHeader">
             <td class="NewsTitle" style="background-color:#55acee;">了解 7-Zip 最新动态</td></tr>
           <tr class="News">
