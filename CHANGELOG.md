@@ -1,3 +1,84 @@
+<a name="2.0.18"></a>
+## [2.0.18](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.17...v2.0.18) (2019-09-13)
+
+
+### Features
+
+* **circleci:** add percy ([63308df](https://github.com/sparanoid/almace-scaffolding/commit/63308df))
+* **config:** force utf-8 by default ([49643c4](https://github.com/sparanoid/almace-scaffolding/commit/49643c4))
+* update copywriting ([1cc68b6](https://github.com/sparanoid/almace-scaffolding/commit/1cc68b6))
+
+
+
+<a name="2.0.17"></a>
+## [2.0.17](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.16...v2.0.17) (2019-08-24)
+
+
+### Bug Fixes
+
+* **grunt:** wrong circleci config location copied ([b335620](https://github.com/sparanoid/almace-scaffolding/commit/b335620))
+
+
+
+<a name="2.0.16"></a>
+## [2.0.16](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.15...v2.0.16) (2019-08-24)
+
+
+### Bug Fixes
+
+* **grunt:** missing circleci config ([d540f1f](https://github.com/sparanoid/almace-scaffolding/commit/d540f1f))
+
+
+
+<a name="2.0.15"></a>
+## [2.0.15](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.14...v2.0.15) (2019-08-24)
+
+
+### Bug Fixes
+
+* **config:** example config out of sync ([5ddf7d4](https://github.com/sparanoid/almace-scaffolding/commit/5ddf7d4))
+* **css:** missing font stack fallback for Windows ([f043bac](https://github.com/sparanoid/almace-scaffolding/commit/f043bac))
+* **travis:** try fixing bundle out of date issue ([ad95238](https://github.com/sparanoid/almace-scaffolding/commit/ad95238))
+* **travis:** try fixing bundle out of date issue, again ([b902c70](https://github.com/sparanoid/almace-scaffolding/commit/b902c70))
+* **travisci:** try fixing `ambiguous redirect` error ([980c16d](https://github.com/sparanoid/almace-scaffolding/commit/980c16d))
+
+
+### Features
+
+* **circleci:** init script ([220e258](https://github.com/sparanoid/almace-scaffolding/commit/220e258))
+* **css:** refine dark mode support with `auto_dark_mode` option (default on) ([4c936d0](https://github.com/sparanoid/almace-scaffolding/commit/4c936d0))
+* **title:** add `title_no_desc`: force to show only page title without description ([a333810](https://github.com/sparanoid/almace-scaffolding/commit/a333810))
+* **travisci:** disable travis, it sucks ([0dc51dd](https://github.com/sparanoid/almace-scaffolding/commit/0dc51dd))
+* try latest dev deps ([e13daaa](https://github.com/sparanoid/almace-scaffolding/commit/e13daaa))
+
+
+
+<a name="2.0.14"></a>
+## [2.0.14](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.13...v2.0.14) (2019-03-31)
+
+
+### Features
+
+* **css:** further switch to css variables ([b757caf](https://github.com/sparanoid/almace-scaffolding/commit/b757caf))
+* **css:** update randomized color ([3bafdfc](https://github.com/sparanoid/almace-scaffolding/commit/3bafdfc))
+
+
+
+<a name="2.0.13"></a>
+## [2.0.13](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.12...v2.0.13) (2019-03-16)
+
+
+### Bug Fixes
+
+* **google_analytics:** missing url variable ([4e9f528](https://github.com/sparanoid/almace-scaffolding/commit/4e9f528))
+
+
+### Features
+
+* **js:** update lightense images ([dfd14cd](https://github.com/sparanoid/almace-scaffolding/commit/dfd14cd))
+
+
+
 <a name="2.0.12"></a>
 ## [2.0.12](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.11...v2.0.12) (2019-02-19)
 

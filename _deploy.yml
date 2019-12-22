@@ -27,7 +27,7 @@ rsync:
     # I use `--exclude` here to prevent additional files from being deleted on
     # the server (rsync --delete), these files and directories are available on
     # the remote server but outside this git repo. So I need to ignore them.
-    params: --exclude=lab
+    params: --exclude=lab --exclude=s3_website.yml
   prod:
     user: sparanoid
     port: 22
@@ -35,7 +35,7 @@ rsync:
     dest: /srv/www/sparanoid.com/public_html
     # Extra rsync parameters
     # I use `--rsync-path` here to run `rsync` with sudo permission.
-    params: --rsync-path="sudo rsync" --exclude=lab
+    params: --rsync-path="sudo rsync" --exclude=lab --exclude=s3_website.yml
 
 sparanoid:
   default:

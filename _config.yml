@@ -189,8 +189,8 @@ tc_large_image: true
 #
 # Enable this will simply add <meta charset="utf-8"> to the head of your pages
 #
-# Default:      false
-force_utf_8:    false
+# Default:      true
+force_utf_8:    true
 
 # Link blog
 #
