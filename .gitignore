@@ -29,6 +29,7 @@ node_modules
 
 # AMSF specified
 .amsf-cache
+.jekyll-cache
 .jekyll-metadata
 .sass-cache
 _site

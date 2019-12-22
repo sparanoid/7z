@@ -168,7 +168,7 @@ module.exports = (grunt) ->
     postcss:
       options:
         processors: [
-          require("autoprefixer")(browsers: "last 1 versions")
+          require("autoprefixer")
         ]
 
       serve:
@@ -479,6 +479,15 @@ module.exports = (grunt) ->
               "!TODOS.md"
             ]
             dest: "./"
+          }
+          {
+            expand: true
+            dot: true
+            cwd: "<%= amsf.core %>/.circleci/"
+            src: [
+              "config.example.yml"
+            ]
+            dest: ".circleci/"
           }
           {
             expand: true

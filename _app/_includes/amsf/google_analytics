@@ -9,6 +9,6 @@
       ga('set', 'anonymizeIp', true);
       ga('send', 'pageview');
     </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script async src="{{ site.google_analytics.url }}"></script>
   {%- endif -%}
 {%- endcapture -%}
