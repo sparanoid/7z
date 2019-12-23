@@ -1560,10 +1560,10 @@ grunt-sri-hash@1.1.5:
   dependencies:
     jsdom "^15.0.0"
 
-grunt-terser@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/grunt-terser/-/grunt-terser-0.1.0.tgz#979a571d1ed9764773819db0f57dd46bc8a9c5d5"
-  integrity sha1-l5pXHR7ZdkdzgZ2w9X3Ua8ipxdU=
+grunt-terser@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/grunt-terser/-/grunt-terser-0.1.1.tgz#f51125a728f9d6e9cbbed4c0db998a0b86ceae2a"
+  integrity sha512-GfdEs9AlduMKsruImjH9ifiTv2H+hzfjJtperT7h7yckCnVJlftBbrk0rCjWzeMZFs7QzJFWH87U+T8GsL3+mg==
   dependencies:
     terser "^3.8.0"
 
