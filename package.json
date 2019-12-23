@@ -54,7 +54,7 @@
     "grunt-service-worker": "1.0.3",
     "grunt-shell": "3.0.1",
     "grunt-sri-hash": "1.1.5",
-    "grunt-terser": "0.1.0",
+    "grunt-terser": "1.0.0",
     "grunt-text-replace": "0.4.0",
     "grunt-uncss-inline": "1.2.6",
     "grunt-xmlmin": "0.1.8",

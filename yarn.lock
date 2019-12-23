@@ -507,7 +507,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.19.0, commander@~2.20.3:
+commander@^2.19.0, commander@^2.20.0, commander@~2.20.3:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -1560,12 +1560,12 @@ grunt-sri-hash@1.1.5:
   dependencies:
     jsdom "^15.0.0"
 
-grunt-terser@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/grunt-terser/-/grunt-terser-0.1.0.tgz#979a571d1ed9764773819db0f57dd46bc8a9c5d5"
-  integrity sha1-l5pXHR7ZdkdzgZ2w9X3Ua8ipxdU=
+grunt-terser@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-terser/-/grunt-terser-1.0.0.tgz#cb46d645fe51ec9b3bcb1f37dbd2f3112d91e791"
+  integrity sha512-8MfNU3cVP4UWZLlIjJMUpk3NWIEmaD+CwewhDpUTiPaS49EkBiSWCmGAihqWxBKbiOC3KePPXMmB/yiaVNqW2w==
   dependencies:
-    terser "^3.8.0"
+    terser "^4.3.9"
 
 grunt-text-replace@0.4.0:
   version "0.4.0"
@@ -3168,10 +3168,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
-source-map-support@~0.5.9:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.10.tgz#2214080bc9d51832511ee2bab96e3c2f9353120c"
-  integrity sha512-YfQ3tQFTK/yzlGJuX8pTwa4tifQj4QS2Mj7UegOu8jAz59MqIiMGPXxQhVQiIMNzayuUSF/jEuVnfFF5JqybmQ==
+source-map-support@~0.5.12:
+  version "0.5.16"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.16.tgz#0ae069e7fe3ba7538c64c98515e35339eac5a042"
+  integrity sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -3428,14 +3428,14 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terser@^3.8.0:
-  version "3.16.1"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-3.16.1.tgz#5b0dd4fa1ffd0b0b43c2493b2c364fd179160493"
-  integrity sha512-JDJjgleBROeek2iBcSNzOHLKsB/MdDf+E/BOAJ0Tk9r7p9/fVobfv7LMJ/g/k3v9SXdmjZnIlFd5nfn/Rt0Xow==
+terser@^4.3.9:
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.4.3.tgz#401abc52b88869cf904412503b1eb7da093ae2f0"
+  integrity sha512-0ikKraVtRDKGzHrzkCv5rUNDzqlhmhowOBqC0XqUHFpW+vJ45+20/IFBcebwKfiS2Z9fJin6Eo+F1zLZsxi8RA==
   dependencies:
-    commander "~2.17.1"
+    commander "^2.20.0"
     source-map "~0.6.1"
-    source-map-support "~0.5.9"
+    source-map-support "~0.5.12"
 
 text-extensions@^1.0.0:
   version "1.9.0"
