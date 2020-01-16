@@ -59,7 +59,7 @@
     "grunt-uncss-inline": "1.2.6",
     "grunt-xmlmin": "0.1.8",
     "jit-grunt": "0.10.0",
-    "node-sass": "4.12.0"
+    "node-sass": "4.13.1"
   },
   "browserslist": [
     ">0.2%",
