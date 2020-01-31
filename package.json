@@ -28,7 +28,7 @@
     "@lodder/time-grunt": "4.0.0",
     "autoprefixer": "9.6.1",
     "coffeelint": "2.1.0",
-    "coffeescript": "2.4.1",
+    "coffeescript": "2.5.1",
     "grunt": "1.0.4",
     "grunt-assets-inline": "1.2.2",
     "grunt-bump": "0.8.0",
