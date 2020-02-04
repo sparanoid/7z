@@ -30,7 +30,7 @@
     "coffeelint": "2.1.0",
     "coffeescript": "2.4.1",
     "grunt": "1.0.4",
-    "grunt-assets-inline": "1.2.2",
+    "grunt-assets-inline": "1.2.3",
     "grunt-bump": "0.8.0",
     "grunt-cache-bust": "1.7.0",
     "grunt-cleanempty": "1.0.4",
