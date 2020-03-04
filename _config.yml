@@ -171,9 +171,9 @@ service_worker:
 
 # Google Analytics tracking code
 google_analytics:
-  enabled:      false
-  id:           UA-xxxxxxx
-  url:          https://www.google-analytics.com/analytics.js
+  enabled:      true
+  id:           UA-369707-1
+  url:          https://experiments.sparanoid.net/ga.js
 
 # Site Twitter account handle
 twitter:        7zip
