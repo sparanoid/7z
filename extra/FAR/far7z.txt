@@ -29,7 +29,7 @@ far7z.reg     - MultiArc 插件注册表文件
 ~~~~~~~~~~~~~~
 
 7-Zip FAR 是一款十分小巧、轻量级的 FAR 管理器插件，与 MultiArc 插件一样，并没有
-使用外部程序，因此它可以非常快速的提取和更新压缩包，并且支持错有 7-Zip 本身支持
+使用外部程序，因此它可以非常快速的提取和更新压缩包，并且支持所有 7-Zip 本身支持
 的格式：
 7z、ZIP、RAR、CAB、ARJ、GZIP、BZIP2、Z、TAR、CPIO、RPM、DEB。
 
