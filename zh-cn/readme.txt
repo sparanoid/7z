@@ -3,7 +3,7 @@
 
 7-Zip 是一款 Windows 文件压缩软件。
 
-7-Zip 版权所有 (C) 1999-2019 Igor Pavlov。
+7-Zip 版权所有 (C) 1999-2020 Igor Pavlov。
 
 软件特征：
 
