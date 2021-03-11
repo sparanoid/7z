@@ -1,3 +1,31 @@
+<a name="2.0.19"></a>
+## [2.0.19](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.18...v2.0.19) (2020-12-14)
+
+
+### Bug Fixes
+
+* **ci:** outdated node ([e405bee](https://github.com/sparanoid/almace-scaffolding/commit/e405bee))
+* broken deps ([fef212f](https://github.com/sparanoid/almace-scaffolding/commit/fef212f))
+* **ci:** outdated percy workflow ([1122f21](https://github.com/sparanoid/almace-scaffolding/commit/1122f21))
+* **css:** avoid long line breakers ([91116c4](https://github.com/sparanoid/almace-scaffolding/commit/91116c4))
+* **css:** wrong table width ([b33c6f9](https://github.com/sparanoid/almace-scaffolding/commit/b33c6f9))
+* **title:** wrong `title_no_desc` logic ([dbea217](https://github.com/sparanoid/almace-scaffolding/commit/dbea217))
+
+
+### Features
+
+* bump jekyll dep ([20250c0](https://github.com/sparanoid/almace-scaffolding/commit/20250c0))
+* **css:** refine typography stack on windows ([618a27c](https://github.com/sparanoid/almace-scaffolding/commit/618a27c))
+* try GitHub Actions ([1234fb5](https://github.com/sparanoid/almace-scaffolding/commit/1234fb5))
+* **amsf:** always show site name if no page title defined while `title_no_desc` is set to `true` ([89a9bb7](https://github.com/sparanoid/almace-scaffolding/commit/89a9bb7))
+
+
+### BREAKING CHANGES
+
+* **title:** `title_no_desc` no longer avaiable, add new option `force_desc` to do the same thing
+
+
+
 <a name="2.0.18"></a>
 ## [2.0.18](https://github.com/sparanoid/almace-scaffolding/compare/v2.0.17...v2.0.18) (2019-09-13)
 
