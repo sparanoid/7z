@@ -10,6 +10,7 @@ module.exports = (grunt) ->
     "bump-commit": "grunt-bump"
     "bump-only": "grunt-bump"
     gitclone: "grunt-git"
+    postcss: "@lodder/grunt-postcss"
     replace: "grunt-text-replace"
 
   # Track tasks load time
