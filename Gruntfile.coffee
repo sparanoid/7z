@@ -3,7 +3,7 @@
 module.exports = (grunt) ->
 
   # Load Sass deps
-  sass = require('node-sass')
+  sass = require('sass')
 
   # Load all grunt tasks
   require("jit-grunt") grunt,
@@ -148,7 +148,6 @@ module.exports = (grunt) ->
 
       serve:
         options:
-          outputStyle: "nested"
           sourceMapContents: true
           sourceMapEmbed: true
 
