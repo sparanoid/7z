@@ -241,7 +241,7 @@ iNode
 使用大内存页(&L)
 2900
 关于 7-Zip
-7-Zip 是一款自由软件。您可以通过捐赠的方式来支持 7-Zip 的开发。
+7-Zip 是一款自由软件
 3000
 系统无法分配所需内存
 未发现错误
@@ -490,6 +490,6 @@ CPU 使用率
 7710
 链接类型
 硬链接
-文件符号链接（Symbolic Link）
-目录符号链接（Symbolic Link）
-目录接合点（Directory Junction）
+文件符号链接
+目录符号链接
+目录连接（Directory Junction）
