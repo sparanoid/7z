@@ -8,9 +8,10 @@ stable:
     date:        2019-02-21
 
 beta:
-  long:          "21.02"
-  short:         "2102"
-  date:          2021-05-06
+  long:          "21.03"
+  short:         "2103"
+  type:          "beta"
+  date:          2021-07-20
   sdk:
     long:        "19.02"
     short:       "1902"
