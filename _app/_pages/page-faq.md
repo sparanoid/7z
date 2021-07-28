@@ -114,7 +114,7 @@ title: 常见问题解答（FAQ）
 <H2><a name="developer_faq"></a>开发者常见问题解答</H2>
 
 #### 为何我在使用 Visual C++ 6.0 编译 7-Zip 或 LZMA SDK 时会出现链接错误？
-想要编译源码您需要 Visual C++ 6.0 或更高版本。部分文件还需要来自 microsoft.com 的 Platform SDK。
+想要编译源码吗？您需要 Visual C++ 6.0 或更高版本。部分文件还需要来自 microsoft.com 的 Platform SDK。
 
 如果您使用 MSVC，请在目录列表上方的“包括文件”及“工具 / 选项 / 目录”中的“库文件”中指定 SDK 目录。
 
