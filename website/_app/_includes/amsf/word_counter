@@ -1,0 +1,63 @@
+{%- comment -%}
+  Page words
+
+  Calculate total words in a post
+
+  @since 0.0.49
+{%- endcomment -%}
+{%- assign amsf_page_words_raw = page.content | number_of_words -%}
+{%- capture amsf_page_words -%}
+  {%- if amsf_page_words_raw == 0 -%}
+    No word
+  {%- elsif amsf_page_words_raw == 1 -%}
+    1 word
+  {%- else -%}
+    {{ amsf_page_words_raw }} words
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Reading time
+
+  Calculate Reading time in a post based on page words
+
+  @since 0.0.49
+{%- endcomment -%}
+{%- assign amsf_page_reading_time_raw = amsf_page_words_raw | divided_by: 200 -%}
+{%- capture amsf_page_reading_time -%}
+  {%- if amsf_page_reading_time_raw == 0 -%}
+    Less than 1 min
+  {%- elsif amsf_page_reading_time_raw == 1 -%}
+    1 min
+  {%- elsif amsf_page_reading_time_raw >= 60 -%}
+
+    {%- assign amsf_page_reading_time_hr = amsf_page_reading_time_raw | divided_by: 60 -%}
+    {%- assign amsf_page_reading_time_min = amsf_page_reading_time_raw | modulo: 60 -%}
+
+    {%- capture amsf_page_reading_time_hr_unit -%}
+      {%- if amsf_page_reading_time_hr == 1 -%}
+        hr
+      {%- else -%}
+        hrs
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture amsf_page_reading_time_min_unit -%}
+      {%- if amsf_page_reading_time_min > 1 -%}
+        mins
+      {%- elsif amsf_page_reading_time_min == 1 -%}
+        min
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture amsf_page_reading_time_min_figure -%}
+      {%- if amsf_page_reading_time_min != 0 -%}
+        {{ amsf_page_reading_time_min }}
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {{ amsf_page_reading_time_hr }} {{ amsf_page_reading_time_hr_unit | strip }} {{ amsf_page_reading_time_min_figure | strip }} {{ amsf_page_reading_time_min_unit | strip }}
+  {%- else -%}
+    {{ amsf_page_reading_time_raw }} mins
+  {%- endif -%}
+{%- endcapture -%}

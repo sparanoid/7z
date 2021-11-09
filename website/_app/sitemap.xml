@@ -1,0 +1,38 @@
+---
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+{%- include amsf/core -%}
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ "/" | absolute_url }}</loc>
+    <lastmod>{{ site.time | date: "%F" }}</lastmod>
+  </url>
+
+  {% for page in site.html_pages %}
+    {% if page.hidden != true %}
+      <url>
+        <loc>{{ page.url | absolute_url | replace: '/index.html', '/' }}</loc>
+        {% if page.last_modified_at %}
+          <lastmod>{{ page.last_modified_at | date: "%F" }}</lastmod>
+        {% endif %}
+      </url>
+    {% endif %}
+  {% endfor %}
+
+  {% for post in site.posts %}
+    {% if post.hidden != true %}
+      <url>
+        <loc>{{ post.url | absolute_url }}</loc>
+        {% if post.last_modified_at %}
+          <lastmod>{{ post.last_modified_at | date: "%F" }}</lastmod>
+        {% else %}
+          <lastmod>{{ post.date | date: "%F" }}</lastmod>
+        {% endif %}
+      </url>
+    {% endif %}
+  {% endfor %}
+
+</urlset>

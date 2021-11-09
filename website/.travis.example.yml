@@ -1,0 +1,17 @@
+# Travis is slow, I recommend use CircleCI for CI process
+sudo: false
+language: node_js
+cache:
+  - bundler
+node_js:
+  - "10"
+  - "12"
+before_install:
+  - rvm use 2.6.3 --install --fuzzy
+  - bundle install
+matrix:
+  fast_finish: true
+notifications:
+  email: false
+  slack:
+    secure: P/ngpvqinM/t9tdXZO2qHQvq2XCkcerKM+KwNJlQoVHnkl/Z/EtzB1yxiZZ6LGdHp+r3nShBhfW+gJVojU80EObt0iWHbFTkUUMFf6WI6c056937CksQI4atmDBiCJxMAnkd6DCLWfBexVtKDhkc5vX0bYhgoiXEzCYUhFd8pZ4=

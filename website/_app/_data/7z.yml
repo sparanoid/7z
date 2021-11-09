@@ -1,0 +1,24 @@
+# Theme facts
+meta:
+  name:         Curtana
+  url:          https://github.com/amsf/amsf-curtana
+  author:       Tunghsiao Liu
+  author_url:   https://sparanoid.com/
+
+# {{ site.data.curtana.free }}: used in homepage, not implimented at the moment
+free:           true
+
+# Site donate link, used in several posts
+donate:         https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LTXZ835Y6T95S
+
+# Hide footer from your homepage, example: sparanoid.com
+# Default:      false
+clean_homepage: false
+
+# Style post link color (if defined) for article list
+# Default:      false
+colorful_list:  false
+
+# Show email subscription link in footer
+# Default:      false
+subscription:   false

@@ -1,0 +1,18 @@
+stable:
+  long:          "19.00"
+  short:         "1900"
+  date:          2019-02-21
+  sdk:
+    long:        "19.00"
+    short:       "1900"
+    date:        2019-02-21
+
+beta:
+  long:          "21.03"
+  short:         "2103"
+  type:          "beta"
+  date:          2021-07-20
+  sdk:
+    long:        "19.02"
+    short:       "1902"
+    date:        2019-09-05

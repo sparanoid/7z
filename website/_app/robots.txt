@@ -1,0 +1,7 @@
+---
+---
+Sitemap: {{ "/sitemap.xml" | absolute_url }}
+
+{% for post in site.robots -%}
+  {{ post | strip }}
+{% endfor -%}

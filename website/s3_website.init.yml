@@ -1,0 +1,32 @@
+# This is an example config for `s3_website`
+# Rename this file to `s3_website.yml` and edit it
+# See https://github.com/laurilehmijoki/s3_website for more info
+s3_id: <%= ENV['S3_ID'] %>
+s3_secret: <%= ENV['S3_SECRET'] %>
+s3_bucket: sparanoid.com
+site: .
+cache_control:
+  "*.json":  no-cache, no-store
+  "*service-worker.js": no-cache, no-store
+max_age:
+  "*.html":  1800
+  "*.xml":   1800
+  "*.css":   2592000
+  "*.js":    2592000
+  "*": 86400
+exclude_from_upload:
+  - (?:\.(?:DS_Store|bak|config|sql|fla|psd|ai|sketch|ini|log|sh|inc|swp|dist))$
+index_document: index.html
+error_document: error/index.html # should match your error page permalink
+concurrency_level: 10
+treat_zero_length_objects_as_redirects: true
+
+# CloudFront settings
+cloudfront_distribution_id: <%= ENV['CF_DIST_ID'] %>
+cloudfront_invalidate_root: true
+cloudfront_wildcard_invalidation: true
+cloudfront_distribution_config:
+  aliases:
+    quantity: 1
+    items:
+      - sparanoid.com

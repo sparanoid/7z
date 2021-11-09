@@ -1,0 +1,66 @@
+{%- comment -%}
+  Site name
+{%- endcomment -%}
+{%- capture amsf_site_name -%}
+  {%- if site.name.first -%}
+    {{ site.name[site.active_lang] }}
+  {%- else -%}
+    {{ site.name }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Site title
+  = site name + site desc
+{%- endcomment -%}
+{%- capture amsf_site_title -%}
+  {%- if site.name.first -%}
+    {%- assign site_name = site.name[site.active_lang] -%}
+  {%- else -%}
+    {%- assign site_name = site.name -%}
+  {%- endif -%}
+
+  {%- if page.title.first -%}
+    {%- assign page_title = page.title[site.active_lang] -%}
+  {%- else -%}
+    {%- assign page_title = page.title -%}
+  {%- endif -%}
+
+  {%- if site.description.first -%}
+    {%- assign site_description = site.description[site.active_lang] -%}
+  {%- else -%}
+    {%- assign site_description = site.description -%}
+  {%- endif -%}
+
+  {%- if page_title == site_name or page.permalink == '/' -%}
+    {%- if page.title_no_desc == true -%}
+      {{ page_title }}
+    {%- else -%}
+      {%- comment -%}
+        force using `page.title` if defined in homepage
+      {%- endcomment -%}
+      {%- if page.title -%}
+        {{ page_title }} - {{ site_name }}
+      {%- else -%}
+        {{ site_name }} - {{ site_description }}
+      {%- endif -%}
+    {%- endif -%}
+  {%- else -%}
+    {{ page_title }} - {{ site_name }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Page title
+{%- endcomment -%}
+{%- capture amsf_page_title -%}
+  {%- if type.title -%}
+    {%- if type.title.first -%}
+      {{ type.title[site.active_lang] }}
+    {%- else -%}
+      {{ type.title }}
+    {%- endif -%}
+  {%- else -%}
+    {{ amsf_site_name }}
+  {%- endif -%}
+{%- endcapture -%}

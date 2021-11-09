@@ -1,0 +1,5 @@
+{% comment %}
+  Site title
+{% endcomment %}
+{% capture amsf_site_title %}{% if page.title != site.name %} - {{ site.name }}{% endif %}{% endcapture %}
+{% capture amsf_site_title_alt %}{% if page.title != site.name %}{{ site.name }} - {% endif %}{% endcapture %}

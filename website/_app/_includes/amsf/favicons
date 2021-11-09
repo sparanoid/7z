@@ -1,0 +1,31 @@
+{%- comment -%}
+  Favicons
+
+  Check `static_file` and output favicon markup
+
+  @since 1.1.0
+{%- endcomment -%}
+{%- capture amsf_favicon_png %}{{ "/favicon.png" | relative_url }}{% endcapture -%}
+{%- capture amsf_favicon_svg %}{{ "/favicon.svg?assets-inline-assets-keep" | relative_url }}{% endcapture -%}
+{%- capture amsf_mask_icon %}{{ "/mask-icon.svg" | relative_url }}{% endcapture -%}
+{%- capture amsf_apple_touch_icon %}{{ "/apple-touch-icon.png" | relative_url }}{% endcapture -%}
+
+{%- capture amsf_favicons -%}
+  {%- for static_file in site.static_files -%}
+    {%- if static_file.path == "/favicon.png" -%}
+      <link rel="icon" href="{{ amsf_favicon_png }}" type="image/png">
+    {%- endif -%}
+
+    {%- if static_file.path == "/favicon.svg" -%}
+      <link rel="icon" href="{{ amsf_favicon_svg }}" sizes="any" type="image/svg+xml">
+    {%- endif -%}
+
+    {%- if static_file.path == "/mask-icon.svg" -%}
+      <link rel="mask-icon" href="{{ amsf_mask_icon }}" color="{{ amsf_page_theme_color_with_fallback | strip }}">
+    {%- endif -%}
+
+    {%- if static_file.path == "/apple-touch-icon.png" -%}
+      <link rel="apple-touch-icon" href="{{ amsf_apple_touch_icon }}">
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}

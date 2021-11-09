@@ -1,0 +1,227 @@
+#
+# More configuration examples at:
+# https://jekyllrb.com/docs/configuration/
+#
+
+#
+# Jekyll basic configurations
+#
+source:         _app
+destination:    _site
+timezone:       America/Los_Angeles
+permalink:      /:title.html
+markdown:       kramdown
+highlighter:    rouge
+include:        ["_pages"]
+exclude:        ["_pages/themes"]
+
+#
+# Jekyll serve settings
+#
+port:           4321
+
+#
+# Jekyll build settings
+#
+future:         false
+
+#
+# Markdown settings
+#
+kramdown:
+  input:                     GFM
+  auto_ids:                  true
+  footnote_nr:               1
+  entity_output:             as_char
+  toc_levels:                1..6
+  smart_quotes:              lsquo,rsquo,ldquo,rdquo
+  enable_coderay:            false
+  hard_wrap:                 false
+  syntax_highlighter:        rouge
+  syntax_highlighter_opts:
+    css_class:               "highlight"
+  transliterated_header_ids: true
+  footnote_backlink:         "&#8617;&#xfe0e;"
+
+#
+# Jekyll plugins
+#
+# Plugins inside `jekyll_plugins` group in `Gemfile` will be actived by default
+plugins:
+  - jekyll-last-modified-at
+
+#
+# Almace Scaffolding settings
+#
+
+# Development mode
+#
+# Development mode is disabled on production build by default, we've enabled it
+# in `_config.dev.yml` for local development, so most of the time you don't
+# need to change it.
+#
+# Default:      false
+dev:            false
+
+# Site name
+#
+# Default:      Almace Scaffolding
+name:           Almace Scaffolding
+
+# Site short name
+#
+# Currently only used by Chrome Web App manifest, can be anything you like.
+# You can also just use your `name` for `name_short` if it is short enough
+#
+# For example:
+# - name:       Almace Scaffolding
+# - name_short: AMSF
+#
+# or:
+# - name:       Sparanoid Group
+# - name_short: Sparanoid
+#
+# Default:      AMSF
+name_short:     AMSF
+
+# Site description
+#
+# Will be used in the document meta and Atom feed subtitle
+#
+# Default:      Super-fast Jekyll framework
+description:    Super-fast Jekyll framework
+
+# Base URL
+#
+# This is useful when I need to build site in a subdirectory (like
+# GitHub Pages for Projects), it provides a specific URL prefix, for example, if
+# the production site URL is https://sparanoid.com/my-project/, set `baseurl` to
+# `/my-project`, without trailing slash.
+#
+# Default:      ""
+baseurl:        ""
+
+# Flatten base
+#
+# This is useful when you generate your static site for GitHub Pages. By default
+# the generated pages will have full hierarchy with `baseurl` you defined. This
+# behavior will causes wrong URLs when using GitHub Pages under `docs/`. So
+# enable this option if you're using GitHub Pages.
+#
+# Default:      false
+flatten_base:   false
+
+# CSS path used in templates
+#
+# Default:      /assets
+assets:         /assets
+
+# Feed URL
+#
+# Define your main feed URL, this will be only used in your templates
+#
+# Default:      /feed.xml
+feed:           /feed.xml
+
+# Site full URL
+#
+# Used in atom feed, sitemap, Twitter Cards, and etc. I should use absolute full
+# URLs for these fields
+#
+# Default:      https://sparanoid.com
+url:            https://sparanoid.com
+
+# Media assets URL
+#
+# Media assets URL are used in posts, without trailing slash. ie.
+# `<img src="{{ site.file }}/image.png">`. In the most cases this URL should be
+# powered by a CDN provider
+# Note: you should avoid protocol-free (ie. //cdn.mysite.tld) address here
+# because Twitter Cards doesn't work well with protocol-free assets when AMSF
+# grabs the first image of your post as post featured image.
+#
+# Default:      https://d349cztnlupsuf.cloudfront.net
+file:           https://d349cztnlupsuf.cloudfront.net
+
+# Download files URL
+#
+# Download files URL are used in posts, ie.
+# href="{{ site.download }}/package.zip", this should also be a CDN link just
+# like `site.file`. There're no notable differences in `site.file` and
+# `site.download`, I just use the one for post images and the other for large
+# download files. That's it. Remove or ignore this if you don't need it.
+#
+# Default:      https://d1bmx7s6749k4k.cloudfront.net
+download:       https://d1bmx7s6749k4k.cloudfront.net
+
+# Primary color
+#
+# Used by Safari mask-icon, Chrome Web App theme color
+#
+# Default       "#ff00b4"
+primary_color:  "#ff00b4"
+
+# Service Worker Precache
+service_worker:
+  enabled:      true
+  max_size:     120000
+  files:
+    - "**/*.{css,html,jpg,gif,png,svg,woff,woff2}"
+    - "**/js/**.js"
+
+# Google Analytics tracking code
+google_analytics:
+  enabled:      false
+  id:           UA-xxxxxxx
+  url:          https://www.google-analytics.com/analytics.js
+
+# Site Twitter account handle
+twitter:        sparanoid
+
+# Twitter Cards large images
+#
+# Use summary card with large image for Twitter Cards, require theme support
+#
+# Default:      true
+tc_large_image: true
+
+# Force UTF-8 encoding
+#
+# Enable this will simply add <meta charset="utf-8"> to the head of your pages
+#
+# Default:      false
+force_utf_8:    false
+
+# Link blog
+#
+# Enable this settings to make your feed Daring Fireball-like link blog (This
+# basically change your <link> value to external link you defined in your posts)
+#
+# Default:      false
+link_blog:      false
+
+# Excerpts for RSS
+#
+# Change the value to true to use post excerpt for RSS feeds
+#
+# Default:      false
+rss_excerpt:    false
+
+# Generator credits
+#
+# Show or hide generator credits, require theme support
+#
+# Default:      true
+credits:        true
+
+# Custom records in robots.txt
+#
+# For example:
+# robots:
+#   - "User-agent: *"
+#   - "Disallow: /ajax/"
+#   - "Disallow: /@async"
+#   - "Disallow: /log/"
+#
+# Default:      "User-agent: *"
+robots:         "User-agent: *"
