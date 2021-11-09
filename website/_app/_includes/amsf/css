@@ -1,0 +1,10 @@
+{%- comment -%}
+  Page custom CSS
+{%- endcomment -%}
+{%- capture amsf_page_css -%}
+  {%- if page.css -%}
+    <style>
+      {{ page.css }}
+    </style>
+  {%- endif -%}
+{%- endcapture -%}

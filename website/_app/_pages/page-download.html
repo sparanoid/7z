@@ -1,0 +1,264 @@
+---
+layout: default
+short: download
+permalink: download.html
+title: 程序下载
+---
+
+<H1>{{ page.title }}</H1>
+
+{% assign ver = site.data.versions %}
+<!-- <p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}，Windows）</B>：</P>
+
+<table cellspacing="1" cellpadding="6">
+  <tbody><tr>
+    <th class="Title" width="90">链接</th>
+    <th class="Title" width="60">格式</th>
+    <th class="Title" width="80">系统</th>
+    <th class="Title">描述</th>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}.exe">下载</a></td>
+    <td class="Item">.exe</td>
+    <td class="Item">32 位 x86</td>
+    <td class="Item">7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.exe">下载</a></td>
+    <td class="Item">.exe</td>
+    <td class="Item">64 位 x64</td>
+    <td class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-extra.7z">下载</a></td>
+    <td class="Item">.7z</td>
+    <td class="Item">x86 / x64</td>
+    <td class="Item">7-Zip 附加包：7z 独立命令行版本、7z DLL、Far 管理器插件</td>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-src.7z">下载</a></td>
+    <td class="Item">.7z</td>
+    <td class="Item">任意</td>
+    <td class="Item">7-Zip 源代码</td>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/lzma{{ ver.beta.short }}.7z">下载</a></td>
+    <td class="Item">.7z</td>
+    <td class="Item">任意 / x86 / x64</td>
+    <td class="Item">LZMA SDK（C、C++、C#、Java）</td>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}.msi">下载</a></td>
+    <td class="Item">.msi</td>
+    <td class="Item">32 位 x86</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.msi">下载</a></td>
+    <td class="Item">.msi</td>
+    <td class="Item">64 位 x64</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+</tbody></table> -->
+
+<P><B>下载 7-Zip {{ ver.stable.long }}（{{ ver.stable.date }}，Windows）</B>：</P>
+
+<table cellspacing="1" cellpadding="6">
+  <tbody><tr>
+    <th class="Title" width="90">链接</th>
+    <th class="Title" width="60">格式</th>
+    <th class="Title" width="80">系统</th>
+    <th class="Title">描述</th>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
+    <td class="Item text-center">.exe</td>
+    <td class="Item text-center">32 位 x86</td>
+    <td class="Item">7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
+    <td class="Item text-center">.exe</td>
+    <td class="Item text-center">64 位 x64</td>
+    <td class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-extra.7z">下载</a></td>
+    <td class="Item text-center">.7z</td>
+    <td class="Item text-center">x86 / x64</td>
+    <td class="Item">7-Zip 附加包：独立命令行、7z 程序库、Far 管理器插件</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-src.7z">下载</a></td>
+    <td class="Item text-center">.7z</td>
+    <td class="Item text-center">任意</td>
+    <td class="Item">7-Zip 源代码</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/lzma{{ ver.stable.short }}.7z">下载</a></td>
+    <td class="Item text-center">.7z</td>
+    <td class="Item text-center">任意 / x86 / x64</td>
+    <td class="Item">LZMA SDK（C、C++、C#、Java）</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</a></td>
+    <td class="Item text-center">.msi</td>
+    <td class="Item text-center">32 位 x86</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
+    <td class="Item text-center">.msi</td>
+    <td class="Item text-center">64 位 x64</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+</tbody></table>
+
+<P><B>下载 7-Zip 16.04（2016-10-04，Windows）</B>：</P>
+
+<table cellspacing="1" cellpadding="6">
+  <tbody><tr>
+    <th class="Title" width="90">链接</th>
+    <th class="Title" width="60">格式</th>
+    <th class="Title" width="80">系统</th>
+    <th class="Title">描述</th>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z1604.exe">下载</a></td>
+    <td class="Item text-center">.exe</td>
+    <td class="Item text-center">32 位 x86</td>
+    <td class="Item">7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z1604-x64.exe">下载</a></td>
+    <td class="Item text-center">.exe</td>
+    <td class="Item text-center">64 位 x64</td>
+    <td class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z1604-extra.7z">下载</a></td>
+    <td class="Item text-center">.7z</td>
+    <td class="Item text-center">x86 / x64</td>
+    <td class="Item">7-Zip 附加包：独立命令行、7z 程序库、Far 管理器插件</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z1604-src.7z">下载</a></td>
+    <td class="Item text-center">.7z</td>
+    <td class="Item text-center">任意</td>
+    <td class="Item">7-Zip 源代码</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/lzma1604.7z">下载</a></td>
+    <td class="Item text-center">.7z</td>
+    <td class="Item text-center">任意 / x86 / x64</td>
+    <td class="Item">LZMA SDK（C、C++、C#、Java）</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z1604.msi">下载</a></td>
+    <td class="Item text-center">.msi</td>
+    <td class="Item text-center">32 位 x86</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z1604-x64.msi">下载</a></td>
+    <td class="Item text-center">.msi</td>
+    <td class="Item text-center">64 位 x64</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+</tbody></table>
+
+<p><b>下载 7-Zip 9.20（2010-11-18，Windows）</b>：</p>
+<TABLE cellspacing="1" cellpadding="6">
+  <TR>
+  <TH class="Title" width=90>链接</TH>
+    <TH class="Title" width=60>格式</TH>
+    <TH class="Title" width=80>系统</TH>
+    <TH class="Title">描述</TH>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920.exe">下载</A></TD>
+    <TD class="Item text-center">.exe</TD>
+    <TD class="Item text-center" rowspan=2>32 位 x86</TD>
+    <TD class="Item text-center" rowspan=2>7-Zip Windows 32 位</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920.msi">下载</A></TD>
+    <TD class="Item text-center">.msi</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920-x64.msi">下载</A></TD>
+    <TD class="Item text-center">.msi</TD>
+    <TD class="Item text-center">64 位 x64</TD>
+    <TD class="Item">7-Zip Windows 64 位（Intel 64 或 AMD64）</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920-ia64.msi">下载</A></TD>
+    <TD class="Item text-center">.msi</TD>
+    <TD class="Item text-center">IA-64</TD>
+    <TD class="Item">7-Zip 64 位（IA-64 安腾 Itanium CPU）</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920-arm.exe">下载</A></TD>
+    <TD class="Item text-center">.exe</TD>
+    <TD class="Item text-center">ARM-WinCE</TD>
+    <TD class="Item">7-Zip for Windows Mobile / Windows CE (ARM)</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7za920.zip">下载</A></TD>
+    <TD class="Item text-center">.zip</TD>
+    <TD class="Item text-center">32 位</TD>
+    <TD class="Item">7-Zip 命令行版本</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920.tar.bz2">下载</A></TD>
+    <TD class="Item text-center">.tar.bz2</TD>
+    <TD class="Item text-center">任意</TD>
+    <TD class="Item">7-Zip 源代码</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/7z920_extra.7z">下载</A></TD>
+    <TD class="Item text-center">.7z</TD>
+    <TD class="Item text-center">32 位</TD>
+    <TD class="Item">7-Zip 附加包：7z 程序库、安装模式自释放模块、FAR 管理器插件</TD>
+  </TR>
+  <TR>
+    <TD class="Item text-center"><A href="https://www.7-zip.org/a/lzma920.tar.bz2">下载</A></TD>
+    <TD class="Item text-center">.tar.bz2</TD>
+    <TD class="Item text-center">任意</TD>
+    <TD class="Item" rowspan=2>LZMA SDK（C、C++、C#、Java）</TD>
+  </TR>
+</TABLE>
+
+<p>您可以在 SourceForge 下载其他板本的 7-Zip（包括老板本和测试版本）：</p>
+
+<P><A href="https://sourceforge.net/projects/sevenzip/files/">在 SourceForge 上的 7-Zip 文件页面</A></P>
+<P><A href="https://sourceforge.net/projects/sevenzip/">在 SourceForge 上的 7-Zip 项目页面</A></P>
+
+<p><B>下载 p7zip for Posix/Linux（x86 二进制文件及源代码）</B>：<br>
+<p><A href="https://sourceforge.net/project/showfiles.php?group_id=111810">下载 p7zip</A></p>
+<p><A href="https://sourceforge.net/projects/p7zip/">Source Forge 中的 p7zip 页面</A></p>
+
+<P>p7zip 是 Unix/Linux 下的 7-Zip 命令行版本，是由网上的 7-Zip 爱好者独立开发的。</P>
+
+<P><B>Linux 及其它操作系统上的一些非官方 p7zip：</B></P>
+<UL>
+<LI><A href="http://packages.debian.org/sid/p7zip-full">p7zip for Debian (and Ubuntu)</A></LI>
+<LI><A href="http://timeoff.wsisiz.edu.pl/rpms.html">p7zip for Fedora Core</A></LI>
+<LI><A href="http://packages.gentoo.org/package/app-arch/p7zip">p7zip for Gentoo</A></LI>
+<LI><A href="http://www.sisyphus.ru/srpm/p7zip">p7zip for AltLinux.org</A></LI>
+<LI><A href="http://www.freshports.org/archivers/p7zip/">p7zip for FreeBSD</A></LI>
+<LI><A href="http://homepage.mac.com/krmathis/">p7zip for Mac OS X</A></LI>
+<LI><A href="http://www.macupdate.com/info.php/id/19139">EZ 7z for Mac OS X</A></LI>
+<LI><A href="http://sixtyfive.xmghosting.com/">7zX for Mac OS X</A></LI>
+<LI><A href="http://www.kekaosx.com/">keka - 免费的 Mac OS X 压缩软件</A></LI>
+<LI><A href="http://www.bebits.com/app/4079">p7zip for BeOS</A></LI>
+<LI><A href="http://ftp.ibiblio.org/pub/micro/pc-stuff/freedos/files/util/file/7zip/">p7zip for DOS / DJGPP</A></LI>
+<LI><A href="http://aminet.net/search?name=p7zip">p7zip for Amiga</A></LI>
+<LI><A href="http://www.opencsw.org/packages/p7zip">p7zip for Solaris</A></LI>
+<LI><A href="http://www.perzl.org/aix/index.php?n=Main.P7zip">p7zip for AIX</A></LI>
+</UL>
+
+<P><B>其它系统上的 7-Zip：</B></P>
+<UL>
+<LI><A href="http://4pda.ru/forum/index.php?showtopic=69426">7-Zip 解压程序 for WinCE</A></LI>
+</UL>

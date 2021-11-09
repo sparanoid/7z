@@ -1,0 +1,56 @@
+{%- comment -%}
+  Thumbnails
+
+  Generate page thumbnail for Open Graph and Twitter Cards
+  Regex:
+    - Match first `img` tag in post: https://regex101.com/r/N2hoxV/1
+    - Match filename protocol:  https://regex101.com/r/AmwvYE/2
+
+  @since 1.1.0
+{%- endcomment -%}
+{%- assign amsf_site_logo = "/logo.png" | absolute_url -%}
+{%- capture amsf_page_first_image -%}
+  {%- assign hero_image = page.content | match_regex: '<img .*?src="([^"]+)"' -%}
+  {%- if hero_image == nil -%}
+    {%- assign hero_image = amsf_site_logo -%}
+  {%- endif -%}
+  {{ hero_image }}
+{%- endcapture -%}
+
+{%- capture amsf_page_thumbnail_src -%}
+  {%- include amsf/has_protocol url=page.thumbnail -%}
+  {%- if amsf_has_protocol == null -%}
+    {%- if page.thumbnail-local -%}
+      {{ amsf_user_assets | prepend: site.url }}/{{ page.thumbnail }}
+    {%- else -%}
+      {{ site.file }}/{{ page.thumbnail }}
+    {%- endif -%}
+  {%- else -%}
+    {{ page.thumbnail }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg_image_src -%}
+  {%- include amsf/has_protocol url=page.heading-bg -%}
+  {%- if amsf_has_protocol == null -%}
+    {%- if page.heading-bg-local -%}
+      {{ amsf_user_assets | prepend: site.url }}/{{ page.heading-bg }}
+    {%- else -%}
+      {{ site.file }}/{{ page.heading-bg }}
+    {%- endif -%}
+  {%- else -%}
+    {{ page.heading-bg }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_thumbnail -%}
+  {%- if page.thumb_force_logo -%}
+    {{ amsf_site_logo }}
+  {%- elsif page.thumbnail -%}
+    {{ amsf_page_thumbnail_src }}
+  {%- elsif page.heading-bg -%}
+    {{ amsf_page_heading_bg_image_src }}
+  {%- else -%}
+    {{ amsf_page_first_image }}
+  {%- endif -%}
+{%- endcapture -%}

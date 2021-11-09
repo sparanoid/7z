@@ -1,0 +1,42 @@
+#
+# Custom deployment variables
+#
+
+# Usage:
+# $ grunt deploy:[deploy_method] --env=[deploy_environment]
+#
+# Examples:
+# $ grunt && grunt deploy:rsync
+# $ grunt && grunt deploy:rsync --env=prod
+# $ grunt && grunt deploy:s3_website
+#
+# You can also create your own deployment method, `default` environment is
+# required if no `--env` parameter passed:
+# ftp:
+#   default:
+#     user: ftp_user
+#     port: 123
+#     blah: blah
+rsync:
+  default:
+    user: rsync
+    port: 22
+    host: caladbolg.sparanoid.com
+    dest: /srv/www/dev.sparanoid.com/public_html
+    # Extra rsync parameters
+    # I use `--exclude` here to prevent additional files from being deleted on
+    # the server (rsync --delete), these files and directories are available on
+    # the remote server but outside this git repo. So I need to ignore them.
+    params: --exclude=lab --exclude=s3_website.yml
+  prod:
+    user: sparanoid
+    port: 22
+    host: caladbolg.sparanoid.com
+    dest: /srv/www/sparanoid.com/public_html
+    # Extra rsync parameters
+    # I use `--rsync-path` here to run `rsync` with sudo permission.
+    params: --rsync-path="sudo rsync" --exclude=lab --exclude=s3_website.yml
+
+sparanoid:
+  default:
+    dest: ~/Git/sparanoid.com-prod

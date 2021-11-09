@@ -1,0 +1,20 @@
+{%- include amsf/type type=include.type -%}
+
+{%- comment -%}
+  Page publish date
+{%- endcomment -%}
+{%- capture amsf_page_pubdate %}{{ type.date }}{% endcapture -%}
+
+{%- comment -%}
+  Page update date
+{%- endcomment -%}
+{%- capture amsf_page_update -%}
+  {%- assign date_publish = type.date | date: "%b %-d, %Y" -%}
+  {%- assign date_update  = type.last_modified_at | date: "%b %-d, %Y" -%}
+
+  {%- if date_publish != date_update -%}
+    {{ type.last_modified_at }}
+  {%- else -%}
+    {{ type.date }}
+  {%- endif -%}
+{%- endcapture -%}

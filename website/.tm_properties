@@ -1,0 +1,6 @@
+# Variables
+EXCLUDES              = "{_amsf,_site,node_modules}"
+
+# Exclude search list
+excludeInFolderSearch = "$EXCLUDES"
+excludeInFileChooser  = "$EXCLUDES"

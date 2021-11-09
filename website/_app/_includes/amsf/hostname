@@ -1,0 +1,8 @@
+{%- comment -%}
+  Site domain
+
+  Get current site domain name defined by `site.url`
+  Regex:
+    - Match domain hostname (without port): https://regex101.com/r/VkNQ7Q/1
+{%- endcomment -%}
+{%- assign amsf_hostname = site.url | match_regex: '^(?:https?\:)?\/\/([^\/?#:]+)(?:[\/?#:]|$)' -%}

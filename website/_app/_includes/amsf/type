@@ -1,0 +1,15 @@
+{%- comment -%}
+  Include type
+
+  Define include type of this file, make sure code snippets work smoothly on
+  both `page` and `post` and whatever content types:
+
+  {%- include amsf/core type=post -%}
+
+  Or you can include this helper directly:
+
+  {%- include amsf/type type=post -%}
+
+  @since 1.1.4
+{%- endcomment -%}
+{%- assign type = include.type | default: page -%}

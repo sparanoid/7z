@@ -1,0 +1,22 @@
+#
+# Jekyll basic configurations
+#
+
+# Expose site to local network
+host:           0.0.0.0
+
+# Re-include theme example pages for development
+exclude:        []
+
+#
+# Almace Scaffolding settings
+#
+
+# Enable development mode
+dev:            true
+
+# Reset base to / for localhost development
+baseurl:        ""
+
+# CDN location for development
+file:           https://s3.amazonaws.com/sparanoid

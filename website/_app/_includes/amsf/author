@@ -1,0 +1,9 @@
+{%- comment -%}
+  Page/post author meta
+{%- endcomment -%}
+{%- include amsf/type type=include.type -%}
+{%- if type.author -%}
+  {%- assign author = site.data.authors[type.author] -%}
+{%- else -%}
+  {%- assign author = site.data.authors["default"] -%}
+{%- endif -%}
