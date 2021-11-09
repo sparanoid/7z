@@ -1,9 +1,8 @@
-# 7-Zip Chinese Simplified Git Repository
+# 7-Zip Chinese Simplified Repository
 
 ## Structures
 
-- `master` 为附加包分支（Extra package branch）
-- `site` 为网站分支（Website branch）
+- `website/` AMSF-based site
 
 ## Author
 
