@@ -1,0 +1,20 @@
+{% comment %}
+  Almace Scaffolding core helpers
+{% endcomment %}
+{%- include amsf/type type=include.type -%}
+{%- include amsf/author -%}
+{%- include amsf/hostname -%}
+{%- include amsf/title -%}
+{%- include amsf/desc -%}
+{%- include amsf/urls -%}
+{%- include amsf/dates -%}
+{%- include amsf/lang -%}
+{%- include amsf/css -%}
+{%- include amsf/open_graph -%}
+{%- include amsf/theme_color -%}
+{%- include amsf/favicons -%}
+{%- include amsf/word_counter -%}
+{%- include amsf/thumbnail -%}
+{%- include amsf/heading -%}
+{%- include amsf/service_worker -%}
+{%- include amsf/google_analytics -%}

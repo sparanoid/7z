@@ -1,0 +1,36 @@
+---
+permalink: /feed.json
+---
+
+[
+
+{% assign first = true %}
+{%- include amsf/core -%}
+
+{% for post in site.posts %}
+  {% if post.hidden != true %}
+    {% unless first %},{% endunless %}
+    {
+      "title": {{ post.title | jsonify }},
+      "permalink": {{ post.url | absolute_url | jsonify }},
+      "link": {{ post.url | absolute_url | jsonify }},
+      "date": {{ post.date | date_to_xmlschema | jsonify }},
+      {% if post.last_modified_at %}
+        "modified": {{ post.last_modified_at | date_to_xmlschema | jsonify }},
+      {% endif %}
+      "author": {
+        "name": {{ author.name | jsonify }},
+        "url": {{ author.web | jsonify }},
+        "email": {{ author.email | jsonify }}
+      },
+      "content": {{ post.content | markdownify | strip | jsonify }},
+      "excerpt": {{ post.excerpt | markdownify | strip_html | strip | jsonify }},
+      "languages": {{ post.lang | jsonify }},
+      "categories": {{ post.categories | jsonify }},
+      "tags": {{ post.tags | jsonify }}
+    }
+    {% assign first = false %}
+  {% endif %}
+{% endfor %}
+
+]

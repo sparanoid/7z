@@ -1,0 +1,20 @@
+{%- comment -%}
+  Page language
+{%- endcomment -%}
+{%- capture amsf_page_lang -%}
+  {%- if page.lang -%}
+    {%- if page.lang[0] != null -%}
+      {{ page.lang | first }}
+    {%- else -%}
+      {{ page.lang }}
+    {%- endif -%}
+  {%- elsif site.active_lang -%}
+    {{ site.active_lang }}
+  {%- elsif site.default_lang -%}
+    {{ site.default_lang }}
+  {%- elsif site.lang -%}
+    {{ site.lang }}
+  {%- else -%}
+    en
+  {%- endif -%}
+{%- endcapture -%}

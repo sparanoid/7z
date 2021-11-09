@@ -1,0 +1,20 @@
+{%- comment -%}
+  Relative URL
+
+  Make given link relative to current site base (except external links with protocol)
+
+  {%- include amsf/relative_url url=my_url -%}
+  {{ amsf_relative_url }}
+
+  @since 1.1.6
+{%- endcomment -%}
+{%- assign url = include.url | default: '' -%}
+{%- include amsf/has_protocol url=url -%}
+
+{%- capture amsf_relative_url -%}
+  {%- if amsf_has_protocol == null -%}
+    {{ url | relative_url }}
+  {%- else -%}
+    {{ url }}
+  {%- endif -%}
+{%- endcapture -%}

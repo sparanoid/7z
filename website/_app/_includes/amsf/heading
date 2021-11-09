@@ -1,0 +1,139 @@
+{%- comment -%}
+  Heading image
+
+  Check front-matter fileds and generate custom heading image styles
+
+  @since 1.1.0
+{%- endcomment -%}
+{%- capture amsf_page_heading_img -%}
+  {%- include amsf/has_protocol url=page.heading-img -%}
+  {%- if amsf_has_protocol == null -%}
+    {%- if page.heading-img-local -%}
+      <img
+        src="{{ amsf_user_assets }}/{{ page.heading-img }}"
+        {%- if page.heading-img-width -%}
+          style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+        {%- else -%}
+          style="width: 50vw;"
+        {%- endif -%}
+      >
+    {%- else -%}
+      <img
+        src="{{ site.file }}/{{ page.heading-img }}"
+        {%- if page.heading-img-width -%}
+          style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+        {%- else -%}
+          style="width: 50vw;"
+        {%- endif -%}
+      >
+    {%- endif -%}
+  {%- else -%}
+    <img
+      src="{{ page.heading-img }}"
+      {%- if page.heading-img-width -%}
+        style="width: {{ page.heading-img-width | times: 0.1 }}vw;"
+      {%- else -%}
+        style="width: 50vw;"
+      {%- endif -%}
+    >
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_text -%}
+  {%- if page.heading-img -%}
+    {{ amsf_page_title }}
+    {{ amsf_page_heading_img }}
+  {%- else -%}
+    {{ amsf_page_title }}<span class="dot dot--post"> </span>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_class -%}
+  {%- if page.heading-img -%}
+    image-title
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_external -%}
+  {%- if page.link -%}
+    class=external
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading -%}
+  {%- if page.link -%}
+    <a href="{{ page.link }}" class=external>
+      {{ amsf_page_heading_text }}
+    </a>
+  {%- else -%}
+    {{ amsf_page_heading_text }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Heading background
+
+  Check front-matter fileds and generate custom heading background styles
+
+  @since 1.1.0
+{%- endcomment -%}
+{%- capture amsf_page_heading_bg_image -%}
+  {%- if page.heading-bg -%}
+    {%- include amsf/has_protocol url=page.heading-bg -%}
+    {%- if amsf_has_protocol == null -%}
+      {%- if page.heading-bg-local -%}
+        background-image: url('{{ amsf_user_assets }}/{{ page.heading-bg }}');
+      {%- else -%}
+        background-image: url('{{ site.file }}/{{ page.heading-bg }}');
+      {%- endif -%}
+    {%- else -%}
+      background-image: url('{{ page.heading-bg }}');
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg_color -%}
+  {%- if page.heading-bg-color -%}
+    background-color: {{ page.heading-bg-color }};
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg_size -%}
+  {%- if page.heading-bg -%}
+    {%- if page.heading-bg-size -%}
+      background-size: {{ page.heading-bg-size }};
+    {%- else -%}
+      background-size: cover;
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg_position -%}
+  {%- if page.heading-bg -%}
+    {%- if page.heading-bg-position -%}
+      background-position: {{ page.heading-bg-position }};
+    {%- else -%}
+      background-position: center center;
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg_repeat -%}
+  {%- if page.heading-bg -%}
+    {%- if page.heading-bg-position -%}
+      background-repeat: {{ page.heading-bg-repeat }};
+    {%- else -%}
+      background-repeat: no-repeat;
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg_text -%}
+  {%- if page.heading-bg-text -%}
+    color: {{ page.heading-bg-text }};
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture amsf_page_heading_bg -%}
+  style="{{ amsf_page_heading_bg_image | strip }} {{ amsf_page_heading_bg_color | strip }} {{ amsf_page_heading_bg_size | strip }} {{ amsf_page_heading_bg_position | strip }} {{ amsf_page_heading_bg_repeat | strip }} {{ amsf_page_heading_bg_text | strip }}"
+{%- endcapture -%}

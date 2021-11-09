@@ -1,0 +1,38 @@
+{%- comment -%}
+  Site base URL
+
+  Deprecated, it's now the same as the Jekyll built-in filter `absolute_url`.
+{%- endcomment -%}
+{%- capture amsf_site_base %}{{ "" | absolute_url }}{% endcapture -%}
+
+{%- comment -%}
+  Theme base URL
+{%- endcomment -%}
+{%- capture amsf_theme_base %}{{ site.amsf_theme | prepend: "/themes/" }}{% endcapture -%}
+
+{%- comment -%}
+  Theme assets base URL
+{%- endcomment -%}
+{%- capture amsf_theme_assets %}{{ amsf_theme_base | prepend: site.assets | relative_url }}{% endcapture -%}
+
+{%- comment -%}
+  User assets base URL
+{%- endcomment -%}
+{%- capture amsf_user_assets %}{{ site.assets | relative_url }}{% endcapture -%}
+
+{%- comment -%}
+  Feed URL
+{%- endcomment -%}
+{%- capture amsf_feed_url -%}
+  {%- include amsf/has_protocol url=site.feed -%}
+  {%- if amsf_has_protocol == null -%}
+    {{ site.feed | relative_url | replace: '/index.xml', '/' }}
+  {%- else -%}
+    {{ site.feed }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Page URL (full URl with `site.url`)
+{%- endcomment -%}
+{%- capture amsf_page_url %}{{ page.url | absolute_url | replace: '/index.html', '/' | replace: '/index.htm', '/' | replace: '/index.xml', '/' }}{% endcapture -%}

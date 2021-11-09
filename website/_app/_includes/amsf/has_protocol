@@ -1,0 +1,12 @@
+{%- comment -%}
+  Has Protocol
+
+  Check if given string has protocol (aka. external link)
+
+  {%- include amsf/has_protocol url=my_url -%}
+  {{ amsf_has_protocol }}
+
+  @since 1.1.6
+{%- endcomment -%}
+{%- assign url = include.url | default: '' -%}
+{%- assign amsf_has_protocol = url | match_regex: '^((?:https?:)?\/\/)' -%}

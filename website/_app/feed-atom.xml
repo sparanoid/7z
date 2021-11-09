@@ -1,0 +1,74 @@
+---
+permalink: /feed.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+{%- include amsf/core -%}
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ "/" | absolute_url | xml_escape }}</id>
+  <generator uri="https://sparanoid.com/lab/amsf/" version="{{ site.version }}">Almace Scaffolding</generator>
+
+  <link rel="alternate" type="text/html" hreflang="en" href="{{ '/' | absolute_url }}" />
+  <link rel="self" type="application/atom+xml" href="{{ amsf_page_url }}" />
+
+  <author>
+    <name>{{ site.data.authors.default.name }}</name>
+    <uri>{{ "/" | absolute_url }}</uri>
+    <email>{{ site.data.authors.default.email }}</email>
+  </author>
+
+  {% for post in site.posts limit:300 %}
+    {% if post.hidden != true %}
+      {% if site.link_blog and post.link %}
+        {% assign entry_link = post.link %}
+      {% else %}
+        {% assign entry_link = post.url | absolute_url %}
+      {% endif %}
+
+      {% capture entry_permalink %}
+        {% if site.link_blog and post.link %}
+          <p><a href="{{ post.url | absolute_url }}" title="Permalink to “{{ post.title | strip_html | xml_escape }}”"><small>◉ Permalink</small></a></p>
+        {% elsif site.link_blog != true and post.link %}
+          <p><a href="{{ post.link }}"><small>◉ Direct Link to Original Site</small></a></p>
+        {% endif %}
+      {% endcapture %}
+
+      <entry>
+        <title>{{ post.title | strip_html | xml_escape }}</title>
+        <id>{{ post.url | absolute_url | xml_escape }}</id>
+        <link rel="alternate" type="text/html" href="{{ entry_link }}" />
+        <published>{{ post.date | date_to_xmlschema }}</published>
+
+        {% if post.last_modified_at %}
+          <updated>{{ post.last_modified_at | date_to_xmlschema }}</updated>
+        {% else %}
+          <updated>{{ post.date | date_to_xmlschema }}</updated>
+        {% endif %}
+
+        <author>
+          <name>{{ author.name }}</name>
+          <uri>{{ author.web }}</uri>
+          <email>{{ author.email }}</email>
+        </author>
+
+        <content type="html" xml:base="{{ '/' | absolute_url }}">
+          {% if site.rss_excerpt %}
+            {{ post.excerpt | markdownify | xml_escape }}
+          {% else %}
+            {{ post.content | markdownify | xml_escape }}
+          {% endif %}
+          {{ entry_permalink | xml_escape}}
+        </content>
+
+        {% if post.excerpt and post.excerpt != empty %}
+          <summary>{{ post.excerpt | markdownify | strip_html | strip_newlines | xml_escape }}</summary>
+        {% endif %}
+      </entry>
+    {% endif %}
+  {% endfor %}
+</feed>

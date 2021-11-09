@@ -1,0 +1,16 @@
+sudo: false
+language: node_js
+cache:
+  - bundler
+node_js:
+  - "9"
+  - "10"
+before_install:
+  - rvm use 2.5.0 --install --fuzzy
+  - bundle install
+matrix:
+  fast_finish: true
+notifications:
+  email: false
+  slack:
+    secure: P/ngpvqinM/t9tdXZO2qHQvq2XCkcerKM+KwNJlQoVHnkl/Z/EtzB1yxiZZ6LGdHp+r3nShBhfW+gJVojU80EObt0iWHbFTkUUMFf6WI6c056937CksQI4atmDBiCJxMAnkd6DCLWfBexVtKDhkc5vX0bYhgoiXEzCYUhFd8pZ4=
