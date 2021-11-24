@@ -1,11 +1,11 @@
 stable:
-  long:          "19.00"
-  short:         "1900"
-  date:          2019-02-21
+  long:          "21.05"
+  short:         "2105"
+  date:          2021-11-20
   sdk:
     long:        "19.00"
     short:       "1900"
-    date:        2019-02-21
+    date:        2021-11-20
 
 beta:
   long:          "21.04"
