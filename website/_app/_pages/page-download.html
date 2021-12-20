@@ -63,59 +63,81 @@ title: 程序下载
 
 <P><B>下载 7-Zip {{ ver.stable.long }}（{{ ver.stable.date }}）</B>：</P>
 
-<table cellspacing="1" cellpadding="6">
+<table cellspacing="1" cellpadding="6" border="0">
   <tbody><tr>
-    <th class="Title" width="60">链接</th>
-    <th class="Title" width="60">格式</th>
-    <th class="Title" width="160">系统</th>
-    <th class="Title">描述</th>
+    <th class="Title text-center" width="60">链接</th>
+    <th class="Title text-center" width="60">类型</th>
+    <th class="Title text-center" width="160">系统</th>
+    <th class="Title text-center">描述</th>
   </tr>
   <tr>
     <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
     <td class="Item text-center">.exe</td>
-    <td class="Item">64 位 x64</td>
+    <td class="Item">64 位 Windows x64</td>
     <td class="Item" rowspan="3">7-Zip Windows</td>
   </tr>
   <tr>
     <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
     <td class="Item text-center">.exe</td>
-    <td class="Item">32 位 x86</td>
+    <td class="Item">32 位 Windows x86</td>
   </tr>
   <tr>
-    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z2104-arm64.exe">下载</a></td>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-arm64.exe">下载</a></td>
     <td class="Item text-center">.exe</td>
     <td class="Item">64 位 Windows arm64</td>
   </tr>
-  <!-- <tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
+    <td class="Item text-center">.msi</td>
+    <td class="Item">64 位 Windows x64</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</a></td>
+    <td class="Item text-center">.msi</td>
+    <td class="Item">32-bit Windows x86</td>
+    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
+  </tr>
+  <tr>
     <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-extra.7z">下载</a></td>
     <td class="Item text-center">.7z</td>
-    <td class="Item text-center">x86 / x64</td>
-    <td class="Item">7-Zip 附加包：独立命令行、7z 程序库、Far 管理器插件</td>
+    <td class="Item">Windows x86 / x64</td>
+    <td class="Item">7-Zip 附加包：7z 独立命令行版本、7z DLL、Far 管理器插件</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-linux-x64.tar.xz">下载</a></td>
+    <td class="Item text-center">.tar.xz</td>
+    <td class="Item">64-bit Linux x86-64</td>
+    <td class="Item" rowspan="3">7-Zip Linux：命令行版本</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-linux-x86.tar.xz">下载</a></td>
+    <td class="Item text-center">.tar.xz</td>
+    <td class="Item">32 位 Linux x86</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-linux-arm64.tar.xz">下载</a></td>
+    <td class="Item text-center">.tar.xz</td>
+    <td class="Item">64 位 Linux arm64</td>
+  </tr>
+  <tr>
+    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-mac.tar.xz">下载</a></td>
+    <td class="Item text-center">.tar.xz</td>
+    <td class="Item">macOS（arm64 / x86-64）</td>
+    <td class="Item">7-Zip MacOS：命令行版本</td>
   </tr>
   <tr>
     <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-src.7z">下载</a></td>
     <td class="Item text-center">.7z</td>
-    <td class="Item text-center">任意</td>
+    <td class="Item">任意 / Windows</td>
     <td class="Item">7-Zip 源代码</td>
   </tr>
   <tr>
     <td class="Item text-center"><a href="https://www.7-zip.org/a/lzma{{ ver.stable.short }}.7z">下载</a></td>
     <td class="Item text-center">.7z</td>
-    <td class="Item text-center">任意 / x86 / x64</td>
+    <td class="Item">any / Windows</td>
     <td class="Item">LZMA SDK（C、C++、C#、Java）</td>
   </tr>
-  <tr>
-    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.msi">下载</a></td>
-    <td class="Item text-center">.msi</td>
-    <td class="Item text-center">32 位 x86</td>
-    <td class="Item">（MSI 安装包）7-Zip Windows 32 位</td>
-  </tr>
-  <tr>
-    <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.msi">下载</a></td>
-    <td class="Item text-center">.msi</td>
-    <td class="Item text-center">64 位 x64</td>
-    <td class="Item">（MSI 安装包）7-Zip Windows 64 位（Intel 64 或 AMD64）</td>
-  </tr> -->
 </tbody></table>
 
 <p><b>下载 7-Zip 21.04 beta（2021-11-02）</b>：</p>
