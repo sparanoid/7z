@@ -20,25 +20,34 @@ permalink: /
         <table cellspacing="1" cellpadding="6">
           <tbody>
             <tr>
-              <th class="Title" width="60">链接</th>
+              <th class="Title" width="120">链接</th>
               <th class="Title" width="60">格式</th>
               <th class="Title" width="80">系统</th>
               <th class="Title" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a></td>
+              <td class="Item text-center">
+                <a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}.exe">下载</a> /
+                <a href="{{ site.data.sevenzip.download_cdn }}/7z{{ ver.stable.short }}.exe">镜像下载</a>
+              </td>
               <td class="Item text-center">.exe</td>
               <td class="Item text-center">32 位 x86</td>
               <td class="Item text-center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a></td>
+              <td class="Item text-center">
+                <a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-x64.exe">下载</a> /
+                <a href="{{ site.data.sevenzip.download_cdn }}/7z{{ ver.stable.short }}-x64.exe">镜像下载</a>
+              </td>
               <td class="Item text-center">.exe</td>
               <td class="Item text-center">64 位 x64</td>
               <td class="Item text-center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-arm64.exe">下载</a></td>
+              <td class="Item text-center">
+                <a href="https://www.7-zip.org/a/7z{{ ver.stable.short }}-arm64.exe">下载</a> /
+                <a href="{{ site.data.sevenzip.download_cdn }}/7z{{ ver.stable.short }}-arm64.exe">镜像下载</a>
+              </td>
               <td class="Item text-center">.exe</td>
               <td class="Item text-center">64 位 ARM64</td>
               <td class="Item text-center">1 MB</td>
@@ -57,19 +66,28 @@ permalink: /
               <th class="Title" width="55">大小</th>
             </tr>
             <tr>
-              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}.exe">下载</a></td>
+              <td class="Item text-center">
+                <a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}.exe">下载</a>
+                <a href="{{ site.data.sevenzip.download_cdn }}/7z{{ ver.beta.short }}.exe">镜像下载</a>
+              </td>
               <td class="Item text-center">.exe</td>
               <td class="Item text-center">32 位 x86</td>
               <td class="Item text-center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.exe">下载</a></td>
+              <td class="Item text-center">
+                <a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-x64.exe">下载</a>
+                <a href="{{ site.data.sevenzip.download_cdn }}/7z{{ ver.beta.short }}-x64.exe">镜像下载</a>
+              </td>
               <td class="Item text-center">.exe</td>
               <td class="Item text-center">64 位 x64</td>
               <td class="Item text-center">1 MB</td>
             </tr>
             <tr>
-              <td class="Item text-center"><a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-arm64.exe">下载</a></td>
+              <td class="Item text-center">
+                <a href="https://www.7-zip.org/a/7z{{ ver.beta.short }}-arm64.exe">下载</a>
+                <a href="{{ site.data.sevenzip.download_cdn }}/7z{{ ver.beta.short }}-arm64.exe">镜像下载</a>
+              </td>
               <td class="Item text-center">.exe</td>
               <td class="Item text-center">64 位 ARM64</td>
               <td class="Item text-center">1 MB</td>
@@ -78,6 +96,7 @@ permalink: /
         </table> -->
 
         <p><b>中文版附加内容</b>请 <a href="https://github.com/sparanoid/7z">访问 GitHub 查看</a>。</p>
+        <p>如果遇到<b>下载</b>链接无法正常下载，请尝试使用<b>镜像下载</b>。镜像下载为国内链接反代，请自行验证或比对镜像站与原站点的文件哈希值。</p>
 
         <!-- <p><b>中文版附加内容，适用于 {{ ver.beta.long }} beta：</b><br>包含：安装包模块、FAR 插件、中文自述、历史更新、帮助文件</p>
 
@@ -223,7 +242,10 @@ permalink: /
             <td class="NewsText" colspan="2">
               <a href="https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt">查看更新历史（中文）</a>
               <br>
-              <a href="https://www.7-zip.org/history.txt">查看更新历史（英文）</a>
+
+              <a href="https://www.7-zip.org/history.txt">查看更新历史（英文）<
+                <a href="httpshttps://experiments-alicdn.sparanoid.net">查看更新历镜像史（英文）<
+                /a>
             </td>
           </tr>
         </tbody></table>
