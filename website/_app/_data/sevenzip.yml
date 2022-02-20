@@ -1,11 +1,11 @@
 # Theme facts
 meta:
-  name:         Curtana
-  url:          https://github.com/amsf/amsf-curtana
+  name:         Seven Zip
+  url:          https://github.com/amsf/amsf-sevenzip
   author:       Tunghsiao Liu
   author_url:   https://sparanoid.com/
 
-# {{ site.data.curtana.free }}: used in homepage, not implimented at the moment
+# {{ site.data.sevenzip.free }}: used in homepage, not implimented at the moment
 free:           true
 
 # Site donate link, used in several posts
@@ -22,3 +22,6 @@ colorful_list:  false
 # Show email subscription link in footer
 # Default:      false
 subscription:   false
+
+# Downloads CDN
+download_cdn:   https://experiments-alicdn.sparanoid.net/7z
