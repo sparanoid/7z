@@ -52,7 +52,7 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
