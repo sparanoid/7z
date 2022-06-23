@@ -5,7 +5,6 @@
 -------------------------
 - 7-Zip 现在可以提取 APFS（Apple File System）镜像，可用于 DMG 文件中。
 - 7-Zip 现在可以创建 POSIX（pax）tar 格式的 TAR 压缩包，使用开关
-
     -ttar -mm=pax 或 -ttar -mm=posix
 - 7-Zip 现在可以在 tar/pax 压缩包中，以更高精度（Linux 中为 1 纳秒）存储额外的文件时间戳，
   使用以下开关：
