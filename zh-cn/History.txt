@@ -7,7 +7,7 @@
 - 7-Zip 现在可以创建 POSIX（pax）tar 格式的 TAR 压缩包，使用开关
 
     -ttar -mm=pax 或 -ttar -mm=posix
-- 7-Zip 现在可以在 tar/pax 压缩文件中，以更高精度（Linux 中为 1 纳秒）存储额外的文件时间戳，
+- 7-Zip 现在可以在 tar/pax 压缩包中，以更高精度（Linux 中为 1 纳秒）存储额外的文件时间戳，
   使用以下开关：
     -ttar -mm=pax -mtp=3 -mtc -mta
 - Linux 版本中为 TAR 压缩文件添加了新的开关：
