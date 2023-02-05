@@ -126,7 +126,7 @@ title: 常见问题解答（FAQ）
 
 #### 如何在我的程序中添加对 7z 格式的支持？
 
-一种方法是使用 7za.dll（可到 sf.net 站点下载）。7za.dll 通过 COM 接口工作。但是它并没有使用标准的 COM 接口。您可以在源代码中找到一些例子。完整的例子就是 7-Zip 本身，7-Zip 本身就通过此 dll 允许。目前还有一些其它的应用程序使用了 7za.dll：WinRAR、PowerArchiver 等等。
+一种方法是使用 7za.dll（可到 sf.net 站点下载）。7za.dll 通过 COM 接口工作。但是它并没有使用标准的 COM 接口。您可以在源代码中找到一些例子。完整的例子就是 7-Zip 本身，7-Zip 本身就通过此 dll 运行。目前还有一些其它的应用程序使用了 7za.dll：WinRAR、PowerArchiver 等等。
 
 其它的方法是调用命令行版本 7za.exe。
 
