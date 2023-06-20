@@ -1,11 +1,11 @@
 stable:
-  long:          "22.01"
-  short:         "2201"
-  date:          2022-07-15
+  long:          "23.01"
+  short:         "2301"
+  date:          2023-06-30
   sdk:
-    long:        "22.01"
-    short:       "2201"
-    date:        2022-07-15
+    long:        "23.01"
+    short:       "2301"
+    date:        2023-06-30
 
 beta:
   long:          "21.04"
