@@ -2,7 +2,7 @@
 meta:
   name:         Seven Zip
   url:          https://github.com/amsf/amsf-sevenzip
-  author:       Tunghsiao Liu
+  author:       Sparanoid
   author_url:   https://sparanoid.com/
 
 # {{ site.data.sevenzip.free }}: used in homepage, not implimented at the moment
