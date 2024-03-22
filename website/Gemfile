@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll", "4.2.0"
+gem "jekyll", "4.3.3"
 
 group :development do
-  gem "jekyll-last-modified-at"
+  # gem "jekyll-last-modified-at"
   gem "stringex"
   gem "webrick"
 end
