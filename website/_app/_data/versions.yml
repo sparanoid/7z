@@ -1,18 +1,18 @@
 stable:
-  long:          "23.01"
-  short:         "2301"
-  date:          2023-06-20
+  long:          "24.07"
+  short:         "2407"
+  date:          2024-06-19
   sdk:
-    long:        "23.01"
-    short:       "2301"
-    date:        2023-06-20
+    long:        "24.07"
+    short:       "2407"
+    date:        2024-06-19
 
 beta:
-  long:          "21.04"
-  short:         "2104"
+  long:          "24.07"
+  short:         "2407"
   type:          "beta"
-  date:          2021-11-02
+  date:          2024-06-19
   sdk:
-    long:        "21.04"
-    short:       "2104"
-    date:        2021-11-02
+    long:        "24.07"
+    short:       "2407"
+    date:        2024-06-19
