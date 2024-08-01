@@ -1,4 +1,4 @@
-7-Zip 23.01
+7-Zip 24.07
 -----------
 
 7-Zip 是一款 Windows 文件压缩软件。
@@ -12,7 +12,7 @@
      - 压缩 / 解压缩：7z、XZ、BZIP2、GZIP、TAR、ZIP、WIM
      - 仅解压缩：AR、ARJ、CAB、CHM、CPIO、CramFS、DMG、EXT、FAT、GPT、HFS、
                IHEX、ISO、LZH、LZMA、MBR、MSI、NSIS、NTFS、QCOW2、RAR、
-               RPM、SquashFS、UDF、UEFI、VDI、VHD、VMDK、WIM、XAR 以及 Z。
+               RPM、SquashFS、UDF、UEFI、VDI、VHD、VMDK、WIM、XAR、Z 以及 ZSTD。
   - 更快的压缩和解压缩速度
   - 7z 格式支持创建自释放压缩包
   - 为 7z 与 ZIP 提供更完善的 AES-256 加密算法
