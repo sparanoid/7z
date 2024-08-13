@@ -1,18 +1,18 @@
 stable:
-  long:          "24.07"
-  short:         "2407"
-  date:          2024-06-19
+  long:          "24.08"
+  short:         "2408"
+  date:          2024-08-11
   sdk:
-    long:        "24.07"
-    short:       "2407"
-    date:        2024-06-19
+    long:        "24.08"
+    short:       "2408"
+    date:        2024-08-11
 
 beta:
-  long:          "24.07"
-  short:         "2407"
+  long:          "24.08"
+  short:         "2408"
   type:          "beta"
-  date:          2024-06-19
+  date:          2024-08-11
   sdk:
-    long:        "24.07"
-    short:       "2407"
-    date:        2024-06-19
+    long:        "24.08"
+    short:       "2408"
+    date:        2024-08-11
