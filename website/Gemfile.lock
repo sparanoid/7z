@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    bigdecimal (3.1.8)
     colorator (1.1.0)
     concurrent-ruby (1.2.3)
     em-websocket (0.5.3)
@@ -11,17 +12,23 @@ GEM
     eventmachine (1.2.7)
     ffi (1.16.3)
     forwardable-extended (2.6.0)
-    google-protobuf (4.26.0)
+    google-protobuf (4.27.5)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-aarch64-linux)
+    google-protobuf (4.27.5-aarch64-linux)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-arm64-darwin)
+    google-protobuf (4.27.5-arm64-darwin)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-x86-linux)
+    google-protobuf (4.27.5-x86-linux)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-x86_64-darwin)
+    google-protobuf (4.27.5-x86_64-darwin)
+      bigdecimal
       rake (>= 13)
-    google-protobuf (4.26.0-x86_64-linux)
+    google-protobuf (4.27.5-x86_64-linux)
+      bigdecimal
       rake (>= 13)
     http_parser.rb (0.8.0)
     i18n (1.14.4)
@@ -59,7 +66,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (5.0.4)
-    rake (13.1.0)
+    rake (13.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
