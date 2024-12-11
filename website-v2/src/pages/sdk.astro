@@ -1,0 +1,191 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { stable } from "../data/versions";
+
+const downloads = [
+  {
+    href: `https://www.7-zip.org/a/lzma${stable.sdk.short}.7z`,
+    size: "1 MB",
+    date: stable.sdk.date,
+    version: stable.sdk.long,
+    description: "LZMA SDK<br>C、C++、C#、Java<br>包含 Windows 二进制文件",
+    rowSpan: 2,
+  },
+  {
+    href: "https://www.7-zip.org/a/lzma2301.7z",
+    size: "1 MB",
+    date: "2023-06-20",
+    version: "23.01",
+    description: null, // Uses rowspan from above
+  },
+  {
+    href: "https://www.7-zip.org/a/lzma-specification.7z",
+    size: "12 KB",
+    date: "2015-06-14",
+    version: "",
+    description: "LZMA 规范（草案）",
+  },
+];
+
+const title = "LZMA SDK（软件开发工具包）（英文版）";
+---
+
+<Layout title={title} currentPage="sdk">
+  <h1>{title}</h1>
+
+  <p>
+    <b>LZMA 软件开发工具包</b>（以下简称
+    SDK）给开发客户提供文档、源代码以及几个使用 <b>LZMA</b> 压缩算法制作的应用程序的例子。
+  </p>
+
+  <table cellspacing="1" cellpadding="6">
+    <tr>
+      <th class="Title" style="width: 60px;">链接</th>
+      <th class="Title" style="width: 60px;">大小</th>
+      <th class="Title" style="width: 90px;">日期</th>
+      <th class="Title" style="width: 60px;">版本</th>
+      <th class="Title">描述</th>
+    </tr>
+    {
+      downloads.map((download, index) => (
+        <tr>
+          <td class="Item text-center">
+            <a href={download.href}>下载</a>
+          </td>
+          <td class="Item text-center">{download.size}</td>
+          <td class="Item text-center">{download.date}</td>
+          <td class="Item text-center">{download.version}</td>
+          {download.description && (
+            <td
+              class="Item"
+              rowspan={download.rowSpan || 1}
+              set:html={download.description}
+            />
+          )}
+        </tr>
+      ))
+    }
+  </table>
+
+  <p>
+    注意：如果您使用 LZMA SDK 中的 XZ 代码，建议您从 15.05 beta 中升级到最新的
+    XZ 代码，新版本的 XZ 代码修复了一些 bug。
+  </p>
+
+  <p><b>工具包更新：</b></p>
+  <ul>
+    <li><b>24.09：</b>增加 LZMA/LZMA2 压缩算法的默认字典大小值。</li>
+    <li><b>24.05：</b>新的 RISC-V 可执行文件过滤器。</li>
+    <li>
+      <b>23.01：</b>新的 ARM64 可执行文件过滤器。优化 BCJ2
+      过滤器，可获得更好的压缩比。修复已知错误。
+    </li>
+    <li><b>21.07：</b>一些小改动和错误修复。</li>
+    <li><b>21.06：</b>修复了 LZMA 的编码函数。</li>
+    <li><b>21.03 beta：</b>LZMA 字典大小最大支持 4 GB。速度优化。</li>
+    <li><b>21.02 alpha：</b>支持 macOS 及 Linux。速度优化。</li>
+    <li><b>19.00：</b>加强 7z 压缩档案的加密强度。</li>
+    <li><b>18.06：</b>部分 LZMA/LZMA2 代码的速度优化。</li>
+    <li><b>18.05：</b>部分 LZMA/LZMA2 代码的速度优化。</li>
+    <li>
+      <b>18.01：</b>对 LZMA2/xz 多线程压缩代码进行部分改动。修复已知错误。
+    </li>
+    <li><b>9.35：</b>修复已知错误，SDK 中新增 AES 源代码以及 SFX 模块。</li>
+    <li><b>9.20：</b>新增用于安装包的精简版 SFX 自释放模块。</li>
+    <li><b>9.11：</b>支持 PPMd。</li>
+    <li><b>9.04：</b>增加对 LZMA2 以及 XZ 的支持。</li>
+    <li>
+      <b>4.62：</b>修复小错误。LZMA SDK 隶属于 <a
+        href="https://zh.wikipedia.org/wiki/%E5%85%AC%E6%9C%89%E9%A2%86%E5%9F%9F"
+        >公有领域</a
+      >
+    </li>
+    <li><b>4.58：</b>速度优化，为 LZMA 压缩提供了新的 ANSI-C 代码。</li>
+    <li><b>4.57：</b>速度优化，修复了一些小错误。</li>
+    <li>
+      <b>4.49：</b>完善 .7z ANSI-C 解码器。增加 C++ 的 .7z 压缩档案处理代码。
+    </li>
+  </ul>
+
+  <p>
+    <b>LZMA</b> 是 <b>7-Zip</b> 程序中 <a href="7z.html"><b>7z 格式</b></a> 的默认压缩算法。<b
+      >LZMA</b
+    > 能提供给用户极高的压缩比及较快的压缩速度，它非常适合与应用程序集成。
+  </p>
+
+  <p><b>LZMA SDK</b> 包括：</p>
+  <ul>
+    <li><b>LZMA</b> 编码器及解码器的 <b>C++</b> 源代码</li>
+    <li><b>.7z</b> 压缩与解压缩 <b>C++</b> 源代码（精简版）</li>
+    <li>兼容 <b>ANSI-C</b> 的 <b>LZMA / LZMA2 / XZ</b> 压缩及解压缩源代码</li>
+    <li>兼容 <b>ANSI-C</b> 的 <b>7z</b> 解压缩及相关例子的源代码</li>
+    <li><b>LZMA</b> 压缩及解压缩的 <b>C#</b> 源代码</li>
+    <li><b>LZMA</b> 压缩及解压缩的 <b>Java</b> 源代码</li>
+    <li><b>lzma.exe</b> 用于 .lzma 的压缩及解压缩</li>
+    <li><b>7zr.exe</b> 用于 7z 压缩包（7z.exe 的精简版）</li>
+    <li><b>SFX 模块</b> 可以用来创建自释放压缩包以及应用程序安装包</li>
+  </ul>
+
+  <p>
+    <b>ANSI-C LZMA</b> 解压缩代码是从原始的 C++ 源代码转换到 C。并简化和优化了代码的大小。但它依然和
+    <b>7-Zip</b> 的 <b>LZMA</b> 完全兼容。
+  </p>
+
+  <p><b>LZMA</b> 的主要特征：</p>
+  <ul>
+    <li>压缩速度：在双核处理器上可以达到 2 MB/秒。</li>
+    <li>
+      解压缩速度：
+      <ul>
+        <li>在英特尔酷睿2 或 AMD 速龙 64 上可以达到 20-30 MB/秒。</li>
+        <li>
+          在 100 MHz ARM、MIPS、PowerPC 或其它精简指令集处理器上能达到
+          1-2MB/秒。
+        </li>
+      </ul>
+    </li>
+    <li>较小的解压缩内存需求：8-32 KB（依赖于字典大小）</li>
+    <li>较小的解压缩代码：2-8 KB</li>
+  </ul>
+
+  <p>
+    <b>LZMA</b> 解码器仅使用整数运算，可以在任何主流的 32 位处理器（或在一定条件下的
+    16 或处理器）下运行。
+  </p>
+
+  <h2>许可协议</h2>
+
+  <p><strong>LZMA SDK</strong> 隶属于 <strong>公有领域</strong></p>
+
+  <h2>LZMA 相关链接</h2>
+  <ul>
+    <li>
+      <a href="https://zh.wikipedia.org/wiki/LZMA">维基百科上的 LZMA 页面</a
+      >（<a href="https://en.wikipedia.org/wiki/LZMA">英文</a>）
+    </li>
+    <li>
+      <a href="https://sourceforge.net/projects/p7zip/"
+        >面向 JAVA 独立开发者的 LZMA SDK 文档</a
+      >
+    </li>
+    <li>
+      <a href="http://www.birtles.org.uk/programming/"
+        >面向 Pascal（Delphi、Kylix 以及 Freepascal）的 LZMA SDK 文档</a
+      >
+    </li>
+    <li>
+      <a href="http://www.joachim-bauch.de/projects/python/pylzma/"
+        >PyLZMA: Python 绑定的 LZMA 算法</a
+      >
+    </li>
+    <li>
+      <a href="http://tukaani.org/xz/">XZ 实用小工具 / LZMA 实用小工具</a>
+    </li>
+    <li>
+      <a href="http://contrapunctus.net/league/haques/lzmajio/"
+        >Java 中的 LZMA 压缩流</a
+      >
+    </li>
+    <li><a href="https://www.7-cpu.com/">不同 CPU 上的 LZMA 基准测试</a></li>
+  </ul>
+</Layout>

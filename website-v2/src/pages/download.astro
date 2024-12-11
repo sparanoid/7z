@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { currentDownloads, legacyDownloads } from "../data/versions";
+
+// combine current and legacy downloads
+const resolvedDownloads = [...currentDownloads, ...legacyDownloads];
+
+const title = "程序下载";
+---
+
+<Layout title={title} currentPage="download">
+  <h1>{title}</h1>
+
+  <!-- Beta version downloads commented out as in original -->
+  <!-- <p><b>下载 7-Zip {{ ver.beta.long }} beta 测试版（{{ ver.beta.date }}，Windows）</b>：</p>
+  ... -->
+
+  <p>我们更建议使用 <b>exe</b> 版本的安装包而不是 <b>msi</b> 安装包。</p>
+
+  {
+    resolvedDownloads.map((version) => (
+      <div>
+        <p>
+          <b>
+            下载 7-Zip {version.version}（{version.date}）：
+          </b>
+        </p>
+        <table cellspacing="1" cellpadding="6" border="0">
+          <thead>
+            <tr>
+              <th class="Title" style="width: 60px;">
+                链接
+              </th>
+              <th class="Title" style="width: 60px;">
+                类型
+              </th>
+              <th class="Title" style="width: 160px;">
+                系统
+              </th>
+              <th class="Title">描述</th>
+            </tr>
+          </thead>
+          <tbody>
+            {version.downloads.map((download) => (
+              <tr>
+                <td class="Item text-center">
+                  <a href={download.url}>下载</a>
+                </td>
+                <td class="Item text-center">{download.type}</td>
+                <td class="Item">{download.system}</td>
+                {download.description && (
+                  <td class="Item" rowspan={download.rowspan || 1}>
+                    {download.description}
+                  </td>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {version.note && <Fragment set:html={version.note} />}
+      </div>
+    ))
+  }
+
+  <p>您可以在 SourceForge 下载其他板本的 7-Zip（包括老板本和测试版本）：</p>
+
+  <p>
+    <a href="https://sourceforge.net/projects/sevenzip/files/"
+      >在 SourceForge 上的 7-Zip 文件页面</a
+    >
+  </p>
+  <p>
+    <a href="https://sourceforge.net/projects/sevenzip/"
+      >在 SourceForge 上的 7-Zip 项目页面</a
+    >
+  </p>
+
+  <p><b>下载 p7zip for Posix/Linux（x86 二进制文件及源代码）</b>：<br /></p>
+  <p><a href="https://sourceforge.net/projects/p7zip/files/">下载 p7zip</a></p>
+  <p>
+    <a href="https://sourceforge.net/projects/p7zip/"
+      >Source Forge 中的 p7zip 页面</a
+    >
+  </p>
+
+  <p>
+    p7zip 是 Unix/Linux 下的 7-Zip 命令行版本，是由网上的 7-Zip
+    爱好者独立开发的。
+  </p>
+
+  <p><b>Linux 及其它操作系统上的一些非官方 p7zip：</b></p>
+  <ul>
+    <li>
+      <a href="http://packages.debian.org/sid/p7zip-full"
+        >p7zip for Debian (and Ubuntu)</a
+      >
+    </li>
+    <li>
+      <a href="http://timeoff.wsisiz.edu.pl/rpms.html">p7zip for Fedora Core</a>
+    </li>
+    <li>
+      <a href="http://packages.gentoo.org/package/app-arch/p7zip"
+        >p7zip for Gentoo</a
+      >
+    </li>
+    <li>
+      <a href="http://www.sisyphus.ru/srpm/p7zip">p7zip for AltLinux.org</a>
+    </li>
+    <li>
+      <a href="http://www.freshports.org/archivers/p7zip/">p7zip for FreeBSD</a>
+    </li>
+    <li><a href="http://homepage.mac.com/krmathis/">p7zip for Mac OS X</a></li>
+    <li>
+      <a href="http://www.macupdate.com/info.php/id/19139">EZ 7z for Mac OS X</a
+      >
+    </li>
+    <li><a href="http://sixtyfive.xmghosting.com/">7zX for Mac OS X</a></li>
+    <li>
+      <a href="http://www.kekaosx.com/">keka - 免费的 Mac OS X 压缩软件</a>
+    </li>
+    <li><a href="http://www.bebits.com/app/4079">p7zip for BeOS</a></li>
+    <li>
+      <a
+        href="http://ftp.ibiblio.org/pub/micro/pc-stuff/freedos/files/util/file/7zip/"
+        >p7zip for DOS / DJGPP</a
+      >
+    </li>
+    <li><a href="http://aminet.net/search?name=p7zip">p7zip for Amiga</a></li>
+    <li>
+      <a href="http://www.opencsw.org/packages/p7zip">p7zip for Solaris</a>
+    </li>
+    <li>
+      <a href="http://www.perzl.org/aix/index.php?n=Main.P7zip">p7zip for AIX</a
+      >
+    </li>
+  </ul>
+
+  <p><b>其它系统上的 7-Zip：</b></p>
+  <ul>
+    <li>
+      <a href="http://4pda.ru/forum/index.php?showtopic=69426"
+        >7-Zip 解压程序 for WinCE</a
+      >
+    </li>
+  </ul>
+</Layout>
