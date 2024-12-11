@@ -1,0 +1,248 @@
+---
+// Layout.astro
+interface Props {
+  title: string;
+  currentPage?: string;
+  frontmatter?: {
+    title?: string;
+    currentPage?: string;
+  };
+}
+
+const {
+  frontmatter = {},
+  title: propTitle,
+  currentPage: propCurrentPage = "home",
+} = Astro.props;
+
+// Merge frontmatter and props, with props taking precedence
+const title = propTitle || frontmatter.title;
+const currentPage = frontmatter.currentPage || propCurrentPage;
+
+const siteName = "7-Zip";
+const currentYear = new Date().getFullYear();
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const menuItems = [
+  { id: "home", label: "首页", href: "./" },
+  { id: "7z", label: "7z 格式", href: "7z.html" },
+  { id: "sdk", label: "LZMA SDK", href: "sdk.html" },
+  { id: "download", label: "下载", href: "download.html" },
+  { id: "faq", label: "常见问题", href: "faq.html" },
+  { id: "support", label: "支持", href: "support.html" },
+  { id: "links", label: "链接", href: "links.html" },
+];
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <title>{currentPage !== "home" ? `${siteName} - ${title}` : title}</title>
+
+    <link href={`${baseUrl}/favicon.ico`} rel="shortcut icon" />
+
+    <meta
+      name="keywords"
+      content="7-zip, 7zip, 7z, lzma, sevenzip, archiver, compression, zip, best, compress, compressor, gnu, lgpl, unzip, far, win32"
+    />
+  </head>
+  <body>
+    <table cellspacing="10" cellpadding="10" width="100%">
+      <tbody>
+        <tr>
+          <td class="MenuColumn" valign="top">
+            <table cellpadding="2" cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      width="110"
+                      height="63"
+                      src={`${baseUrl}/img/7ziplogo.png`}
+                      alt="7-Zip"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <hr />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table cellpadding="2" cellspacing="0">
+              <tbody>
+                {
+                  menuItems.map((item) => (
+                    <tr>
+                      <td>
+                        <a
+                          href={
+                            currentPage !== item.id
+                              ? `${baseUrl}/${item.href}`
+                              : undefined
+                          }
+                          class={
+                            currentPage === item.id
+                              ? "menu-current"
+                              : "menu-link"
+                          }
+                        >
+                          {item.label}
+                        </a>
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+
+            <table cellpadding="2" cellspacing="0" width="100%">
+              <tbody>
+                <tr>
+                  <td>
+                    <hr />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>
+              <strong>简体中文</strong>
+              <br />
+              <a href="https://www.developershome.com/7-zip/">正體中文</a>
+              <br />
+              <a href="https://www.7-zip.org/">Other Languages</a>
+              <br />
+            </p>
+          </td>
+
+          <td valign="top">
+            <slot />
+
+            <hr />
+
+            <p>
+              <small>Copyright (C) {currentYear} Igor Pavlov.</small>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Analytics -->
+    <script
+      is:inline
+      defer
+      data-domain="sparanoid.com"
+      src="https://get.openbayes.net/js/script.js"></script>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+  }
+  th {
+    font-size: 12px;
+  }
+  td {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  h4 {
+    font-size: 14px;
+  }
+
+  .News {
+    width: 220px;
+    background-color: silver;
+  }
+  .NewsHeader {
+    background-color: #8080e0;
+  }
+  table .News .News {
+    background-color: #fff8f8;
+  }
+  .NewsTitle {
+    width: 55%;
+    font-weight: bold;
+    color: white;
+  }
+  .NewsDate {
+    font-weight: bold;
+    color: white;
+    text-align: right;
+  }
+
+  .menu-link {
+    font-weight: bold;
+    color: blue;
+    text-align: left;
+    text-decoration: none;
+  }
+  .menu-link:hover {
+    color: green;
+  }
+  .menu-current {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .MenuColumn {
+    width: 120px;
+    background-color: #e0e0e0;
+  }
+
+  .Layout {
+    background-color: white;
+  }
+  .Title {
+    background-color: #a0e0a0;
+  }
+  .Item {
+    background-color: #e8e8e8;
+  }
+  .SubItem {
+    background-color: #ffffff;
+  }
+  .ExternalProgram {
+    background-color: #e8d0e8;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  form {
+    margin-bottom: 0;
+  }
+
+  .donate-wrap {
+    .donate-tip {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      .donate-tip {
+        display: block;
+      }
+    }
+  }
+</style>

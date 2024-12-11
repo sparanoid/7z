@@ -1,0 +1,16 @@
+// TODO: https://github.com/withastro/astro/issues/11575
+// https://docs.astro.build/en/guides/integrations-guide/sitemap/
+import type { APIRoute } from "astro";
+
+const getRobotsTxt = (sitemapURL: URL) => `
+User-agent: *
+Allow: /
+
+Sitemap: ${sitemapURL.href}
+`;
+
+export const GET: APIRoute = ({ site }) => {
+  const baseUrl = import.meta.env.BASE_URL;
+  const sitemapURL = new URL(`${baseUrl}/sitemap-index.xml`, site);
+  return new Response(getRobotsTxt(sitemapURL));
+};
