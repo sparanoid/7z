@@ -1,41 +1,24 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.zip
-*.vi
-*~
+# build output
+dist/
 
-# OS or Editor folders
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-._*
-Thumbs.db
-.cache
-.project
-.settings
-.tmproj
-*.esproj
-nbproject
-*.sublime-project
-*.sublime-workspace
-.idea
 
-# Folders to ignore
-node_modules
-
-# AMSF specified
-.amsf-cache
-.jekyll-cache
-.jekyll-metadata
-.sass-cache
-_site
-_app/assets/**/js
-_app/assets/**/css
-
-# AMSF deprecated, leave them for compatibility
-_amsf/themes
-_amsf/core
+# jetbrains setting folder
+.idea/
