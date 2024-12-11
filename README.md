@@ -6,8 +6,6 @@
 
 ## Author
 
-**Sparanoid**
-
 - Twitter: @[sparanoid](http://twitter.com/sparanoid)
 - GitHub: @[sparanoid](http://github.com/sparanoid)
 
