@@ -6,8 +6,6 @@
 
 ## Author
 
-**Tunghsiao Liu**
-
 - Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
 - GitHub: @[sparanoid](http://github.com/sparanoid)
 
