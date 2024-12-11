@@ -105,7 +105,7 @@ GEM
     tzinfo-data (1.2024.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.5.0)
-    webrick (1.8.1)
+    webrick (1.8.2)
 
 PLATFORMS
   aarch64-linux
