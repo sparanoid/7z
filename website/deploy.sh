@@ -9,7 +9,7 @@ set -e # Exit on error
 COMMIT_CHANGES=true
 SOURCE_DIR="dist"                       # Default source directory
 DEST_DIR="$HOME/Git/sparanoid.com-prod" # Default destination
-BASE_PATH="/lab/7z"                     # Default base path
+BASE_PATH="lab/7z"                     # Default base path
 LOG_FILE="deploy-sparanoid.log"
 
 # Parse arguments
