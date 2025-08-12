@@ -2,12 +2,7 @@
 
 ## Structures
 
-- `website/` AMSF-based site
-
-## Author
-
-- Twitter: @[tunghsiao](http://twitter.com/tunghsiao)
-- GitHub: @[sparanoid](http://github.com/sparanoid)
+- `website/` Astro-based static site
 
 ## License
 
