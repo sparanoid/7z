@@ -1,6 +1,6 @@
 ---
 name: update-7zip-version
-description: Update 7-Zip version numbers across the Chinese Simplified website. Use when the user wants to update, bump, or change the 7-Zip version, release a new version, or mentions a new 7-Zip release.
+description: Update 7-Zip version numbers across the Chinese Simplified website. Auto-fetches the latest version, release date, and SourceForge thread URL from https://7-zip.org/ if the user does not provide them. Use when the user wants to update, bump, or change the 7-Zip version, release a new version, or mentions a new 7-Zip release.
 ---
 
 # Update 7-Zip Version
@@ -71,18 +71,46 @@ XX.YY          YYYY-MM-DD
 
 ## Required Information
 
-Before making any changes, you **MUST** collect all three of the following from the user. Do **NOT** proceed until all three are provided. If any are missing, ask the user explicitly.
+Three values are needed for any update:
 
-1. **Version number** — long format, e.g., `25.02`
-2. **Release date** — ISO format, e.g., `2025-09-15`
-3. **SourceForge discussion URL** — full thread URL, e.g., `https://sourceforge.net/p/sevenzip/discussion/45797/thread/abc123/`
+1. **Version number** — long format, e.g., `26.01`
+2. **Release date** — ISO format, e.g., `2026-04-27`
+3. **SourceForge discussion URL** — full thread URL, e.g., `https://sourceforge.net/p/sevenzip/discussion/45797/thread/555e132ba4/`
 
-If the user triggers a version update without providing all three, use the AskQuestion tool (or ask conversationally) to request the missing values. Never guess or fabricate these values.
+### Source of values
+
+- **If the user supplies all three**, use the user's values verbatim. Never override them with auto-fetched data.
+- **If the user supplies none or only some**, auto-fetch the missing values from `https://7-zip.org/` (see "Auto-Fetching" below). Confirm the fetched values with the user before writing files.
+- **Never guess or fabricate** values. If auto-fetch fails (network error, parsing fails), ask the user explicitly via AskQuestion.
+
+## Auto-Fetching from 7-zip.org
+
+When the user has not provided the three required values, fetch `https://7-zip.org/` with the WebFetch tool and extract them from the rendered markdown:
+
+1. **Version + date** appear in the top download heading, e.g.:
+   ```
+   Download 7-Zip 26.01 (2026-04-27) for Windows x64 (64-bit):
+   ```
+   Pattern: `Download 7-Zip <VERSION> (<YYYY-MM-DD>)`
+
+2. **SourceForge discussion URL** is the first (topmost) entry in the news section, formatted as:
+   ```
+   | 7-Zip 26.01 | 2026-04-27 |
+   | --- | --- |
+   | [7-Zip 26.01](https://sourceforge.net/p/sevenzip/discussion/45797/thread/555e132ba4/) |
+   ```
+   Take the URL from the topmost entry whose version matches the version extracted in step 1.
+
+3. **Confirmation**: After extraction, show the user the three values (e.g., "Detected: 7-Zip 26.01, 2026-04-27, thread `555e132ba4`. Proceed?") and wait for confirmation before editing files.
+
+If the page structure has changed and parsing fails, fall back to asking the user via AskQuestion.
 
 ## Workflow
 
-1. **Collect required info** (version, date, sf.net URL) — block until all three are provided
-2. **Derive short version** automatically by removing the dot (e.g., `25.02` → `2502`)
+1. **Determine values**:
+   - If the user provided version, date, and URL → use them
+   - Otherwise → auto-fetch from `https://7-zip.org/` and confirm with the user
+2. **Derive short version** automatically by removing the dot (e.g., `26.01` → `2601`)
 3. **Update `versions.ts`** — stable, beta, and SDK versions (SDK defaults to same as stable unless user says otherwise)
 4. **Update `index.astro`** news array — add new entry at top using the sf.net URL, trim to 3 items
 5. **Optionally update `sdk.astro`** if there are SDK changelog notes
