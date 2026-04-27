@@ -32,24 +32,24 @@ export interface DownloadLink {
 
 export const versions: VersionData = {
   stable: {
-    long: "26.00",
-    short: "2600",
-    date: "2026-02-12",
+    long: "26.01",
+    short: "2601",
+    date: "2026-04-27",
     sdk: {
-      long: "26.00",
-      short: "2600",
-      date: "2026-02-12",
+      long: "26.01",
+      short: "2601",
+      date: "2026-04-27",
     },
   },
   beta: {
-    long: "26.00",
-    short: "2600",
+    long: "26.01",
+    short: "2601",
     type: "beta",
-    date: "2026-02-12",
+    date: "2026-04-27",
     sdk: {
-      long: "26.00",
-      short: "2600",
-      date: "2026-02-12",
+      long: "26.01",
+      short: "2601",
+      date: "2026-04-27",
     },
   },
 };
