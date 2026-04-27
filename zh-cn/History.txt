@@ -5,6 +5,18 @@
 - 英文：https://7-zip.org/history.txt
 - 中文：https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt
 
+26.01          2026-04-27
+-------------------------
+- 7-Zip 的 Linux 版本现在可以使用大页（2 MB 页）。它可以将 7z/xz/LZMA/LZMA2 压缩速度提升 10%。
+- 新的 -spo[d|c|r] 开关用于指定提取压缩包时输出目录的路径生成模式。输出目录路径由 -o{dir_path}
+  开关指定的路径与正在解包的压缩包名称共同生成。
+  -spod：对于 Linux/Posix/macOS 系统：-o{dir_path} 指定输出目录的直接路径。{dir_path}
+  中的星号（*）字符不会被替换为压缩包名称。
+  -spoc：7-Zip 会将 -o{dir_path} 指定的路径与压缩包名称拼接，作为输出目录的最终路径。
+  -spor：7-Zip 会将 -o{dir_path} 指定路径中的星号（*）字符替换为压缩包名称。这是默认选项。
+- 修复了已知错误。
+
+
 26.00          2026-02-12
 -------------------------
 - 改进了 ZIP、CPIO、RAR、UFD、QCOW、复合文档格式的处理代码。
