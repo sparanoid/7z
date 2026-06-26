@@ -5,6 +5,11 @@
 - 英文：https://7-zip.org/history.txt
 - 中文：https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt
 
+26.02          2026-06-25
+-------------------------
+- 修复了一些错误和漏洞。
+
+
 26.01          2026-04-27
 -------------------------
 - 7-Zip 的 Linux 版本现在可以使用大页（2 MB 页）。它可以将 7z/xz/LZMA/LZMA2 压缩速度提升 10%。
