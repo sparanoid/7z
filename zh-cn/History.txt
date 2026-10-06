@@ -5,6 +5,11 @@
 - 英文：https://7-zip.org/history.txt
 - 中文：https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt
 
+26.04          2026-10-05
+-------------------------
+- 修复了一些错误和漏洞。
+
+
 26.03          2026-09-03
 -------------------------
 - 改进了对 Joliet ISO 镜像和复合文档压缩包的支持。
