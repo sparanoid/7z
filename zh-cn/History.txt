@@ -5,6 +5,12 @@
 - 英文：https://7-zip.org/history.txt
 - 中文：https://github.com/sparanoid/7z/blob/master/zh-cn/History.txt
 
+26.06          2026-11-06
+-------------------------
+- 改进了对 Linux 中「split」工具创建的分割文件的支持。
+- 修复了一些错误和漏洞。
+
+
 26.05          2026-10-21
 -------------------------
 - 改进了解包 Z 压缩包和 Mach-O 文件的代码。
